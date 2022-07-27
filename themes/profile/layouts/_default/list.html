@@ -16,10 +16,11 @@
             <div class="card h-100">
                 <div class="card-body bg-transparent p-4 shadow-sm">
                     <a href="{{ .RelPermalink }}" class="primary-font card-title">
-                        <h5 class="card-title bg-transparent" title="{{ .Title }}">{{ .Title | truncate 25 }}</h5>
+                        <h6 class="card-title bg-transparent text-white text-center" title="{{ .Title }}">{{ .Title | truncate 25 }}</h6>
                     </a>
                     <div class="card-text secondary-font">
-                        <p>{{ .Summary | truncate 300}}</p>
+                        <!-- <p>{{ .Summary | truncate 300}}</p> -->
+                        <img src="/blog/images/post.jpg" alt="" style="width:100%; height:auto">
                     </div>
                 </div>
                 <div class="mt-auto post-footer bg-transparent py-3">
