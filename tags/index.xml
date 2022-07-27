@@ -2,19 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Hugo Profile</title>
-    <link>/tags/</link>
+    <link>https://teduandy.github.io/blog/tags/</link>
     <description>Recent content in Tags on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 03 Apr 2021 22:53:58 +0530</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Emoji support</title>
-      <link>/tags/emoji-support/</link>
-      <pubDate>Sat, 03 Apr 2021 22:53:58 +0530</pubDate>
-      
-      <guid>/tags/emoji-support/</guid>
-      <description></description>
-    </item>
-    
+    <language>en-us</language><atom:link href="https://teduandy.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

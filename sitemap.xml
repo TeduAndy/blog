@@ -2,28 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/blogs/</loc>
+    <loc>https://teduandy.github.io/blog/blogs/</loc>
+    <lastmod>2022-07-21T15:13:32+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/categories/</loc>
+    <lastmod>2022-07-21T15:13:32+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/</loc>
+    <lastmod>2022-07-21T15:13:32+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/categories/vue/</loc>
+    <lastmod>2022-07-21T15:13:32+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/vue-diagram-use/</loc>
+    <lastmod>2022-07-21T15:13:32+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/vue-axios-mock-adapter/</loc>
+    <lastmod>2022-07-21T15:01:51+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/vue-basic-theory/</loc>
+    <lastmod>2022-07-21T14:40:49+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/vue-setup-syntax-sugar/</loc>
+    <lastmod>2022-07-21T14:16:42+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/vue-axios-repackage/</loc>
+    <lastmod>2022-07-21T14:09:01+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/vue-build-set-out-dir-path/</loc>
+    <lastmod>2022-07-21T14:03:30+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/vue-cors-set/</loc>
+    <lastmod>2022-07-21T11:39:35+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/gallery/</loc>
     <lastmod>2022-06-25T18:35:46+05:30</lastmod>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2022-06-25T18:35:46+05:30</lastmod>
-  </url><url>
-    <loc>/blogs/gallery/</loc>
-    <lastmod>2022-06-25T18:35:46+05:30</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
+    <loc>https://teduandy.github.io/blog/blogs/vue_test/</loc>
     <lastmod>2021-04-03T22:53:58+05:30</lastmod>
   </url><url>
-    <loc>/tags/emoji-support/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
-  </url><url>
-    <loc>/blogs/emoji-support/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
-  </url><url>
-    <loc>/categories/vue/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
+    <loc>https://teduandy.github.io/blog/tags/</loc>
   </url>
 </urlset>
