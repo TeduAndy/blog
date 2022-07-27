@@ -14,14 +14,13 @@
         {{ range .Paginator.Pages }}
         <div class="col-lg-4 col-md-6 my-3">
             <div class="card h-100">
+                <div class="card-header">
+                    <img class="card-img-top" src="/blog/images/post.jpg" alt="{{ .Title }}">
+                </div>
                 <div class="card-body bg-transparent p-4 shadow-sm">
                     <a href="{{ .RelPermalink }}" class="primary-font card-title">
                         <h6 class="card-title bg-transparent text-white text-center" title="{{ .Title }}">{{ .Title | truncate 25 }}</h6>
                     </a>
-                    <div class="card-text secondary-font">
-                        <!-- <p>{{ .Summary | truncate 300}}</p> -->
-                        <img src="/blog/images/post.jpg" alt="" style="width:100%; height:auto">
-                    </div>
                 </div>
                 <div class="mt-auto post-footer bg-transparent py-3">
                     <span class="float-start bg-transparent">{{ .Date.Format "January 2, 2006" }}</span>
