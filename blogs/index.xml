@@ -198,5 +198,14 @@ cors 的方法, 並且可以針對後端的 url 取匿名 ,簡短對 ajax 使用
       <description>一. 引入 需要的套件 using MySql.Data.MySqlClient; 二. 先有連線字串 string connString = &amp;#34;server=127.0.0.1;port=3306;user id=root;password=***;database=mvctest;charset=utf8;&amp;#34;; 三. 建立一個Connection(聯繫), 連線跟字串連結起來 MySqlConnection conn = new MySqlConnection(); conn.ConnectionString = connString; 四. 連線打開，如果已經開了，再打開一次會出錯，要先判斷 if (conn.State != ConnectionState.Open) { conn.Open(); } 五. 創建 Command(命令) 並且執行 然後判斷成功與否 // sql 字符串 string sql = @&amp;#34;INSERT INTO MTN100 (AREA, CARDNUMBER, SAMFILE) VALUES (&amp;#34;SA&amp;#34;, &amp;#34;0936050029001000000266&amp;#34;, file) // 創建命令 MySqlCommand cmd = new MySqlCommand(sql(sql串), conn(聯繫)); // 執行 int index = cmd.ExecuteNonQuery(); // 判斷成功與否 bool success = false; // 判斷 傳回的 index 是否大於 0 if (index &amp;gt; 0) { success = true; } else { success = false; } ExecuteNonQuery 方法 用在新增修改刪除, 成功返回受影響的列數, 失敗傳回0 六.</description>
     </item>
     
+    <item>
+      <title>C# 上傳檔案轉成二進制</title>
+      <link>https://teduandy.github.io/blog/blogs/c#_update_fire_change_byte/</link>
+      <pubDate>Fri, 15 Jul 2022 10:42:49 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c#_update_fire_change_byte/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
