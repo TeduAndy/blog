@@ -6,11 +6,10 @@ github_link: "https://github.com/gurusabarish/hugo-profile"
 author: "Gurusabarish"
 tags:
   - Emoji support
-  - Sample
-  - example
 image: /images/post.jpg
 description: ""
 toc: 
+categories: vue
 ---
 
 Emoji can be enabled in a Hugo project in a number of ways. :zap:
