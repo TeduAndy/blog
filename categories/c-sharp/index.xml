@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C-sharp on Hugo Profile</title>
+    <link>https://teduandy.github.io/blog/categories/c-sharp/</link>
+    <description>Recent content in C-sharp on Hugo Profile</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Jul 2022 09:35:18 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/c-sharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C# 將資料輸出成 excel 方法</title>
+      <link>https://teduandy.github.io/blog/blogs/c-excel-out/</link>
+      <pubDate>Thu, 21 Jul 2022 09:35:18 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c-excel-out/</guid>
+      <description>使用到的套件 using Excel = Microsoft.Office.Interop.Excel; 操作方法 1. 設定需要用到變數 // 設定需要用到的變數 Excel.Application excelApp; // execl 使用的應用程式 變數 Excel._Workbook wBook;	// 活頁簿 變數 Excel._Worksheet wSheet1; // sheet 變數1 Excel._Worksheet wSheet2; // sheet 變數2 Excel.Range wRange; // 活頁簿欄位範圍裏面的控制 及 操作 變數 2. 創建新的 excel 應用 // 開啟一個新的應用程式 excelApp = new Excel.Application(); // 讓Excel文件可見 excelApp.Visible = false; // 停用警告訊息 excelApp.DisplayAlerts = false; // 加入新的活頁簿 excelApp.Workbooks.Add(Type.Missing); // 引用第一個活頁簿 wBook = excelApp.Workbooks[1]; // 基本創建第一個活頁簿時 就有一個 sheet工作表 這邊是添加第二個 wBook.</description>
+    </item>
+    
+    <item>
+      <title>C# 散亂筆記</title>
+      <link>https://teduandy.github.io/blog/blogs/c-scattered-notes/</link>
+      <pubDate>Mon, 18 Jul 2022 16:44:47 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c-scattered-notes/</guid>
+      <description> Process 呼叫EXE 檔案 並 傳值 // 第二個負責傳參數 用 空格 分別不同 值 Process.Start(&amp;#34;C:\\AP06BZ\\EXE\\MTNP200.exe&amp;#34;, &amp;#34;2407 L123370532&amp;#34;); 匿名函數說明 () =&amp;gt; expression // expression = 求值式 本身會有 return value () =&amp;gt; { statement; } // statement = 執行語句，需要 return 才會 return </description>
+    </item>
+    
+    <item>
+      <title>C# PrintDocument 元件列印說明 (winform)</title>
+      <link>https://teduandy.github.io/blog/blogs/c-winform-printdocument/</link>
+      <pubDate>Mon, 18 Jul 2022 16:37:54 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c-winform-printdocument/</guid>
+      <description>說明： 一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明 使用方法： 1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖 private void button1_Click(object sender, EventArgs e) { // 創建列印物件 PrintDocument pd = new PrintDocument(); // 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個 pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage); // 啟動列印 pd.Print(); // 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog PrintPreviewDialog pD = new PrintPreviewDialog(); pD.</description>
+    </item>
+    
+    <item>
+      <title>C# 資料庫獲取資料</title>
+      <link>https://teduandy.github.io/blog/blogs/c-data-get-methods/</link>
+      <pubDate>Mon, 18 Jul 2022 16:26:39 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c-data-get-methods/</guid>
+      <description>說明： 方法有兩種，一種是 DataTable 一種是 DataReader，最簡單的就是用 DataTable 接資料 string connString = &amp;#34;server=127.0.0.1;port=3306;user id=root;password=Acuteboy1215;database=mvctest;charset=utf8;&amp;#34;; MySqlConnection conn = new MySqlConnection(); public ActionResult Index() { // 聯繫裡面放入連線字串 conn.ConnectionString = connString; string sql = @&amp;#34; SELECT `id`, `city` FROM `city`&amp;#34;; // 創建新的空的 DataTable 讓抓回來的資料存放 DataTable dt = new DataTable(); // 執行 sql 語句 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn); // 將資料注入到 空的 database adapter.Fill(dt); } 在這段程式我們沒有處理 連線 跟 斷線 ， 因為 MySqlDataAdapter 會幫我們處理 </description>
+    </item>
+    
+    <item>
+      <title>C# 上傳檔案轉成二進制</title>
+      <link>https://teduandy.github.io/blog/blogs/c-fire-change-byte/</link>
+      <pubDate>Mon, 18 Jul 2022 16:00:22 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c-fire-change-byte/</guid>
+      <description>一、上傳檔案轉成二進制 try { StreamReader sr = new StreamReader(openFileDialog1.FileName); var bytes = default(byte[]); using (var memstream = new MemoryStream()) { sr.BaseStream.CopyTo(memstream); bytes = memstream.ToArray(); //SetText(sr.ReadToEnd()); } catch(SecurityException ex) { MessageBox.Show($&amp;#34;Security error.\n\nError message: {ex.Message}\n\n&amp;#34; + $&amp;#34;Details:\n\n{ex.StackTrace}&amp;#34;);} } 一. StreamReader sr = new StreamReader(位置路徑); (這邊輸出只是可讀 string 拿不到 byts) 二. var bytes = default(byte[]); 設置空的 bytes 三. var memstream = new MemoryStream() (呼叫一個 空的 不可讀 但可以拿到 byte 檔的容器) 四. sr.BaseStream.CopyTo(memstream); (把可讀的複製到空容器裡面) 五. bytes = memstream.</description>
+    </item>
+    
+    <item>
+      <title>C# mysql_conn</title>
+      <link>https://teduandy.github.io/blog/blogs/c-mysql-conn/</link>
+      <pubDate>Mon, 18 Jul 2022 15:49:56 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c-mysql-conn/</guid>
+      <description>一. 引入 需要的套件 using MySql.Data.MySqlClient; 二. 先有連線字串 string connString = &amp;#34;server=127.0.0.1;port=3306;user id=root;password=***;database=mvctest;charset=utf8;&amp;#34;; 三. 建立一個Connection(聯繫), 連線跟字串連結起來 MySqlConnection conn = new MySqlConnection(); conn.ConnectionString = connString; 四. 連線打開，如果已經開了，再打開一次會出錯，要先判斷 if (conn.State != ConnectionState.Open) { conn.Open(); } 五. 創建 Command(命令) 並且執行 然後判斷成功與否 // sql 字符串 string sql = @&amp;#34;INSERT INTO MTN100 (AREA, CARDNUMBER, SAMFILE) VALUES (&amp;#34;SA&amp;#34;, &amp;#34;0936050029001000000266&amp;#34;, file) // 創建命令 MySqlCommand cmd = new MySqlCommand(sql(sql串), conn(聯繫)); // 執行 int index = cmd.ExecuteNonQuery(); // 判斷成功與否 bool success = false; // 判斷 傳回的 index 是否大於 0 if (index &amp;gt; 0) { success = true; } else { success = false; } ExecuteNonQuery 方法 用在新增修改刪除, 成功返回受影響的列數, 失敗傳回0 六.</description>
+    </item>
+    
+  </channel>
+</rss>

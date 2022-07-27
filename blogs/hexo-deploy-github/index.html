@@ -38,21 +38,17 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-<meta property="og:title" content="VUE 基礎理論" />
-<meta property="og:description" content="1. Vue的双向数据绑定原理: Vue是采用数据劫持结合发布订阅模式，通过Object.defineProperty()来劫持各个属性的getter,setter, 在数据变动时发布消息给订阅者，触发相应的回调函数，从而实现数据双向绑定。
-2. SPA 单页面的理解，它的优缺点分别是什么？ SPA（ single-page application ）仅在 Web 页面初始化时加载相应的 HTML、JavaScript 和 CSS。 一旦页面加载完成， SPA 不会因为用户的操作而进行页面的重新加载或跳转；取而代之的是利用路由机制实现 HTML 内容的变换，UI 与用户的交互，避免页面的重新加载。
-優點： 用户体验好、快，内容的改变不需要重新加载整个页面，避免了不必要的跳转和重复渲染 基于上面一点，SPA 相对对服务器压力小 前后端职责分离，架构清晰，前端进行交互逻辑，后端负责数据处理 缺點： 初次加载耗时多：为实现单页 Web 应用功能及显示效果，需要在加载页面的时候将 JavaScript、CSS 统一加载，部分页面按需加载 前进后退路由管理：由于单页应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理 SEO 难度较大：由于所有的内容都在一个页面中动态替换显示，所以在 SEO 上其有着天然的弱势。 3、v-show 与 v-if 有什么区别？ V-if 是真正的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建； 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。 v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 的 “display” 属性进行切换。 所以，v-if 适用于在运行时很少改变条件，不需要频繁切换条件的场景； v-show 则适用于需要非常频繁切换条件的场景。 4、谈谈你对 Vue 生命周期的理解？ beforeCreate 组件实例被创建之初，组件的属性生效之前 created 组件实例已经完全创建，属性也绑定，但真实 dom 还没有生成，$el 还不可用 beforeMount 在挂载开始之前被调用：相关的 render 函数首次被调用 mounted el 被新创建的 vm." />
+<meta property="og:title" content="hexo-部屬靜態頁面到-github" />
+<meta property="og:description" content="GitHub 產生站點專案 1. 先點 Github 官網跟著圖片點 第一步 點擊 repositories 第二步 點new 產生站點專案 第三步 在橘色文字那邊輸入 你的用戶名 &#43; github.io 然後按 create repository 第四步 點擊 Your repositories 點選 剛創建的專案 點選 code 會得到 部屬會用到網址 hexo 專案 設置部分 1. hexo 部屬前需安裝的套件 npm install hexo-deployer-git --save 2. 修改根目錄的_config.yml檔案 # Deployment ## Docs: https://hexo.io/docs/one-command-deployment deploy: type: &#34;git&#34; // 類別請寫 git repo: https://github.com/username/username.github.io.git // github專案位置 branch: master // 上傳到此專案的哪一個分支，通常都是 master 3. 輸入指令部屬上傳 每次部屬請進行三步驟 hexo clean // 清除之前建立的靜態檔案 hexo generate // 建立靜態頁面 hexo deploy // 部署至 GitHub " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://teduandy.github.io/blog/blogs/vue-basic-theory/" /><meta property="article:section" content="blogs" />
-<meta property="article:published_time" content="2022-07-21T14:40:49+00:00" />
-<meta property="article:modified_time" content="2022-07-21T14:40:49+00:00" /><meta property="og:site_name" content="Andy blog" />
+<meta property="og:url" content="https://teduandy.github.io/blog/blogs/hexo-deploy-github/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2022-07-22T08:35:32+00:00" />
+<meta property="article:modified_time" content="2022-07-22T08:35:32+00:00" /><meta property="og:site_name" content="Andy blog" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="VUE 基礎理論"/>
-<meta name="twitter:description" content="1. Vue的双向数据绑定原理: Vue是采用数据劫持结合发布订阅模式，通过Object.defineProperty()来劫持各个属性的getter,setter, 在数据变动时发布消息给订阅者，触发相应的回调函数，从而实现数据双向绑定。
-2. SPA 单页面的理解，它的优缺点分别是什么？ SPA（ single-page application ）仅在 Web 页面初始化时加载相应的 HTML、JavaScript 和 CSS。 一旦页面加载完成， SPA 不会因为用户的操作而进行页面的重新加载或跳转；取而代之的是利用路由机制实现 HTML 内容的变换，UI 与用户的交互，避免页面的重新加载。
-優點： 用户体验好、快，内容的改变不需要重新加载整个页面，避免了不必要的跳转和重复渲染 基于上面一点，SPA 相对对服务器压力小 前后端职责分离，架构清晰，前端进行交互逻辑，后端负责数据处理 缺點： 初次加载耗时多：为实现单页 Web 应用功能及显示效果，需要在加载页面的时候将 JavaScript、CSS 统一加载，部分页面按需加载 前进后退路由管理：由于单页应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理 SEO 难度较大：由于所有的内容都在一个页面中动态替换显示，所以在 SEO 上其有着天然的弱势。 3、v-show 与 v-if 有什么区别？ V-if 是真正的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建； 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。 v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 的 “display” 属性进行切换。 所以，v-if 适用于在运行时很少改变条件，不需要频繁切换条件的场景； v-show 则适用于需要非常频繁切换条件的场景。 4、谈谈你对 Vue 生命周期的理解？ beforeCreate 组件实例被创建之初，组件的属性生效之前 created 组件实例已经完全创建，属性也绑定，但真实 dom 还没有生成，$el 还不可用 beforeMount 在挂载开始之前被调用：相关的 render 函数首次被调用 mounted el 被新创建的 vm."/>
+<meta name="twitter:title" content="hexo-部屬靜態頁面到-github"/>
+<meta name="twitter:description" content="GitHub 產生站點專案 1. 先點 Github 官網跟著圖片點 第一步 點擊 repositories 第二步 點new 產生站點專案 第三步 在橘色文字那邊輸入 你的用戶名 &#43; github.io 然後按 create repository 第四步 點擊 Your repositories 點選 剛創建的專案 點選 code 會得到 部屬會用到網址 hexo 專案 設置部分 1. hexo 部屬前需安裝的套件 npm install hexo-deployer-git --save 2. 修改根目錄的_config.yml檔案 # Deployment ## Docs: https://hexo.io/docs/one-command-deployment deploy: type: &#34;git&#34; // 類別請寫 git repo: https://github.com/username/username.github.io.git // github專案位置 branch: master // 上傳到此專案的哪一個分支，通常都是 master 3. 輸入指令部屬上傳 每次部屬請進行三步驟 hexo clean // 清除之前建立的靜態檔案 hexo generate // 建立靜態頁面 hexo deploy // 部署至 GitHub "/>
 
 
 <link rel="stylesheet" href="/blog//bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/blog//css/header.css" media="all">
@@ -96,7 +92,7 @@ if (!doNotTrack) {
 <script defer src="/blog//fontawesome-5/all-5.15.4.js"></script>
 
   <title>
-VUE 基礎理論 | Hugo Profile
+hexo-部屬靜態頁面到-github | Hugo Profile
 
   </title>
 </head>
@@ -233,97 +229,48 @@ VUE 基礎理論 | Hugo Profile
       <div class="col-sm-12 col-md-12 col-lg-9">
         <div class="pr-lg-4">
           <div class="title mb-5">
-            <h1 class="text-center mb-4">VUE 基礎理論</h1>
+            <h1 class="text-center mb-4">hexo-部屬靜態頁面到-github</h1>
             <div class="text-center">
                
               <small>|</small>
-              Jul 21, 2022
+              Jul 22, 2022
             </div>
           </div>
           
           <article class="page-content  p-2">
-          <h3 id="font-colore599111-vue的双向数据绑定原理font"><font color='e59911'>1. Vue的双向数据绑定原理:</font></h3>
-<p><strong>Vue是采用数据劫持结合发布订阅模式，通过Object.defineProperty()来劫持各个属性的getter,setter,</strong>
-<strong>在数据变动时发布消息给订阅者，触发相应的回调函数，从而实现数据双向绑定。</strong></p>
+          <h2 id="github-產生站點專案">GitHub 產生站點專案</h2>
+<h4 id="font-colore599111-先點-github-官網跟著圖片點font"><font color='e59911'>1. 先點 Github 官網跟著圖片點</font></h4>
+<p><strong>第一步 點擊 repositories</strong>
+<img src="/2022/07/22/hexo-deploy-github/github1.png" alt=""></p>
 <br>
-<h3 id="font-colore599112-spa-单页面的理解它的优缺点分别是什么font"><font color='e59911'>2. SPA 单页面的理解，它的优缺点分别是什么？</font></h3>
-<p><strong>SPA（ single-page application ）仅在 Web 页面初始化时加载相应的 HTML、JavaScript 和 CSS。</strong>
-<strong>一旦页面加载完成，</strong>
-<strong>SPA 不会因为用户的操作而进行页面的重新加载或跳转；取而代之的是利用路由机制实现 HTML 内容的变换，UI 与用户的交互，避免页面的重新加载。</strong></p>
+<p><strong>第二步 點new 產生站點專案</strong>
+<img src="/2022/07/22/hexo-deploy-github/github2.png" alt=""></p>
 <br>
-<ul>
-<li>
-<h4 id="優點"><strong>優點：</strong></h4>
-<ul>
-<li><strong>用户体验好、快，内容的改变不需要重新加载整个页面，避免了不必要的跳转和重复渲染</strong></li>
-<li><strong>基于上面一点，SPA 相对对服务器压力小</strong></li>
-<li><strong>前后端职责分离，架构清晰，前端进行交互逻辑，后端负责数据处理</strong></li>
-</ul>
-</li>
-<li>
-<h4 id="缺點"><strong>缺點：</strong></h4>
-<ul>
-<li><strong>初次加载耗时多：为实现单页 Web 应用功能及显示效果，需要在加载页面的时候将 JavaScript、CSS 统一加载，部分页面按需加载</strong></li>
-<li><strong>前进后退路由管理：由于单页应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理</strong></li>
-<li><strong>SEO 难度较大：由于所有的内容都在一个页面中动态替换显示，所以在 SEO 上其有着天然的弱势。</strong></li>
-</ul>
-</li>
-</ul>
+<p><strong>第三步 在橘色文字那邊輸入 你的用戶名 + github.io 然後按 create repository</strong>
+<img src="/2022/07/22/hexo-deploy-github/github3.png" alt=""></p>
 <br>
-<h3 id="font-colore599113v-show-与-v-if-有什么区别font"><font color='e59911'>3、v-show 与 v-if 有什么区别？</font></h3>
+<p><strong>第四步 點擊 Your repositories 點選 剛創建的專案 點選 code 會得到 部屬會用到網址</strong>
+<img src="/2022/07/22/hexo-deploy-github/github4.png" alt=""></p>
+<h2 id="hexo-專案-設置部分">hexo 專案 設置部分</h2>
+<h4 id="font-colore599111-hexo-部屬前需安裝的套件font"><font color='e59911'>1. hexo 部屬前需安裝的套件</font></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install hexo-deployer-git --save
+</span></span></code></pre></div><br>
+<h4 id="font-colore599112-修改根目錄的_configyml檔案font"><font color='e59911'>2. 修改根目錄的_config.yml檔案</font></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#75715e"># Deployment</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Docs: https://hexo.io/docs/one-command-deployment</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;git&#34;</span> <span style="color:#ae81ff">// 類別請寫 git</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">repo</span>: <span style="color:#ae81ff">https://github.com/username/username.github.io.git // github專案位置</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">branch</span>: <span style="color:#ae81ff">master  // 上傳到此專案的哪一個分支，通常都是 master </span>
+</span></span></code></pre></div><br>
+<h4 id="font-colore599113-輸入指令部屬上傳font"><font color='e59911'>3. 輸入指令部屬上傳</font></h4>
 <ul>
-<li>
-<h4 id="v-if"><strong>V-if</strong></h4>
-<strong>是真正的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建；</strong>
-<strong>也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。</strong></li>
-<li>
-<h4 id="v-show"><strong>v-show</strong></h4>
-<strong>就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 的 “display” 属性进行切换。</strong>
-<strong>所以，v-if 适用于在运行时很少改变条件，不需要频繁切换条件的场景；</strong>
-<strong>v-show 则适用于需要非常频繁切换条件的场景。</strong></li>
+<li><strong>每次部屬請進行三步驟</strong></li>
 </ul>
-<br>
-<h3 id="font-colore599114谈谈你对-vue-生命周期的理解font"><font color='e59911'>4、谈谈你对 Vue 生命周期的理解？</font></h3>
-<ul>
-<li>
-<h4 id="font-colore59911-beforecreatefont"><strong><font color='e59911' >beforeCreate</font></strong></h4>
-<strong>组件实例被创建之初，组件的属性生效之前</strong></li>
-<li>
-<h4 id="font-colore59911-createdfont"><strong><font color='e59911' >created</font></strong></h4>
-<strong>组件实例已经完全创建，属性也绑定，但真实 dom 还没有生成，$el 还不可用</strong></li>
-<li>
-<h4 id="font-colore59911-beforemountfont"><strong><font color='e59911' >beforeMount</font></strong></h4>
-<strong>在挂载开始之前被调用：相关的 render 函数首次被调用</strong></li>
-<li>
-<h4 id="font-colore59911-mountedfont"><strong><font color='e59911' >mounted</font></strong></h4>
-<strong>el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子</strong></li>
-<li>
-<h4 id="font-colore59911-beforeupdatefont"><strong><font color='e59911' >beforeUpdate</font></strong></h4>
-<strong>组件数据更新之前调用，发生在虚拟 DOM 打补丁之前</strong></li>
-<li>
-<h4 id="font-colore59911-updatefont"><strong><font color='e59911' >update</font></strong></h4>
-<strong>组件数据更新之后</strong></li>
-<li>
-<h4 id="font-colore59911-activitedfont"><strong><font color='e59911' >activited</font></strong></h4>
-<strong>keep-alive 专属，组件被激活时调用</strong></li>
-<li>
-<h4 id="font-colore59911-deactivatedfont"><strong><font color='e59911' >deactivated</font></strong></h4>
-<strong>keep-alive 专属，组件被销毁时调用</strong></li>
-<li>
-<h4 id="font-colore59911-beforedestoryfont"><strong><font color='e59911' >beforeDestory</font></strong></h4>
-<strong>组件销毁前调用</strong></li>
-<li>
-<h4 id="font-colore59911-destoryedfont"><strong><font color='e59911' >destoryed</font></strong></h4>
-<strong>组件销毁前调用</strong></li>
-</ul>
-<br>
-<h3 id="font-colore599115在什么阶段才能访问操作domfont"><font color='e59911'>5、在什么阶段才能访问操作DOM？</font></h3>
-<ul>
-<li>
-<h5 id="mounted-中就可以访问操作-dom"><strong>mounted 中就可以访问操作 DOM</strong></h5>
-</li>
-</ul>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hexo clean        // 清除之前建立的靜態檔案
+</span></span><span style="display:flex;"><span>hexo generate     // 建立靜態頁面
+</span></span><span style="display:flex;"><span>hexo deploy       // 部署至 GitHub
+</span></span></code></pre></div>
           </article>
         </div>
       </div>
@@ -337,13 +284,14 @@ VUE 基礎理論 | Hugo Profile
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#github-產生站點專案">GitHub 產生站點專案</a>
       <ul>
-        <li><a href="#font-colore599111-vue的双向数据绑定原理font"><font color='e59911'>1. Vue的双向数据绑定原理:</font></a></li>
-        <li><a href="#font-colore599112-spa-单页面的理解它的优缺点分别是什么font"><font color='e59911'>2. SPA 单页面的理解，它的优缺点分别是什么？</font></a></li>
-        <li><a href="#font-colore599113v-show-与-v-if-有什么区别font"><font color='e59911'>3、v-show 与 v-if 有什么区别？</font></a></li>
-        <li><a href="#font-colore599114谈谈你对-vue-生命周期的理解font"><font color='e59911'>4、谈谈你对 Vue 生命周期的理解？</font></a></li>
-        <li><a href="#font-colore599115在什么阶段才能访问操作domfont"><font color='e59911'>5、在什么阶段才能访问操作DOM？</font></a></li>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#hexo-專案-設置部分">hexo 專案 設置部分</a>
+      <ul>
+        <li></li>
       </ul>
     </li>
   </ul>
@@ -360,17 +308,17 @@ VUE 基礎理論 | Hugo Profile
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=VUE%20%e5%9f%ba%e7%a4%8e%e7%90%86%e8%ab%96&url=https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fvue-basic-theory%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=hexo-%e9%83%a8%e5%b1%ac%e9%9d%9c%e6%85%8b%e9%a0%81%e9%9d%a2%e5%88%b0-github&url=https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fhexo-deploy-github%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=VUE%20%e5%9f%ba%e7%a4%8e%e7%90%86%e8%ab%96: https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fvue-basic-theory%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=hexo-%e9%83%a8%e5%b1%ac%e9%9d%9c%e6%85%8b%e9%a0%81%e9%9d%a2%e5%88%b0-github: https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fhexo-deploy-github%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="mailto:?subject=VUE%20%e5%9f%ba%e7%a4%8e%e7%90%86%e8%ab%96&amp;body=Check out this site https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fvue-basic-theory%2f">
+                  <a target="_blank" href="mailto:?subject=hexo-%e9%83%a8%e5%b1%ac%e9%9d%9c%e6%85%8b%e9%a0%81%e9%9d%a2%e5%88%b0-github&amp;body=Check out this site https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fhexo-deploy-github%2f">
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>

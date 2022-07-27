@@ -4,7 +4,7 @@
 <head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="icon" href=/blog/favicon.ico type="image/gif">
+<link rel="icon" href=/blog/Lun.ico type="image/gif">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -127,7 +127,7 @@ VUE 前端與後端交互 cors \ 上線時 根目錄修改方式 | Hugo Profile
             
             <a class="navbar-brand primary-font text-wrap" href="/blog">
                 
-                <img src="/blog/favicon.ico" width="30" height="30"
+                <img src="/blog/Lun.ico" width="30" height="30"
                     class="d-inline-block align-top me-3">
                 Andy blog
                 
@@ -247,13 +247,13 @@ VUE 前端與後端交互 cors \ 上線時 根目錄修改方式 | Hugo Profile
           
           <article class="page-content  p-2">
           <h2 id="font-colore599111-corsfont"><font color='#e59911'>1. CORS:</font></h2>
-<h4 id="font-colorred說明font"><font color='red'>說明:</font></h4>
+<h4 id="font-colorred說明font"><strong><font color='red'>說明:</font></strong></h4>
 <p><strong>在以往前後端分離時 不同域名 或者 同域名但是不同PORT號 都會遇上 cors 跨域的問題, 一般都會在 後端 設定 cors 允許那些域名是可以進行訪問的,</strong></p>
 <p><strong>但是前端設置時必須一個一個針對有寫到 ajax 的部分 url 修改, 上線時域名也會不同 , 這時候還是要在修改一次, 相當麻煩, vue 這邊 提供前端設定</strong></p>
 <p><strong>cors 的方法, 並且可以針對後端的 url 取匿名 ,簡短對 ajax 使用時要填上完整的 url, 如果遇到 後端 域名換了只要修改配置文件那邊寫的後端url就</strong></p>
 <p><strong>可以修改全部有 ajax 有寫到url 的地方.</strong></p>
 <br>
-<h4 id="font-colorred使用方法font"><font color='red'>使用方法:</font></h4>
+<h4 id="font-colorred使用方法font"><strong><font color='red'>使用方法:</font></strong></h4>
 <ul>
 <li><strong>在 vite.config.js 配置文件裡面 的 export default defineConfig 添加這段 便可以使用 .</strong>
 <strong>(/api 這寫法 路由會自帶 api , 不用的話用 rewrite 處理)</strong></li>
@@ -270,11 +270,11 @@ VUE 前端與後端交互 cors \ 上線時 根目錄修改方式 | Hugo Profile
 </span></span><span style="display:flex;"><span>  }
 </span></span></code></pre></div><br>
 <h2 id="font-colore599112-base-上線時-根目錄可能在某個資料夾時-根路徑修改font"><font color='#e59911'>2. base 上線時 根目錄可能在某個資料夾時 根路徑修改</font></h2>
-<h4 id="font-colorred說明font-1"><font color='red'>說明:</font></h4>
+<h4 id="font-colorred說明font-1"><strong><font color='red'>說明:</font></strong></h4>
 <p><strong>上線時 檔案全部是放在 某個資料夾底下, 也就是說路徑原本是 <a href="https://localhost:44355/">https://localhost:3000/</a> 預設的根目錄是在自己目錄底下自動會自己找index.html,</strong></p>
 <p><strong>但是上線時 路徑 是會放在某個資料夾底下, 也就是說根目錄不是在自己的專案, 而是一個資料夾底下分門別類放著其他人的專案, 為了對應到自己的資料夾則需要另外在配置。</strong></p>
 <br>
-<h4 id="font-colorred使用方法font-1"><font color='red'>使用方法:</font></h4>
+<h4 id="font-colorred使用方法font-1"><strong><font color='red'>使用方法:</font></strong></h4>
 <ul>
 <li><strong>在 vite.config.js 配置文件裡面 的 export default defineConfig 添加這段 base: “路徑位置” ,便可以使用。</strong></li>
 </ul>
@@ -471,7 +471,7 @@ VUE 前端與後端交互 cors \ 上線時 根目錄修改方式 | Hugo Profile
         <div class="col-md-4 text-center">
             <div class="pb-2">
                 <a href="https://teduandy.github.io/blog/" title="Hugo Profile">
-                    <img alt="Footer logo" src="/blog/favicon.ico"
+                    <img alt="Footer logo" src="/blog/Lun.ico"
                         height="40px" width="40px">
                 </a>
             </div>

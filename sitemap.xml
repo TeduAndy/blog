@@ -2,14 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://teduandy.github.io/blog/categories/blog-hexo%E6%A1%86%E6%9E%B6/</loc>
+    <lastmod>2022-07-22T08:35:32+00:00</lastmod>
+  </url><url>
     <loc>https://teduandy.github.io/blog/blogs/</loc>
-    <lastmod>2022-07-21T15:13:32+00:00</lastmod>
+    <lastmod>2022-07-22T08:35:32+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/categories/</loc>
-    <lastmod>2022-07-21T15:13:32+00:00</lastmod>
+    <lastmod>2022-07-22T08:35:32+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/hexo-deploy-github/</loc>
+    <lastmod>2022-07-22T08:35:32+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/</loc>
-    <lastmod>2022-07-21T15:13:32+00:00</lastmod>
+    <lastmod>2022-07-22T08:35:32+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/categories/vue/</loc>
     <lastmod>2022-07-21T15:13:32+00:00</lastmod>
@@ -35,11 +41,47 @@
     <loc>https://teduandy.github.io/blog/blogs/vue-cors-set/</loc>
     <lastmod>2022-07-21T11:39:35+00:00</lastmod>
   </url><url>
-    <loc>https://teduandy.github.io/blog/blogs/gallery/</loc>
-    <lastmod>2022-06-25T18:35:46+05:30</lastmod>
+    <loc>https://teduandy.github.io/blog/categories/c-sharp/</loc>
+    <lastmod>2022-07-21T09:35:18+00:00</lastmod>
   </url><url>
-    <loc>https://teduandy.github.io/blog/blogs/vue_test/</loc>
-    <lastmod>2021-04-03T22:53:58+05:30</lastmod>
+    <loc>https://teduandy.github.io/blog/blogs/c-excel-out/</loc>
+    <lastmod>2022-07-21T09:35:18+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/hexo-category-set/</loc>
+    <lastmod>2022-07-19T16:08:18+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/hexo-install-and-setup/</loc>
+    <lastmod>2022-07-19T15:01:23+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/hexo-basic/</loc>
+    <lastmod>2022-07-19T14:57:47+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/categories/git/</loc>
+    <lastmod>2022-07-19T09:03:25+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/git-common-command/</loc>
+    <lastmod>2022-07-19T09:03:25+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/categories/sql/</loc>
+    <lastmod>2022-07-18T16:54:51+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/sql-often-use/</loc>
+    <lastmod>2022-07-18T16:54:51+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/c-scattered-notes/</loc>
+    <lastmod>2022-07-18T16:44:47+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/c-winform-printdocument/</loc>
+    <lastmod>2022-07-18T16:37:54+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/c-data-get-methods/</loc>
+    <lastmod>2022-07-18T16:26:39+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/c-fire-change-byte/</loc>
+    <lastmod>2022-07-18T16:00:22+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/c-mysql-conn/</loc>
+    <lastmod>2022-07-18T15:49:56+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/tags/</loc>
   </url>

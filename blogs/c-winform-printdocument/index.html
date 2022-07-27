@@ -38,21 +38,17 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-<meta property="og:title" content="VUE 基礎理論" />
-<meta property="og:description" content="1. Vue的双向数据绑定原理: Vue是采用数据劫持结合发布订阅模式，通过Object.defineProperty()来劫持各个属性的getter,setter, 在数据变动时发布消息给订阅者，触发相应的回调函数，从而实现数据双向绑定。
-2. SPA 单页面的理解，它的优缺点分别是什么？ SPA（ single-page application ）仅在 Web 页面初始化时加载相应的 HTML、JavaScript 和 CSS。 一旦页面加载完成， SPA 不会因为用户的操作而进行页面的重新加载或跳转；取而代之的是利用路由机制实现 HTML 内容的变换，UI 与用户的交互，避免页面的重新加载。
-優點： 用户体验好、快，内容的改变不需要重新加载整个页面，避免了不必要的跳转和重复渲染 基于上面一点，SPA 相对对服务器压力小 前后端职责分离，架构清晰，前端进行交互逻辑，后端负责数据处理 缺點： 初次加载耗时多：为实现单页 Web 应用功能及显示效果，需要在加载页面的时候将 JavaScript、CSS 统一加载，部分页面按需加载 前进后退路由管理：由于单页应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理 SEO 难度较大：由于所有的内容都在一个页面中动态替换显示，所以在 SEO 上其有着天然的弱势。 3、v-show 与 v-if 有什么区别？ V-if 是真正的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建； 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。 v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 的 “display” 属性进行切换。 所以，v-if 适用于在运行时很少改变条件，不需要频繁切换条件的场景； v-show 则适用于需要非常频繁切换条件的场景。 4、谈谈你对 Vue 生命周期的理解？ beforeCreate 组件实例被创建之初，组件的属性生效之前 created 组件实例已经完全创建，属性也绑定，但真实 dom 还没有生成，$el 还不可用 beforeMount 在挂载开始之前被调用：相关的 render 函数首次被调用 mounted el 被新创建的 vm." />
+<meta property="og:title" content="C# PrintDocument 元件列印說明 (winform)" />
+<meta property="og:description" content="說明： 一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明 使用方法： 1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖 private void button1_Click(object sender, EventArgs e) { // 創建列印物件 PrintDocument pd = new PrintDocument(); // 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個 pd.PrintPage &#43;= new PrintPageEventHandler(this.pd_PrintPage); // 啟動列印 pd.Print(); // 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog PrintPreviewDialog pD = new PrintPreviewDialog(); pD." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://teduandy.github.io/blog/blogs/vue-basic-theory/" /><meta property="article:section" content="blogs" />
-<meta property="article:published_time" content="2022-07-21T14:40:49+00:00" />
-<meta property="article:modified_time" content="2022-07-21T14:40:49+00:00" /><meta property="og:site_name" content="Andy blog" />
+<meta property="og:url" content="https://teduandy.github.io/blog/blogs/c-winform-printdocument/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2022-07-18T16:37:54+00:00" />
+<meta property="article:modified_time" content="2022-07-18T16:37:54+00:00" /><meta property="og:site_name" content="Andy blog" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="VUE 基礎理論"/>
-<meta name="twitter:description" content="1. Vue的双向数据绑定原理: Vue是采用数据劫持结合发布订阅模式，通过Object.defineProperty()来劫持各个属性的getter,setter, 在数据变动时发布消息给订阅者，触发相应的回调函数，从而实现数据双向绑定。
-2. SPA 单页面的理解，它的优缺点分别是什么？ SPA（ single-page application ）仅在 Web 页面初始化时加载相应的 HTML、JavaScript 和 CSS。 一旦页面加载完成， SPA 不会因为用户的操作而进行页面的重新加载或跳转；取而代之的是利用路由机制实现 HTML 内容的变换，UI 与用户的交互，避免页面的重新加载。
-優點： 用户体验好、快，内容的改变不需要重新加载整个页面，避免了不必要的跳转和重复渲染 基于上面一点，SPA 相对对服务器压力小 前后端职责分离，架构清晰，前端进行交互逻辑，后端负责数据处理 缺點： 初次加载耗时多：为实现单页 Web 应用功能及显示效果，需要在加载页面的时候将 JavaScript、CSS 统一加载，部分页面按需加载 前进后退路由管理：由于单页应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理 SEO 难度较大：由于所有的内容都在一个页面中动态替换显示，所以在 SEO 上其有着天然的弱势。 3、v-show 与 v-if 有什么区别？ V-if 是真正的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建； 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。 v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 的 “display” 属性进行切换。 所以，v-if 适用于在运行时很少改变条件，不需要频繁切换条件的场景； v-show 则适用于需要非常频繁切换条件的场景。 4、谈谈你对 Vue 生命周期的理解？ beforeCreate 组件实例被创建之初，组件的属性生效之前 created 组件实例已经完全创建，属性也绑定，但真实 dom 还没有生成，$el 还不可用 beforeMount 在挂载开始之前被调用：相关的 render 函数首次被调用 mounted el 被新创建的 vm."/>
+<meta name="twitter:title" content="C# PrintDocument 元件列印說明 (winform)"/>
+<meta name="twitter:description" content="說明： 一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明 使用方法： 1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖 private void button1_Click(object sender, EventArgs e) { // 創建列印物件 PrintDocument pd = new PrintDocument(); // 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個 pd.PrintPage &#43;= new PrintPageEventHandler(this.pd_PrintPage); // 啟動列印 pd.Print(); // 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog PrintPreviewDialog pD = new PrintPreviewDialog(); pD."/>
 
 
 <link rel="stylesheet" href="/blog//bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/blog//css/header.css" media="all">
@@ -96,7 +92,7 @@ if (!doNotTrack) {
 <script defer src="/blog//fontawesome-5/all-5.15.4.js"></script>
 
   <title>
-VUE 基礎理論 | Hugo Profile
+C# PrintDocument 元件列印說明 (winform) | Hugo Profile
 
   </title>
 </head>
@@ -233,97 +229,58 @@ VUE 基礎理論 | Hugo Profile
       <div class="col-sm-12 col-md-12 col-lg-9">
         <div class="pr-lg-4">
           <div class="title mb-5">
-            <h1 class="text-center mb-4">VUE 基礎理論</h1>
+            <h1 class="text-center mb-4">C# PrintDocument 元件列印說明 (winform)</h1>
             <div class="text-center">
                
               <small>|</small>
-              Jul 21, 2022
+              Jul 18, 2022
             </div>
           </div>
           
           <article class="page-content  p-2">
-          <h3 id="font-colore599111-vue的双向数据绑定原理font"><font color='e59911'>1. Vue的双向数据绑定原理:</font></h3>
-<p><strong>Vue是采用数据劫持结合发布订阅模式，通过Object.defineProperty()来劫持各个属性的getter,setter,</strong>
-<strong>在数据变动时发布消息给订阅者，触发相应的回调函数，从而实现数据双向绑定。</strong></p>
+          <h3 id="span-stylecolorred-說明-span"><strong><span style="color:red"> 說明： </span></strong></h3>
+<pre><code>一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明
+</code></pre>
 <br>
-<h3 id="font-colore599112-spa-单页面的理解它的优缺点分别是什么font"><font color='e59911'>2. SPA 单页面的理解，它的优缺点分别是什么？</font></h3>
-<p><strong>SPA（ single-page application ）仅在 Web 页面初始化时加载相应的 HTML、JavaScript 和 CSS。</strong>
-<strong>一旦页面加载完成，</strong>
-<strong>SPA 不会因为用户的操作而进行页面的重新加载或跳转；取而代之的是利用路由机制实现 HTML 内容的变换，UI 与用户的交互，避免页面的重新加载。</strong></p>
-<br>
-<ul>
-<li>
-<h4 id="優點"><strong>優點：</strong></h4>
-<ul>
-<li><strong>用户体验好、快，内容的改变不需要重新加载整个页面，避免了不必要的跳转和重复渲染</strong></li>
-<li><strong>基于上面一点，SPA 相对对服务器压力小</strong></li>
-<li><strong>前后端职责分离，架构清晰，前端进行交互逻辑，后端负责数据处理</strong></li>
-</ul>
-</li>
-<li>
-<h4 id="缺點"><strong>缺點：</strong></h4>
-<ul>
-<li><strong>初次加载耗时多：为实现单页 Web 应用功能及显示效果，需要在加载页面的时候将 JavaScript、CSS 统一加载，部分页面按需加载</strong></li>
-<li><strong>前进后退路由管理：由于单页应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理</strong></li>
-<li><strong>SEO 难度较大：由于所有的内容都在一个页面中动态替换显示，所以在 SEO 上其有着天然的弱势。</strong></li>
-</ul>
-</li>
-</ul>
-<br>
-<h3 id="font-colore599113v-show-与-v-if-有什么区别font"><font color='e59911'>3、v-show 与 v-if 有什么区别？</font></h3>
-<ul>
-<li>
-<h4 id="v-if"><strong>V-if</strong></h4>
-<strong>是真正的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建；</strong>
-<strong>也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。</strong></li>
-<li>
-<h4 id="v-show"><strong>v-show</strong></h4>
-<strong>就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 的 “display” 属性进行切换。</strong>
-<strong>所以，v-if 适用于在运行时很少改变条件，不需要频繁切换条件的场景；</strong>
-<strong>v-show 则适用于需要非常频繁切换条件的场景。</strong></li>
-</ul>
-<br>
-<h3 id="font-colore599114谈谈你对-vue-生命周期的理解font"><font color='e59911'>4、谈谈你对 Vue 生命周期的理解？</font></h3>
-<ul>
-<li>
-<h4 id="font-colore59911-beforecreatefont"><strong><font color='e59911' >beforeCreate</font></strong></h4>
-<strong>组件实例被创建之初，组件的属性生效之前</strong></li>
-<li>
-<h4 id="font-colore59911-createdfont"><strong><font color='e59911' >created</font></strong></h4>
-<strong>组件实例已经完全创建，属性也绑定，但真实 dom 还没有生成，$el 还不可用</strong></li>
-<li>
-<h4 id="font-colore59911-beforemountfont"><strong><font color='e59911' >beforeMount</font></strong></h4>
-<strong>在挂载开始之前被调用：相关的 render 函数首次被调用</strong></li>
-<li>
-<h4 id="font-colore59911-mountedfont"><strong><font color='e59911' >mounted</font></strong></h4>
-<strong>el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子</strong></li>
-<li>
-<h4 id="font-colore59911-beforeupdatefont"><strong><font color='e59911' >beforeUpdate</font></strong></h4>
-<strong>组件数据更新之前调用，发生在虚拟 DOM 打补丁之前</strong></li>
-<li>
-<h4 id="font-colore59911-updatefont"><strong><font color='e59911' >update</font></strong></h4>
-<strong>组件数据更新之后</strong></li>
-<li>
-<h4 id="font-colore59911-activitedfont"><strong><font color='e59911' >activited</font></strong></h4>
-<strong>keep-alive 专属，组件被激活时调用</strong></li>
-<li>
-<h4 id="font-colore59911-deactivatedfont"><strong><font color='e59911' >deactivated</font></strong></h4>
-<strong>keep-alive 专属，组件被销毁时调用</strong></li>
-<li>
-<h4 id="font-colore59911-beforedestoryfont"><strong><font color='e59911' >beforeDestory</font></strong></h4>
-<strong>组件销毁前调用</strong></li>
-<li>
-<h4 id="font-colore59911-destoryedfont"><strong><font color='e59911' >destoryed</font></strong></h4>
-<strong>组件销毁前调用</strong></li>
-</ul>
-<br>
-<h3 id="font-colore599115在什么阶段才能访问操作domfont"><font color='e59911'>5、在什么阶段才能访问操作DOM？</font></h3>
-<ul>
-<li>
-<h5 id="mounted-中就可以访问操作-dom"><strong>mounted 中就可以访问操作 DOM</strong></h5>
-</li>
-</ul>
-
+<h3 id="span-stylecolorred-使用方法-span"><strong><span style="color:red"> 使用方法： </span></strong></h3>
+<h4 id="1先在-需要-綁定的按鈕-創建點擊事件並且在事件裡面-產生一個-printdocument-物件-如圖">1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> button1_Click(<span style="color:#66d9ef">object</span> sender, EventArgs e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 創建列印物件 </span>
+</span></span><span style="display:flex;"><span>	PrintDocument pd = <span style="color:#66d9ef">new</span> PrintDocument();
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個</span>
+</span></span><span style="display:flex;"><span>	pd.PrintPage += <span style="color:#66d9ef">new</span> PrintPageEventHandler(<span style="color:#66d9ef">this</span>.pd_PrintPage);
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 啟動列印</span>
+</span></span><span style="display:flex;"><span>	pd.Print();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog</span>
+</span></span><span style="display:flex;"><span>	PrintPreviewDialog pD = <span style="color:#66d9ef">new</span> PrintPreviewDialog();
+</span></span><span style="display:flex;"><span>	pD.Document = pd;
+</span></span><span style="display:flex;"><span>	pD.ShowDialog();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><br>
+<h4 id="2接下來需要在-該執行的動作method-裡面-設置-我們要的文字及圖片">2.接下來需要在 該執行的動作(method) 裡面 設置 我們要的文字及圖片</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#75715e">//記得傳值參數須帶上 object sender, PrintPageEventArgs ev </span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> pd_PrintPage(<span style="color:#66d9ef">object</span> sender, PrintPageEventArgs ev)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 文字大小以及是甚麼文字體</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> printFont = <span style="color:#66d9ef">new</span> Font(<span style="color:#e6db74">&#34;Arial&#34;</span>, <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 字體顏色</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> color_font = Brushes.Black;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 座標</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> coordinate = <span style="color:#66d9ef">new</span> PointF(<span style="color:#ae81ff">300</span>, <span style="color:#ae81ff">300</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 寫入文字的方法</span>
+</span></span><span style="display:flex;"><span>	ev.Graphics.DrawString(<span style="color:#e6db74">&#34;要輸出的內容&#34;</span>, printFont, color_font, coordinate );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 獲取圖片</span>
+</span></span><span style="display:flex;"><span>	Image newImage = Image.FromFile(<span style="color:#e6db74">&#34;圖片地址&#34;</span>);
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 繪製圖片擺放位置以及大小控制 </span>
+</span></span><span style="display:flex;"><span>	Rectangle destRect = <span style="color:#66d9ef">new</span> Rectangle(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">200</span>, <span style="color:#ae81ff">100</span>); <span style="color:#75715e">// (前兩個是座標位置，後面兩個是設定大小)</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 圖片 寫入的方法	</span>
+</span></span><span style="display:flex;"><span>	ev.Graphics.DrawImage(newImage, destRect);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
           </article>
         </div>
       </div>
@@ -339,11 +296,8 @@ VUE 基礎理論 | Hugo Profile
   <ul>
     <li>
       <ul>
-        <li><a href="#font-colore599111-vue的双向数据绑定原理font"><font color='e59911'>1. Vue的双向数据绑定原理:</font></a></li>
-        <li><a href="#font-colore599112-spa-单页面的理解它的优缺点分别是什么font"><font color='e59911'>2. SPA 单页面的理解，它的优缺点分别是什么？</font></a></li>
-        <li><a href="#font-colore599113v-show-与-v-if-有什么区别font"><font color='e59911'>3、v-show 与 v-if 有什么区别？</font></a></li>
-        <li><a href="#font-colore599114谈谈你对-vue-生命周期的理解font"><font color='e59911'>4、谈谈你对 Vue 生命周期的理解？</font></a></li>
-        <li><a href="#font-colore599115在什么阶段才能访问操作domfont"><font color='e59911'>5、在什么阶段才能访问操作DOM？</font></a></li>
+        <li><a href="#span-stylecolorred-說明-span"><strong><span style="color:red"> 說明： </span></strong></a></li>
+        <li><a href="#span-stylecolorred-使用方法-span"><strong><span style="color:red"> 使用方法： </span></strong></a></li>
       </ul>
     </li>
   </ul>
@@ -360,17 +314,17 @@ VUE 基礎理論 | Hugo Profile
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=VUE%20%e5%9f%ba%e7%a4%8e%e7%90%86%e8%ab%96&url=https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fvue-basic-theory%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=C%23%20PrintDocument%20%e5%85%83%e4%bb%b6%e5%88%97%e5%8d%b0%e8%aa%aa%e6%98%8e%20%28winform%29&url=https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fc-winform-printdocument%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=VUE%20%e5%9f%ba%e7%a4%8e%e7%90%86%e8%ab%96: https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fvue-basic-theory%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=C%23%20PrintDocument%20%e5%85%83%e4%bb%b6%e5%88%97%e5%8d%b0%e8%aa%aa%e6%98%8e%20%28winform%29: https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fc-winform-printdocument%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="mailto:?subject=VUE%20%e5%9f%ba%e7%a4%8e%e7%90%86%e8%ab%96&amp;body=Check out this site https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fvue-basic-theory%2f">
+                  <a target="_blank" href="mailto:?subject=C%23%20PrintDocument%20%e5%85%83%e4%bb%b6%e5%88%97%e5%8d%b0%e8%aa%aa%e6%98%8e%20%28winform%29&amp;body=Check out this site https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fc-winform-printdocument%2f">
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
