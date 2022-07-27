@@ -4,12 +4,12 @@ date: 2022-07-21 14:16:42
 categories: vue
 ---
 
-### <font color='red'>1. Vue3 的一大特性函数 ---- setup</font>
+### <font color='e59911'>1. Vue3 的一大特性函数 ---- setup</font>
 + **說明: setup函数是 Composition API（组合API）的入口**
 
 <br>
 
-### <font color='red'>2. data 輸出到 Template 採用兩種函數</font>
+### <font color='e59911'>2. data 輸出到 Template 採用兩種函數</font>
 
 + **<font color='e59911'>1. ref函数 (使用常量居多)</font>**
 
@@ -39,11 +39,11 @@ const name = reactive({
 
 <br>
 
-### <font color='red'>3. 生命週期鉤子</font>
+### <font color='e59911'>3. 生命週期鉤子</font>
 
 + **vue2 跟 vue3 對應**
 
-|   <h3>vue2</h3>   |    <h3>vue3</h3>    |
+|<font color='e59911'>vue2</font>|<font color='e59911'>vue3</font>|
 |   :----------:    |    :----------:     |
 |**beforeCreate**   |                     |
 |**created**        |                     |

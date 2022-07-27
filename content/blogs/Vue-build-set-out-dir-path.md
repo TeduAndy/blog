@@ -5,13 +5,13 @@ categories: vue
 ---
 
 
-### <font color='red'>說明:</font>
+### <font color='e59911'>說明:</font>
 
 + **輸出時 打包位置 改去別的地方**
 
 <br>
 
-### <font color='red'>使用方法:</font>
+### <font color='e59911'>使用方法:</font>
 
 + **在 vite.config.js 配置文件裡面 的 export default defineConfig 添加這段 build:{outDir: '輸出的位置路徑'},  打包時位置便會到輸入的路徑裡面**
 

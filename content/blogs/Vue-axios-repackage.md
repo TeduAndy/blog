@@ -4,7 +4,7 @@ date: 2022-07-21 14:09:01
 categories: vue
 ---
 
-#### <font color='red'>說明:</font>
+#### <font color='e59911'>說明:</font>
 
 **一般使用 axios 是 直接 import 引入 雖然 後端路由 可以透過 配置 重新命名處理掉一長串的網址**
 
@@ -14,7 +14,7 @@ categories: vue
 
 <br>
 
-#### <font color='red'>使用方法(先建立一個 js 檔案 並且加入以下):</font>
+#### <font color='e59911'>使用方法(先建立一個 js 檔案 並且加入以下):</font>
 ```js
 // 先引入 原本安裝的 axios
 import axios from "axios";
@@ -32,7 +32,7 @@ export default request
 
 <br>
 
-#### <font color='red'>別人引入使用:</font>
+#### <font color='e59911'>別人引入使用:</font>
 ```js
 import 自己重新命名 from 設定的 js檔案
 ```

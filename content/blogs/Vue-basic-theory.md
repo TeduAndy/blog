@@ -4,13 +4,13 @@ date: 2022-07-21 14:40:49
 categories: vue
 ---
 
-### <font color='red'>1. Vue的双向数据绑定原理:</font>
+### <font color='e59911'>1. Vue的双向数据绑定原理:</font>
    **Vue是采用数据劫持结合发布订阅模式，通过Object.defineProperty()来劫持各个属性的getter,setter,**
    **在数据变动时发布消息给订阅者，触发相应的回调函数，从而实现数据双向绑定。**
 
 <br>
 
-### <font color='red'>2. SPA 单页面的理解，它的优缺点分别是什么？</font>
+### <font color='e59911'>2. SPA 单页面的理解，它的优缺点分别是什么？</font>
    **SPA（ single-page application ）仅在 Web 页面初始化时加载相应的 HTML、JavaScript 和 CSS。**
    **一旦页面加载完成，**
    **SPA 不会因为用户的操作而进行页面的重新加载或跳转；取而代之的是利用路由机制实现 HTML 内容的变换，UI 与用户的交互，避免页面的重新加载。**
@@ -29,7 +29,7 @@ categories: vue
 
 <br>
 
-### <font color='red'>3、v-show 与 v-if 有什么区别？</font>
+### <font color='e59911'>3、v-show 与 v-if 有什么区别？</font>
 
 + #### **V-if**
    **是真正的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建；**
@@ -41,7 +41,7 @@ categories: vue
 
 <br>
 
-### <font color='red'>4、谈谈你对 Vue 生命周期的理解？</font>
+### <font color='e59911'>4、谈谈你对 Vue 生命周期的理解？</font>
 
 +  #### **<font color='e59911' >beforeCreate</font>**
 	**组件实例被创建之初，组件的属性生效之前**
@@ -66,6 +66,6 @@ categories: vue
 
 <br>
 
-### <font color='red'>5、在什么阶段才能访问操作DOM？</font>
+### <font color='e59911'>5、在什么阶段才能访问操作DOM？</font>
 
 + ##### **mounted 中就可以访问操作 DOM**

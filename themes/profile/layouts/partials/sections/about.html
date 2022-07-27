@@ -12,15 +12,32 @@
             {{ end }}
             <div class="col-sm-12 col-md-12 col-lg-8 content">
                 {{ .Site.Params.about.content | markdownify }}
+                <div class="d-md-flex">
+                    <!-- skills -->
+                    <div>
+                        {{ if .Site.Params.about.skills.enable }}
+                        {{ .Site.Params.about.skills.title }}
+                        <ul>
+                            {{ range .Site.Params.about.skills.items }}
+                            <li>{{ . | markdownify }}</li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </div>
 
-                {{ if .Site.Params.about.skills.enable }}
-                {{ .Site.Params.about.skills.title }}
-                <ul>
-                    {{ range .Site.Params.about.skills.items }}
-                    <li>{{ . | markdownify }}</li>
-                    {{ end }}
-                </ul>
-                {{ end }}
+                    <!-- framework -->
+                    <div>
+                        {{ if .Site.Params.about.framework.enable }}
+                        {{ .Site.Params.about.framework.title }}
+                        <ul>
+                            {{ range .Site.Params.about.framework.items }}
+                            <li>{{ . | markdownify }}</li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </div>
+                </div>
+               
             </div>
         </div>
     </div>
