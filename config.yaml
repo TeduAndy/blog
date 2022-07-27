@@ -1,4 +1,4 @@
-baseURL: ""
+baseURL: "https://teduandy.github.io/blog/"
 languageCode: "en-us"
 title: "Hugo Profile"
 theme: profile
@@ -51,8 +51,8 @@ Menus:
 params:
   title: Andy blog
   description: Text about my cool site
-  # staticPath: ""  # The path to serve the static files from
-  favicon: "/favicon.ico"
+  staticPath: "/blog/" # The path to serve the static files from
+  favicon: "/blog/favicon.ico"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
   # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
@@ -107,7 +107,7 @@ params:
     title: "This is my Web Blog."
     subtitle: ""
     content: "I'm just an ordinary programmer. <br> Diligence redeems stupidity."
-    image: /out.png
+    image: /blog/out.png
     button:
       enable: true
       name: "Resume"
@@ -123,7 +123,7 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/images/me.png"
+    image: "/blog/images/me.png"
     content: |-
       I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. 
 
@@ -269,7 +269,7 @@ params:
     items:
       - title: Hugo Profile
         content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
-        image: /images/projects/profile.png
+        image: /blog/images/projects/profile.png
         featured:
           name: Demo
           link: https://hugo-profile.netlify.app
@@ -287,7 +287,7 @@ params:
 
       - title: Image Converter
         content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
-        image: /images/projects/converter.jpg
+        image: /blog/images/projects/converter.jpg
         featured:
           name: Demo
           link: https://django-converter.herokuapp.com
@@ -300,7 +300,7 @@ params:
 
       - title: Hugo Profile V2
         content: A clean and simple Hugo template for personal portfolio and blog.
-        image: /images/projects/profile2.jpg
+        image: /blog/images/projects/profile2.jpg
         featured:
           name: Demo V2
           link: https://hugo-profile-2.netlify.app
