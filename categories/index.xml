@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Hugo Profile</title>
-    <link>https://teduandy.github.io/blog/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 03 Apr 2021 22:53:58 +0530</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Apr 2021 22:53:58 +0530</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>vue</title>
-      <link>https://teduandy.github.io/blog/categories/vue/</link>
+      <link>/categories/vue/</link>
       <pubDate>Sat, 03 Apr 2021 22:53:58 +0530</pubDate>
       
-      <guid>https://teduandy.github.io/blog/categories/vue/</guid>
+      <guid>/categories/vue/</guid>
       <description></description>
     </item>
     
