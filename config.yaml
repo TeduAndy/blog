@@ -7,7 +7,7 @@ theme: profile
 categories: categories
 
 Paginate: 6
-disqusShortname: gurusabarish
+# disqusShortname: gurusabarish
 googleAnalytics: G-DWJJVE27WD
 
 markup:
