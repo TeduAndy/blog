@@ -1,21 +1,21 @@
 {{ if .Site.Params.hero.enable | default false }}
-<section id="hero" class="py-5 align-middle d-flex justify-content-center align-items-center">
+<section id="hero" class="py-5 align-middle d-flex justify-content-center align-items-md-center">
     <div class="container px-3 px-sm-5 px-md-5 px-lg-5 pt-lg-3">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-8 content" id="primary-font">
-                <span class="subtitle">
+                <span class="subtitle text-sm-center">
                     {{ .Site.Params.hero.intro }}
                 </span>
-                <h2>
+                <h2 class="text-center text-md-start">
                     {{ .Site.Params.hero.title }}
                 </h2>
-                <h3>
+                <h3 class="text-center text-md-start ">
                     {{ .Site.Params.hero.subtitle }}
                 </h3>
-                <p class="hero-content">
+                <p class="hero-content text-center text-md-start ps-md-2">
                     {{ .Site.Params.hero.content | markdownify }}
                 </p>
-                <div class="row">
+                <div class="row justify-content-center justify-content-md-start">
                     <div class="col-auto h-100">
                         {{ if .Site.Params.hero.button.enable }}
                         <a href="{{ .Site.Params.hero.button.url }}" class="btn">
@@ -23,12 +23,12 @@
                         </a>
                         {{ end }}
                     </div>
-                    <div class="col-auto px-0 h-100">
+                    <div class="col-auto px-0 h-100 mt-1">
                         {{- partial "sections/hero/social.html" . -}}
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="col-sm-12 col-md-12 col-lg-4 mt-5 mt-md-0">
                 <div class="row justify-content-center ">
                     <div class="col-sm-12 col-md-9 image px-5 px-md-5 px-lg-0 text-center">
                         <img src="{{ .Site.Params.hero.image }}" 

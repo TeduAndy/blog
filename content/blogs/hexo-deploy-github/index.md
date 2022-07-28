@@ -9,22 +9,24 @@ categories: Blog-Hexo框架
 #### <font color='e59911'>1. 先點 Github 官網跟著圖片點</font>
 
 **第一步 點擊 repositories**
-![](/2022/07/22/hexo-deploy-github/github1.png)
+<br>
+![](github1.png)
 
 <br>
 
 **第二步 點new 產生站點專案**
-![](/2022/07/22/hexo-deploy-github/github2.png)
+<br>
+![](github2.png)
 
 <br>
 
 **第三步 在橘色文字那邊輸入 你的用戶名 + github.io 然後按 create repository**
-![](/2022/07/22/hexo-deploy-github/github3.png)
+![](github3.png)
 
 <br>
 
 **第四步 點擊 Your repositories 點選 剛創建的專案 點選 code 會得到 部屬會用到網址**
-![](/2022/07/22/hexo-deploy-github/github4.png)
+![](github4.png)
 
 ## hexo 專案 設置部分
 

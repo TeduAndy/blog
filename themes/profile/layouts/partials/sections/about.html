@@ -12,11 +12,11 @@
             {{ end }}
             <div class="col-sm-12 col-md-12 col-lg-8 content">
                 {{ .Site.Params.about.content | markdownify }}
-                <div class="d-md-flex">
+                <div class="m-sm-auto d-md-flex mt-5 mt-md-5">
                     <!-- skills -->
-                    <div>
+                    <div class="">
                         {{ if .Site.Params.about.skills.enable }}
-                        {{ .Site.Params.about.skills.title }}
+                        <h3>{{ .Site.Params.about.skills.title }}</h3>
                         <ul>
                             {{ range .Site.Params.about.skills.items }}
                             <li>{{ . | markdownify }}</li>
@@ -26,9 +26,9 @@
                     </div>
 
                     <!-- framework -->
-                    <div>
+                    <div class="mt-5 mt-md-0">
                         {{ if .Site.Params.about.framework.enable }}
-                        {{ .Site.Params.about.framework.title }}
+                        <h3> {{ .Site.Params.about.framework.title }}</h3>
                         <ul>
                             {{ range .Site.Params.about.framework.items }}
                             <li>{{ . | markdownify }}</li>
