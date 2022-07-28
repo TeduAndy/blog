@@ -38,17 +38,21 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-<meta property="og:title" content="hexo-部屬靜態頁面到-github" />
-<meta property="og:description" content="GitHub 產生站點專案 1. 先點 Github 官網跟著圖片點 第一步 點擊 repositories 第二步 點new 產生站點專案 第三步 在橘色文字那邊輸入 你的用戶名 &#43; github.io 然後按 create repository 第四步 點擊 Your repositories 點選 剛創建的專案 點選 code 會得到 部屬會用到網址 hexo 專案 設置部分 1. hexo 部屬前需安裝的套件 npm install hexo-deployer-git --save 2. 修改根目錄的_config.yml檔案 # Deployment ## Docs: https://hexo.io/docs/one-command-deployment deploy: type: &#34;git&#34; // 類別請寫 git repo: https://github.com/username/username.github.io.git // github專案位置 branch: master // 上傳到此專案的哪一個分支，通常都是 master 3. 輸入指令部屬上傳 每次部屬請進行三步驟 hexo clean // 清除之前建立的靜態檔案 hexo generate // 建立靜態頁面 hexo deploy // 部署至 GitHub " />
+<meta property="og:title" content="Dapper 使用介紹" />
+<meta property="og:description" content="說明： Dapper輕量級的 ORM，必須要自己定義 C# class、管理連線、自己寫 SQL，但是套件非常迷你而且效能非常好，很適合已經學會目標資料庫語法的開發者。 安裝： 1. 專案點右鍵 -&gt; 管理 NuGet 套件
+2. 收尋 1. Dapper and 1. MySQL Connector 並且安裝
+Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。 2.開啟一個 MySQL 連線： 用 var _db = new MySqlConnection(&quot;連線資訊&quot;); 就能開啟連線。比較需要注意的是，最好用注入組態設定的方法取得連線資訊，以及用 using 語法自動幫我們關閉連線，以免忘記關閉造成連線被占用 3.連線資訊設定： 在專案新增一個空類 名叫 serverMq.cs 裡面是用來填入 我們從組態設定抓來的 連線字串 public class servermq { public string ConnectionString { get; set; } } 到 appsettings.json 組態設定裡面 新增 mysql 連線字串 &#34;AllowedHosts&#34;: &#34;*&#34;, &#34;MySQL&#34;: { &#34;ConnectionString&#34;: &#34;server=127." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://teduandy.github.io/blog/blogs/hexo-deploy-github/" /><meta property="article:section" content="blogs" />
-<meta property="article:published_time" content="2022-07-22T08:35:32+00:00" />
-<meta property="article:modified_time" content="2022-07-22T08:35:32+00:00" /><meta property="og:site_name" content="Andy blog" />
+<meta property="og:url" content="https://teduandy.github.io/blog/blogs/aspcore-dapper/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2022-07-19T09:27:01+00:00" />
+<meta property="article:modified_time" content="2022-07-19T09:27:01+00:00" /><meta property="og:site_name" content="Andy blog" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="hexo-部屬靜態頁面到-github"/>
-<meta name="twitter:description" content="GitHub 產生站點專案 1. 先點 Github 官網跟著圖片點 第一步 點擊 repositories 第二步 點new 產生站點專案 第三步 在橘色文字那邊輸入 你的用戶名 &#43; github.io 然後按 create repository 第四步 點擊 Your repositories 點選 剛創建的專案 點選 code 會得到 部屬會用到網址 hexo 專案 設置部分 1. hexo 部屬前需安裝的套件 npm install hexo-deployer-git --save 2. 修改根目錄的_config.yml檔案 # Deployment ## Docs: https://hexo.io/docs/one-command-deployment deploy: type: &#34;git&#34; // 類別請寫 git repo: https://github.com/username/username.github.io.git // github專案位置 branch: master // 上傳到此專案的哪一個分支，通常都是 master 3. 輸入指令部屬上傳 每次部屬請進行三步驟 hexo clean // 清除之前建立的靜態檔案 hexo generate // 建立靜態頁面 hexo deploy // 部署至 GitHub "/>
+<meta name="twitter:title" content="Dapper 使用介紹"/>
+<meta name="twitter:description" content="說明： Dapper輕量級的 ORM，必須要自己定義 C# class、管理連線、自己寫 SQL，但是套件非常迷你而且效能非常好，很適合已經學會目標資料庫語法的開發者。 安裝： 1. 專案點右鍵 -&gt; 管理 NuGet 套件
+2. 收尋 1. Dapper and 1. MySQL Connector 並且安裝
+Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。 2.開啟一個 MySQL 連線： 用 var _db = new MySqlConnection(&quot;連線資訊&quot;); 就能開啟連線。比較需要注意的是，最好用注入組態設定的方法取得連線資訊，以及用 using 語法自動幫我們關閉連線，以免忘記關閉造成連線被占用 3.連線資訊設定： 在專案新增一個空類 名叫 serverMq.cs 裡面是用來填入 我們從組態設定抓來的 連線字串 public class servermq { public string ConnectionString { get; set; } } 到 appsettings.json 組態設定裡面 新增 mysql 連線字串 &#34;AllowedHosts&#34;: &#34;*&#34;, &#34;MySQL&#34;: { &#34;ConnectionString&#34;: &#34;server=127."/>
 
 
 <link rel="stylesheet" href="/blog//bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/blog//css/header.css" media="all">
@@ -92,7 +96,7 @@ if (!doNotTrack) {
 <script defer src="/blog//fontawesome-5/all-5.15.4.js"></script>
 
   <title>
-hexo-部屬靜態頁面到-github | Hugo Profile
+Dapper 使用介紹 | Hugo Profile
 
   </title>
 </head>
@@ -229,49 +233,122 @@ hexo-部屬靜態頁面到-github | Hugo Profile
       <div class="col-sm-12 col-md-12 col-lg-9">
         <div class="pr-lg-4">
           <div class="title mb-5">
-            <h1 class="text-center mb-4">hexo-部屬靜態頁面到-github</h1>
+            <h1 class="text-center mb-4">Dapper 使用介紹</h1>
             <div class="text-center">
                
               <small>|</small>
-              Jul 22, 2022
+              Jul 19, 2022
             </div>
           </div>
           
           <article class="page-content  p-2">
-          <h2 id="github-產生站點專案">GitHub 產生站點專案</h2>
-<h4 id="font-colore599111-先點-github-官網跟著圖片點font"><font color='e59911'>1. 先點 Github 官網跟著圖片點</font></h4>
-<p><strong>第一步 點擊 repositories</strong>
-<br>
-<img src="github1.png" alt=""></p>
-<br>
-<p><strong>第二步 點new 產生站點專案</strong>
-<br>
-<img src="github2.png" alt=""></p>
-<br>
-<p><strong>第三步 在橘色文字那邊輸入 你的用戶名 + github.io 然後按 create repository</strong>
-<img src="github3.png" alt=""></p>
-<br>
-<p><strong>第四步 點擊 Your repositories 點選 剛創建的專案 點選 code 會得到 部屬會用到網址</strong>
-<img src="github4.png" alt=""></p>
-<h2 id="hexo-專案-設置部分">hexo 專案 設置部分</h2>
-<h4 id="font-colore599111-hexo-部屬前需安裝的套件font"><font color='e59911'>1. hexo 部屬前需安裝的套件</font></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install hexo-deployer-git --save
-</span></span></code></pre></div><br>
-<h4 id="font-colore599112-修改根目錄的_configyml檔案font"><font color='e59911'>2. 修改根目錄的_config.yml檔案</font></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#75715e"># Deployment</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">## Docs: https://hexo.io/docs/one-command-deployment</span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">deploy</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>: <span style="color:#e6db74">&#34;git&#34;</span> <span style="color:#ae81ff">// 類別請寫 git</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">repo</span>: <span style="color:#ae81ff">https://github.com/username/username.github.io.git // github專案位置</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">branch</span>: <span style="color:#ae81ff">master  // 上傳到此專案的哪一個分支，通常都是 master </span>
-</span></span></code></pre></div><br>
-<h4 id="font-colore599113-輸入指令部屬上傳font"><font color='e59911'>3. 輸入指令部屬上傳</font></h4>
+          <h4 id="font-colorred說明font"><strong><font color='red'>說明：</font></strong></h4>
 <ul>
-<li><strong>每次部屬請進行三步驟</strong></li>
+<li><strong>Dapper輕量級的 ORM，必須要自己定義 C# class、管理連線、自己寫 SQL，但是套件非常迷你而且效能非常好，很適合已經學會目標資料庫語法的開發者。</strong></li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hexo clean        // 清除之前建立的靜態檔案
-</span></span><span style="display:flex;"><span>hexo generate     // 建立靜態頁面
-</span></span><span style="display:flex;"><span>hexo deploy       // 部署至 GitHub
+<br>
+<h4 id="font-colorred安裝font"><strong><font color='red'>安裝：</font></strong></h4>
+<p><strong>1. 專案點右鍵 -&gt; 管理 NuGet 套件</strong></p>
+<p><strong>2.</strong> <strong>收尋 1. <a href="https://www.nuget.org/packages/Dapper">Dapper</a> and 1. <a href="https://www.nuget.org/packages/MySqlConnector/">MySQL Connector</a> 並且安裝</strong></p>
+<br>
+<h4 id="font-colorreddapper-連線-font"><strong><font color='red'>Dapper 連線 :</font></strong></h4>
+<ul>
+<li><strong>1. 定義一個用來接資料的 Model 類別：</strong>
+<strong>Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。</strong></li>
+</ul>
+<br>
+<ul>
+<li><strong>2.開啟一個 MySQL 連線：</strong>
+<strong>用 <code>var _db = new MySqlConnection(&quot;連線資訊&quot;);</code>
+就能開啟連線。比較需要注意的是，最好用注入組態設定的方法取得連線資訊，以及用 using 語法自動幫我們關閉連線，以免忘記關閉造成連線被占用</strong></li>
+</ul>
+<br>
+<ul>
+<li><strong>3.連線資訊設定：</strong>
+<strong>在專案新增一個空類 名叫 serverMq.cs 裡面是用來填入 我們從組態設定抓來的 連線字串</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">servermq</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> ConnectionString { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><center style="font-weight:600"> 到 appsettings.json 組態設定裡面 新增 mysql 連線字串</center>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;AllowedHosts&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;*&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;MySQL&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;ConnectionString&#34;</span>: <span style="color:#e6db74">&#34;server=127.0.0.1;userid=用戶名字;password=密碼;database=連線的資料庫名字;&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><center style="font-weight:600"> 然後在 Program.cs 裡面設定 啟動時 抓取 連線字串 並且 注入到 我設定好的容器</center>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>builder.Services.Configure&lt;servermq&gt;(builder.Configuration.GetSection(<span style="color:#e6db74">&#34;MySQL&#34;</span>));
+</span></span></code></pre></div><center style="font-weight:600"> 然後在 controller 裡面的 controller建構函數 啟動時 把 注入的 servermq 注入到 設定好的空 _options</center>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> servermq _options;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> UserController(IOptions&lt;servermq&gt; options)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	_options = options.Value;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 取 連線字串</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> _db = <span style="color:#66d9ef">new</span> MySqlConnection(_options.ConnectionString);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 便可以連接到 mysql </span>
+</span></span></code></pre></div><br>
+<h4 id="font-colorreddapper使用-font"><strong><font color='red'>Dapper使用: </font></strong></h4>
+<br>
+<h5 id="font-colororange-1-dapper---query-font"><strong><font color='orange'> 1. Dapper - Query </font></strong></h5>
+<p><strong>光是查詢Dapper就提供了很多種方法可以使用，很多方法都跟Lambda用法一樣。</strong></p>
+<ul>
+<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#Query"><strong>Query</strong></a></li>
+<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QueryFirst"><strong>QueryFirst</strong></a></li>
+<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QueryFirstOrDefault"><strong>QueryFirstOrDefault</strong></a></li>
+<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QuerySingle"><strong>QuerySingle</strong></a></li>
+<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QuerySingleOrDefault"><strong>QuerySingleOrDefault</strong></a></li>
+<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QueryMultiple"><strong>QueryMultiple</strong></a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>List&lt;MyModel&gt; results = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> (SqlConnection conn = <span style="color:#66d9ef">new</span> SqlConnection(strConnection))
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">string</span> strSql =<span style="color:#e6db74">&#34;Select * from Users&#34;</span> ;
+</span></span><span style="display:flex;"><span>	results = conn.Query&lt;MyModel&gt;(strSql).ToList();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><br>
+<h5 id="font-colororange-2-dapper---execute-font"><strong><font color='orange'> 2. Dapper - Execute </font></strong></h5>
+<p><strong>執行Insert、Update、Delete、Stored Procedure時使用。</strong></p>
+<ul>
+<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#Stored%20Procedure"><strong>Stored Procedure</strong></a></li>
+<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#INSERT%20statement"><strong>INSERT statement</strong></a></li>
+<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#UPDATE%20statement"><strong>UPDATE statement</strong></a></li>
+<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#DELETE%20statement"><strong>DELETE statement</strong></a></li>
+</ul>
+<p><strong>新增多筆範例 (修改\刪除也是同一種方法, 只是 sql 不同)</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#75715e">//新增多筆範例</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> (SqlConnection conn = <span style="color:#66d9ef">new</span> SqlConnection(strConnection))
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">string</span> strSql =<span style="color:#e6db74">&#34;INSERT INTO Users(col1,col2) VALUES (@c1,@c2);&#34;</span> ;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//新增多筆參數</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">dynamic</span> datas = <span style="color:#66d9ef">new</span> []{ <span style="color:#66d9ef">new</span> { c1 = <span style="color:#e6db74">&#34;A&#34;</span>, c2 = <span style="color:#e6db74">&#34;A2&#34;</span> }
+</span></span><span style="display:flex;"><span>				, <span style="color:#66d9ef">new</span> { c1 = <span style="color:#e6db74">&#34;B&#34;</span>, c2 = <span style="color:#e6db74">&#34;B2&#34;</span> }
+</span></span><span style="display:flex;"><span>				, <span style="color:#66d9ef">new</span> { c1 = <span style="color:#e6db74">&#34;C&#34;</span>, c2 = <span style="color:#e6db74">&#34;C2&#34;</span> }};
+</span></span><span style="display:flex;"><span>	conn.Execute( strSql, datas);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><br>
+<h5 id="font-colororange-3-dapper---async-font"><strong><font color='orange'> 3. Dapper - Async </font></strong></h5>
+<p><strong>非同步方法Dapper也是有提供，寫法只有一點點不一樣而已。</strong></p>
+<ul>
+<li><strong>ExecuteAsync</strong></li>
+<li><strong>QueryAsync</strong></li>
+<li><strong>QueryFirstAsync</strong></li>
+<li><strong>QueryFirstOrDefaultAsync</strong></li>
+<li><strong>QuerySingleAsync</strong></li>
+<li><strong>QuerySingleOrDefaultAsync</strong></li>
+<li><strong>QueryMultipleAsync</strong></li>
+</ul>
+<p><strong>寫法沒多大改變，除了方法名稱不一樣以外，最大的不同是要.Result</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>List&lt;MyModel&gt; results = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> (SqlConnection conn = <span style="color:#66d9ef">new</span> SqlConnection(strConnection))
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">string</span> strSql =<span style="color:#e6db74">&#34;Select * from Users&#34;</span> ;
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//非同步</span>
+</span></span><span style="display:flex;"><span>	results = conn. QueryAsync&lt;MyModel&gt;(strSql).Result.ToList();
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div>
           </article>
         </div>
@@ -286,12 +363,7 @@ hexo-部屬靜態頁面到-github | Hugo Profile
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li><a href="#github-產生站點專案">GitHub 產生站點專案</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="#hexo-專案-設置部分">hexo 專案 設置部分</a>
+    <li>
       <ul>
         <li></li>
       </ul>
@@ -310,17 +382,17 @@ hexo-部屬靜態頁面到-github | Hugo Profile
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=hexo-%e9%83%a8%e5%b1%ac%e9%9d%9c%e6%85%8b%e9%a0%81%e9%9d%a2%e5%88%b0-github&url=https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fhexo-deploy-github%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=Dapper%20%e4%bd%bf%e7%94%a8%e4%bb%8b%e7%b4%b9&url=https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2faspcore-dapper%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=hexo-%e9%83%a8%e5%b1%ac%e9%9d%9c%e6%85%8b%e9%a0%81%e9%9d%a2%e5%88%b0-github: https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fhexo-deploy-github%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=Dapper%20%e4%bd%bf%e7%94%a8%e4%bb%8b%e7%b4%b9: https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2faspcore-dapper%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="mailto:?subject=hexo-%e9%83%a8%e5%b1%ac%e9%9d%9c%e6%85%8b%e9%a0%81%e9%9d%a2%e5%88%b0-github&amp;body=Check out this site https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fhexo-deploy-github%2f">
+                  <a target="_blank" href="mailto:?subject=Dapper%20%e4%bd%bf%e7%94%a8%e4%bb%8b%e7%b4%b9&amp;body=Check out this site https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2faspcore-dapper%2f">
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
