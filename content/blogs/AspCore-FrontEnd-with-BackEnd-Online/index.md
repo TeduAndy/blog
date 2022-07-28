@@ -1,7 +1,7 @@
 ---
 title: 上線使用後端搭配前端
 date: 2022-07-19 11:26:12
-category: Asp.net core 
+categories: Asp.net core 
 ---
 
 
