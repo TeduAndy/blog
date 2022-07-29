@@ -38,19 +38,19 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-<meta property="og:title" content="axios-mock-adapter為axios提供測試用的假資料" />
-<meta property="og:description" content="安裝指令: npm install axios-mock-adapter --save-dev 說明: 開發時期或是要做Unit testing需要用假資料來取代server api直接回傳。
-import axios from &#39;axios&#39; import MockAdapter from &#39;axios-mock-adapter&#39; let mock = new MockAdapter(axios) mock.onGet(&#39;/users&#39;).reply(200, { users: [ { id: 1, name: &#39;John Smith&#39; }, { id: 2, name: &#39;John Doe&#39; } ] }) axios.get(&#39;/users&#39;) .then(response =&gt; { console.log(response.data) }) 使用方法: 創建uri跟假資料的對應很簡單, 基本上也就是’on&rsquo;‘Method’, 比如說onGet, onPost, 另外還有一個onAny可以處理所有的HTTP methods 做過mock後, axios呼叫這個uri所拿回來的資料通通就都會是假資料了, 這樣也不用為了塞假資料開發測試而去改動自己的程式" />
+<meta property="og:title" content="SQL 運行時執行順序及些許觀念" />
+<meta property="og:description" content="1. SQL 執行語句時 先後順序 上面的圖片總共分四個區塊分別是：select 後面欄位、from 主表、where 條件、left join部分
+1. 資料庫運行時會先從 from 主表尋找資料，再來 where 條件找跟主表相關的做排除 2. 再來 left join 部分，再來 where 條件找跟 left join 相關的做排除 3. 最後才是 select 後面欄位的建置 2. 部分觀念說明 在 join 另外一張表的時候，如果已有明確要尋找的條件，可以再 join裡面就做排除，不需要再帶不相關的資料近來，減少查詢次數，限縮資料範圍 避免在 select 欄位區塊 做子查詢，查詢次數會已次方成長，並且造成查詢速度大幅度遞減，這意思就是 最後運行到建構 欄位 每一筆因為欄位裡面有做子查詢，等同於建構每一筆資料時都要做一次查詢。 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://teduandy.github.io/blog/blogs/vue-axios-mock-adapter/" /><meta property="article:section" content="blogs" />
-<meta property="article:published_time" content="2022-07-21T15:01:51+00:00" />
-<meta property="article:modified_time" content="2022-07-21T15:01:51+00:00" /><meta property="og:site_name" content="Andy blog" />
+<meta property="og:url" content="https://teduandy.github.io/blog/blogs/sql-execution-order/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2022-07-18T16:54:51+00:00" />
+<meta property="article:modified_time" content="2022-07-18T16:54:51+00:00" /><meta property="og:site_name" content="Andy blog" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="axios-mock-adapter為axios提供測試用的假資料"/>
-<meta name="twitter:description" content="安裝指令: npm install axios-mock-adapter --save-dev 說明: 開發時期或是要做Unit testing需要用假資料來取代server api直接回傳。
-import axios from &#39;axios&#39; import MockAdapter from &#39;axios-mock-adapter&#39; let mock = new MockAdapter(axios) mock.onGet(&#39;/users&#39;).reply(200, { users: [ { id: 1, name: &#39;John Smith&#39; }, { id: 2, name: &#39;John Doe&#39; } ] }) axios.get(&#39;/users&#39;) .then(response =&gt; { console.log(response.data) }) 使用方法: 創建uri跟假資料的對應很簡單, 基本上也就是’on&rsquo;‘Method’, 比如說onGet, onPost, 另外還有一個onAny可以處理所有的HTTP methods 做過mock後, axios呼叫這個uri所拿回來的資料通通就都會是假資料了, 這樣也不用為了塞假資料開發測試而去改動自己的程式"/>
+<meta name="twitter:title" content="SQL 運行時執行順序及些許觀念"/>
+<meta name="twitter:description" content="1. SQL 執行語句時 先後順序 上面的圖片總共分四個區塊分別是：select 後面欄位、from 主表、where 條件、left join部分
+1. 資料庫運行時會先從 from 主表尋找資料，再來 where 條件找跟主表相關的做排除 2. 再來 left join 部分，再來 where 條件找跟 left join 相關的做排除 3. 最後才是 select 後面欄位的建置 2. 部分觀念說明 在 join 另外一張表的時候，如果已有明確要尋找的條件，可以再 join裡面就做排除，不需要再帶不相關的資料近來，減少查詢次數，限縮資料範圍 避免在 select 欄位區塊 做子查詢，查詢次數會已次方成長，並且造成查詢速度大幅度遞減，這意思就是 最後運行到建構 欄位 每一筆因為欄位裡面有做子查詢，等同於建構每一筆資料時都要做一次查詢。 "/>
 
 
 <link rel="stylesheet" href="/blog//bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/blog//css/header.css" media="all">
@@ -94,7 +94,7 @@ import axios from &#39;axios&#39; import MockAdapter from &#39;axios-mock-adapte
 <script defer src="/blog//fontawesome-5/all-5.15.4.js"></script>
 
   <title>
-axios-mock-adapter為axios提供測試用的假資料 | Hugo Profile
+SQL 運行時執行順序及些許觀念 | Hugo Profile
 
   </title>
 </head>
@@ -231,40 +231,33 @@ axios-mock-adapter為axios提供測試用的假資料 | Hugo Profile
       <div class="col-sm-12 col-md-12 col-lg-9">
         <div class="pr-lg-4">
           <div class="title mb-5">
-            <h1 class="text-center mb-4">axios-mock-adapter為axios提供測試用的假資料</h1>
+            <h1 class="text-center mb-4">SQL 運行時執行順序及些許觀念</h1>
             <div class="text-center">
                
               <small>|</small>
-              Jul 21, 2022
+              Jul 18, 2022
             </div>
           </div>
           
           <article class="page-content  p-2">
-          <h3 id="font-colore59911安裝指令font"><font color='e59911'>安裝指令:</font></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install axios-mock-adapter --save-dev
-</span></span></code></pre></div><br>
-<h3 id="font-colore59911說明font"><font color='e59911'>說明:</font></h3>
-<p><strong>開發時期或是要做Unit testing需要用假資料來取代server api直接回傳。</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">axios</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;axios&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">MockAdapter</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;axios-mock-adapter&#39;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">mock</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">MockAdapter</span>(<span style="color:#a6e22e">axios</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mock</span>.<span style="color:#a6e22e">onGet</span>(<span style="color:#e6db74">&#39;/users&#39;</span>).<span style="color:#a6e22e">reply</span>(<span style="color:#ae81ff">200</span>, {
-</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">users</span><span style="color:#f92672">:</span> [
-</span></span><span style="display:flex;"><span>    { <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;John Smith&#39;</span> },
-</span></span><span style="display:flex;"><span>    { <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;John Doe&#39;</span> }
-</span></span><span style="display:flex;"><span>  ]
-</span></span><span style="display:flex;"><span>})
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#39;/users&#39;</span>)
-</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">data</span>)
-</span></span><span style="display:flex;"><span>  })
-</span></span></code></pre></div><br>
-<h3 id="font-colore59911使用方法font"><font color='e59911'>使用方法:</font></h3>
-<p><strong>創建uri跟假資料的對應很簡單, 基本上也就是’on&rsquo;‘Method’, 比如說<code>onGet</code>, <code>onPost</code>, 另外還有一個<code>onAny</code>可以處理所有的HTTP methods</strong>
-<strong>做過mock後, axios呼叫這個uri所拿回來的資料通通就都會是假資料了, 這樣也不用為了塞假資料開發測試而去改動自己的程式</strong></p>
+          <h3 id="1-sql-執行語句時-先後順序">1. SQL 執行語句時 先後順序</h3>
+<p><img src="sql_execution_order.png" alt=""></p>
+<br>
+<p><strong>上面的圖片總共分四個區塊分別是：select 後面欄位、from 主表、where 條件、left join部分</strong></p>
+<ul>
+<li><strong>1. 資料庫運行時會先從 from 主表尋找資料，再來 where 條件找跟主表相關的做排除</strong></li>
+<li><strong>2. 再來 left join 部分，再來 where 條件找跟 left join 相關的做排除</strong></li>
+<li><strong>3. 最後才是 select 後面欄位的建置</strong></li>
+</ul>
+<br>
+<h3 id="2-部分觀念說明">2. 部分觀念說明</h3>
+<ul>
+<li><strong>在 join 另外一張表的時候，如果已有明確要尋找的條件，可以再 join裡面就做排除，不需要再帶不相關的資料近來，減少查詢次數，限縮資料範圍</strong></li>
+</ul>
+<br>
+<ul>
+<li><strong>避免在 select 欄位區塊 做子查詢，查詢次數會已次方成長，並且造成查詢速度大幅度遞減，這意思就是 最後運行到建構 欄位 每一筆因為欄位裡面有做子查詢，等同於建構每一筆資料時都要做一次查詢。</strong></li>
+</ul>
 
           </article>
         </div>
@@ -281,9 +274,8 @@ axios-mock-adapter為axios提供測試用的假資料 | Hugo Profile
   <ul>
     <li>
       <ul>
-        <li><a href="#font-colore59911安裝指令font"><font color='e59911'>安裝指令:</font></a></li>
-        <li><a href="#font-colore59911說明font"><font color='e59911'>說明:</font></a></li>
-        <li><a href="#font-colore59911使用方法font"><font color='e59911'>使用方法:</font></a></li>
+        <li><a href="#1-sql-執行語句時-先後順序">1. SQL 執行語句時 先後順序</a></li>
+        <li><a href="#2-部分觀念說明">2. 部分觀念說明</a></li>
       </ul>
     </li>
   </ul>
@@ -300,17 +292,17 @@ axios-mock-adapter為axios提供測試用的假資料 | Hugo Profile
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=axios-mock-adapter%e7%82%baaxios%e6%8f%90%e4%be%9b%e6%b8%ac%e8%a9%a6%e7%94%a8%e7%9a%84%e5%81%87%e8%b3%87%e6%96%99&url=https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fvue-axios-mock-adapter%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=SQL%20%e9%81%8b%e8%a1%8c%e6%99%82%e5%9f%b7%e8%a1%8c%e9%a0%86%e5%ba%8f%e5%8f%8a%e4%ba%9b%e8%a8%b1%e8%a7%80%e5%bf%b5&url=https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fsql-execution-order%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=axios-mock-adapter%e7%82%baaxios%e6%8f%90%e4%be%9b%e6%b8%ac%e8%a9%a6%e7%94%a8%e7%9a%84%e5%81%87%e8%b3%87%e6%96%99: https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fvue-axios-mock-adapter%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=SQL%20%e9%81%8b%e8%a1%8c%e6%99%82%e5%9f%b7%e8%a1%8c%e9%a0%86%e5%ba%8f%e5%8f%8a%e4%ba%9b%e8%a8%b1%e8%a7%80%e5%bf%b5: https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fsql-execution-order%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="mailto:?subject=axios-mock-adapter%e7%82%baaxios%e6%8f%90%e4%be%9b%e6%b8%ac%e8%a9%a6%e7%94%a8%e7%9a%84%e5%81%87%e8%b3%87%e6%96%99&amp;body=Check out this site https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fvue-axios-mock-adapter%2f">
+                  <a target="_blank" href="mailto:?subject=SQL%20%e9%81%8b%e8%a1%8c%e6%99%82%e5%9f%b7%e8%a1%8c%e9%a0%86%e5%ba%8f%e5%8f%8a%e4%ba%9b%e8%a8%b1%e8%a7%80%e5%bf%b5&amp;body=Check out this site https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fsql-execution-order%2f">
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>
