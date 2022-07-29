@@ -173,3 +173,4 @@ bash ./run_publish.sh
 ![](git_pages.png)
 
 **前面有提到新建專案並且同時發佈時，github 這邊會有兩個分支，一個負責儲存 原始專案，一個是負責放置 打包過後要發佈顯示的靜態資源，而 gh-pages 就是要負責當顯示的分支，切換成這個分支之後按儲存，這樣就可以從 https://username.github.io/res專案名稱 看到你的部落格了!!!!**
+![](github_url.png)
