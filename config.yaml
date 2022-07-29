@@ -110,15 +110,13 @@ params:
     image: /blog/Andy_photo.png
     button:
       enable: true
-      name: "Resume"
-      url: "#"
+      name: "CakeResume"
+      url: "https://www.cakeresume.com/zxcv77889920"
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
           url: https://github.com/TeduAndy
         - icon: fab fa-instagram
-          url: https://example.com
-        - icon: fab fa-facebook
           url: https://example.com
 
   # About
@@ -127,9 +125,13 @@ params:
     title: "About Me"
     image: "/blog/images/me.png"
     content: |-
-      I am a software developer with a passion for web development. I have a background in computer science and mathematics, and I have a strong interest in the intersection of technology and art. I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. 
-
-      I am currently working on a project that will be used to help people find the best way to get around the city.
+      2019的我對於 coding 非常感興趣 <br>
+      後來通過網路查詢發現近年來人工智慧及大數據相當流行 <br>
+      在當中發現 Python 這門語言相當好理解且實用性非常高，可調用的函數庫相當的多， <br>
+      Python 學習方便許多，而藉由 Python 擴展去學習其他語言，對於 coding 這件事情產生更濃厚的興趣， <br>
+      而目前公司的需求學習到了許多語言，當中最有意思的就是 C# 以及 asp.net core，由於 asp.net 有相當多的特性，<br>
+      並且可開發的東西相當的多，web、winform.....，慢慢的對 C# 這門語言產生了濃厚的興趣， <br>
+      讓我主攻語言從 python 轉移到了 C# 。
 
     # 技能
     skills:
@@ -161,41 +163,33 @@ params:
   experience:
     enable: true
     items:
-      - job: "Senior Software Developer"
-        company: "Facebook"
-        companyUrl: "https://example.com"
-        date: "Jan 2022 - present"
+      # 光田醫院
+      - job: "程序設計師(在職中)"
+        company: "沙鹿光田醫院"
+        companyUrl: "https://www.ktgh.com.tw/"
+        date: "April 2022 - present"
         featuredLink:
-          enable: true
-          name: "View the project"
-          url: "https://example.com"
-        content: "I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city."
-
-      - job: "Software Developer"
-        company: "Amazon"
-        companyUrl: "https://example.com"
-        date: "Sep 2020 - Dec 2021"
+          enable: false
+          name: ""
+          url: ""
+        content: "<br> 負責醫院系統程式相關維護以及開發新的程式。"
+      # 弘爺漢堡
+      - job: "煎臺手"
+        company: "弘爺漢堡-紫雲店"
+        companyUrl: "https://www.hongya88.com.tw/"
+        date: "Jan 2019 - March 2022"
         featuredLink:
-          enable: true
-          url: "https://example.com"
-        info:
-          enable: true
-          content: I worked as a software developer for more than one year in Amazon.
-        content: |
-          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
-
-          - Lead backend developer for a product.
-          - Created a frontend design for a product.
+          enable: false
+          url: ""
+        content: "<br> 煎煮食材及負責櫃台與客人交互。"
 
       - job: "Junior Software Developer"
         company: "Apple"
         companyUrl: "https://example.com"
         date: "Jan 2020 - Aug 2020"
-        info:
-          enable: false
         featuredLink:
-          enable: true
-          url: "https://example.com"
+          enable: false
+          url: ""
         content: |
           I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
 
@@ -207,8 +201,8 @@ params:
         companyUrl: "https://example.com"
         date: "June 2017 - Nov 2019"
         featuredLink:
-          enable: true
-          url: "https://example.com"
+          enable: false
+          url: ""
         content: |
           I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
 
@@ -333,6 +327,5 @@ params:
   footer:
     recentPosts: false
     socialNetworks:
-      github: https://github.com
+      github: https://github.com/TeduAndy
       instagram: https://instagram.com
-      facebook: https://facebook.com
