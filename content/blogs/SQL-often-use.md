@@ -163,12 +163,7 @@ ON table_name1.column_name=table_name2.column_name;
 <br>
 
 ## **Partition By的用法**
-```SQL
-SELECT table_column1, table_column2...
-FROM table_name1
-INNER JOIN table_name2
-ON table_name1.column_name=table_name2.column_name;
-```
+
 
 ### 一、rank()
 
