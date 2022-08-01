@@ -100,16 +100,6 @@ SQL 常用語法 | Hugo Profile
 <body class="light" onload="loading()">
   
   
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
 
 
 
@@ -197,26 +187,6 @@ SQL 常用語法 | Hugo Profile
                 </ul>
 
                 
-                
-                <div class="text-center">
-                    <button id="theme-toggle">
-                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </button>
-                </div>
-            
                 
             </div>
         </div>
@@ -333,11 +303,7 @@ SQL 常用語法 | Hugo Profile
 </span></span></code></pre></div><p><strong>LEFT JOIN <font color='red'>可以用來建立兩邊的交集</font>，查詢的 SQL 敘述句 INNER JOIN <font color='red'>左側跟右側資料表都有相同 (table_name1) 的記錄都會加入到查詢結果中，沒有符合的值就不會</font>。</strong></p>
 <br>
 <h2 id="partition-by的用法"><strong>Partition By的用法</strong></h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> table_column1, table_column2...
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> table_name1
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INNER</span> <span style="color:#66d9ef">JOIN</span> table_name2
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ON</span> table_name1.<span style="color:#66d9ef">column_name</span><span style="color:#f92672">=</span>table_name2.<span style="color:#66d9ef">column_name</span>;
-</span></span></code></pre></div><h3 id="一rank">一、rank()</h3>
+<h3 id="一rank">一、rank()</h3>
 <p><strong>rank() over(partition by A order by B)是按照A进行分组，分组里面的数据按照B进行排序，over即在什么之上，rank()即跳跃排序(比如存在两个第一名，接下来就是第三名) 举例：</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#960050;background-color:#1e0010">课程</span>, <span style="color:#960050;background-color:#1e0010">学生</span>ID, <span style="color:#960050;background-color:#1e0010">分数</span>, rank() over (partition <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">课程</span> <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">分数</span> <span style="color:#66d9ef">desc</span>) <span style="color:#66d9ef">as</span> <span style="color:#960050;background-color:#1e0010">排名</span> <span style="color:#66d9ef">from</span> <span style="color:#960050;background-color:#1e0010">成绩表</span>
 </span></span></code></pre></div><h3 id="二row_number">二、row_number()</h3>
@@ -584,7 +550,7 @@ FROM questionnaire;
     
 
     
-    <a href="https://instagram.com" aria-label="instagram">
+    <a href="https://www.instagram.com/zxcv77889920/" aria-label="instagram">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
             <radialGradient id="yOrnnhliCrdS2gy~4tD8ma" cx="19.38" cy="42.035" r="44.899"
                 gradientUnits="userSpaceOnUse">
@@ -644,23 +610,6 @@ FROM questionnaire;
         document.body.classList.add('dark');
         localStorage.setItem("pref-theme", 'dark');
     }
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-
 </script>
 
 <script>
