@@ -97,6 +97,15 @@ cors 的方法, 並且可以針對後端的 url 取匿名 ,簡短對 ajax 使用
     </item>
     
     <item>
+      <title>Asp csc.exe error</title>
+      <link>https://teduandy.github.io/blog/blogs/aspcore-csc-exe-question/</link>
+      <pubDate>Thu, 21 Jul 2022 09:35:18 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/aspcore-csc-exe-question/</guid>
+      <description>說明 : 會出現這個原因是因為新版開啟舊版專案導致 解決方法 : 1. 先到專案底下尋找 一個附檔名為 專案名稱.csporj 2. 然後在最下面貼上這段 到這裡面 3. 然後再重新執行一次 程式 就可以了 &amp;lt;Target Name=&amp;#34;CopyRoslynFiles&amp;#34; AfterTargets=&amp;#34;AfterBuild&amp;#34; Condition=&amp;#34;!$(Disable_CopyWebApplication) And &amp;#39;$(OutDir)&amp;#39; != &amp;#39;$(OutputPath)&amp;#39;&amp;#34;&amp;gt; &amp;lt;ItemGroup&amp;gt; &amp;lt;RoslynFiles Include=&amp;#34;$(CscToolPath)\*&amp;#34; /&amp;gt; &amp;lt;/ItemGroup&amp;gt; &amp;lt;MakeDir Directories=&amp;#34;$(WebProjectOutputDir)\bin\roslyn&amp;#34; /&amp;gt; &amp;lt;Copy SourceFiles=&amp;#34;@(RoslynFiles)&amp;#34; DestinationFolder=&amp;#34;$(WebProjectOutputDir)\bin\roslyn&amp;#34; SkipUnchangedFiles=&amp;#34;true&amp;#34; Retries=&amp;#34;$(CopyRetryCount)&amp;#34; RetryDelayMilliseconds=&amp;#34;$(CopyRetryDelayMilliseconds)&amp;#34; /&amp;gt; &amp;lt;/Target&amp;gt; </description>
+    </item>
+    
+    <item>
       <title>C# 將資料輸出成 excel 方法</title>
       <link>https://teduandy.github.io/blog/blogs/c-excel-out/</link>
       <pubDate>Thu, 21 Jul 2022 09:35:18 +0000</pubDate>
