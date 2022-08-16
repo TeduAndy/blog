@@ -4,7 +4,7 @@ date: 2022-07-21 14:40:49
 categories: vue
 ---
 
-### <font color='e59911'>1. Vue的双向数据绑定原理:</font>
+### <font color='e59911'>1. Vue2的双向数据绑定原理:</font>
    **Vue是采用数据劫持结合发布订阅模式，通过Object.defineProperty()来劫持各个属性的getter,setter,**
    **在数据变动时发布消息给订阅者，触发相应的回调函数，从而实现数据双向绑定。**
 
