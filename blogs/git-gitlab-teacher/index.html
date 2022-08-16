@@ -38,15 +38,17 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-<meta property="og:title" content="Blogs" />
-<meta property="og:description" content="Text about my cool site" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://teduandy.github.io/blog/blogs/" /><meta property="og:site_name" content="Andy blog" />
+<meta property="og:title" content="GITLAB 專案上傳到遠程倉庫教學" />
+<meta property="og:description" content="1. 說明 : 在使用之前 請先安裝完 git 這邊安裝方法就不再敘述 2. 登入到自己的 gitlab 裡面 並且按 new project 進入到此頁面 3. 點擊 clone 並且複製上面 https 的網址 4. 回到 要上傳的專案 先初始化 git 本地倉庫 到專案的終端機上面 輸入這段指令 git init 輸入這段指令，將所有檔案先加入到暫時存檔區 git add . (. 的意思就是全部) 提交版本 本次 加入到暫存區的 輸入這段指令 git commit -m &#34;這邊是輸入備註，看是要輸入版本號或者是寫入此版本修改了甚麼都可以&#34; 接下來要利用 我們剛剛複製的 gitlab https 位置，輸入這段指令給它一個別名 git remote add [name] [your https url] 然後就可以將專案 推到你的 遠程倉庫了 git push [url_name] [branch] 5. 就可以回到 gitlab 看看 創的 project 有沒有資料了!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://teduandy.github.io/blog/blogs/git-gitlab-teacher/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2022-07-19T09:03:25+00:00" />
+<meta property="article:modified_time" content="2022-07-19T09:03:25+00:00" /><meta property="og:site_name" content="Andy blog" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Blogs"/>
-<meta name="twitter:description" content="Text about my cool site"/>
+<meta name="twitter:title" content="GITLAB 專案上傳到遠程倉庫教學"/>
+<meta name="twitter:description" content="1. 說明 : 在使用之前 請先安裝完 git 這邊安裝方法就不再敘述 2. 登入到自己的 gitlab 裡面 並且按 new project 進入到此頁面 3. 點擊 clone 並且複製上面 https 的網址 4. 回到 要上傳的專案 先初始化 git 本地倉庫 到專案的終端機上面 輸入這段指令 git init 輸入這段指令，將所有檔案先加入到暫時存檔區 git add . (. 的意思就是全部) 提交版本 本次 加入到暫存區的 輸入這段指令 git commit -m &#34;這邊是輸入備註，看是要輸入版本號或者是寫入此版本修改了甚麼都可以&#34; 接下來要利用 我們剛剛複製的 gitlab https 位置，輸入這段指令給它一個別名 git remote add [name] [your https url] 然後就可以將專案 推到你的 遠程倉庫了 git push [url_name] [branch] 5. 就可以回到 gitlab 看看 創的 project 有沒有資料了!"/>
 
 
 <link rel="stylesheet" href="/blog//bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/blog//css/header.css" media="all">
@@ -83,11 +85,14 @@ if (!doNotTrack) {
     }
 </style>
 
-<meta name="description" content="Blogs of Hugo Profile">
-<link rel="stylesheet" href="/blog//css/list.css" media="all">
+<meta name="description" content="">
+<link rel="stylesheet" href="/blog//css/single.css">
+
+
+<script defer src="/blog//fontawesome-5/all-5.15.4.js"></script>
 
   <title>
-Blogs | Hugo Profile
+GITLAB 專案上傳到遠程倉庫教學 | Hugo Profile
 
   </title>
 </head>
@@ -188,148 +193,153 @@ Blogs | Hugo Profile
     </nav>
 </header>
 <div id="content">
-<div class="container pt-5" id="list-page">
-    <h2 class="text-center pb-2">Blogs</h2>
-    <div class="row">
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card h-100">
-                <div class="card-header">
-                    <img class="card-img-top" src="/blog/images/post.jpg" alt="SQL 運行時執行順序及些許觀念">
-                </div>
-                <div class="card-body bg-transparent p-4 shadow-sm">
-                    <a href="/blog/blogs/sql-execution-order/" class="primary-font card-title">
-                        <h6 class="card-title bg-transparent text-white text-center" title="SQL 運行時執行順序及些許觀念">SQL 運行時執行順序及些許觀念</h6>
-                    </a>
-                </div>
-                <div class="mt-auto post-footer bg-transparent py-3">
-                    <span class="float-start bg-transparent">July 18, 2022</span>
-                    <a href="/blog/blogs/sql-execution-order/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">GITLAB 專案上傳到遠程倉庫教學</h1>
+            <div class="text-center">
+               
+              <small>|</small>
+              Jul 19, 2022
             </div>
+          </div>
+          
+          <article class="page-content  p-2">
+          <h3 id="1-說明--在使用之前-請先安裝完-git-這邊安裝方法就不再敘述">1. 說明 : 在使用之前 請先安裝完 git 這邊安裝方法就不再敘述</h3>
+ <br>
+<h3 id="2-登入到自己的-gitlab-裡面-並且按-new-project-進入到此頁面">2. 登入到自己的 gitlab 裡面 並且按 new project 進入到此頁面</h3>
+<p><img src="gitlab1.png" alt=""></p>
+<br>
+<h3 id="3-點擊-clone-並且複製上面-https-的網址">3. 點擊 clone 並且複製上面 https 的網址</h3>
+<p><img src="gitlab2.png" alt=""></p>
+<br>
+<h3 id="4-回到-要上傳的專案">4. 回到 要上傳的專案</h3>
+<ul>
+<li>
+<h5 id="先初始化-git-本地倉庫-到專案的終端機上面-輸入這段指令">先初始化 git 本地倉庫 到專案的終端機上面 輸入這段指令</h5>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git init
+</span></span></code></pre></div><br>
+<ul>
+<li>
+<h5 id="輸入這段指令將所有檔案先加入到暫時存檔區">輸入這段指令，將所有檔案先加入到暫時存檔區</h5>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add .   <span style="color:#f92672">(</span>. 的意思就是全部<span style="color:#f92672">)</span>
+</span></span></code></pre></div><br>
+<ul>
+<li>
+<h5 id="提交版本-本次-加入到暫存區的-輸入這段指令">提交版本 本次 加入到暫存區的 輸入這段指令</h5>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;這邊是輸入備註，看是要輸入版本號或者是寫入此版本修改了甚麼都可以&#34;</span>
+</span></span></code></pre></div><br>
+<ul>
+<li>
+<h5 id="接下來要利用-我們剛剛複製的-gitlab-https-位置輸入這段指令給它一個別名">接下來要利用 我們剛剛複製的 gitlab https 位置，輸入這段指令給它一個別名</h5>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git remote add <span style="color:#f92672">[</span>name<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>your https url<span style="color:#f92672">]</span>
+</span></span></code></pre></div><br>
+<ul>
+<li>
+<h5 id="然後就可以將專案-推到你的-遠程倉庫了">然後就可以將專案 推到你的 遠程倉庫了</h5>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git push <span style="color:#f92672">[</span>url_name<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>branch<span style="color:#f92672">]</span>
+</span></span></code></pre></div><br>
+<h3 id="5-就可以回到-gitlab-看看-創的-project-有沒有資料了">5. 就可以回到 gitlab 看看 創的 project 有沒有資料了!!!!</h3>
+
+          </article>
         </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card h-100">
-                <div class="card-header">
-                    <img class="card-img-top" src="/blog/images/post.jpg" alt="C# 散亂筆記">
-                </div>
-                <div class="card-body bg-transparent p-4 shadow-sm">
-                    <a href="/blog/blogs/c-scattered-notes/" class="primary-font card-title">
-                        <h6 class="card-title bg-transparent text-white text-center" title="C# 散亂筆記">C# 散亂筆記</h6>
-                    </a>
-                </div>
-                <div class="mt-auto post-footer bg-transparent py-3">
-                    <span class="float-start bg-transparent">July 18, 2022</span>
-                    <a href="/blog/blogs/c-scattered-notes/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-說明--在使用之前-請先安裝完-git-這邊安裝方法就不再敘述">1. 說明 : 在使用之前 請先安裝完 git 這邊安裝方法就不再敘述</a></li>
+        <li><a href="#2-登入到自己的-gitlab-裡面-並且按-new-project-進入到此頁面">2. 登入到自己的 gitlab 裡面 並且按 new project 進入到此頁面</a></li>
+        <li><a href="#3-點擊-clone-並且複製上面-https-的網址">3. 點擊 clone 並且複製上面 https 的網址</a></li>
+        <li><a href="#4-回到-要上傳的專案">4. 回到 要上傳的專案</a></li>
+        <li><a href="#5-就可以回到-gitlab-看看-創的-project-有沒有資料了">5. 就可以回到 gitlab 看看 創的 project 有沒有資料了!!!!</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=GITLAB%20%e5%b0%88%e6%a1%88%e4%b8%8a%e5%82%b3%e5%88%b0%e9%81%a0%e7%a8%8b%e5%80%89%e5%ba%ab%e6%95%99%e5%ad%b8&url=https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fgit-gitlab-teacher%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=GITLAB%20%e5%b0%88%e6%a1%88%e4%b8%8a%e5%82%b3%e5%88%b0%e9%81%a0%e7%a8%8b%e5%80%89%e5%ba%ab%e6%95%99%e5%ad%b8: https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fgit-gitlab-teacher%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="mailto:?subject=GITLAB%20%e5%b0%88%e6%a1%88%e4%b8%8a%e5%82%b3%e5%88%b0%e9%81%a0%e7%a8%8b%e5%80%89%e5%ba%ab%e6%95%99%e5%ad%b8&amp;body=Check out this site https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fgit-gitlab-teacher%2f">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
+          </aside>
+          
         </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card h-100">
-                <div class="card-header">
-                    <img class="card-img-top" src="/blog/images/post.jpg" alt="C# PrintDocument 元件列印說明 (winform)">
-                </div>
-                <div class="card-body bg-transparent p-4 shadow-sm">
-                    <a href="/blog/blogs/c-winform-printdocument/" class="primary-font card-title">
-                        <h6 class="card-title bg-transparent text-white text-center" title="C# PrintDocument 元件列印說明 (winform)">C# PrintDocument …</h6>
-                    </a>
-                </div>
-                <div class="mt-auto post-footer bg-transparent py-3">
-                    <span class="float-start bg-transparent">July 18, 2022</span>
-                    <a href="/blog/blogs/c-winform-printdocument/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card h-100">
-                <div class="card-header">
-                    <img class="card-img-top" src="/blog/images/post.jpg" alt="C# 資料庫獲取資料">
-                </div>
-                <div class="card-body bg-transparent p-4 shadow-sm">
-                    <a href="/blog/blogs/c-data-get-methods/" class="primary-font card-title">
-                        <h6 class="card-title bg-transparent text-white text-center" title="C# 資料庫獲取資料">C# 資料庫獲取資料</h6>
-                    </a>
-                </div>
-                <div class="mt-auto post-footer bg-transparent py-3">
-                    <span class="float-start bg-transparent">July 18, 2022</span>
-                    <a href="/blog/blogs/c-data-get-methods/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card h-100">
-                <div class="card-header">
-                    <img class="card-img-top" src="/blog/images/post.jpg" alt="C# 上傳檔案轉成二進制">
-                </div>
-                <div class="card-body bg-transparent p-4 shadow-sm">
-                    <a href="/blog/blogs/c-fire-change-byte/" class="primary-font card-title">
-                        <h6 class="card-title bg-transparent text-white text-center" title="C# 上傳檔案轉成二進制">C# 上傳檔案轉成二進制</h6>
-                    </a>
-                </div>
-                <div class="mt-auto post-footer bg-transparent py-3">
-                    <span class="float-start bg-transparent">July 18, 2022</span>
-                    <a href="/blog/blogs/c-fire-change-byte/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card h-100">
-                <div class="card-header">
-                    <img class="card-img-top" src="/blog/images/post.jpg" alt="C# mysql_conn">
-                </div>
-                <div class="card-body bg-transparent p-4 shadow-sm">
-                    <a href="/blog/blogs/c-mysql-conn/" class="primary-font card-title">
-                        <h6 class="card-title bg-transparent text-white text-center" title="C# mysql_conn">C# mysql_conn</h6>
-                    </a>
-                </div>
-                <div class="mt-auto post-footer bg-transparent py-3">
-                    <span class="float-start bg-transparent">July 18, 2022</span>
-                    <a href="/blog/blogs/c-mysql-conn/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row justify-content-center">
-            <div class="col-auto m-3">
-                
-    <ul class="pagination pagination-default">
-      <li class="page-item">
-        <a href="/blog/blogs/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/blogs/page/4/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/blogs/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/blogs/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/blogs/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 5" class="page-link" role="button">5</a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/blogs/page/6/" aria-label="Page 6" class="page-link" role="button">6</a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/blogs/page/6/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/blogs/page/6/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul>
-            </div>
-        </div>
+      </div>
     </div>
-</div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
 
   </div><footer>
     <div class="container py-3" id="recent-posts">
