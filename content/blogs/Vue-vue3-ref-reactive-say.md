@@ -1,7 +1,7 @@
 ---
 title: VUE3 ref、reactive說明 
-date: 2022-09-21 08:00:00
-categories: vue
+date: 2022-07-21 08:00:00
+categories: vue 
 ---
 
 ### <font color='e59911'>Vue3 雙向綁定用到的函數 ref 跟 reactive 區別</font>
