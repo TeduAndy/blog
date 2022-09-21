@@ -1,6 +1,6 @@
 ---
 title: VUE3 ref、reactive說明 
-date: 2022-07-21 14:16:42
+date: 2022-09-21 08:30:42
 categories: vue
 ---
 
@@ -9,11 +9,11 @@ categories: vue
 <br>
 
 #### 1. 說明：
--  **ref： 接收任何型態的資料放入，但是不會對 Object 和 Array 裡面的元素進行深層監聽，取值方式須使用 .value 進行取值。**
+-  **ref： 接收任何型態的資料放入，但是不會對每一個元素都進行監聽，Object 和 Array 裡面的元素也不會監聽，取值方式須使用 .value 進行取值。**
 
 <br>
 
-- **reactive： 只接受 Array 跟 Object 能夠放入，並且會針對裡面的元素進行監聽，同時還不需要使用 .value 去獲得值。**
+- **reactive： 只接受 Array 跟 Object 能夠放入，並且會針對每一個元素進行監聽，同時還不需要使用 .value 去獲得值。**
 
 <br>
 
