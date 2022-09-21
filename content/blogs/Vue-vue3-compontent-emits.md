@@ -1,6 +1,6 @@
 ---
 title: VUE3 compontent $emit 和 emits 說明及設置
-date: 2022-08-21 14:16:42
+date: 2022-10-01 14:16:42
 categories: vue
 ---
 
