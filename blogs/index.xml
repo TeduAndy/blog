@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>VUE3 ref、reactive說明</title>
+      <link>https://teduandy.github.io/blog/blogs/vue-vue3-ref-reactive-say/</link>
+      <pubDate>Tue, 20 Sep 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/vue-vue3-ref-reactive-say/</guid>
+      <description>Vue3 雙向綁定用到的函數 ref 跟 reactive 區別 1. 說明： ref： 接收任何型態的資料放入，但是不會對每一個元素都進行監聽，Object 和 Array 裡面的元素也不會監聽，取值方式須使用 .value 進行取值。 reactive： 只接受 Array 跟 Object 能夠放入，並且會針對每一個元素進行監聽，同時還不需要使用 .value 去獲得值。 實際例子： &amp;lt;script lang=&amp;#39;ts&amp;#39; setup&amp;gt; import { watch, reactive, ref } from &amp;#34;vue&amp;#34;; const exampleRef = ref({number: 0}) const exampleReactive = reactive({number: 0}) // 取值方式說明 ref 部分 exampleRef.value // 才能取出放入的物件或者其他資料類型 exampleRef.value.number // 才能取出在物件裡面的元素 // 取值方式說明 reactive 部分，這邊取值就不需要再使用 .value exampleReactive.number // 直接向物件取值方式一樣，Array則是使用索引 // 底下這邊實際測試監聽狀態 watch(exampleRef, (newValue)=&amp;gt;{ console.log(newValue) }) watch(exampleReactive, (newValue)=&amp;gt;{ console.</description>
+    </item>
+    
+    <item>
       <title>hexo-部屬靜態頁面到-github</title>
       <link>https://teduandy.github.io/blog/blogs/hexo-deploy-github/</link>
       <pubDate>Fri, 22 Jul 2022 08:35:32 +0000</pubDate>
@@ -121,15 +130,6 @@ cors 的方法, 並且可以針對後端的 url 取匿名 ,簡短對 ajax 使用
       
       <guid>https://teduandy.github.io/blog/blogs/c-excel-out/</guid>
       <description>使用到的套件 using Excel = Microsoft.Office.Interop.Excel; 操作方法 1. 設定需要用到變數 // 設定需要用到的變數 Excel.Application excelApp; // execl 使用的應用程式 變數 Excel._Workbook wBook;	// 活頁簿 變數 Excel._Worksheet wSheet1; // sheet 變數1 Excel._Worksheet wSheet2; // sheet 變數2 Excel.Range wRange; // 活頁簿欄位範圍裏面的控制 及 操作 變數 2. 創建新的 excel 應用 // 開啟一個新的應用程式 excelApp = new Excel.Application(); // 讓Excel文件可見 excelApp.Visible = false; // 停用警告訊息 excelApp.DisplayAlerts = false; // 加入新的活頁簿 excelApp.Workbooks.Add(Type.Missing); // 引用第一個活頁簿 wBook = excelApp.Workbooks[1]; // 基本創建第一個活頁簿時 就有一個 sheet工作表 這邊是添加第二個 wBook.</description>
-    </item>
-    
-    <item>
-      <title>VUE3 ref、reactive說明</title>
-      <link>https://teduandy.github.io/blog/blogs/vue-vue3-ref-reactive-say/</link>
-      <pubDate>Thu, 21 Jul 2022 08:00:00 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/blogs/vue-vue3-ref-reactive-say/</guid>
-      <description>Vue3 雙向綁定用到的函數 ref 跟 reactive 區別 1. 說明： ref： 接收任何型態的資料放入，但是不會對每一個元素都進行監聽，Object 和 Array 裡面的元素也不會監聽，取值方式須使用 .value 進行取值。 reactive： 只接受 Array 跟 Object 能夠放入，並且會針對每一個元素進行監聽，同時還不需要使用 .value 去獲得值。 實際例子： &amp;lt;script lang=&amp;#39;ts&amp;#39; setup&amp;gt; import { watch, reactive, ref } from &amp;#34;vue&amp;#34;; const exampleRef = ref({number: 0}) const exampleReactive = reactive({number: 0}) // 取值方式說明 ref 部分 exampleRef.value // 才能取出放入的物件或者其他資料類型 exampleRef.value.number // 才能取出在物件裡面的元素 // 取值方式說明 reactive 部分，這邊取值就不需要再使用 .value exampleReactive.number // 直接向物件取值方式一樣，Array則是使用索引 // 底下這邊實際測試監聽狀態 watch(exampleRef, (newValue)=&amp;gt;{ console.log(newValue) }) watch(exampleReactive, (newValue)=&amp;gt;{ console.</description>
     </item>
     
     <item>
