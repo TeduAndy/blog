@@ -6,25 +6,7 @@
     <description>Recent content in Blogs on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Aug 2022 14:16:42 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>VUE3 compontent $emit 和 emits 說明及設置</title>
-      <link>https://teduandy.github.io/blog/blogs/vue-vue3-compontent-emits/</link>
-      <pubDate>Sun, 21 Aug 2022 14:16:42 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/blogs/vue-vue3-compontent-emits/</guid>
-      <description>Vue3 Compontent emit emits 說明：組件封裝了多個 emit 事件，回傳數據或者回調函數等等，外部使用時採用 @設置的emit名稱=&amp;ldquo;自己配置的方法&amp;rdquo;，從而讓 compontent 應用 外部的方法。 emits：設置組件自定義的事件名稱，設置時可以是 Array 或 Object 寫法如下 &amp;lt;script&amp;gt; // 此寫法是 cdn 使用 const compontent1 = { template: `&amp;lt;button @click=&amp;#34;this.$emit(&amp;#39;MeClick&amp;#39;)&amp;#34;&amp;gt;com&amp;lt;/button&amp;gt;`, emits: [&amp;#34;MeClick&amp;#34;], props: [&amp;#34;prop&amp;#34;], }; // 在 vite 或者 cli 則是 // Array 寫法 const emit = defineEmits([&amp;#39;change&amp;#39;, &amp;#39;delete&amp;#39;]) // Object 寫法 const emit = defineEmits({ change:()=&amp;gt;{}, delete:()=&amp;gt;{} }) &amp;lt;/script&amp;gt; $emit：觸發當前實際例子上的事件，附加參數也會帶進來，第一個為組件自定義名稱並且會帶入在父組件在自定義名稱裡面寫的方法或者其他，第二個跟第三個&amp;hellip;之後都是傳給綁定的參數 &amp;lt;script setup&amp;gt; this.$emit(&amp;#39;自定義的名稱&amp;#39;, 參數1, 參數2) &amp;lt;/script&amp;gt; 實際例子如下(採用cdn作為例子)： 會發現內部配置的 MeClick 使用的方法是外部的 newclick 事件 &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;div&amp;gt; &amp;lt;btn @Me-Click=&amp;#34;newclick()&amp;#34;&amp;gt;&amp;lt;/btn&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script src=&amp;#34;https://unpkg.</description>
-    </item>
-    
-    <item>
-      <title>VUE3 ref、reactive說明</title>
-      <link>https://teduandy.github.io/blog/blogs/vue-vue3-ref-reactive-say/</link>
-      <pubDate>Sun, 21 Aug 2022 14:16:42 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/blogs/vue-vue3-ref-reactive-say/</guid>
-      <description>Vue3 雙向綁定用到的函數 ref 跟 reactive 區別 1. 說明： ref： 接收任何型態的資料放入，但是不會對每一個元素都進行監聽，Object 和 Array 裡面的元素也不會監聽，取值方式須使用 .value 進行取值。 reactive： 只接受 Array 跟 Object 能夠放入，並且會針對每一個元素進行監聽，同時還不需要使用 .value 去獲得值。 實際例子： &amp;lt;script lang=&amp;#39;ts&amp;#39; setup&amp;gt; import { watch, reactive, ref } from &amp;#34;vue&amp;#34;; const exampleRef = ref({number: 0}) const exampleReactive = reactive({number: 0}) // 取值方式說明 ref 部分 exampleRef.value // 才能取出放入的物件或者其他資料類型 exampleRef.value.number // 才能取出在物件裡面的元素 // 取值方式說明 reactive 部分，這邊取值就不需要再使用 .value exampleReactive.number // 直接向物件取值方式一樣，Array則是使用索引 // 底下這邊實際測試監聽狀態 watch(exampleRef, (newValue)=&amp;gt;{ console.log(newValue) }) watch(exampleReactive, (newValue)=&amp;gt;{ console.</description>
-    </item>
-    
+    <lastBuildDate>Fri, 22 Jul 2022 08:35:32 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hexo-部屬靜態頁面到-github</title>
       <link>https://teduandy.github.io/blog/blogs/hexo-deploy-github/</link>
