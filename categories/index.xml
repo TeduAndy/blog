@@ -6,22 +6,22 @@
     <description>Recent content in Categories on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Jul 2022 08:35:32 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Sep 2022 14:16:42 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vue</title>
+      <link>https://teduandy.github.io/blog/categories/vue/</link>
+      <pubDate>Tue, 20 Sep 2022 14:16:42 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/categories/vue/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Blog-Hexo框架</title>
       <link>https://teduandy.github.io/blog/categories/blog-hexo%E6%A1%86%E6%9E%B6/</link>
       <pubDate>Fri, 22 Jul 2022 08:35:32 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/categories/blog-hexo%E6%A1%86%E6%9E%B6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>vue</title>
-      <link>https://teduandy.github.io/blog/categories/vue/</link>
-      <pubDate>Thu, 21 Jul 2022 15:13:32 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/categories/vue/</guid>
       <description></description>
     </item>
     

@@ -2,23 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://teduandy.github.io/blog/categories/blog-hexo%E6%A1%86%E6%9E%B6/</loc>
-    <lastmod>2022-07-22T08:35:32+00:00</lastmod>
-  </url><url>
     <loc>https://teduandy.github.io/blog/blogs/</loc>
-    <lastmod>2022-07-22T08:35:32+00:00</lastmod>
+    <lastmod>2022-09-20T14:16:42+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/categories/</loc>
+    <lastmod>2022-09-20T14:16:42+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/</loc>
+    <lastmod>2022-09-20T14:16:42+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/categories/vue/</loc>
+    <lastmod>2022-09-20T14:16:42+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/vue-vue3-compontent-emits/</loc>
+    <lastmod>2022-09-20T14:16:42+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/categories/blog-hexo%E6%A1%86%E6%9E%B6/</loc>
     <lastmod>2022-07-22T08:35:32+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/hexo-deploy-github/</loc>
     <lastmod>2022-07-22T08:35:32+00:00</lastmod>
-  </url><url>
-    <loc>https://teduandy.github.io/blog/</loc>
-    <lastmod>2022-07-22T08:35:32+00:00</lastmod>
-  </url><url>
-    <loc>https://teduandy.github.io/blog/categories/vue/</loc>
-    <lastmod>2022-07-21T15:13:32+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/vue-diagram-use/</loc>
     <lastmod>2022-07-21T15:13:32+00:00</lastmod>
@@ -52,6 +55,9 @@
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/c-excel-out/</loc>
     <lastmod>2022-07-21T09:35:18+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/vue-vue3-ref-reactive-say/</loc>
+    <lastmod>2022-07-21T08:00:00+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/hexo-category-set/</loc>
     <lastmod>2022-07-19T16:08:18+00:00</lastmod>
