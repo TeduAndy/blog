@@ -41,15 +41,6 @@ import axios from &amp;#39;axios&amp;#39; import MockAdapter from &amp;#39;axios
     </item>
     
     <item>
-      <title>VUE3 ref、reactive說明</title>
-      <link>https://teduandy.github.io/blog/blogs/vue-vue3-ref-reactive-say/</link>
-      <pubDate>Thu, 21 Jul 2022 14:16:42 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/blogs/vue-vue3-ref-reactive-say/</guid>
-      <description>Vue3 雙向綁定用到的函數 ref 跟 reactive 區別 1. 說明： ref： 接收任何型態的資料放入，但是不會對 Object 和 Array 裡面的元素進行深層監聽，取值方式須使用 .value 進行取值。 reactive： 只接受 Array 跟 Object 能夠放入，並且會針對裡面的元素進行監聽，同時還不需要使用 .value 去獲得值。 實際例子： &amp;lt;script lang=&amp;#39;ts&amp;#39; setup&amp;gt; import { watch, reactive, ref } from &amp;#34;vue&amp;#34;; const exampleRef = ref({number: 0}) const exampleReactive = reactive({number: 0}) // 取值方式說明 ref 部分 exampleRef.value // 才能取出放入的物件或者其他資料類型 exampleRef.value.number // 才能取出在物件裡面的元素 // 取值方式說明 reactive 部分，這邊取值就不需要再使用 .value exampleReactive.number // 直接向物件取值方式一樣，Array則是使用索引 // 底下這邊實際測試監聽狀態 watch(exampleRef, (newValue)=&amp;gt;{ console.log(newValue) }) watch(exampleReactive, (newValue)=&amp;gt;{ console.</description>
-    </item>
-    
-    <item>
       <title>VUE3 語法糖</title>
       <link>https://teduandy.github.io/blog/blogs/vue-setup-syntax-sugar/</link>
       <pubDate>Thu, 21 Jul 2022 14:16:42 +0000</pubDate>
