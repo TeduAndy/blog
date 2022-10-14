@@ -38,7 +38,7 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-<meta property="og:title" content="SQL 常用語法" />
+<meta property="og:title" content="SQL 通用基礎常用語法" />
 <meta property="og:description" content="讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&#34;&#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) 函數使用(運算類) AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) example： SELECT &#34;函數名&#34;(&#34;欄位名&#34;) FROM &#34;表格名&#34;; GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://teduandy.github.io/blog/blogs/sql-often-use/" /><meta property="article:section" content="blogs" />
@@ -47,7 +47,7 @@ if (!doNotTrack) {
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="SQL 常用語法"/>
+<meta name="twitter:title" content="SQL 通用基礎常用語法"/>
 <meta name="twitter:description" content="讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&#34;&#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) 函數使用(運算類) AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) example： SELECT &#34;函數名&#34;(&#34;欄位名&#34;) FROM &#34;表格名&#34;; GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2."/>
 
 
@@ -92,7 +92,7 @@ if (!doNotTrack) {
 <script defer src="/blog//fontawesome-5/all-5.15.4.js"></script>
 
   <title>
-SQL 常用語法 | Hugo Profile
+SQL 通用基礎常用語法 | Hugo Profile
 
   </title>
 </head>
@@ -199,7 +199,7 @@ SQL 常用語法 | Hugo Profile
       <div class="col-sm-12 col-md-12 col-lg-9">
         <div class="pr-lg-4">
           <div class="title mb-5">
-            <h1 class="text-center mb-4">SQL 常用語法</h1>
+            <h1 class="text-center mb-4">SQL 通用基礎常用語法</h1>
             <div class="text-center">
                
               <small>|</small>
@@ -463,17 +463,17 @@ FROM questionnaire;
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=SQL%20%e5%b8%b8%e7%94%a8%e8%aa%9e%e6%b3%95&url=https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fsql-often-use%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=SQL%20%e9%80%9a%e7%94%a8%e5%9f%ba%e7%a4%8e%e5%b8%b8%e7%94%a8%e8%aa%9e%e6%b3%95&url=https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fsql-often-use%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=SQL%20%e5%b8%b8%e7%94%a8%e8%aa%9e%e6%b3%95: https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fsql-often-use%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=SQL%20%e9%80%9a%e7%94%a8%e5%9f%ba%e7%a4%8e%e5%b8%b8%e7%94%a8%e8%aa%9e%e6%b3%95: https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fsql-often-use%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="mailto:?subject=SQL%20%e5%b8%b8%e7%94%a8%e8%aa%9e%e6%b3%95&amp;body=Check out this site https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fsql-often-use%2f">
+                  <a target="_blank" href="mailto:?subject=SQL%20%e9%80%9a%e7%94%a8%e5%9f%ba%e7%a4%8e%e5%b8%b8%e7%94%a8%e8%aa%9e%e6%b3%95&amp;body=Check out this site https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fsql-often-use%2f">
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>

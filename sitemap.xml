@@ -3,13 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://teduandy.github.io/blog/blogs/</loc>
-    <lastmod>2022-09-20T14:16:42+00:00</lastmod>
+    <lastmod>2022-10-12T16:54:51+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/categories/</loc>
-    <lastmod>2022-09-20T14:16:42+00:00</lastmod>
+    <lastmod>2022-10-12T16:54:51+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/</loc>
-    <lastmod>2022-09-20T14:16:42+00:00</lastmod>
+    <lastmod>2022-10-12T16:54:51+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/sql-oracle-often-use/</loc>
+    <lastmod>2022-10-12T16:54:51+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/categories/sql/</loc>
+    <lastmod>2022-10-12T16:54:51+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/categories/vue/</loc>
     <lastmod>2022-09-20T14:16:42+00:00</lastmod>
@@ -103,9 +109,6 @@
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/git-gitlab-teacher/</loc>
     <lastmod>2022-07-19T09:03:25+00:00</lastmod>
-  </url><url>
-    <loc>https://teduandy.github.io/blog/categories/sql/</loc>
-    <lastmod>2022-07-18T16:54:51+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/sql-often-use/</loc>
     <lastmod>2022-07-18T16:54:51+00:00</lastmod>

@@ -6,7 +6,16 @@
     <description>Recent content in Blogs on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Sep 2022 14:16:42 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Oct 2022 16:54:51 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oracle 常用進階語法</title>
+      <link>https://teduandy.github.io/blog/blogs/sql-oracle-often-use/</link>
+      <pubDate>Wed, 12 Oct 2022 16:54:51 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/sql-oracle-often-use/</guid>
+      <description>listagg 串聯多筆成一筆 實例： ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 select ID, listagg(Item, &amp;#39;,&amp;#39;) within group (order by price) as ItemList from Order group by OrderNo 輸出： ID ItemList A01 茶葉蛋,口香糖 A02 報紙, 香菸 使用說明： select ID, listagg(相同ID但是欄位值不同且需要合併, 合併時使用的連接符) within group (order by 參照某個欄位讓合併的進行排序連接) as ItemList from Order group by ID </description>
+    </item>
+    
     <item>
       <title>VUE3 compontent $emit 和 emits 說明及設置</title>
       <link>https://teduandy.github.io/blog/blogs/vue-vue3-compontent-emits/</link>
@@ -261,7 +270,7 @@ Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援�
     </item>
     
     <item>
-      <title>SQL 常用語法</title>
+      <title>SQL 通用基礎常用語法</title>
       <link>https://teduandy.github.io/blog/blogs/sql-often-use/</link>
       <pubDate>Mon, 18 Jul 2022 16:54:51 +0000</pubDate>
       
