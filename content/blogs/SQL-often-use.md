@@ -1,5 +1,5 @@
 ---
-title: SQL 常用語法
+title: SQL 通用基礎常用語法
 date: 2022-07-18 16:54:51
 categories: SQL
 ---
