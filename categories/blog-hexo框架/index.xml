@@ -1,50 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blog-Hexo框架 on Hugo Profile</title>
-    <link>https://teduandy.github.io/blog/categories/blog-hexo%E6%A1%86%E6%9E%B6/</link>
-    <description>Recent content in Blog-Hexo框架 on Hugo Profile</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 22 Jul 2022 08:35:32 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/blog-hexo%E6%A1%86%E6%9E%B6/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>hexo-部屬靜態頁面到-github</title>
-      <link>https://teduandy.github.io/blog/blogs/hexo-deploy-github/</link>
-      <pubDate>Fri, 22 Jul 2022 08:35:32 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/blogs/hexo-deploy-github/</guid>
-      <description>GitHub 產生站點專案 1. 先點 Github 官網跟著圖片點 第一步 點擊 repositories 第二步 點new 產生站點專案 第三步 在橘色文字那邊輸入 你的用戶名 + github.io 然後按 create repository 第四步 點擊 Your repositories 點選 剛創建的專案 點選 code 會得到 部屬會用到網址 hexo 專案 設置部分 1. hexo 部屬前需安裝的套件 npm install hexo-deployer-git --save 2. 修改根目錄的_config.yml檔案 # Deployment ## Docs: https://hexo.io/docs/one-command-deployment deploy: type: &amp;#34;git&amp;#34; // 類別請寫 git repo: https://github.com/username/username.github.io.git // github專案位置 branch: master // 上傳到此專案的哪一個分支，通常都是 master 3. 輸入指令部屬上傳 每次部屬請進行三步驟 hexo clean // 清除之前建立的靜態檔案 hexo generate // 建立靜態頁面 hexo deploy // 部署至 GitHub </description>
-    </item>
-    
-    <item>
-      <title>Hexo 分類設定</title>
-      <link>https://teduandy.github.io/blog/blogs/hexo-category-set/</link>
-      <pubDate>Tue, 19 Jul 2022 16:08:18 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/blogs/hexo-category-set/</guid>
-      <description>如何使用categories進行分類 1. 第一步驟先到bash下指令新增分類 hexo new page category 2. 會發現 主目錄的 source資料夾底下多了一個 category資料夾，點開裡面的 index.md title: 分類 // 類別頁面的標題 date: 2022-07-15 11:35:52 type: category // 型態可以自己取 layout: &amp;#34;category&amp;#34; // 版面呈現 用於 你在使用的樣式專案 3. 接下來到需要分類的 md文檔 進行設定 title: 文檔標題名稱 date: 時間 category: Hexo // 這個 category 是你在 type 設置的名字 用來判別是用於分類，後面的 Hexo 則是 你分類頁面 會顯示有一個分類區塊叫做 Hexo ，文檔裡面設置是這個名字的都會被歸類在Hexo底下。 接下是切換到樣式專案裡面的 _config.yml 裡面設置 找尋 nav 或者 menu 的設置，把 nav:# Resume:Posts: /archives# category: /category // 把#字號刪除 就打開了 設置好後，在啟動伺服器時要先清除舊的靜態資源，然後生成新的靜態支援後再啟動 hexo clean // 先把原來的靜態資源清空 hexo generate // 再重新生成新的靜態資源 hexo server // 再執行 模擬伺服器，這對之後做分類頁面很重要 </description>
-    </item>
-    
-    <item>
-      <title>Hexo 安裝 及 設置</title>
-      <link>https://teduandy.github.io/blog/blogs/hexo-install-and-setup/</link>
-      <pubDate>Tue, 19 Jul 2022 15:01:23 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/blogs/hexo-install-and-setup/</guid>
-      <description>1.安裝 Hexo （電腦必須先安裝 git 和 node.js） npm install -g hexo-cli 2.建立 Hexo 專案 1.產生一個叫做 blog 的資料夾，資料夾名稱可以任意更改，必須是英文 hexo init blog 2.切換到創建的blog專案裡面，並且用npm安裝hexo必需的套件 cd blog npm install 3.輸入底下指令在本地端開啟測試伺服器，預設 port 號 是 4000 ， 在網址輸入：http://localhost:4000/ 即可預設網頁 hexo server 3.Hexo 設定 Hexo 專案結構 ├── source // markdown檔案放置位置| ├── _drafts| └── _posts├── _config.yml // 參數設置├── package.json // node_modules 須安裝的東西├── scaffolds└── themes // 下載樣式存放位置 4.Hexo 樣式下載 及 設定 1. 樣式下載可以到 Hexo官網 樣式下載這邊找，然後點選樣式進入樣式裡面的 gtihub，下載樣式的專案 放到 自己專案 themes資料夾 底下 ├── _config.</description>
-    </item>
-    
-    <item>
-      <title>Hexo 基本指令</title>
-      <link>https://teduandy.github.io/blog/blogs/hexo-basic/</link>
-      <pubDate>Tue, 19 Jul 2022 14:57:47 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/blogs/hexo-basic/</guid>
-      <description>快速開始 創建新的筆記 hexo new &amp;#34;My New Post&amp;#34; More info: Writing
-啟動模擬伺服器 hexo server More info: Server
-生成靜態文件 hexo generate More info: Generating
-部屬 hexo deploy More info: Deployment</description>
-    </item>
-    
-  </channel>
-</rss>
