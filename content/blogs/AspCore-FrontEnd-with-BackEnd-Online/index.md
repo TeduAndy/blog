@@ -5,7 +5,7 @@ categories: Asp.net core
 ---
 
 
-##### 專案範例使用：Asp.net core 3.1 
+##### 專案範例使用：Asp.net core 3.1
 
 #### **<font color='red'>1. 先在專案 底下 新增一個 wwwRoot 靜態資源資料夾(用於放打包好的前端)</font>**
 
