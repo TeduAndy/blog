@@ -130,3 +130,8 @@ git checkout [HASH]
 ```GIT
 git branch -m <OLD_BRANCH_NAME> <NEW_BRANCH_NAME>
 ```
+
++ **檢視歷史提交紀錄**
+```Git
+git log --oneline
+```
