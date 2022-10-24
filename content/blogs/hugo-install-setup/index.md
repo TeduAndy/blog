@@ -24,6 +24,32 @@ categories: Blog-Hugo框架
 <br>
 <br>
 
+# **HUGO 環境安裝(手動配置)**
+#### [Hugo 安裝檔下載地點](https://github.com/gohugoio/hugo/releases)
+- 點選電腦系統版本
+- 找不到則往下一版找
+
+<br>
+
+## Window 安裝
+#### 步驟
+- 1.先在 C槽 新增一個 Hugo 的資料夾，並且把下載下來的壓縮檔壓縮到此目錄
+- 2.查看 壓縮完的檔案裏面 是否有一個 (hugo.exe) 檔案，有的話接下來進行環境路徑配置
+- 3.點擊我的電腦 右鍵 選擇 (內容) 進去之後點擊 (進階系統設定)
+
+![我的電腦](hugo-set.png) ![我的電腦](hugo-set2.png)
+
+- 4.點選 (環境變數)，然後選擇 Path 之後 點擊 (編輯) 
+- 5.之後 點擊 (新增) 將 hugo 路徑加入 然後都按 (確定) 設置便完成
+![我的電腦](hugo-set3.png)
+![我的電腦](hugo-set4.png)
+![我的電腦](hugo-set5.png)
+
+## Mac 安裝
+
+<br>
+<br>
+
 [大神-Blog](https://tigernaxojr.github.io/blog/#home)
 <br>
 **這邊創建專案的方式參考某位大神寫好的腳本，創建好的同時並且上傳到 github 上面之外，還在此專案上面分成兩個分支，一個是 main(負責放原本的專案位置)，一個是 gh-pages(存放Bulid過後的靜態資源)**
