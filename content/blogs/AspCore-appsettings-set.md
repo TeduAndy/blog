@@ -10,6 +10,7 @@ categories: Asp.net core
 
 <br>
 
+## 第一種 抓取方法
 ### **<font color='red'>使用方法：</font>**
 
 +  **1. 先在 appsettings.json 設定自己需要的 參數 例: 設定了一個 mysql 裡面的 connectionstring**
@@ -62,3 +63,8 @@ public class UserController : Controller
 	}
 }
 ```
+
+<br>
+<br>
+
+## 第二種 抓取方法
