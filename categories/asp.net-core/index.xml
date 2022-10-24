@@ -6,7 +6,16 @@
     <description>Recent content in Asp.net core on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jul 2022 09:35:18 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/asp.net-core/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Oct 2022 11:26:12 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/asp.net-core/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DI 注入相關說明</title>
+      <link>https://teduandy.github.io/blog/blogs/aspcore-di/</link>
+      <pubDate>Sat, 22 Oct 2022 11:26:12 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/aspcore-di/</guid>
+      <description>DI 圖示說明 DI注入表圖示PTT下載</description>
+    </item>
+    
     <item>
       <title>Asp csc.exe error</title>
       <link>https://teduandy.github.io/blog/blogs/aspcore-csc-exe-question/</link>
