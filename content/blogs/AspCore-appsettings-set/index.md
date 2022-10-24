@@ -10,7 +10,7 @@ categories: Asp.net core
 
 <br>
 
-## 第一種 抓取方法
+# 第一種 抓取方法
 ### **<font color='red'>使用方法：</font>**
 
 +  **1. 先在 appsettings.json 設定自己需要的 參數 例: 設定了一個 mysql 裡面的 connectionstring**
@@ -67,4 +67,26 @@ public class UserController : Controller
 <br>
 <br>
 
-## 第二種 抓取方法
+# 第二種 抓取方法
+
+### 一樣 先在 appsettings.json 裡面設置要獲取的值
+![照片](appsettings1.png)
+
+<br>
+
+### 使用 IConfiguration 介面 去獲取 appsettings 裡面的資訊
+
+- 預設一個空的 IConfiguration 
+- 並且在建構值裡面 將 實體物件賦予給它
+
+![照片](appsettings2.png)
+
+<br>
+
+### 利用 鍵值對的方式去抓取
+![照片](appsettings3.png)
+
+<br>
+
+### 輸出結果
+![照片](appsettings4.png)
