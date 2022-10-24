@@ -15,8 +15,7 @@
       <guid>https://teduandy.github.io/blog/blogs/hugo-install-setup/</guid>
       <description>簡介： 官網：HUGO 主題也可以從官網上面查找自己想要得主題 官網上的經典名句：The world’s fastest framework for building websites 這意思其實是指生產靜態資源的速度。
 讓我們看看，可參考以下 Build Time 比較表 生產靜態資源的速度 出處
-Generator 10 100 1,000 10,000 Hugo 0.05s 0.08s 0.34s 2.95s Jekyll 1.47s 3.3s 14.38s 187.15s 大神-Blog 這邊創建專案的方式參考某位大神寫好的腳本，創建好的同時並且上傳到 github 上面之外，還在此專案上面分成兩個分支，一個是 main(負責放原本的專案位置)，一個是 gh-pages(存放Bulid過後的靜態資源)
-1. 設置腳本bash檔案 先在你想要存放的位置打開一個空白的txt檔案，然後把腳本放進去之後，副檔名修改成 .sh 的副檔名，記得要先在 github 先建立好 res 專案 以及腳本要進行設置，需設置的部分下面註釋有說。 腳本如下： #!/bin/bash gitUser=&amp;#34;&amp;#34; # 這邊設置 github 帳號 gitRepo=&amp;#34;&amp;#34; # 這邊設置 respon 專案的 名字 hugo new site ${gitRepo} cd ${gitRepo}/ git init git clone https://github.</description>
+Generator 10 100 1,000 10,000 Hugo 0.05s 0.08s 0.34s 2.95s Jekyll 1.47s 3.3s 14.38s 187.15s HUGO 環境安裝(手動配置) Hugo 安裝檔下載地點 點選電腦系統版本 找不到則往下一版找 Window 安裝 步驟 1.先在 C槽 新增一個 Hugo 的資料夾，並且把下載下來的壓縮檔壓縮到此目錄 2.查看 壓縮完的檔案裏面 是否有一個 (hugo.exe) 檔案，有的話接下來進行環境路徑配置 3.點擊我的電腦 右鍵 選擇 (內容) 進去之後點擊 (進階系統設定) 4.點選 (環境變數)，然後選擇 Path 之後 點擊 (編輯) 5.之後 點擊 (新增) 將 hugo 路徑加入 然後都按 (確定) 設置便完成 Mac 安裝 大神-Blog 這邊創建專案的方式參考某位大神寫好的腳本，創建好的同時並且上傳到 github 上面之外，還在此專案上面分成兩個分支，一個是 main(負責放原本的專案位置)，一個是 gh-pages(存放Bulid過後的靜態資源)</description>
     </item>
     
   </channel>
