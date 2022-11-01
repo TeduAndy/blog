@@ -141,3 +141,15 @@ git log --oneline
 git pull origin master
                 [分支]
 ```
+
++ **刪除本地分支**
+```Git
+git branch -d <branch>
+                [分支]
+```
+
++ **刪除遠端分支**
+```Git
+git push origin :<branch>
+                  [分支]
+```
