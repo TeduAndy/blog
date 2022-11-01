@@ -74,6 +74,13 @@ git push
 ```GIT
 git push origin [BRANCH_NAME]
 ```
+<br>
+
++ **添加遠端分支**
+```Git
+git remote add [name] [your https url]
+            [遠端網址別名]   [github網址]
+```
 
 <br>
 
@@ -131,10 +138,14 @@ git checkout [HASH]
 git branch -m <OLD_BRANCH_NAME> <NEW_BRANCH_NAME>
 ```
 
+<br>
+
 + **檢視歷史提交紀錄**
 ```Git
 git log --oneline
 ```
+
+<br>
 
 + **遠端資料最新版拉到本地（本地更新）**
 ```Git
@@ -142,14 +153,21 @@ git pull origin master
                 [分支]
 ```
 
+<br>
+
 + **刪除本地分支**
 ```Git
 git branch -d <branch>
                 [分支]
 ```
 
+<br>
+
 + **刪除遠端分支**
 ```Git
 git push origin :<branch>
                   [分支]
 ```
+
+<br>
+
