@@ -135,3 +135,9 @@ git branch -m <OLD_BRANCH_NAME> <NEW_BRANCH_NAME>
 ```Git
 git log --oneline
 ```
+
++ **遠端資料最新版拉到本地（本地更新）**
+```Git
+git pull origin master
+                [分支]
+```
