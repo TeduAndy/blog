@@ -5,7 +5,7 @@ categories: Asp.net
 ---
 
 
-#### <font color='red'>1. ASP.NET Core 中強制執行 HTTPS</font>
+#### <font color='red'>1. ASP.NET Or Core 中強制執行 HTTPS</font>
 
 **說明：**
 - **測試的時候可能會出現的問題 http導到https**

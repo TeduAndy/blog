@@ -1,9 +1,12 @@
 ---
-title: .NET 6.0 使用 Serilog 對應用程式事件進行結構化紀錄
+title: 使用 Serilog 對應用程式事件進行結構化紀錄
 date: 2022-07-19 13:39:29
 categories: Asp.net
 ---
 
+### **版本:Asp.net 6**
+
+<br>
 
 ### 1. <font color='#9f6b53'>使用的套件:</font>
 + **Serilog 版本: 2.11.1**
