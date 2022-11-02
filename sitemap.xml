@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://teduandy.github.io/blog/categories/asp.net-core/</loc>
+    <loc>https://teduandy.github.io/blog/categories/asp.net/</loc>
     <lastmod>2022-10-22T11:26:12+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/</loc>
@@ -11,7 +11,7 @@
     <loc>https://teduandy.github.io/blog/categories/</loc>
     <lastmod>2022-10-22T11:26:12+00:00</lastmod>
   </url><url>
-    <loc>https://teduandy.github.io/blog/blogs/aspcore-di/</loc>
+    <loc>https://teduandy.github.io/blog/blogs/aspnet-di/</loc>
     <lastmod>2022-10-22T11:26:12+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/</loc>
@@ -59,7 +59,7 @@
     <loc>https://teduandy.github.io/blog/blogs/vue-cors-set/</loc>
     <lastmod>2022-07-21T11:39:35+00:00</lastmod>
   </url><url>
-    <loc>https://teduandy.github.io/blog/blogs/aspcore-csc-exe-question/</loc>
+    <loc>https://teduandy.github.io/blog/blogs/aspnet-csc-exe-question/</loc>
     <lastmod>2022-07-21T09:35:18+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/categories/c-sharp/</loc>
@@ -83,25 +83,25 @@
     <loc>https://teduandy.github.io/blog/blogs/hugo-install-setup/</loc>
     <lastmod>2022-07-19T14:57:47+00:00</lastmod>
   </url><url>
-    <loc>https://teduandy.github.io/blog/blogs/aspcore-asp-web-api-problem/</loc>
+    <loc>https://teduandy.github.io/blog/blogs/aspnet-asp-web-api-problem/</loc>
     <lastmod>2022-07-19T13:47:37+00:00</lastmod>
   </url><url>
-    <loc>https://teduandy.github.io/blog/blogs/aspcore-serilog-log-set/</loc>
+    <loc>https://teduandy.github.io/blog/blogs/aspnet-serilog-log-set/</loc>
     <lastmod>2022-07-19T13:39:29+00:00</lastmod>
   </url><url>
-    <loc>https://teduandy.github.io/blog/blogs/aspcore-frontend-with-backend-online/</loc>
+    <loc>https://teduandy.github.io/blog/blogs/aspnet-frontend-with-backend-online/</loc>
     <lastmod>2022-07-19T11:26:12+00:00</lastmod>
   </url><url>
-    <loc>https://teduandy.github.io/blog/blogs/aspcore-jwt-token/</loc>
+    <loc>https://teduandy.github.io/blog/blogs/aspnet-jwt-token/</loc>
     <lastmod>2022-07-19T11:00:35+00:00</lastmod>
   </url><url>
-    <loc>https://teduandy.github.io/blog/blogs/aspcore-appsettings-set/</loc>
+    <loc>https://teduandy.github.io/blog/blogs/aspnet-appsettings-set/</loc>
     <lastmod>2022-07-19T10:51:27+00:00</lastmod>
   </url><url>
-    <loc>https://teduandy.github.io/blog/blogs/aspcore-linq/</loc>
+    <loc>https://teduandy.github.io/blog/blogs/aspnet-linq/</loc>
     <lastmod>2022-07-19T10:00:01+00:00</lastmod>
   </url><url>
-    <loc>https://teduandy.github.io/blog/blogs/aspcore-dapper/</loc>
+    <loc>https://teduandy.github.io/blog/blogs/aspnet-dapper/</loc>
     <lastmod>2022-07-19T09:27:01+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/categories/git/</loc>

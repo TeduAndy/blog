@@ -9,10 +9,10 @@
     <lastBuildDate>Sat, 22 Oct 2022 11:26:12 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DI 注入相關說明</title>
-      <link>https://teduandy.github.io/blog/blogs/aspcore-di/</link>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-di/</link>
       <pubDate>Sat, 22 Oct 2022 11:26:12 +0000</pubDate>
       
-      <guid>https://teduandy.github.io/blog/blogs/aspcore-di/</guid>
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-di/</guid>
       <description>DI 圖示說明 DI注入表圖示PTT下載</description>
     </item>
     
@@ -134,10 +134,10 @@ cors 的方法, 並且可以針對後端的 url 取匿名 ,簡短對 ajax 使用
     
     <item>
       <title>Asp csc.exe error</title>
-      <link>https://teduandy.github.io/blog/blogs/aspcore-csc-exe-question/</link>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-csc-exe-question/</link>
       <pubDate>Thu, 21 Jul 2022 09:35:18 +0000</pubDate>
       
-      <guid>https://teduandy.github.io/blog/blogs/aspcore-csc-exe-question/</guid>
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-csc-exe-question/</guid>
       <description>說明 : 會出現這個原因是因為新版開啟舊版專案導致 解決方法 : 1. 先到專案底下尋找 一個附檔名為 專案名稱.csporj 2. 然後在最下面貼上這段 到這裡面 3. 然後再重新執行一次 程式 就可以了 &amp;lt;Target Name=&amp;#34;CopyRoslynFiles&amp;#34; AfterTargets=&amp;#34;AfterBuild&amp;#34; Condition=&amp;#34;!$(Disable_CopyWebApplication) And &amp;#39;$(OutDir)&amp;#39; != &amp;#39;$(OutputPath)&amp;#39;&amp;#34;&amp;gt; &amp;lt;ItemGroup&amp;gt; &amp;lt;RoslynFiles Include=&amp;#34;$(CscToolPath)\*&amp;#34; /&amp;gt; &amp;lt;/ItemGroup&amp;gt; &amp;lt;MakeDir Directories=&amp;#34;$(WebProjectOutputDir)\bin\roslyn&amp;#34; /&amp;gt; &amp;lt;Copy SourceFiles=&amp;#34;@(RoslynFiles)&amp;#34; DestinationFolder=&amp;#34;$(WebProjectOutputDir)\bin\roslyn&amp;#34; SkipUnchangedFiles=&amp;#34;true&amp;#34; Retries=&amp;#34;$(CopyRetryCount)&amp;#34; RetryDelayMilliseconds=&amp;#34;$(CopyRetryDelayMilliseconds)&amp;#34; /&amp;gt; &amp;lt;/Target&amp;gt; </description>
     </item>
     
@@ -156,7 +156,7 @@ cors 的方法, 並且可以針對後端的 url 取匿名 ,簡短對 ajax 使用
       <pubDate>Tue, 19 Jul 2022 16:08:18 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/hexo-category-set/</guid>
-      <description>如何使用categories進行分類 1. 第一步驟先到bash下指令新增分類 hexo new page category 2. 會發現 主目錄的 source資料夾底下多了一個 category資料夾，點開裡面的 index.md title: 分類 // 類別頁面的標題 date: 2022-07-15 11:35:52 type: category // 型態可以自己取 layout: &amp;#34;category&amp;#34; // 版面呈現 用於 你在使用的樣式專案 3. 接下來到需要分類的 md文檔 進行設定 title: 文檔標題名稱 date: 時間 category: Hexo // 這個 category 是你在 type 設置的名字 用來判別是用於分類，後面的 Hexo 則是 你分類頁面 會顯示有一個分類區塊叫做 Hexo ，文檔裡面設置是這個名字的都會被歸類在Hexo底下。 接下是切換到樣式專案裡面的 _config.yml 裡面設置 找尋 nav 或者 menu 的設置，把 nav: # Resume: Posts: /archives # category: /category // 把#字號刪除 就打開了 設置好後，在啟動伺服器時要先清除舊的靜態資源，然後生成新的靜態支援後再啟動 hexo clean // 先把原來的靜態資源清空 hexo generate // 再重新生成新的靜態資源 hexo server // 再執行 模擬伺服器，這對之後做分類頁面很重要 </description>
+      <description>如何使用categories進行分類 1. 第一步驟先到bash下指令新增分類 hexo new page category 2. 會發現 主目錄的 source資料夾底下多了一個 category資料夾，點開裡面的 index.md title: 分類 // 類別頁面的標題 date: 2022-07-15 11:35:52 type: category // 型態可以自己取 layout: &amp;#34;category&amp;#34; // 版面呈現 用於 你在使用的樣式專案 3. 接下來到需要分類的 md文檔 進行設定 title: 文檔標題名稱 date: 時間 category: Hexo // 這個 category 是你在 type 設置的名字 用來判別是用於分類，後面的 Hexo 則是 你分類頁面 會顯示有一個分類區塊叫做 Hexo ，文檔裡面設置是這個名字的都會被歸類在Hexo底下。 接下是切換到樣式專案裡面的 _config.yml 裡面設置 找尋 nav 或者 menu 的設置，把 nav:# Resume:Posts: /archives# category: /category // 把#字號刪除 就打開了 設置好後，在啟動伺服器時要先清除舊的靜態資源，然後生成新的靜態支援後再啟動 hexo clean // 先把原來的靜態資源清空 hexo generate // 再重新生成新的靜態資源 hexo server // 再執行 模擬伺服器，這對之後做分類頁面很重要 </description>
     </item>
     
     <item>
@@ -165,7 +165,7 @@ cors 的方法, 並且可以針對後端的 url 取匿名 ,簡短對 ajax 使用
       <pubDate>Tue, 19 Jul 2022 15:01:23 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/hexo-install-and-setup/</guid>
-      <description>1.安裝 Hexo （電腦必須先安裝 git 和 node.js） npm install -g hexo-cli 2.建立 Hexo 專案 1.產生一個叫做 blog 的資料夾，資料夾名稱可以任意更改，必須是英文 hexo init blog 2.切換到創建的blog專案裡面，並且用npm安裝hexo必需的套件 cd blog npm install 3.輸入底下指令在本地端開啟測試伺服器，預設 port 號 是 4000 ， 在網址輸入：http://localhost:4000/ 即可預設網頁 hexo server 3.Hexo 設定 Hexo 專案結構 ├── source // markdown檔案放置位置 | ├── _drafts | └── _posts ├── _config.yml // 參數設置 ├── package.json // node_modules 須安裝的東西 ├── scaffolds └── themes // 下載樣式存放位置 4.Hexo 樣式下載 及 設定 1. 樣式下載可以到 Hexo官網 樣式下載這邊找，然後點選樣式進入樣式裡面的 gtihub，下載樣式的專案 放到 自己專案 themes資料夾 底下 ├── _config.</description>
+      <description>1.安裝 Hexo （電腦必須先安裝 git 和 node.js） npm install -g hexo-cli 2.建立 Hexo 專案 1.產生一個叫做 blog 的資料夾，資料夾名稱可以任意更改，必須是英文 hexo init blog 2.切換到創建的blog專案裡面，並且用npm安裝hexo必需的套件 cd blog npm install 3.輸入底下指令在本地端開啟測試伺服器，預設 port 號 是 4000 ， 在網址輸入：http://localhost:4000/ 即可預設網頁 hexo server 3.Hexo 設定 Hexo 專案結構 ├── source // markdown檔案放置位置| ├── _drafts| └── _posts├── _config.yml // 參數設置├── package.json // node_modules 須安裝的東西├── scaffolds└── themes // 下載樣式存放位置 4.Hexo 樣式下載 及 設定 1. 樣式下載可以到 Hexo官網 樣式下載這邊找，然後點選樣式進入樣式裡面的 gtihub，下載樣式的專案 放到 自己專案 themes資料夾 底下 ├── _config.</description>
     </item>
     
     <item>
@@ -193,70 +193,70 @@ Generator 10 100 1,000 10,000 Hugo 0.05s 0.08s 0.34s 2.95s Jekyll 1.47s 3.3s 14.
     
     <item>
       <title>ASP.NET WEB API常見問題</title>
-      <link>https://teduandy.github.io/blog/blogs/aspcore-asp-web-api-problem/</link>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-asp-web-api-problem/</link>
       <pubDate>Tue, 19 Jul 2022 13:47:37 +0000</pubDate>
       
-      <guid>https://teduandy.github.io/blog/blogs/aspcore-asp-web-api-problem/</guid>
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-asp-web-api-problem/</guid>
       <description>1. ASP.NET Core 中強制執行 HTTPS 說明：
 測試的時候可能會出現的問題 http導到https 要求所有要求都需要 HTTPS。 將所有 HTTP 要求都重新導向至 HTTPS。 var builder = WebApplication.CreateBuilder(args); builder.Services.AddRazorPages(); var app = builder.Build(); if (!app.Environment.IsDevelopment()) { app.UseExceptionHandler(&amp;#34;/Error&amp;#34;); app.UseHsts(); } app.UseHttpsRedirection();　／／　這個方法　會強制導到　https (建立專案測試時 請先不要用) app.UseStaticFiles(); app.UseRouting(); app.UseAuthorization(); app.MapRazorPages(); app.Run(); </description>
     </item>
     
     <item>
       <title>.NET 6.0 使用 Serilog 對應用程式事件進行結構化紀錄</title>
-      <link>https://teduandy.github.io/blog/blogs/aspcore-serilog-log-set/</link>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-serilog-log-set/</link>
       <pubDate>Tue, 19 Jul 2022 13:39:29 +0000</pubDate>
       
-      <guid>https://teduandy.github.io/blog/blogs/aspcore-serilog-log-set/</guid>
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-serilog-log-set/</guid>
       <description>1. 使用的套件: Serilog 版本: 2.11.1 Serilog-AspNetCore 版本: 6.00 2. Asp.net6 Program.cs 設定: using System; using Microsoft.AspNetCore.Builder; using Microsoft.Extensions.DependencyInjection; using Microsoft.Extensions.Hosting; using Serilog; using Serilog.Events; // LOG基本設定 Log.Logger = new LoggerConfiguration() .MinimumLevel.Information() .MinimumLevel.Override(&amp;#34;Microsoft.AspNetCore&amp;#34;, LogEventLevel.Warning) .WriteTo.Console() // 執行 LOG時 輸出也會打印 .WriteTo.File(&amp;#34;../logs/log-.txt&amp;#34;, rollingInterval: RollingInterval.Day) // 輸出到哪一個資料夾 .CreateLogger(); try { Log.Information(&amp;#34;=============Starting=============&amp;#34;); // TODO: 將原本 Program.cs 所有程式碼搬到這裡 // LOG設定 必須在 APP 之前 builder.Host.UseSerilog(); // app.UseSerilogRequestLogging(); 這個 Middleware 來整理所有與 Request 相關的紀錄，讓你在一條 Log 中就可以取得目前 Request 所有的相關資訊。 app.UseSerilogRequestLogging(); return 0; } catch (Exception ex) { // web 運作錯誤 寫入 Log.</description>
     </item>
     
     <item>
       <title>上線使用後端搭配前端</title>
-      <link>https://teduandy.github.io/blog/blogs/aspcore-frontend-with-backend-online/</link>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-frontend-with-backend-online/</link>
       <pubDate>Tue, 19 Jul 2022 11:26:12 +0000</pubDate>
       
-      <guid>https://teduandy.github.io/blog/blogs/aspcore-frontend-with-backend-online/</guid>
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-frontend-with-backend-online/</guid>
       <description>專案範例使用：Asp.net core 3.1 測試 1. 先在專案 底下 新增一個 wwwRoot 靜態資源資料夾(用於放打包好的前端) wwwRoot 資料夾 用於放靜態資源 所以 樣子不一樣
 2. 接下來在 Startup.cs(.net6 在 Program.cs) 添加設定 (套件:Microsoft.AspNetCore.SpaServices.Extensions) app.UseHttpsRedirection(); //將 http 導向至 https app.UseDefaultFiles(); // 沒有指定檔案名稱的話就預設使用 index.html http://xxx.xxx.xx/controller/(index.html) app.UseStaticFiles(); // 預設把 wwwRoot 資料夾底下的檔案作為靜態資源提供服務 // 404 not found // 把後端收到的 /ORD/ORDWxxxx/app/.... 請求 全部導到 /ORD/ORDWxxx/app/index.html 靜態資源 並告訴前端 /a/b/c app.UseSpa(spa =&amp;gt; { spa.Options.SourcePath = &amp;#34;/app&amp;#34;; }); 3. 接下來 對專案 按下發佈 之後彈出畫面 在按發佈 會打包出新的包在 bin\Release\netcoreapp3.1\punlish( 裡面的東西就是要放置到 線上 ) </description>
     </item>
     
     <item>
       <title>JWT 驗證 及 創建 token</title>
-      <link>https://teduandy.github.io/blog/blogs/aspcore-jwt-token/</link>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-jwt-token/</link>
       <pubDate>Tue, 19 Jul 2022 11:00:35 +0000</pubDate>
       
-      <guid>https://teduandy.github.io/blog/blogs/aspcore-jwt-token/</guid>
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-jwt-token/</guid>
       <description>使用的套件: Microsoft.AspNetCore.Authentication.JwtBearer 創建TOKEN 1. 先在 專案裡面 添加一個 JWT類 代碼如下： using System; using System.Collections.Generic; using System.Security.Claims; using System.Text; using System.IdentityModel.Tokens.Jwt; using Microsoft.Extensions.Configuration; using Microsoft.IdentityModel.Tokens; namespace test2 { public class JWT { private readonly IConfiguration Configuration; public JWT(IConfiguration configuration) { this.Configuration = configuration; } public string GenerateToken(string userName, int expireMinutes = 30) { // 獲取在 appsettiongs.json 裡面設定好的資訊 var issuer = Configuration.GetValue&amp;lt;string&amp;gt;(&amp;#34;Jwt:Issuer&amp;#34;); var signKey = Configuration.GetValue&amp;lt;string&amp;gt;(&amp;#34;KEY:skey&amp;#34;); // Configuring &amp;#34;Claims&amp;#34; to your JWT Token var claims = new List&amp;lt;Claim&amp;gt;(); // In RFC 7519 (Section#4), there are defined 7 built-in Claims, but we mostly use 2 of them.</description>
     </item>
     
     <item>
       <title>組態設定 appsettings.json</title>
-      <link>https://teduandy.github.io/blog/blogs/aspcore-appsettings-set/</link>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-appsettings-set/</link>
       <pubDate>Tue, 19 Jul 2022 10:51:27 +0000</pubDate>
       
-      <guid>https://teduandy.github.io/blog/blogs/aspcore-appsettings-set/</guid>
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-appsettings-set/</guid>
       <description>說明： 在 appsettings.json 自己所需要的參數 避免在邏輯控制層曝露自己的帳號密碼, 只有在邏輯控制啟動時注入 到 自己寫好的 DTO裡面 並且實例化
 第一種 抓取方法 使用方法： 1. 先在 appsettings.json 設定自己需要的 參數 例: 設定了一個 mysql 裡面的 connectionstring &amp;#34;AllowedHosts&amp;#34;: &amp;#34;*&amp;#34;, &amp;#34;MySQL&amp;#34;: { &amp;#34;ConnectionString&amp;#34;: &amp;#34;server=127.0.0.1;userid=root;password=123456;database=django;&amp;#34; }, 2. 然後先寫好自己要注入的DTO namespace test2 { public class servermq { public string? ConnectionString { get; set; } } } 3. 然後在 Program.cs 裡面添加 這段 (基本上 appsettings.json 獲取裡面的資訊都是用這方式) builder.Services.Configure&amp;lt;servermq&amp;gt;(builder.Configuration.GetSection(&amp;#34;MySQL&amp;#34;)); 4. 然後在 Controller 那裡 先幫 創好 一個變量 , 然後在他的建構函數下 添加這段. [ApiController] [Route(&amp;#34;[Controller]&amp;#34;)] public class UserController : Controller { private readonly servermq _options; //建構函數 public UserController(IOptions&amp;lt;servermq&amp;gt; options) { // 啟動時注入 並且把 值 賦予到 創好的變量裡面 _options = options.</description>
     </item>
     
     <item>
       <title>LINQ 相關</title>
-      <link>https://teduandy.github.io/blog/blogs/aspcore-linq/</link>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-linq/</link>
       <pubDate>Tue, 19 Jul 2022 10:00:01 +0000</pubDate>
       
-      <guid>https://teduandy.github.io/blog/blogs/aspcore-linq/</guid>
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-linq/</guid>
       <description>離線table 用法 // 抓回來的 DataTable DataTable tb = GetTB(_formno, _key); // tb.AsEnumerable() 會轉成 EnumerableRowCollection&amp;lt;DataRow&amp;gt; 類型 , 因為是 Enumerable 類型 便可以用 linq // 從裡面的資料抓取多筆 使用 where , {} 內是要寫第二行 但是 {} 不會自動 return 所以要手動 return var tmps = tb.AsEnumerable().Where(row =&amp;gt; { var num = row[&amp;#34;DTLNO&amp;#34;].ToString(); return (Convert.ToInt32(num) &amp;lt; 220 &amp;amp;&amp;amp; num != &amp;#34;215&amp;#34;) | num == &amp;#34;254&amp;#34;; }); // 單一一筆 使用 FirstOrDefault (但是這個會 一抓到一筆 馬上返回) var tmp = tb.AsEnumerable().FirstOrDefault(row =&amp;gt; row[&amp;#34;DTLNO&amp;#34;].ToString() == &amp;#34;215&amp;#34;); // 單一一筆 使用 SingleOrDefault (這個是抓到一筆 會再繼續往下 查完所有 抓到第二筆則會報錯誤) tmp = tb.</description>
     </item>
     
     <item>
       <title>Dapper 使用介紹</title>
-      <link>https://teduandy.github.io/blog/blogs/aspcore-dapper/</link>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-dapper/</link>
       <pubDate>Tue, 19 Jul 2022 09:27:01 +0000</pubDate>
       
-      <guid>https://teduandy.github.io/blog/blogs/aspcore-dapper/</guid>
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-dapper/</guid>
       <description>說明： Dapper輕量級的 ORM，必須要自己定義 C# class、管理連線、自己寫 SQL，但是套件非常迷你而且效能非常好，很適合已經學會目標資料庫語法的開發者。 安裝： 1. 專案點右鍵 -&amp;gt; 管理 NuGet 套件
 2. 收尋 1. Dapper and 1. MySQL Connector 並且安裝
-Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。 2.開啟一個 MySQL 連線： 用 var _db = new MySqlConnection(&amp;quot;連線資訊&amp;quot;); 就能開啟連線。比較需要注意的是，最好用注入組態設定的方法取得連線資訊，以及用 using 語法自動幫我們關閉連線，以免忘記關閉造成連線被占用 3.連線資訊設定： 在專案新增一個空類 名叫 serverMq.cs 裡面是用來填入 我們從組態設定抓來的 連線字串 public class servermq { public string ConnectionString { get; set; } } 到 appsettings.json 組態設定裡面 新增 mysql 連線字串 &amp;#34;AllowedHosts&amp;#34;: &amp;#34;*&amp;#34;, &amp;#34;MySQL&amp;#34;: { &amp;#34;ConnectionString&amp;#34;: &amp;#34;server=127.</description>
+Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。 2.開啟一個 MySQL 連線： 用 var _db = new MySqlConnection(&amp;quot;連線資訊&amp;quot;); 就能開啟連線。比較需要注意的是，最好用注入組態設定的方法取得連線資訊，以及用 using 語法自動幫我們關閉連線，以免忘記關閉造成連線被占用 3.連線資訊設定： 在專案新增一個空類 名叫 serverMq.cs 裡面是用來填入 我們從組態設定抓來的 連線字串 public class servermq { public string ConnectionString { get; set; } } 到 appsettings.json 組態設定裡面 新增 mysql 連線字串&amp;#34;AllowedHosts&amp;#34;: &amp;#34;*&amp;#34;, &amp;#34;MySQL&amp;#34;: { &amp;#34;ConnectionString&amp;#34;: &amp;#34;server=127.</description>
     </item>
     
     <item>
@@ -265,7 +265,7 @@ Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援�
       <pubDate>Tue, 19 Jul 2022 09:03:25 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/git-common-command/</guid>
-      <description>常用指令 建立新的本地端 Repository。 git init 複製遠端的 Repository 檔案到本地端。 git clone [Repository URL] 檢查本地端檔案異動狀態。 git status 將指定的檔案（或資料夾）加入版本控制。用 git add . 可加入全部。 git add [檔案或資料夾] 提交（commit）目前的異動。 git commit 提交（commit）目前的異動並透過 -m 參數設定摘要說明文字。 git commit -m &amp;#34;提交說明內容&amp;#34; 獲取目前工作目錄的 dirty state，並保存到一個未完成變更的 stack，以方便隨時回復至當初的 state。 git stash 查看先前的 commit 記錄。 git log 將本地端 Repository 的 commit 發佈到遠端。 git push 發佈至遠端指定的分支（Branch） git push origin [BRANCH_NAME] 添加遠端分支 git remote add [name] [your https url] [遠端網址別名] [github網址] 查看分支。 git branch 建立分支。 git branch [BRANCH_NAME] 取出指定的分支。 git checkout [BRANCH_NAME] 建立並跳到該分支。 git checkout -b [BRANCH_NAME] 強制刪除指定分支（須先切換至其他分支再做刪除）。 git branch -D [BRANCH_NAME] 強制恢復到指定的 commit（透過 Hash 值）。 git reset --hard [HASH] 切換到指定的 commit（與 git checkout [BRANCH_NAME] 相同)。 git checkout [HASH] 修改分支名稱。 git branch -m &amp;lt;OLD_BRANCH_NAME&amp;gt; &amp;lt;NEW_BRANCH_NAME&amp;gt; 檢視歷史提交紀錄 git log --oneline 遠端資料最新版拉到本地（本地更新） git pull origin master [分支] 刪除本地分支 git branch -d &amp;lt;branch&amp;gt; [分支] 刪除遠端分支 git push origin :&amp;lt;branch&amp;gt; [分支] </description>
+      <description>常用指令 建立新的本地端 Repository。 git init 複製遠端的 Repository 檔案到本地端。 git clone [Repository URL] 檢查本地端檔案異動狀態。 git status 將指定的檔案（或資料夾）加入版本控制。用 git add . 可加入全部。 git add [檔案或資料夾] 提交（commit）目前的異動。 git commit 提交（commit）目前的異動並透過 -m 參數設定摘要說明文字。 git commit -m &amp;#34;提交說明內容&amp;#34; 獲取目前工作目錄的 dirty state，並保存到一個未完成變更的 stack，以方便隨時回復至當初的 state。 git stash 查看先前的 commit 記錄。 git log 將本地端 Repository 的 commit 發佈到遠端。 git push 發佈至遠端指定的分支（Branch） git push origin [BRANCH_NAME] 添加遠端分支 git remote add [name] [your https url][遠端網址別名] [github網址] 查看分支。 git branch 建立分支。 git branch [BRANCH_NAME] 取出指定的分支。 git checkout [BRANCH_NAME] 建立並跳到該分支。 git checkout -b [BRANCH_NAME] 強制刪除指定分支（須先切換至其他分支再做刪除）。 git branch -D [BRANCH_NAME] 強制恢復到指定的 commit（透過 Hash 值）。 git reset --hard [HASH] 切換到指定的 commit（與 git checkout [BRANCH_NAME] 相同)。 git checkout [HASH] 修改分支名稱。 git branch -m &amp;lt;OLD_BRANCH_NAME&amp;gt; &amp;lt;NEW_BRANCH_NAME&amp;gt; 檢視歷史提交紀錄 git log --oneline 遠端資料最新版拉到本地（本地更新） git pull origin master[分支] 刪除本地分支 git branch -d &amp;lt;branch&amp;gt;[分支] 刪除遠端分支 git push origin :&amp;lt;branch&amp;gt;[分支] </description>
     </item>
     
     <item>
@@ -283,7 +283,7 @@ Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援�
       <pubDate>Mon, 18 Jul 2022 16:54:51 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/sql-often-use/</guid>
-      <description>讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&amp;#34;&amp;#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) 函數使用(運算類) AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) example： SELECT &amp;#34;函數名&amp;#34;(&amp;#34;欄位名&amp;#34;) FROM &amp;#34;表格名&amp;#34;; GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明： HAVING 子句通常是在一個 SQL 句子的最後。 一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。 example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &amp;gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2.</description>
+      <description>讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&amp;#34;&amp;#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) 函數使用(運算類) AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) example： SELECT &amp;#34;函數名&amp;#34;(&amp;#34;欄位名&amp;#34;) FROM &amp;#34;表格名&amp;#34;; GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &amp;gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2.</description>
     </item>
     
     <item>
@@ -302,7 +302,7 @@ Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援�
       <pubDate>Mon, 18 Jul 2022 16:44:47 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/c-scattered-notes/</guid>
-      <description> Process 呼叫EXE 檔案 並 傳值 // 第二個負責傳參數 用 空格 分別不同 值 Process.Start(&amp;#34;C:\\AP06BZ\\EXE\\MTNP200.exe&amp;#34;, &amp;#34;2407 L123370532&amp;#34;); 匿名函數說明 () =&amp;gt; expression // expression = 求值式 本身會有 return value () =&amp;gt; { statement; } // statement = 執行語句，需要 return 才會 return </description>
+      <description>Process 呼叫EXE 檔案 並 傳值 // 第二個負責傳參數 用 空格 分別不同 值 Process.Start(&amp;#34;C:\\AP06BZ\\EXE\\MTNP200.exe&amp;#34;, &amp;#34;2407 L123370532&amp;#34;); 匿名函數說明() =&amp;gt; expression // expression = 求值式 本身會有 return value () =&amp;gt; { statement; } // statement = 執行語句，需要 return 才會 return </description>
     </item>
     
     <item>
@@ -311,7 +311,7 @@ Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援�
       <pubDate>Mon, 18 Jul 2022 16:37:54 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/c-winform-printdocument/</guid>
-      <description>說明： 一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明 使用方法： 1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖 private void button1_Click(object sender, EventArgs e) { // 創建列印物件 PrintDocument pd = new PrintDocument(); // 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個 pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage); // 啟動列印 pd.Print(); // 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog PrintPreviewDialog pD = new PrintPreviewDialog(); pD.</description>
+      <description>說明： 一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明使用方法： 1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖 private void button1_Click(object sender, EventArgs e) { // 創建列印物件 PrintDocument pd = new PrintDocument(); // 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個 pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage); // 啟動列印 pd.Print(); // 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog PrintPreviewDialog pD = new PrintPreviewDialog(); pD.</description>
     </item>
     
     <item>
@@ -320,7 +320,7 @@ Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援�
       <pubDate>Mon, 18 Jul 2022 16:26:39 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/c-data-get-methods/</guid>
-      <description>說明： 方法有兩種，一種是 DataTable 一種是 DataReader，最簡單的就是用 DataTable 接資料 string connString = &amp;#34;server=127.0.0.1;port=3306;user id=root;password=Acuteboy1215;database=mvctest;charset=utf8;&amp;#34;; MySqlConnection conn = new MySqlConnection(); public ActionResult Index() { // 聯繫裡面放入連線字串 conn.ConnectionString = connString; string sql = @&amp;#34; SELECT `id`, `city` FROM `city`&amp;#34;; // 創建新的空的 DataTable 讓抓回來的資料存放 DataTable dt = new DataTable(); // 執行 sql 語句 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn); // 將資料注入到 空的 database adapter.Fill(dt); } 在這段程式我們沒有處理 連線 跟 斷線 ， 因為 MySqlDataAdapter 會幫我們處理 </description>
+      <description>說明： 方法有兩種，一種是 DataTable 一種是 DataReader，最簡單的就是用 DataTable 接資料string connString = &amp;#34;server=127.0.0.1;port=3306;user id=root;password=Acuteboy1215;database=mvctest;charset=utf8;&amp;#34;; MySqlConnection conn = new MySqlConnection(); public ActionResult Index() { // 聯繫裡面放入連線字串 conn.ConnectionString = connString; string sql = @&amp;#34; SELECT `id`, `city` FROM `city`&amp;#34;; // 創建新的空的 DataTable 讓抓回來的資料存放 DataTable dt = new DataTable(); // 執行 sql 語句 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn); // 將資料注入到 空的 database adapter.Fill(dt); } 在這段程式我們沒有處理 連線 跟 斷線 ， 因為 MySqlDataAdapter 會幫我們處理 </description>
     </item>
     
     <item>
