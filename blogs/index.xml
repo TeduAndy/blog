@@ -6,7 +6,16 @@
     <description>Recent content in Blogs on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Oct 2022 11:26:12 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Nov 2022 08:00:00 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ASP.NET 查看環境安裝版本</title>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-checkaspsdk/</link>
+      <pubDate>Tue, 01 Nov 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-checkaspsdk/</guid>
+      <description>打開 cmd 查看 Asp.Net Framework reg query &amp;#34;HKLM\Software\Microsoft\NET Framework Setup\NDP&amp;#34; /s /v version | findstr /i version | sort /+26 /r 查看 Asp.net Core 版本 指令一: Help dotnet help 指令二: 當前運行版本 dotnet --version 指令三: 查看已安装所有SDK版本 dotnet --list-sdks 指令三: 查看已安装所有版本，包括地址 dotnet --info </description>
+    </item>
+    
     <item>
       <title>DI 注入相關說明</title>
       <link>https://teduandy.github.io/blog/blogs/aspnet-di/</link>
@@ -197,17 +206,17 @@ Generator 10 100 1,000 10,000 Hugo 0.05s 0.08s 0.34s 2.95s Jekyll 1.47s 3.3s 14.
       <pubDate>Tue, 19 Jul 2022 13:47:37 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/aspnet-asp-web-api-problem/</guid>
-      <description>1. ASP.NET Core 中強制執行 HTTPS 說明：
+      <description>1. ASP.NET Or Core 中強制執行 HTTPS 說明：
 測試的時候可能會出現的問題 http導到https 要求所有要求都需要 HTTPS。 將所有 HTTP 要求都重新導向至 HTTPS。 var builder = WebApplication.CreateBuilder(args); builder.Services.AddRazorPages(); var app = builder.Build(); if (!app.Environment.IsDevelopment()) { app.UseExceptionHandler(&amp;#34;/Error&amp;#34;); app.UseHsts(); } app.UseHttpsRedirection();　／／　這個方法　會強制導到　https (建立專案測試時 請先不要用) app.UseStaticFiles(); app.UseRouting(); app.UseAuthorization(); app.MapRazorPages(); app.Run(); </description>
     </item>
     
     <item>
-      <title>.NET 6.0 使用 Serilog 對應用程式事件進行結構化紀錄</title>
+      <title>使用 Serilog 對應用程式事件進行結構化紀錄</title>
       <link>https://teduandy.github.io/blog/blogs/aspnet-serilog-log-set/</link>
       <pubDate>Tue, 19 Jul 2022 13:39:29 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/aspnet-serilog-log-set/</guid>
-      <description>1. 使用的套件: Serilog 版本: 2.11.1 Serilog-AspNetCore 版本: 6.00 2. Asp.net6 Program.cs 設定: using System; using Microsoft.AspNetCore.Builder; using Microsoft.Extensions.DependencyInjection; using Microsoft.Extensions.Hosting; using Serilog; using Serilog.Events; // LOG基本設定 Log.Logger = new LoggerConfiguration() .MinimumLevel.Information() .MinimumLevel.Override(&amp;#34;Microsoft.AspNetCore&amp;#34;, LogEventLevel.Warning) .WriteTo.Console() // 執行 LOG時 輸出也會打印 .WriteTo.File(&amp;#34;../logs/log-.txt&amp;#34;, rollingInterval: RollingInterval.Day) // 輸出到哪一個資料夾 .CreateLogger(); try { Log.Information(&amp;#34;=============Starting=============&amp;#34;); // TODO: 將原本 Program.cs 所有程式碼搬到這裡 // LOG設定 必須在 APP 之前 builder.Host.UseSerilog(); // app.UseSerilogRequestLogging(); 這個 Middleware 來整理所有與 Request 相關的紀錄，讓你在一條 Log 中就可以取得目前 Request 所有的相關資訊。 app.UseSerilogRequestLogging(); return 0; } catch (Exception ex) { // web 運作錯誤 寫入 Log.</description>
+      <description>版本:Asp.net 6 1. 使用的套件: Serilog 版本: 2.11.1 Serilog-AspNetCore 版本: 6.00 2. Asp.net6 Program.cs 設定: using System; using Microsoft.AspNetCore.Builder; using Microsoft.Extensions.DependencyInjection; using Microsoft.Extensions.Hosting; using Serilog; using Serilog.Events; // LOG基本設定 Log.Logger = new LoggerConfiguration() .MinimumLevel.Information() .MinimumLevel.Override(&amp;#34;Microsoft.AspNetCore&amp;#34;, LogEventLevel.Warning) .WriteTo.Console() // 執行 LOG時 輸出也會打印 .WriteTo.File(&amp;#34;../logs/log-.txt&amp;#34;, rollingInterval: RollingInterval.Day) // 輸出到哪一個資料夾 .CreateLogger(); try { Log.Information(&amp;#34;=============Starting=============&amp;#34;); // TODO: 將原本 Program.cs 所有程式碼搬到這裡 // LOG設定 必須在 APP 之前 builder.Host.UseSerilog(); // app.UseSerilogRequestLogging(); 這個 Middleware 來整理所有與 Request 相關的紀錄，讓你在一條 Log 中就可以取得目前 Request 所有的相關資訊。 app.</description>
     </item>
     
     <item>
