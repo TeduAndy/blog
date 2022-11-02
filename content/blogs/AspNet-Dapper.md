@@ -1,7 +1,7 @@
 ---
 title: Dapper 使用介紹
 date: 2022-07-19 09:27:01
-categories: Asp.net core 
+categories: Asp.net
 ---
 
 

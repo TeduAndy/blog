@@ -1,7 +1,7 @@
 ---
 title: 組態設定 appsettings.json
 date: 2022-07-19 10:51:27
-categories: Asp.net core 
+categories: Asp.net
 ---
 
 

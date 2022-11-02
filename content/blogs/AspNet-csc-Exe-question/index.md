@@ -1,7 +1,7 @@
 ---
 title: Asp csc.exe error
 date: 2022-07-21 09:35:18
-categories: Asp.net core 
+categories: Asp.net
 ---
 
 ### 說明 : 會出現這個原因是因為新版開啟舊版專案導致

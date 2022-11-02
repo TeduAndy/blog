@@ -1,7 +1,7 @@
 ---
 title: LINQ 相關
 date: 2022-07-19 10:00:01
-categories: Asp.net core 
+categories: Asp.net
 ---
 
 #### **<font color='red'>離線table 用法</font>**

@@ -1,7 +1,7 @@
 ---
 title: ASP.NET WEB API常見問題
 date: 2022-07-19 13:47:37
-categories: Asp.net core 
+categories: Asp.net
 ---
 
 

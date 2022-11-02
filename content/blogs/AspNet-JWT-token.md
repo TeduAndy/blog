@@ -1,7 +1,7 @@
 ---
 title: JWT 驗證 及 創建 token
 date: 2022-07-19 11:00:35
-categories: Asp.net core 
+categories: Asp.net
 ---
 
 ##### 使用的套件: <font color='red'>Microsoft.AspNetCore.Authentication.JwtBearer</font>

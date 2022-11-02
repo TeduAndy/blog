@@ -1,7 +1,7 @@
 ---
 title: .NET 6.0 使用 Serilog 對應用程式事件進行結構化紀錄
 date: 2022-07-19 13:39:29
-categories: Asp.net core 
+categories: Asp.net
 ---
 
 
