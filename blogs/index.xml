@@ -6,7 +6,17 @@
     <description>Recent content in Blogs on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Nov 2022 08:00:00 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Nov 2022 15:48:00 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL 函數使用方法</title>
+      <link>https://teduandy.github.io/blog/blogs/sql-functionuse/</link>
+      <pubDate>Wed, 02 Nov 2022 15:48:00 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/sql-functionuse/</guid>
+      <description>1.Decode 函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
+ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &amp;#39;10&amp;#39;, &amp;#39;十&amp;#39;, &amp;#39;80&amp;#39;, &amp;#39;八十&amp;#39;, &amp;#39;其他&amp;#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 2.計算型函數 AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) 範例： SELECT &amp;#34;函數名&amp;#34;(&amp;#34;欄位名&amp;#34;) FROM &amp;#34;表格名&amp;#34;; </description>
+    </item>
+    
     <item>
       <title>ASP.NET 查看環境安裝版本</title>
       <link>https://teduandy.github.io/blog/blogs/aspnet-checkaspsdk/</link>
@@ -284,16 +294,6 @@ Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援�
       
       <guid>https://teduandy.github.io/blog/blogs/git-gitlab-teacher/</guid>
       <description>1. 說明 : 在使用之前 請先安裝完 git 這邊安裝方法就不再敘述 2. 登入到自己的 gitlab 裡面 並且按 new project 進入到此頁面 3. 點擊 clone 並且複製上面 https 的網址 4. 回到 要上傳的專案 先初始化 git 本地倉庫 到專案的終端機上面 輸入這段指令 git init 輸入這段指令，將所有檔案先加入到暫時存檔區 git add . (. 的意思就是全部) 提交版本 本次 加入到暫存區的 輸入這段指令 git commit -m &amp;#34;這邊是輸入備註，看是要輸入版本號或者是寫入此版本修改了甚麼都可以&amp;#34; 接下來要利用 我們剛剛複製的 gitlab https 位置，輸入這段指令給它一個別名 git remote add [name] [your https url] 然後就可以將專案 推到你的 遠程倉庫了 git push [url_name] [branch] 5. 就可以回到 gitlab 看看 創的 project 有沒有資料了!</description>
-    </item>
-    
-    <item>
-      <title>SQL 函數使用方法</title>
-      <link>https://teduandy.github.io/blog/blogs/sql-functionuse/</link>
-      <pubDate>Mon, 18 Jul 2022 16:54:51 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/blogs/sql-functionuse/</guid>
-      <description>1.Decode 函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
-ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &amp;#39;10&amp;#39;, &amp;#39;十&amp;#39;, &amp;#39;80&amp;#39;, &amp;#39;八十&amp;#39;, &amp;#39;其他&amp;#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 </description>
     </item>
     
     <item>

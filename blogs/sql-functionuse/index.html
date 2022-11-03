@@ -40,17 +40,17 @@ if (!doNotTrack) {
 
 <meta property="og:title" content="SQL 函數使用方法" />
 <meta property="og:description" content="1.Decode 函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
-ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &#39;10&#39;, &#39;十&#39;, &#39;80&#39;, &#39;八十&#39;, &#39;其他&#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 " />
+ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &#39;10&#39;, &#39;十&#39;, &#39;80&#39;, &#39;八十&#39;, &#39;其他&#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 2.計算型函數 AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) 範例： SELECT &#34;函數名&#34;(&#34;欄位名&#34;) FROM &#34;表格名&#34;; " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://teduandy.github.io/blog/blogs/sql-functionuse/" /><meta property="article:section" content="blogs" />
-<meta property="article:published_time" content="2022-07-18T16:54:51+00:00" />
-<meta property="article:modified_time" content="2022-07-18T16:54:51+00:00" /><meta property="og:site_name" content="Andy blog" />
+<meta property="article:published_time" content="2022-11-02T15:48:00+00:00" />
+<meta property="article:modified_time" content="2022-11-02T15:48:00+00:00" /><meta property="og:site_name" content="Andy blog" />
 
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="SQL 函數使用方法"/>
 <meta name="twitter:description" content="1.Decode 函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
-ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &#39;10&#39;, &#39;十&#39;, &#39;80&#39;, &#39;八十&#39;, &#39;其他&#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 "/>
+ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &#39;10&#39;, &#39;十&#39;, &#39;80&#39;, &#39;八十&#39;, &#39;其他&#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 2.計算型函數 AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) 範例： SELECT &#34;函數名&#34;(&#34;欄位名&#34;) FROM &#34;表格名&#34;; "/>
 
 
 <link rel="stylesheet" href="/blog//bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/blog//css/header.css" media="all">
@@ -205,7 +205,7 @@ SQL 函數使用方法 | Hugo Profile
             <div class="text-center">
                
               <small>|</small>
-              Jul 18, 2022
+              Nov 2, 2022
             </div>
           </div>
           
@@ -279,7 +279,18 @@ SQL 函數使用方法 | Hugo Profile
 </tr>
 </tbody>
 </table>
-
+<br>
+<h3 id="2計算型函數"><strong>2.計算型函數</strong></h3>
+<ul>
+<li><strong>AVG (平均)</strong></li>
+<li><strong>COUNT (計數)</strong></li>
+<li><strong>MAX (最大值)</strong></li>
+<li><strong>MIN (最小值)</strong></li>
+<li><strong>SUM (總合)</strong></li>
+</ul>
+<h4 id="範例"><strong>範例：</strong></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#e6db74">&#34;函數名&#34;</span>(<span style="color:#e6db74">&#34;欄位名&#34;</span>) <span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#34;表格名&#34;</span>;
+</span></span></code></pre></div>
           </article>
         </div>
       </div>
@@ -296,6 +307,7 @@ SQL 函數使用方法 | Hugo Profile
     <li>
       <ul>
         <li><a href="#1decode-函数"><strong>1.Decode 函数</strong></a></li>
+        <li><a href="#2計算型函數"><strong>2.計算型函數</strong></a></li>
       </ul>
     </li>
   </ul>

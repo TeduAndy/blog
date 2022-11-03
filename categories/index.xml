@@ -6,22 +6,22 @@
     <description>Recent content in Categories on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Nov 2022 08:00:00 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Nov 2022 15:48:00 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL</title>
+      <link>https://teduandy.github.io/blog/categories/sql/</link>
+      <pubDate>Wed, 02 Nov 2022 15:48:00 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/categories/sql/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Asp.net</title>
       <link>https://teduandy.github.io/blog/categories/asp.net/</link>
       <pubDate>Tue, 01 Nov 2022 08:00:00 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/categories/asp.net/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>SQL</title>
-      <link>https://teduandy.github.io/blog/categories/sql/</link>
-      <pubDate>Wed, 12 Oct 2022 16:54:51 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/categories/sql/</guid>
       <description></description>
     </item>
     
