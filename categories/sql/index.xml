@@ -17,6 +17,16 @@
     </item>
     
     <item>
+      <title>SQL 函數使用方法</title>
+      <link>https://teduandy.github.io/blog/blogs/sql-functionuse/</link>
+      <pubDate>Mon, 18 Jul 2022 16:54:51 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/sql-functionuse/</guid>
+      <description>1.Decode 函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
+ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &amp;#39;10&amp;#39;, &amp;#39;十&amp;#39;, &amp;#39;80&amp;#39;, &amp;#39;八十&amp;#39;, &amp;#39;其他&amp;#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 </description>
+    </item>
+    
+    <item>
       <title>SQL 通用基礎常用語法</title>
       <link>https://teduandy.github.io/blog/blogs/sql-often-use/</link>
       <pubDate>Mon, 18 Jul 2022 16:54:51 +0000</pubDate>

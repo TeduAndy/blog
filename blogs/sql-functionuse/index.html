@@ -38,15 +38,19 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-<meta property="og:title" content="Blogs" />
-<meta property="og:description" content="Text about my cool site" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://teduandy.github.io/blog/blogs/" /><meta property="og:site_name" content="Andy blog" />
+<meta property="og:title" content="SQL 函數使用方法" />
+<meta property="og:description" content="1.Decode 函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
+ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &#39;10&#39;, &#39;十&#39;, &#39;80&#39;, &#39;八十&#39;, &#39;其他&#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://teduandy.github.io/blog/blogs/sql-functionuse/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2022-07-18T16:54:51+00:00" />
+<meta property="article:modified_time" content="2022-07-18T16:54:51+00:00" /><meta property="og:site_name" content="Andy blog" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Blogs"/>
-<meta name="twitter:description" content="Text about my cool site"/>
+<meta name="twitter:title" content="SQL 函數使用方法"/>
+<meta name="twitter:description" content="1.Decode 函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
+ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &#39;10&#39;, &#39;十&#39;, &#39;80&#39;, &#39;八十&#39;, &#39;其他&#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 "/>
 
 
 <link rel="stylesheet" href="/blog//bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/blog//css/header.css" media="all">
@@ -83,11 +87,14 @@ if (!doNotTrack) {
     }
 </style>
 
-<meta name="description" content="Blogs of Hugo Profile">
-<link rel="stylesheet" href="/blog//css/list.css" media="all">
+<meta name="description" content="">
+<link rel="stylesheet" href="/blog//css/single.css">
+
+
+<script defer src="/blog//fontawesome-5/all-5.15.4.js"></script>
 
   <title>
-Blogs | Hugo Profile
+SQL 函數使用方法 | Hugo Profile
 
   </title>
 </head>
@@ -188,148 +195,173 @@ Blogs | Hugo Profile
     </nav>
 </header>
 <div id="content">
-<div class="container pt-5" id="list-page">
-    <h2 class="text-center pb-2">Blogs</h2>
-    <div class="row">
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card h-100">
-                <div class="card-header">
-                    <img class="card-img-top" src="/blog/images/post.jpg" alt="ASP.NET 查看環境安裝版本">
-                </div>
-                <div class="card-body bg-transparent p-4 shadow-sm">
-                    <a href="/blog/blogs/aspnet-checkaspsdk/" class="primary-font card-title">
-                        <h6 class="card-title bg-transparent text-white text-center" title="ASP.NET 查看環境安裝版本">ASP.NET 查看環境安裝版本</h6>
-                    </a>
-                </div>
-                <div class="mt-auto post-footer bg-transparent py-3">
-                    <span class="float-start bg-transparent">November 1, 2022</span>
-                    <a href="/blog/blogs/aspnet-checkaspsdk/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
+<section id="single">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-12 col-lg-9">
+        <div class="pr-lg-4">
+          <div class="title mb-5">
+            <h1 class="text-center mb-4">SQL 函數使用方法</h1>
+            <div class="text-center">
+               
+              <small>|</small>
+              Jul 18, 2022
             </div>
+          </div>
+          
+          <article class="page-content  p-2">
+          <h3 id="1decode-函数"><strong>1.Decode 函数</strong></h3>
+<h4 id="說明"><strong>說明：</strong></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span>Decode(<span style="color:#960050;background-color:#1e0010">表達式</span>, <span style="color:#960050;background-color:#1e0010">條件</span><span style="color:#ae81ff">1</span>, <span style="color:#960050;background-color:#1e0010">結果</span><span style="color:#ae81ff">1</span>, <span style="color:#960050;background-color:#1e0010">條件</span><span style="color:#ae81ff">2</span>, <span style="color:#960050;background-color:#1e0010">結果</span>, <span style="color:#960050;background-color:#1e0010">其他</span>)
+</span></span></code></pre></div><h4 id="實例">實例：</h4>
+<p>表名: product</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">item</th>
+<th style="text-align:center">price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">A01</td>
+<td style="text-align:center">口香糖</td>
+<td style="text-align:center">10</td>
+</tr>
+<tr>
+<td style="text-align:center">A01</td>
+<td style="text-align:center">茶葉蛋</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">A02</td>
+<td style="text-align:center">香菸</td>
+<td style="text-align:center">80</td>
+</tr>
+<tr>
+<td style="text-align:center">A02</td>
+<td style="text-align:center">報紙</td>
+<td style="text-align:center">10</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">Select</span> ID, item, Decode(price, <span style="color:#e6db74">&#39;10&#39;</span>, <span style="color:#e6db74">&#39;十&#39;</span>, <span style="color:#e6db74">&#39;80&#39;</span>, <span style="color:#e6db74">&#39;八十&#39;</span>, <span style="color:#e6db74">&#39;其他&#39;</span>) <span style="color:#66d9ef">From</span> product
+</span></span></code></pre></div><h4 id="輸出">輸出：</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ID</th>
+<th style="text-align:center">item</th>
+<th style="text-align:center">price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">A01</td>
+<td style="text-align:center">口香糖</td>
+<td style="text-align:center">十</td>
+</tr>
+<tr>
+<td style="text-align:center">A01</td>
+<td style="text-align:center">茶葉蛋</td>
+<td style="text-align:center">其他</td>
+</tr>
+<tr>
+<td style="text-align:center">A02</td>
+<td style="text-align:center">香菸</td>
+<td style="text-align:center">八十</td>
+</tr>
+<tr>
+<td style="text-align:center">A02</td>
+<td style="text-align:center">報紙</td>
+<td style="text-align:center">十</td>
+</tr>
+</tbody>
+</table>
+
+          </article>
         </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card h-100">
-                <div class="card-header">
-                    <img class="card-img-top" src="/blog/images/post.jpg" alt="DI 注入相關說明">
-                </div>
-                <div class="card-body bg-transparent p-4 shadow-sm">
-                    <a href="/blog/blogs/aspnet-di/" class="primary-font card-title">
-                        <h6 class="card-title bg-transparent text-white text-center" title="DI 注入相關說明">DI 注入相關說明</h6>
-                    </a>
-                </div>
-                <div class="mt-auto post-footer bg-transparent py-3">
-                    <span class="float-start bg-transparent">October 22, 2022</span>
-                    <a href="/blog/blogs/aspnet-di/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-3">
+        <div class="sticky-sidebar">
+          
+          <aside class="toc">
+              <h5>
+                Table Of Contents
+              </h5>
+              <div class="toc-content">
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1decode-函数"><strong>1.Decode 函数</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+              </div>
+          </aside>
+          
+
+          
+
+          
+          <aside class="social">
+            <h5>Social</h5>
+            <div class="social-content">
+              <ul class="list-inline">
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://twitter.com/share?text=SQL%20%e5%87%bd%e6%95%b8%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95&url=https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fsql-functionuse%2f">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=SQL%20%e5%87%bd%e6%95%b8%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95: https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fsql-functionuse%2f">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </li>
+                <li class="list-inline-item text-center">
+                  <a target="_blank" href="mailto:?subject=SQL%20%e5%87%bd%e6%95%b8%e4%bd%bf%e7%94%a8%e6%96%b9%e6%b3%95&amp;body=Check out this site https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fsql-functionuse%2f">
+                    <i class="fa fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
+          </aside>
+          
         </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card h-100">
-                <div class="card-header">
-                    <img class="card-img-top" src="/blog/images/post.jpg" alt="Oracle 常用進階語法">
-                </div>
-                <div class="card-body bg-transparent p-4 shadow-sm">
-                    <a href="/blog/blogs/sql-oracle-often-use/" class="primary-font card-title">
-                        <h6 class="card-title bg-transparent text-white text-center" title="Oracle 常用進階語法">Oracle 常用進階語法</h6>
-                    </a>
-                </div>
-                <div class="mt-auto post-footer bg-transparent py-3">
-                    <span class="float-start bg-transparent">October 12, 2022</span>
-                    <a href="/blog/blogs/sql-oracle-often-use/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card h-100">
-                <div class="card-header">
-                    <img class="card-img-top" src="/blog/images/post.jpg" alt="VUE3 compontent $emit 和 emits 說明及設置">
-                </div>
-                <div class="card-body bg-transparent p-4 shadow-sm">
-                    <a href="/blog/blogs/vue-vue3-compontent-emits/" class="primary-font card-title">
-                        <h6 class="card-title bg-transparent text-white text-center" title="VUE3 compontent $emit 和 emits 說明及設置">VUE3 compontent $emit …</h6>
-                    </a>
-                </div>
-                <div class="mt-auto post-footer bg-transparent py-3">
-                    <span class="float-start bg-transparent">September 20, 2022</span>
-                    <a href="/blog/blogs/vue-vue3-compontent-emits/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card h-100">
-                <div class="card-header">
-                    <img class="card-img-top" src="/blog/images/post.jpg" alt="VUE3 ref、reactive說明">
-                </div>
-                <div class="card-body bg-transparent p-4 shadow-sm">
-                    <a href="/blog/blogs/vue-vue3-ref-reactive-say/" class="primary-font card-title">
-                        <h6 class="card-title bg-transparent text-white text-center" title="VUE3 ref、reactive說明">VUE3 ref、reactive說明</h6>
-                    </a>
-                </div>
-                <div class="mt-auto post-footer bg-transparent py-3">
-                    <span class="float-start bg-transparent">September 20, 2022</span>
-                    <a href="/blog/blogs/vue-vue3-ref-reactive-say/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 my-3">
-            <div class="card h-100">
-                <div class="card-header">
-                    <img class="card-img-top" src="/blog/images/post.jpg" alt="hexo-部屬靜態頁面到-github">
-                </div>
-                <div class="card-body bg-transparent p-4 shadow-sm">
-                    <a href="/blog/blogs/hexo-deploy-github/" class="primary-font card-title">
-                        <h6 class="card-title bg-transparent text-white text-center" title="hexo-部屬靜態頁面到-github">hexo-部屬靜態頁面到-github</h6>
-                    </a>
-                </div>
-                <div class="mt-auto post-footer bg-transparent py-3">
-                    <span class="float-start bg-transparent">July 22, 2022</span>
-                    <a href="/blog/blogs/hexo-deploy-github/" class="float-end btn btn-outline-info btn-sm">Read</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row justify-content-center">
-            <div class="col-auto m-3">
-                
-    <ul class="pagination pagination-default">
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;&laquo;</span></a>
-      </li>
-      <li class="page-item disabled">
-        <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">&laquo;</span></a>
-      </li>
-      <li class="page-item active">
-        <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/blogs/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/blogs/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/blogs/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/blogs/page/5/" aria-label="Page 5" class="page-link" role="button">5</a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/blogs/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
-      </li>
-      <li class="page-item">
-        <a href="/blog/blogs/page/7/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
-      </li>
-    </ul>
-            </div>
-        </div>
+      </div>
     </div>
-</div>
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-9 p-4">
+        
+      </div>
+    </div>
+  </div>
+  <button class="p-2 px-3" onclick="topFunction()" id="topScroll">
+    <i class="fas fa-angle-up"></i>
+  </button>
+</section>
+
+<script>
+  var topScroll = document.getElementById("topScroll");
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      topScroll.style.display = "block";
+    } else {
+      topScroll.style.display = "none";
+    }
+  }
+
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
 
   </div><footer>
     <div class="container py-3" id="recent-posts">
