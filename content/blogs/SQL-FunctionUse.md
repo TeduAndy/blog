@@ -61,17 +61,17 @@ Select ID, Sum(price) From product Groub By ID
 
 <br>
 
-## **Partition By的用法**
+### **3.Partition By的用法**
 
 
-### 一、rank()
+#### 一、rank()
 
 **rank() over(partition by A order by B)是按照A进行分组，分组里面的数据按照B进行排序，over即在什么之上，rank()即跳跃排序(比如存在两个第一名，接下来就是第三名) 举例：**
 ```SQL
 select 课程, 学生ID, 分数, rank() over (partition by 课程 order by 分数 desc) as 排名 from 成绩表
 ```
 
-### 二、row_number()
+#### 二、row_number()
 
 **row_number() over(partition by A order by B)row_number(): 如果有两个第一名时，只返回一个结果。 举例：**
 ```SQL
@@ -79,7 +79,7 @@ select 课程, 学生ID, 分数, row_number() over (partition by 课程 order by
 from 成绩表
 ```
 
-### 三、dense_rank()
+#### 三、dense_rank()
 
 **dense_rank() over(partition by A order by B)dense_rank(): 连续排序(如果有两个第一名时，接下来仍然是第二名) 举例：**
 ```SQL
