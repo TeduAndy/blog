@@ -344,7 +344,20 @@ SQL 函數使用方法 | Hugo Profile
 </tr>
 </tbody>
 </table>
-
+<br>
+<h2 id="partition-by的用法"><strong>Partition By的用法</strong></h2>
+<h3 id="一rank">一、rank()</h3>
+<p><strong>rank() over(partition by A order by B)是按照A进行分组，分组里面的数据按照B进行排序，over即在什么之上，rank()即跳跃排序(比如存在两个第一名，接下来就是第三名) 举例：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#960050;background-color:#1e0010">课程</span>, <span style="color:#960050;background-color:#1e0010">学生</span>ID, <span style="color:#960050;background-color:#1e0010">分数</span>, rank() over (partition <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">课程</span> <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">分数</span> <span style="color:#66d9ef">desc</span>) <span style="color:#66d9ef">as</span> <span style="color:#960050;background-color:#1e0010">排名</span> <span style="color:#66d9ef">from</span> <span style="color:#960050;background-color:#1e0010">成绩表</span>
+</span></span></code></pre></div><h3 id="二row_number">二、row_number()</h3>
+<p><strong>row_number() over(partition by A order by B)row_number(): 如果有两个第一名时，只返回一个结果。 举例：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#960050;background-color:#1e0010">课程</span>, <span style="color:#960050;background-color:#1e0010">学生</span>ID, <span style="color:#960050;background-color:#1e0010">分数</span>, row_number() over (partition <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">课程</span> <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">分数</span> <span style="color:#66d9ef">desc</span>) <span style="color:#66d9ef">as</span> <span style="color:#960050;background-color:#1e0010">排名</span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> <span style="color:#960050;background-color:#1e0010">成绩表</span>
+</span></span></code></pre></div><h3 id="三dense_rank">三、dense_rank()</h3>
+<p><strong>dense_rank() over(partition by A order by B)dense_rank(): 连续排序(如果有两个第一名时，接下来仍然是第二名) 举例：</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#960050;background-color:#1e0010">课程</span>, <span style="color:#960050;background-color:#1e0010">学生</span>ID, <span style="color:#960050;background-color:#1e0010">分数</span>, rank() over (partition <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">课程</span> <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">分数</span> <span style="color:#66d9ef">desc</span>) <span style="color:#66d9ef">as</span> <span style="color:#960050;background-color:#1e0010">排名</span> 
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> <span style="color:#960050;background-color:#1e0010">成绩表</span>
+</span></span></code></pre></div>
           </article>
         </div>
       </div>
@@ -362,6 +375,13 @@ SQL 函數使用方法 | Hugo Profile
       <ul>
         <li><a href="#1decode-函数"><strong>1.Decode 函数</strong></a></li>
         <li><a href="#2計算型函數"><strong>2.計算型函數</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#partition-by的用法"><strong>Partition By的用法</strong></a>
+      <ul>
+        <li><a href="#一rank">一、rank()</a></li>
+        <li><a href="#二row_number">二、row_number()</a></li>
+        <li><a href="#三dense_rank">三、dense_rank()</a></li>
       </ul>
     </li>
   </ul>

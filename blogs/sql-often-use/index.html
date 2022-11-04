@@ -39,7 +39,7 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 <meta property="og:title" content="SQL 通用基礎常用語法" />
-<meta property="og:description" content="讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&#34;&#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2." />
+<meta property="og:description" content="讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&#34;&#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名分組 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://teduandy.github.io/blog/blogs/sql-often-use/" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2022-07-18T16:54:51+00:00" />
@@ -48,7 +48,7 @@ if (!doNotTrack) {
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="SQL 通用基礎常用語法"/>
-<meta name="twitter:description" content="讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&#34;&#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2."/>
+<meta name="twitter:description" content="讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&#34;&#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名分組 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2."/>
 
 
 <link rel="stylesheet" href="/blog//bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/blog//css/header.css" media="all">
@@ -249,7 +249,7 @@ SQL 通用基礎常用語法 | Hugo Profile
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Store_Information
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> Store_Name;
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">說明</span>: <span style="color:#960050;background-color:#1e0010">針對店名</span> <span style="color:#960050;background-color:#1e0010">算出</span> sales <span style="color:#960050;background-color:#1e0010">總和</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">說明</span>: <span style="color:#960050;background-color:#1e0010">針對店名分組</span> <span style="color:#960050;background-color:#1e0010">算出</span> sales <span style="color:#960050;background-color:#1e0010">總和</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">輸出之後為這樣</span>
 </span></span><span style="display:flex;"><span>
@@ -291,19 +291,6 @@ SQL 通用基礎常用語法 | Hugo Profile
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">ON</span> table_name1.<span style="color:#66d9ef">column_name</span><span style="color:#f92672">=</span>table_name2.<span style="color:#66d9ef">column_name</span>;
 </span></span></code></pre></div><p><strong>LEFT JOIN <font color='red'>可以用來建立兩邊的交集</font>，查詢的 SQL 敘述句 INNER JOIN <font color='red'>左側跟右側資料表都有相同 (table_name1) 的記錄都會加入到查詢結果中，沒有符合的值就不會</font>。</strong></p>
 <br>
-<h2 id="partition-by的用法"><strong>Partition By的用法</strong></h2>
-<h3 id="一rank">一、rank()</h3>
-<p><strong>rank() over(partition by A order by B)是按照A进行分组，分组里面的数据按照B进行排序，over即在什么之上，rank()即跳跃排序(比如存在两个第一名，接下来就是第三名) 举例：</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#960050;background-color:#1e0010">课程</span>, <span style="color:#960050;background-color:#1e0010">学生</span>ID, <span style="color:#960050;background-color:#1e0010">分数</span>, rank() over (partition <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">课程</span> <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">分数</span> <span style="color:#66d9ef">desc</span>) <span style="color:#66d9ef">as</span> <span style="color:#960050;background-color:#1e0010">排名</span> <span style="color:#66d9ef">from</span> <span style="color:#960050;background-color:#1e0010">成绩表</span>
-</span></span></code></pre></div><h3 id="二row_number">二、row_number()</h3>
-<p><strong>row_number() over(partition by A order by B)row_number(): 如果有两个第一名时，只返回一个结果。 举例：</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#960050;background-color:#1e0010">课程</span>, <span style="color:#960050;background-color:#1e0010">学生</span>ID, <span style="color:#960050;background-color:#1e0010">分数</span>, row_number() over (partition <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">课程</span> <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">分数</span> <span style="color:#66d9ef">desc</span>) <span style="color:#66d9ef">as</span> <span style="color:#960050;background-color:#1e0010">排名</span> 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> <span style="color:#960050;background-color:#1e0010">成绩表</span>
-</span></span></code></pre></div><h3 id="三dense_rank">三、dense_rank()</h3>
-<p><strong>dense_rank() over(partition by A order by B)dense_rank(): 连续排序(如果有两个第一名时，接下来仍然是第二名) 举例：</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#960050;background-color:#1e0010">课程</span>, <span style="color:#960050;background-color:#1e0010">学生</span>ID, <span style="color:#960050;background-color:#1e0010">分数</span>, rank() over (partition <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">课程</span> <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">分数</span> <span style="color:#66d9ef">desc</span>) <span style="color:#66d9ef">as</span> <span style="color:#960050;background-color:#1e0010">排名</span> 
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> <span style="color:#960050;background-color:#1e0010">成绩表</span>
-</span></span></code></pre></div><br>
 <h2 id="case-關鍵字-sql-case-keyword"><strong>CASE 關鍵字 (SQL CASE Keyword)</strong></h2>
 <br>
 #### 說明：
@@ -416,13 +403,6 @@ FROM questionnaire;
     <li><a href="#left-join-使用"><strong>LEFT JOIN 使用</strong></a></li>
     <li><a href="#right-join-使用"><strong>RIGHT JOIN 使用</strong></a></li>
     <li><a href="#inner-join-使用"><strong>INNER JOIN 使用</strong></a></li>
-    <li><a href="#partition-by的用法"><strong>Partition By的用法</strong></a>
-      <ul>
-        <li><a href="#一rank">一、rank()</a></li>
-        <li><a href="#二row_number">二、row_number()</a></li>
-        <li><a href="#三dense_rank">三、dense_rank()</a></li>
-      </ul>
-    </li>
     <li><a href="#case-關鍵字-sql-case-keyword"><strong>CASE 關鍵字 (SQL CASE Keyword)</strong></a>
       <ul>
         <li></li>
