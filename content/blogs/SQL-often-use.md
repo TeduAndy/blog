@@ -80,20 +80,6 @@ CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型�
 
 <br>
 
-## **函數使用(運算類)**
-
-+ **AVG (平均)**
-+ **COUNT (計數)**
-+ **MAX (最大值)**
-+ **MIN (最小值)**
-+ **SUM (總合)**
-#### **example：**
-```SQL
-SELECT "函數名"("欄位名") FROM "表格名";
-```
-
-<br>
-
 ## **GROUP BY 使用**
 ```SQL
 SELECT Store_Name, SUM(Sales)

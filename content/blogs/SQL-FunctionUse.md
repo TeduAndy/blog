@@ -37,7 +37,24 @@ Select ID, item, Decode(price, '10', '十', '80', '八十', '其他') From produ
 + **MAX (最大值)**
 + **MIN (最小值)**
 + **SUM (總合)**
-#### **範例：**
+#### **說明：通常會搭配 Groub By 使用 **
 ```SQL
-SELECT "函數名"("欄位名") FROM "表格名";
+Select "函數名"("欄位名") From "表格名";
 ```
+#### 實例：
+表名: product
+| ID     | item     | price    | 
+| :----: | :----:   | :----:   | 
+| A01    | 口香糖    | 10       |
+| A01    | 茶葉蛋    | 8        |
+| A02    | 香菸      | 80       |
+| A02    | 報紙      | 10       |
+```SQL
+以 ID 作為分組
+Select ID, Sum(price) From product Groub By ID
+```
+#### 輸出：
+| ID     | price     |
+| :----: | :----:   |
+| A01    | 18    | 
+| A02    | 90    |
