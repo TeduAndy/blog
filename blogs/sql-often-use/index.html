@@ -39,7 +39,7 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 <meta property="og:title" content="SQL 通用基礎常用語法" />
-<meta property="og:description" content="讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&#34;&#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) 函數使用(運算類) AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) example： SELECT &#34;函數名&#34;(&#34;欄位名&#34;) FROM &#34;表格名&#34;; GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2." />
+<meta property="og:description" content="讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&#34;&#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://teduandy.github.io/blog/blogs/sql-often-use/" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2022-07-18T16:54:51+00:00" />
@@ -48,7 +48,7 @@ if (!doNotTrack) {
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="SQL 通用基礎常用語法"/>
-<meta name="twitter:description" content="讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&#34;&#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) 函數使用(運算類) AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) example： SELECT &#34;函數名&#34;(&#34;欄位名&#34;) FROM &#34;表格名&#34;; GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2."/>
+<meta name="twitter:description" content="讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&#34;&#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2."/>
 
 
 <link rel="stylesheet" href="/blog//bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/blog//css/header.css" media="all">
@@ -244,17 +244,6 @@ SQL 通用基礎常用語法 | Hugo Profile
 <h2 id="創建表"><strong>創建表</strong></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#960050;background-color:#1e0010">表名</span> (<span style="color:#960050;background-color:#1e0010">欄位名字</span> <span style="color:#960050;background-color:#1e0010">欄位型態</span> <span style="color:#66d9ef">not</span> <span style="color:#66d9ef">null</span>, <span style="color:#960050;background-color:#1e0010">欄位名字</span> <span style="color:#960050;background-color:#1e0010">欄位型態</span>, <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>(<span style="color:#960050;background-color:#1e0010">欄位名字</span>))
 </span></span></code></pre></div><br>
-<h2 id="函數使用運算類"><strong>函數使用(運算類)</strong></h2>
-<ul>
-<li><strong>AVG (平均)</strong></li>
-<li><strong>COUNT (計數)</strong></li>
-<li><strong>MAX (最大值)</strong></li>
-<li><strong>MIN (最小值)</strong></li>
-<li><strong>SUM (總合)</strong></li>
-</ul>
-<h4 id="example"><strong>example：</strong></h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#e6db74">&#34;函數名&#34;</span>(<span style="color:#e6db74">&#34;欄位名&#34;</span>) <span style="color:#66d9ef">FROM</span> <span style="color:#e6db74">&#34;表格名&#34;</span>;
-</span></span></code></pre></div><br>
 <h2 id="group-by-使用"><strong>GROUP BY 使用</strong></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> Store_Name, <span style="color:#66d9ef">SUM</span>(Sales)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Store_Information
@@ -274,7 +263,7 @@ SQL 通用基礎常用語法 | Hugo Profile
 #### 說明：
 	HAVING 子句通常是在一個 SQL 句子的最後。
 	一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。
-<h4 id="example-1">example：</h4>
+<h4 id="example">example：</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> Store_Name, <span style="color:#66d9ef">SUM</span>(Sales)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> Store_Information
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> Store_Name
@@ -418,11 +407,6 @@ FROM questionnaire;
     <li><a href="#刪除-資料庫"><strong>刪除 資料庫</strong></a></li>
     <li><a href="#創建資料庫"><strong>創建資料庫</strong></a></li>
     <li><a href="#創建表"><strong>創建表</strong></a></li>
-    <li><a href="#函數使用運算類"><strong>函數使用(運算類)</strong></a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
     <li><a href="#group-by-使用"><strong>GROUP BY 使用</strong></a></li>
     <li><a href="#having-使用"><strong>HAVING 使用</strong></a>
       <ul>

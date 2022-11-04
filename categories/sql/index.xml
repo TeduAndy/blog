@@ -14,7 +14,7 @@
       
       <guid>https://teduandy.github.io/blog/blogs/sql-functionuse/</guid>
       <description>1.Decode 函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
-ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &amp;#39;10&amp;#39;, &amp;#39;十&amp;#39;, &amp;#39;80&amp;#39;, &amp;#39;八十&amp;#39;, &amp;#39;其他&amp;#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 2.計算型函數 AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) 範例： SELECT &amp;#34;函數名&amp;#34;(&amp;#34;欄位名&amp;#34;) FROM &amp;#34;表格名&amp;#34;; </description>
+ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &amp;#39;10&amp;#39;, &amp;#39;十&amp;#39;, &amp;#39;80&amp;#39;, &amp;#39;八十&amp;#39;, &amp;#39;其他&amp;#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 2.計算型函數 AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) **說明：通常會搭配 Groub By 使用 ** Select &amp;#34;函數名&amp;#34;(&amp;#34;欄位名&amp;#34;) From &amp;#34;表格名&amp;#34;; 實例： 表名: product</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@ ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Selec
       <pubDate>Mon, 18 Jul 2022 16:54:51 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/sql-often-use/</guid>
-      <description>讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&amp;#34;&amp;#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) 函數使用(運算類) AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) example： SELECT &amp;#34;函數名&amp;#34;(&amp;#34;欄位名&amp;#34;) FROM &amp;#34;表格名&amp;#34;; GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &amp;gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2.</description>
+      <description>讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&amp;#34;&amp;#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &amp;gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2.</description>
     </item>
     
     <item>
