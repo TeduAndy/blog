@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vue on Hugo Profile</title>
+    <title>VUE on Hugo Profile</title>
     <link>https://teduandy.github.io/blog/categories/vue/</link>
-    <description>Recent content in vue on Hugo Profile</description>
+    <description>Recent content in VUE on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 20 Sep 2022 14:16:42 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/vue/index.xml" rel="self" type="application/rss+xml" />
