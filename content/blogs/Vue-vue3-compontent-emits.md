@@ -1,7 +1,7 @@
 ---
 title: VUE3 compontent $emit 和 emits 說明及設置
 date: 2022-09-20 14:16:42
-categories: vue 
+categories: VUE 
 ---
 
 ### <font color='e59911'>Vue3 Compontent emit emits</font>

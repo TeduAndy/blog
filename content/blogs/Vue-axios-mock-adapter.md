@@ -1,7 +1,7 @@
 ---
 title: axios-mock-adapter為axios提供測試用的假資料
 date: 2022-07-21 15:01:51
-categories: vue
+categories: VUE
 ---
 
 ### <font color='e59911'>安裝指令:</font>

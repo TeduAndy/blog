@@ -40,7 +40,7 @@ INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名
 
 ## **更新語句**
 ```SQL
-UPDATE 表名 SET 字段名="" WHERE 條件
+UPDATE 表名 SET 字段名="", 字段名2="" WHERE 條件
 ```
 
 <br>

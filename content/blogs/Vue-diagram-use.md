@@ -1,7 +1,7 @@
 ---
 title: VUE3 柱狀圖實現
 date: 2022-07-21 15:13:32
-categories: vue
+categories: VUE
 ---
 
 

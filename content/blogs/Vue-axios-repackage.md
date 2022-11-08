@@ -1,7 +1,7 @@
 ---
 title: VUE axios 重新包裝
 date: 2022-07-21 14:09:01
-categories: vue
+categories: VUE
 ---
 
 #### <font color='e59911'>說明:</font>

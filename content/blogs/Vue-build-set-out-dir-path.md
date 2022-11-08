@@ -1,7 +1,7 @@
 ---
 title: VUE build 打包輸出修改位置
 date: 2022-07-21 14:03:30
-categories: vue
+categories: VUE
 ---
 
 

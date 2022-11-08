@@ -1,7 +1,7 @@
 ---
 title: VUE 前端與後端交互 cors \ 上線時 根目錄修改方式
 date: 2022-07-21 11:39:35
-categories: vue 
+categories: VUE 
 ---
 
 

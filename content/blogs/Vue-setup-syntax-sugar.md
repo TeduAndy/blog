@@ -1,7 +1,7 @@
 ---
 title: VUE3 語法糖
 date: 2022-07-21 14:16:42
-categories: vue
+categories: VUE
 ---
 
 ### <font color='e59911'>1. Vue3 的一大特性函数 ---- setup</font>

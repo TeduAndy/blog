@@ -1,7 +1,7 @@
 ---
 title: VUE 基礎理論
 date: 2022-07-21 14:40:49
-categories: vue
+categories: VUE
 ---
 
 ### <font color='e59911'>1. Vue2的双向数据绑定原理:</font>
