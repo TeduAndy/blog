@@ -153,6 +153,7 @@ ON table_name1.column_name=table_name2.column_name;
 ## **CASE 關鍵字 (SQL CASE Keyword)**
 
 <br>
+
 #### 說明：
 	CASE 類似於程式語言裡的 if/then/else 語句，用來作邏輯判斷。
 #### example：
@@ -231,3 +232,32 @@ ALTER TABLE 表名 MODIFY 欄位名稱 修改的資料型態();
 ```SQL
 ALTER TABLE 表名 DROP 欄位名稱;
 ```
+
+<br>
+
+## **DISTINCT**
+
+<br>
+
+#### 說明：
+	某欄位中可能會有多個紀錄都是相同值的情況，在 SELECT 查詢語句中我們可使用 DISTINCT 關鍵字過濾重複出現的紀錄值。
+#### example：
+```SQL
+ Select DISTINCT 重複欄位名 From table
+```
+<br>
+
+#### 實例(table:pet)：
+| Name   | favorite | 
+| :----: | :----:   | 
+| 張一   |   dog    |
+| 王二   |   dog    | 
+| 李三   |   cat    |
+```sql
+Select DISTINCT favorite From pet
+```
+#### 結果：
+| favorite | 
+| :----:   | 
+|   dog    |
+|   cat    |
