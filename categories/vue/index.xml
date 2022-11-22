@@ -6,7 +6,16 @@
     <description>Recent content in VUE on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Sep 2022 14:16:42 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Nov 2022 15:13:32 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VUE2、vue3 實現路由跳轉方法</title>
+      <link>https://teduandy.github.io/blog/blogs/vue-vue2or3-url-return/</link>
+      <pubDate>Sun, 20 Nov 2022 15:13:32 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/vue-vue2or3-url-return/</guid>
+      <description>Vue2 路由跳轉(選項型API) // 用於 method this.$router.push(&amp;#34;/url&amp;#34;) Vue3 路由跳轉(合成型api) // 在進入setup函數時候執行 import { useRouter } from &amp;#34;vue-router&amp;#34;; const router = useRouter() // 指定的路由 router.push(&amp;#39;/url&amp;#39;) </description>
+    </item>
+    
     <item>
       <title>VUE3 compontent $emit 和 emits 說明及設置</title>
       <link>https://teduandy.github.io/blog/blogs/vue-vue3-compontent-emits/</link>
