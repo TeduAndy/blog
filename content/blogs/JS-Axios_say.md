@@ -36,7 +36,7 @@ npm install axios
 
 <br>
 
-#### 1. 基本寫法
+#### 1. 基本寫法 以及 夾帶token
 ```js
 // 引入 axios 之後
 
@@ -52,7 +52,8 @@ axios({ method: 'GET',
 axios({ method: 'post', 
 		url: 'url',
 		headers: {
-        // accept: 'application/json',
+          'Content-Type': 'application/json', 
+		  'Authorization': `Bearer ${token}` 
       	}, 
 		data: { 
 		param1: 'param1', 
@@ -60,7 +61,7 @@ axios({ method: 'post',
 		} });
 ```
 
-#### 2. get、post 寫法
+#### 2. get、post 以及 夾帶token
 ```js
 // GET
 const configGet = {
