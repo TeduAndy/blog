@@ -6,7 +6,16 @@
     <description>Recent content in JavaScript on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Jul 2022 13:47:37 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Nov 2022 15:13:32 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AXIOS 基礎用法及夾帶JWT-Bearer_Token</title>
+      <link>https://teduandy.github.io/blog/blogs/js-axios_say/</link>
+      <pubDate>Sun, 20 Nov 2022 15:13:32 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/js-axios_say/</guid>
+      <description>AXIOS 說明： 一個前端輕量型的 httpclient 可以發送 http 請求 攔截響應跟請求 自動轉換成 json 格式 支持 Promise 應用場景： 分離式專案時需要向後端索取資料 跟不同 API 界接時使用 安裝方法 npm 安裝方法 npm install axios cdn 直接引入 &amp;lt;script src=&amp;#34;https://unpkg.com/axios/dist/axios.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 使用方法 1. 基本寫法 // 引入 axios 之後 // GET axios({ method: &amp;#39;GET&amp;#39;, url: &amp;#39;url&amp;#39;, data: { param1: &amp;#39;param1&amp;#39;, param2: &amp;#39;param2&amp;#39; } }); // POST 用法 axios({ method: &amp;#39;post&amp;#39;, url: &amp;#39;url&amp;#39;, headers: { // accept: &amp;#39;application/json&amp;#39;, }, data: { param1: &amp;#39;param1&amp;#39;, param2: &amp;#39;param2&amp;#39; } }); 2.</description>
+    </item>
+    
     <item>
       <title>JS 路由參數解析(URL Parameters)</title>
       <link>https://teduandy.github.io/blog/blogs/js-urlparams/</link>

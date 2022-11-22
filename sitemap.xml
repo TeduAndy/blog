@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://teduandy.github.io/blog/blogs/js-axios_say/</loc>
+    <lastmod>2022-11-20T15:13:32+00:00</lastmod>
+  </url><url>
     <loc>https://teduandy.github.io/blog/blogs/</loc>
     <lastmod>2022-11-20T15:13:32+00:00</lastmod>
   </url><url>
@@ -9,6 +12,9 @@
     <lastmod>2022-11-20T15:13:32+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/</loc>
+    <lastmod>2022-11-20T15:13:32+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/categories/javascript/</loc>
     <lastmod>2022-11-20T15:13:32+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/categories/vue/</loc>
@@ -93,9 +99,6 @@
     <lastmod>2022-07-19T14:57:47+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/aspnet-asp-web-api-problem/</loc>
-    <lastmod>2022-07-19T13:47:37+00:00</lastmod>
-  </url><url>
-    <loc>https://teduandy.github.io/blog/categories/javascript/</loc>
     <lastmod>2022-07-19T13:47:37+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/js-urlparams/</loc>
