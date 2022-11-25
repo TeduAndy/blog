@@ -357,6 +357,69 @@ SQL 函數使用方法 | Hugo Profile
 <p><strong>dense_rank() over(partition by A order by B)dense_rank(): 连续排序(如果有两个第一名时，接下来仍然是第二名) 举例：</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#960050;background-color:#1e0010">课程</span>, <span style="color:#960050;background-color:#1e0010">学生</span>ID, <span style="color:#960050;background-color:#1e0010">分数</span>, rank() over (partition <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">课程</span> <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">分数</span> <span style="color:#66d9ef">desc</span>) <span style="color:#66d9ef">as</span> <span style="color:#960050;background-color:#1e0010">排名</span> 
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">from</span> <span style="color:#960050;background-color:#1e0010">成绩表</span>
+</span></span></code></pre></div><br>
+<h3 id="4substr的字串擷取用法"><strong>4.Substr的字串擷取用法</strong></h3>
+<h4 id="說明-1">說明：</h4>
+<ul>
+<li>用來擷取欄位的某一部分使用，每一個資料庫名稱不全相同。</li>
+<li>MySQL: SUBSTR( ), SUBSTRING( )</li>
+<li>Oracle: SUBSTR( )</li>
+<li>SQL Server: SUBSTRING( )</li>
+</ul>
+<h4 id="example">example：</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span> <span style="color:#66d9ef">Select</span> SUBSTR(<span style="color:#960050;background-color:#1e0010">欄位名</span>, <span style="color:#960050;background-color:#1e0010">從第幾個開始</span>) <span style="color:#66d9ef">From</span> <span style="color:#66d9ef">table</span>
+</span></span></code></pre></div><br>
+<h4 id="實例tablepet">實例(table:pet)：</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Name</th>
+<th style="text-align:center">favorite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">張一</td>
+<td style="text-align:center">dog</td>
+</tr>
+<tr>
+<td style="text-align:center">王二</td>
+<td style="text-align:center">dog</td>
+</tr>
+<tr>
+<td style="text-align:center">李三</td>
+<td style="text-align:center">cat</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#75715e">-- 正數開始
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">Select</span>  SUBSTR(favorite, <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">As</span> favorite <span style="color:#66d9ef">From</span> pet
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 負數開始
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">Select</span> SUBSTR(favorite, <span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">As</span> favorite <span style="color:#66d9ef">From</span> pet
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 兩個 SQL 最後結果都是一樣
+</span></span></span></code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:center">favorite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">og</td>
+</tr>
+</tbody>
+</table>
+<br>
+<h3 id="5-to_char的轉成字串用法"><strong>5. TO_CHAR的轉成字串用法</strong></h3>
+<h4 id="說明-2">說明：</h4>
+<ul>
+<li>將日期、數字其他型別轉換成字串格式</li>
+</ul>
+<br>
+<h4 id="example-1">example：</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span> <span style="color:#66d9ef">Select</span> TO_CHAR(<span style="color:#960050;background-color:#1e0010">欄位名</span>) <span style="color:#66d9ef">As</span> <span style="color:#960050;background-color:#1e0010">欄位名</span> <span style="color:#66d9ef">From</span> <span style="color:#66d9ef">table</span>
 </span></span></code></pre></div>
           </article>
         </div>
@@ -376,6 +439,8 @@ SQL 函數使用方法 | Hugo Profile
         <li><a href="#1decode-函数"><strong>1.Decode 函数</strong></a></li>
         <li><a href="#2計算型函數"><strong>2.計算型函數</strong></a></li>
         <li><a href="#3partition-by的用法"><strong>3.Partition By的用法</strong></a></li>
+        <li><a href="#4substr的字串擷取用法"><strong>4.Substr的字串擷取用法</strong></a></li>
+        <li><a href="#5-to_char的轉成字串用法"><strong>5. TO_CHAR的轉成字串用法</strong></a></li>
       </ul>
     </li>
   </ul>
