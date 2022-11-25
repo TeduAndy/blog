@@ -5,7 +5,7 @@ categories: SQL
 ---
 
 
-### **1.Decode 函数**
+### **1.Decode (類似if else 用法)函数**
 #### **說明：**
 ```SQL
 Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他)
@@ -61,7 +61,7 @@ Select ID, Sum(price) From product Groub By ID
 
 <br>
 
-### **3.Partition By的用法**
+### **3.Partition By 排序的用法**
 
 
 #### 一、rank()
