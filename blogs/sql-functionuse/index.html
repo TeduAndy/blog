@@ -39,7 +39,7 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 <meta property="og:title" content="SQL 函數使用方法" />
-<meta property="og:description" content="1.Decode 函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
+<meta property="og:description" content="1.Decode (類似if else 用法)函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
 ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &#39;10&#39;, &#39;十&#39;, &#39;80&#39;, &#39;八十&#39;, &#39;其他&#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 2.計算型函數 AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) **說明：通常會搭配 Groub By 使用 ** Select &#34;函數名&#34;(&#34;欄位名&#34;) From &#34;表格名&#34;; 實例： 表名: product" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://teduandy.github.io/blog/blogs/sql-functionuse/" /><meta property="article:section" content="blogs" />
@@ -49,7 +49,7 @@ ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Selec
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="SQL 函數使用方法"/>
-<meta name="twitter:description" content="1.Decode 函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
+<meta name="twitter:description" content="1.Decode (類似if else 用法)函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
 ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &#39;10&#39;, &#39;十&#39;, &#39;80&#39;, &#39;八十&#39;, &#39;其他&#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 2.計算型函數 AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) **說明：通常會搭配 Groub By 使用 ** Select &#34;函數名&#34;(&#34;欄位名&#34;) From &#34;表格名&#34;; 實例： 表名: product"/>
 
 
@@ -210,7 +210,7 @@ SQL 函數使用方法 | Hugo Profile
           </div>
           
           <article class="page-content  p-2">
-          <h3 id="1decode-函数"><strong>1.Decode 函数</strong></h3>
+          <h3 id="1decode-類似if-else-用法函数"><strong>1.Decode (類似if else 用法)函数</strong></h3>
 <h4 id="說明"><strong>說明：</strong></h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span>Decode(<span style="color:#960050;background-color:#1e0010">表達式</span>, <span style="color:#960050;background-color:#1e0010">條件</span><span style="color:#ae81ff">1</span>, <span style="color:#960050;background-color:#1e0010">結果</span><span style="color:#ae81ff">1</span>, <span style="color:#960050;background-color:#1e0010">條件</span><span style="color:#ae81ff">2</span>, <span style="color:#960050;background-color:#1e0010">結果</span>, <span style="color:#960050;background-color:#1e0010">其他</span>)
 </span></span></code></pre></div><h4 id="實例">實例：</h4>
@@ -345,7 +345,7 @@ SQL 函數使用方法 | Hugo Profile
 </tbody>
 </table>
 <br>
-<h3 id="3partition-by的用法"><strong>3.Partition By的用法</strong></h3>
+<h3 id="3partition-by-排序的用法"><strong>3.Partition By 排序的用法</strong></h3>
 <h4 id="一rank">一、rank()</h4>
 <p><strong>rank() over(partition by A order by B)是按照A进行分组，分组里面的数据按照B进行排序，over即在什么之上，rank()即跳跃排序(比如存在两个第一名，接下来就是第三名) 举例：</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#960050;background-color:#1e0010">课程</span>, <span style="color:#960050;background-color:#1e0010">学生</span>ID, <span style="color:#960050;background-color:#1e0010">分数</span>, rank() over (partition <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">课程</span> <span style="color:#66d9ef">order</span> <span style="color:#66d9ef">by</span> <span style="color:#960050;background-color:#1e0010">分数</span> <span style="color:#66d9ef">desc</span>) <span style="color:#66d9ef">as</span> <span style="color:#960050;background-color:#1e0010">排名</span> <span style="color:#66d9ef">from</span> <span style="color:#960050;background-color:#1e0010">成绩表</span>
@@ -436,9 +436,9 @@ SQL 函數使用方法 | Hugo Profile
   <ul>
     <li>
       <ul>
-        <li><a href="#1decode-函数"><strong>1.Decode 函数</strong></a></li>
+        <li><a href="#1decode-類似if-else-用法函数"><strong>1.Decode (類似if else 用法)函数</strong></a></li>
         <li><a href="#2計算型函數"><strong>2.計算型函數</strong></a></li>
-        <li><a href="#3partition-by的用法"><strong>3.Partition By的用法</strong></a></li>
+        <li><a href="#3partition-by-排序的用法"><strong>3.Partition By 排序的用法</strong></a></li>
         <li><a href="#4substr的字串擷取用法"><strong>4.Substr的字串擷取用法</strong></a></li>
         <li><a href="#5-to_char的轉成字串用法"><strong>5. TO_CHAR的轉成字串用法</strong></a></li>
       </ul>

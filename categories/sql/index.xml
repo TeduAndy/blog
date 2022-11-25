@@ -13,7 +13,7 @@
       <pubDate>Wed, 02 Nov 2022 15:48:00 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/sql-functionuse/</guid>
-      <description>1.Decode 函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
+      <description>1.Decode (類似if else 用法)函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
 ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &amp;#39;10&amp;#39;, &amp;#39;十&amp;#39;, &amp;#39;80&amp;#39;, &amp;#39;八十&amp;#39;, &amp;#39;其他&amp;#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 2.計算型函數 AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) **說明：通常會搭配 Groub By 使用 ** Select &amp;#34;函數名&amp;#34;(&amp;#34;欄位名&amp;#34;) From &amp;#34;表格名&amp;#34;; 實例： 表名: product</description>
     </item>
     
