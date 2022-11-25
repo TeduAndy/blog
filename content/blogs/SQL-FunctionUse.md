@@ -86,3 +86,53 @@ from 成绩表
 select 课程, 学生ID, 分数, rank() over (partition by 课程 order by 分数 desc) as 排名 
 from 成绩表
 ```
+
+<br>
+
+### **4.Substr的字串擷取用法**
+
+#### 說明：
+- 用來擷取欄位的某一部分使用，每一個資料庫名稱不全相同。
+- MySQL: SUBSTR( ), SUBSTRING( )
+- Oracle: SUBSTR( )
+- SQL Server: SUBSTRING( )
+
+#### example：
+```SQL
+ Select SUBSTR(欄位名, 從第幾個開始) From table
+```
+
+<br>
+
+#### 實例(table:pet)：
+| Name   | favorite | 
+| :----: | :----:   | 
+| 張一   |   dog    |
+| 王二   |   dog    | 
+| 李三   |   cat    |
+```sql
+-- 正數開始
+Select  SUBSTR(favorite, 2) As favorite From pet
+
+-- 負數開始
+Select SUBSTR(favorite, -2) As favorite From pet
+
+-- 兩個 SQL 最後結果都是一樣
+```
+| favorite | 
+| :----:   | 
+|   og    |
+
+<br>
+
+### **5. TO_CHAR的轉成字串用法**
+
+#### 說明：
+- 將日期、數字其他型別轉換成字串格式
+
+<br>
+
+#### example：
+```SQL
+ Select TO_CHAR(欄位名) As 欄位名 From table
+```
