@@ -9,7 +9,7 @@ categories: SQL
 	}
 </style>
 
-## **讀取資料**
+### **讀取資料**
 ```SQL
 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件
 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件
@@ -17,42 +17,35 @@ SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件
 
 <br>
 
-## **插入資料(單一)**
+### **插入資料(單一)**
 ```SQL
 INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值)
 ```
 
 <br>
 
-## **插入資料(單一)**
-```SQL
-INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值)
-```
-
-<br>
-
-## **插入多筆資料**
+### **插入多筆資料**
 ```SQL
 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2..  FROM 舊表明
 ```
 
 <br>
 
-## **更新語句**
+### **更新語句**
 ```SQL
 UPDATE 表名 SET 字段名="", 字段名2="" WHERE 條件
 ```
 
 <br>
 
-## **刪除語句(表內的某一條)**
+### **刪除語句(表內的某一條)**
 ```SQL
 DELETE FROM 表名 WHERE 條件
 ```
 
 <br>
 
-## **刪除 表**
+### **刪除 表**
 ```SQL
 DROP table 表名
 ```
@@ -66,21 +59,21 @@ DROP database 資料庫名
 
 <br>
 
-## **創建資料庫**
+### **創建資料庫**
 ```SQL
 CREATE DATABASE 資料庫名字 CHARACTER SET utf8
 ```
 
 <br>
 
-## **創建表**
+### **創建表**
 ```SQL
 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字))
 ```
 
 <br>
 
-## **GROUP BY 使用**
+### **GROUP BY 使用**
 ```SQL
 SELECT Store_Name, SUM(Sales)
 FROM Store_Information
@@ -98,7 +91,7 @@ Boston	             700
 
 <br>
 
-## **HAVING 使用**
+### **HAVING 使用**
 <br>
 #### 說明：
 	HAVING 子句通常是在一個 SQL 句子的最後。
@@ -116,7 +109,7 @@ HAVING SUM(Sales) > 1500;
 
 <br>
 
-## **LEFT JOIN 使用**
+### **LEFT JOIN 使用**
 ```SQL
 SELECT table_column1, table_column2...
 FROM table_name1
@@ -127,7 +120,7 @@ ON table_name1.column_name=table_name2.column_name;
 
 <br>
 
-## **RIGHT JOIN 使用**
+### **RIGHT JOIN 使用**
 ```SQL
 SELECT table_column1, table_column2...
 FROM table_name1
@@ -137,7 +130,7 @@ ON table_name1.column_name=table_name2.column_name;
 
 <br>
 
-## **INNER JOIN 使用**
+### **INNER JOIN 使用**
 ```SQL
 SELECT table_column1, table_column2...
 FROM table_name1
@@ -150,7 +143,7 @@ ON table_name1.column_name=table_name2.column_name;
 
 <br>
 
-## **CASE 關鍵字 (SQL CASE Keyword)**
+### **CASE 關鍵字 (SQL CASE Keyword)**
 
 <br>
 
@@ -204,7 +197,7 @@ FROM questionnaire;
 
 <br>
 
-## **ALTER TABLE**
+### **ALTER TABLE**
 
 **可用方法:**
 
@@ -235,7 +228,7 @@ ALTER TABLE 表名 DROP 欄位名稱;
 
 <br>
 
-## **DISTINCT**
+### **DISTINCT**
 
 <br>
 
