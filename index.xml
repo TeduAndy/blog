@@ -6,7 +6,16 @@
     <description>Recent content on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Nov 2022 13:47:37 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Dec 2022 08:00:00 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>獲取各個語言的 Gitignore</title>
+      <link>https://teduandy.github.io/blog/blogs/git-gitignore_io_use/</link>
+      <pubDate>Thu, 01 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/git-gitignore_io_use/</guid>
+      <description>說明 使用一個專案時，通常都會使用 Git 進行版控 會產生出一個 .gitignore 檔案用來設定不需要上傳到github的資料夾或者資料 但是有時候會遇到需要手動增加 .gitignore 檔案 每個語言的檔案配置都不太一樣，實在感到相當麻煩 Gitignore.io 網站介紹 此網站提供了各個語言、框架的、操作系統、IDE .gitignore 檔案 點擊網站後，選擇你使用的 語言、框架 便可以產生出 檔案 網址：Gitignore.io </description>
+    </item>
+    
     <item>
       <title>ASP.NET CORE 3.1 將靜態資源資料夾放入 VUE</title>
       <link>https://teduandy.github.io/blog/blogs/aspnet-aspcore3_usespa/</link>
@@ -330,15 +339,6 @@ Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援�
       
       <guid>https://teduandy.github.io/blog/blogs/git-gitlab-teacher/</guid>
       <description>1. 說明 : 在使用之前 請先安裝完 git 這邊安裝方法就不再敘述 2. 登入到自己的 gitlab 裡面 並且按 new project 進入到此頁面 3. 點擊 clone 並且複製上面 https 的網址 4. 回到 要上傳的專案 先初始化 git 本地倉庫 到專案的終端機上面 輸入這段指令 git init 輸入這段指令，將所有檔案先加入到暫時存檔區 git add . (. 的意思就是全部) 提交版本 本次 加入到暫存區的 輸入這段指令 git commit -m &amp;#34;這邊是輸入備註，看是要輸入版本號或者是寫入此版本修改了甚麼都可以&amp;#34; 接下來要利用 我們剛剛複製的 gitlab https 位置，輸入這段指令給它一個別名 git remote add [name] [your https url] 然後就可以將專案 推到你的 遠程倉庫了 git push [url_name] [branch] 5. 就可以回到 gitlab 看看 創的 project 有沒有資料了!</description>
-    </item>
-    
-    <item>
-      <title>獲取各個語言的 Gitignore</title>
-      <link>https://teduandy.github.io/blog/blogs/git-gitignore_io_use/</link>
-      <pubDate>Tue, 19 Jul 2022 09:03:25 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/blogs/git-gitignore_io_use/</guid>
-      <description>說明 使用一個專案時，通常都會使用 Git 進行版控 會產生出一個 .gitignore 檔案用來設定不需要上傳到github的資料夾或者資料 但是有時候會遇到需要手動增加 .gitignore 檔案 每個語言的檔案配置都不太一樣，實在感到相當麻煩 Gitignore.io 網站介紹 此網站提供了各個語言、框架的 .gitignore 檔案 點擊網站後，選擇你使用的 語言、框架 便可以產生出 檔案 網址：Gitignore.io </description>
     </item>
     
     <item>
