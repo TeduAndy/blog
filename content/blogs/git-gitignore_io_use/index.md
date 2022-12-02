@@ -1,6 +1,6 @@
 ---
 title: 獲取各個語言的 Gitignore
-date: 2022-07-19 09:03:25
+date: 2022-12-01 08:00:00
 categories: GIT
 ---
 
@@ -12,8 +12,12 @@ categories: GIT
 
 
 ### **Gitignore.io 網站介紹**
-- 此網站提供了各個語言、框架的 .gitignore 檔案
+- 此網站提供了各個語言、框架的、操作系統、IDE .gitignore 檔案
 - 點擊網站後，選擇你使用的 語言、框架 便可以產生出 檔案
 - 網址：[Gitignore.io](https://www.toptal.com/developers/gitignore)
+
+<br>
+
+![](gitignore.png)
 
 
