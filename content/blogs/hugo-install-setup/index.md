@@ -31,7 +31,7 @@ categories: Blog-Hugo框架
 
 <br>
 
-## Window 安裝
+### Window 安裝
 #### 步驟
 - 1.先在 C槽 新增一個 Hugo 的資料夾，並且把下載下來的壓縮檔壓縮到此目錄
 - 2.查看 壓縮完的檔案裏面 是否有一個 (hugo.exe) 檔案，有的話接下來進行環境路徑配置
@@ -48,11 +48,13 @@ categories: Blog-Hugo框架
 <br>
 <br>
 
-## Mac 安裝
+### Mac 安裝
+尚未撰寫
 
 <br>
 <br>
 
+### 教學
 [大神-Blog](https://tigernaxojr.github.io/blog/#home)
 <br>
 **這邊創建專案的方式參考某位大神寫好的腳本，創建好的同時並且上傳到 github 上面之外，還在此專案上面分成兩個分支，一個是 main(負責放原本的專案位置)，一個是 gh-pages(存放Bulid過後的靜態資源)**
