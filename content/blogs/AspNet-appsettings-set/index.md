@@ -96,7 +96,7 @@ public class UserController : Controller
 
 <br>
 
-- **回傳結果**
+- **回傳結果，展示在頁面，正常都是在 controller 裡面使用**
 ![照片](notIOption5.png)
 
 <br>
