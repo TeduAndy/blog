@@ -105,6 +105,9 @@ public class UserController : Controller
 ### 第三種 抓取方法 IConfiguration(範例版本:Asp.net 3.1)
 
 - 一樣 先在 appsettings.json 裡面設置要獲取的值
+
+<br>
+
 ![照片](masagebox1.png)
 
 <br>
