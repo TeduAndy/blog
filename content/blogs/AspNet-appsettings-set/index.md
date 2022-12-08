@@ -104,13 +104,12 @@ public class UserController : Controller
 
 ### 第三種 抓取方法 IConfiguration(範例版本:Asp.net 3.1)
 
-#### 一樣 先在 appsettings.json 裡面設置要獲取的值
+- 一樣 先在 appsettings.json 裡面設置要獲取的值
 ![照片](masagebox1.png)
 
 <br>
 
-#### 使用 IConfiguration 介面 去獲取 appsettings 裡面的資訊
-
+- 使用 IConfiguration 介面 去獲取 appsettings 裡面的資訊
 - 預設一個空的 IConfiguration 
 - 並且在建構值裡面 將 實體物件賦予給它
 
@@ -118,12 +117,12 @@ public class UserController : Controller
 
 <br>
 
-#### 利用 鍵值對的方式去抓取
+- 利用 鍵值對的方式去抓取
 ![照片](masagebox3.png)
 
 <br>
 
-#### 輸出結果
+- 輸出結果
 ![照片](masagebox4.png)
 
 
