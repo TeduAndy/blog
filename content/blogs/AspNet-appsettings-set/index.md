@@ -10,8 +10,8 @@ categories: Asp.net
 
 <br>
 
-# 第一種 抓取方法
-### **<font color='red'>使用方法：</font>**
+### 第一種 抓取方法 IOption<T>
+#### **<font color='red'>使用方法：</font>**
 
 +  **1. 先在 appsettings.json 設定自己需要的 參數 例: 設定了一個 mysql 裡面的 connectionstring**
 
@@ -67,26 +67,64 @@ public class UserController : Controller
 <br>
 <br>
 
-# 第二種 抓取方法(範例版本:Asp.net 3.1)
-
-### 一樣 先在 appsettings.json 裡面設置要獲取的值
-![照片](appsettings1.png)
+### 第二種 擺脫 IOption，直接DI註冊組態物件(推薦)(範例版本:Asp.net 3.1)
+#### **說明：**
+- **消除對 IOptions 的依賴**
+- **使用內建的 DI 直接註冊組態物件**
+- **需要藉由 IConfiguration 介面所提供的 !Bind! 方法**
 
 <br>
 
-### 使用 IConfiguration 介面 去獲取 appsettings 裡面的資訊
+#### **教學：**
+- **先在Models建立一個 application.json 接值使用的物件**
+![照片](notIOption1.png)
+
+<br>
+
+- **在 application.json 設置connectStr**
+![照片](notIOption2.png)
+
+<br>
+
+- **在 Startup.cs 的 ConfigureServices 設置**
+![照片](notIOption3.png)
+
+<br>
+
+- **在 controller 取得註冊物件，並且回傳 MySql 的 connectStr**
+![照片](notIOption4.png)
+
+<br>
+
+- **回傳結果**
+![照片](notIOption5.png)
+
+<br>
+<br>
+
+### 第三種 抓取方法 IConfiguration(範例版本:Asp.net 3.1)
+
+#### 一樣 先在 appsettings.json 裡面設置要獲取的值
+![照片](masagebox1.png)
+
+<br>
+
+#### 使用 IConfiguration 介面 去獲取 appsettings 裡面的資訊
 
 - 預設一個空的 IConfiguration 
 - 並且在建構值裡面 將 實體物件賦予給它
 
-![照片](appsettings2.png)
+![照片](masagebox2.png)
 
 <br>
 
-### 利用 鍵值對的方式去抓取
-![照片](appsettings3.png)
+#### 利用 鍵值對的方式去抓取
+![照片](masagebox3.png)
 
 <br>
 
-### 輸出結果
-![照片](appsettings4.png)
+#### 輸出結果
+![照片](masagebox4.png)
+
+
+
