@@ -134,5 +134,34 @@ public class UserController : Controller
 
 ![照片](masagebox4.png)
 
+<br>
+<br>
+
+### 第三種方法延伸，官方默認 ConnectionStrings (範例版本:Asp.net 6)
+
+- 先在 application.js 設置，官方默認 ConnectionStrings 這個命名用於存放 連線字串
+
+<br>
+
+![照片](official1.png)
+
+<br> 
+
+- 再 Controller 裡面一樣建構值 將 IConfiguration 注入到 空的 設定好的 IConfiguration _config
+- 由於照著官方有設置 ConnectionStrings 這個命名，便可以使用 IConfiguration 的 GetConnectionString 方法
+
+<br>
+
+![照片](official2.png)
+
+<br>
+
+- 輸出結果，可以捕捉到 ConnectionStrings 底下寫的 MySql 的值
+
+<br>
+
+![照片](official3.png)
+
+
 
 
