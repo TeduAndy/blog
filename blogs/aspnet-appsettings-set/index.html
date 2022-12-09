@@ -307,6 +307,27 @@ if (!doNotTrack) {
 </ul>
 <br>
 <p><img src="masagebox4.png" alt="照片"></p>
+<br>
+<br>
+<h3 id="第三種方法延伸官方默認-connectionstrings-範例版本aspnet-6">第三種方法延伸，官方默認 ConnectionStrings (範例版本:Asp.net 6)</h3>
+<ul>
+<li>先在 application.js 設置，官方默認 ConnectionStrings 這個命名用於存放 連線字串</li>
+</ul>
+<br>
+<p><img src="official1.png" alt="照片"></p>
+<br> 
+<ul>
+<li>再 Controller 裡面一樣建構值 將 IConfiguration 注入到 空的 設定好的 IConfiguration _config</li>
+<li>由於照著官方有設置 ConnectionStrings 這個命名，便可以使用 IConfiguration 的 GetConnectionString 方法</li>
+</ul>
+<br>
+<p><img src="official2.png" alt="照片"></p>
+<br>
+<ul>
+<li>輸出結果，可以捕捉到 ConnectionStrings 底下寫的 MySql 的值</li>
+</ul>
+<br>
+<p><img src="official3.png" alt="照片"></p>
 
           </article>
         </div>
@@ -327,6 +348,7 @@ if (!doNotTrack) {
         <li><a href="#第一種-抓取方法-ioptiont">第一種 抓取方法 IOption<T></a></li>
         <li><a href="#第二種-擺脫-ioption直接di註冊組態物件推薦範例版本aspnet-31">第二種 擺脫 IOption，直接DI註冊組態物件(推薦)(範例版本:Asp.net 3.1)</a></li>
         <li><a href="#第三種-抓取方法-iconfiguration範例版本aspnet-31">第三種 抓取方法 IConfiguration(範例版本:Asp.net 3.1)</a></li>
+        <li><a href="#第三種方法延伸官方默認-connectionstrings-範例版本aspnet-6">第三種方法延伸，官方默認 ConnectionStrings (範例版本:Asp.net 6)</a></li>
       </ul>
     </li>
   </ul>
