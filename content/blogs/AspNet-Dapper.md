@@ -1,6 +1,6 @@
 ---
 title: Dapper 使用介紹
-date: 2022-07-19 09:27:01
+date: 2022-12-08 09:27:01
 categories: Asp.net
 ---
 
@@ -11,11 +11,11 @@ categories: Asp.net
 
 <br>
 
-### **<font color='red'>安裝：</font>**
+## **<font color='red'>安裝：</font>**
 
-**1. 專案點右鍵 -> 管理 NuGet 套件**
+- **1. 專案點右鍵 -> 管理 NuGet 套件**
 
-**2.** **收尋 1. [Dapper](https://www.nuget.org/packages/Dapper) and 1. [MySQL Connector](https://www.nuget.org/packages/MySqlConnector/) 並且安裝**
+- **2.** **收尋 1. [Dapper](https://www.nuget.org/packages/Dapper) and 1. [MySQL Connector](https://www.nuget.org/packages/MySqlConnector/) 並且安裝**
 
 <br>
 
@@ -75,8 +75,8 @@ var _db = new MySqlConnection(_options.ConnectionString);
 
 <br>
 
-## **<font color='orange'> 1. Dapper - Query </font>** 
-**光是查詢Dapper就提供了很多種方法可以使用，很多方法都跟Lambda用法一樣。**
+### **<font color='orange'> 1. Dapper - Query </font>** 
+- **光是查詢Dapper就提供了很多種方法可以使用，很多方法都跟Lambda用法一樣。**
 
 - [**Query**](https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#Query)
 - [**QueryFirst**](https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QueryFirst)
@@ -96,16 +96,16 @@ using (SqlConnection conn = new SqlConnection(strConnection))
 
 <br>
 
-##### **<font color='orange'> 2. Dapper - Execute </font>** 
+### **<font color='orange'> 2. Dapper - Execute </font>** 
 
-**執行Insert、Update、Delete、Stored Procedure時使用。**
+- **執行Insert、Update、Delete、Stored Procedure時使用。**
 
 - [**Stored Procedure**](https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#Stored%20Procedure)
 - [**INSERT statement**](https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#INSERT%20statement)
 - [**UPDATE statement**](https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#UPDATE%20statement)
 - [**DELETE statement**](https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#DELETE%20statement)
 
-**新增多筆範例 (修改\刪除也是同一種方法, 只是 sql 不同)**
+- **新增多筆範例 (修改\刪除也是同一種方法, 只是 sql 不同)**
 
 ```C#
 //新增多筆範例
@@ -122,7 +122,7 @@ using (SqlConnection conn = new SqlConnection(strConnection))
 
 <br>
 
-##### **<font color='orange'> 3. Dapper - Async </font>** 
+### **<font color='orange'> 3. Dapper - Async </font>** 
 
 **非同步方法Dapper也是有提供，寫法只有一點點不一樣而已。**
 
@@ -143,6 +143,84 @@ using (SqlConnection conn = new SqlConnection(strConnection))
 	string strSql ="Select * from Users" ;
 	//非同步
 	results = conn. QueryAsync<MyModel>(strSql).Result.ToList();
+}
+```
+
+<br>
+
+### **<font color='orange'> 4. Dapper - transaction </font>** 
+- **transaction 一般獲取方式都是要在，各自的 DB 連線時獲取各自的 DB transaction**
+- **還要執行完成 執行 commit，失敗時 RollBack**
+- **範例**
+```C#
+using (var conn1 = new MySqlConnection("connectStr"))
+using (var ts1 = conn1.BeginTransaction())
+{
+	try
+	{
+		// 連線
+		if (conn1.State != ConnectionState.Open) conn1.Open();
+		// 執行
+		var result = ts1.connection.Query(sql);
+		// 成功
+		ts1.commit();
+	}
+	catch(Exception)
+	{
+		// 失敗
+		ts1.RollBack();
+	}
+}
+
+
+using (var conn2 = new MySqlConnection("connectStr"))
+using (var ts2 = conn2.BeginTransaction())
+{
+	try
+	{
+		// 連線
+		if (conn2.State != ConnectionState.Open) conn2.Open();
+		// 執行
+		var result = ts2.connection.Query(sql);
+		// 成功
+		ts2.commit();
+	}
+	catch(Exception)
+	{
+		// 失敗
+		ts2.RollBack();
+	}
+}
+```
+
+<br>
+
+- **transactionscope 分散式交易可以同時對不同 DB 進行處理**
+- **只要在最下面執行 Complete ， 內建機制成功自動 commit，失敗自動 RollBack**
+- **但是伺服器的分散式交易(MSDTC)的設定開放，許多客戶不太願意開放，這會導致 TransactionScope 無法正常運作**
+- **範例**
+```C#
+try
+{
+	using (var tr = new TransactionScope())
+	using (var conn1 = new MySqlConnection("connectStr"))
+	using (var conn2 = new MySqlConnection("connectStr"))
+	{
+		// 連線
+		if (conn1.State != ConnectionState.Open) conn1.Open();
+		if (conn2.State != ConnectionState.Open) conn2.Open();
+
+		// 執行
+		var result1 = conn1.connection.Query(sql);
+		var result2 = conn2.connection.Query(sql);
+
+		// 交易結束或者失敗
+		tr.Complete();
+	}
+}catch(Exception)
+{
+	// 跳到這裡時，已經自動執行 RollBack
+	// 底下可以做回傳錯誤訊息相關
 }
 ```
 
