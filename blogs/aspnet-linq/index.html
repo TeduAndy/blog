@@ -39,7 +39,7 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 <meta property="og:title" content="LINQ 相關" />
-<meta property="og:description" content="離線table 用法 // 抓回來的 DataTable DataTable tb = GetTB(_formno, _key); // tb.AsEnumerable() 會轉成 EnumerableRowCollection&lt;DataRow&gt; 類型 , 因為是 Enumerable 類型 便可以用 linq // 從裡面的資料抓取多筆 使用 where , {} 內是要寫第二行 但是 {} 不會自動 return 所以要手動 return var tmps = tb.AsEnumerable().Where(row =&gt; { var num = row[&#34;DTLNO&#34;].ToString(); return (Convert.ToInt32(num) &lt; 220 &amp;&amp; num != &#34;215&#34;) | num == &#34;254&#34;; }); // 單一一筆 使用 FirstOrDefault (但是這個會 一抓到一筆 馬上返回) var tmp = tb.AsEnumerable().FirstOrDefault(row =&gt; row[&#34;DTLNO&#34;].ToString() == &#34;215&#34;); // 單一一筆 使用 SingleOrDefault (這個是抓到一筆 會再繼續往下 查完所有 抓到第二筆則會報錯誤) tmp = tb." />
+<meta property="og:description" content="Datatable 用法 // 抓回來的 DataTable DataTable tb = GetTB(_formno, _key); // tb.AsEnumerable() 會轉成 EnumerableRowCollection&lt;DataRow&gt; 類型 , 因為是 Enumerable 類型 便可以用 linq // 從裡面的資料抓取多筆 使用 where , {} 內是要寫第二行 但是 {} 不會自動 return 所以要手動 return var tmps = tb.AsEnumerable().Where(row =&gt; { var num = row[&#34;DTLNO&#34;].ToString(); return (Convert.ToInt32(num) &lt; 220 &amp;&amp; num != &#34;215&#34;) | num == &#34;254&#34;; }); // 單一一筆 使用 FirstOrDefault (但是這個會 一抓到一筆 馬上返回) var tmp = tb.AsEnumerable().FirstOrDefault(row =&gt; row[&#34;DTLNO&#34;].ToString() == &#34;215&#34;); // 單一一筆 使用 SingleOrDefault (這個是抓到一筆 會再繼續往下 查完所有 抓到第二筆則會報錯誤) tmp = tb." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://teduandy.github.io/blog/blogs/aspnet-linq/" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2022-07-19T10:00:01+00:00" />
@@ -48,7 +48,7 @@ if (!doNotTrack) {
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="LINQ 相關"/>
-<meta name="twitter:description" content="離線table 用法 // 抓回來的 DataTable DataTable tb = GetTB(_formno, _key); // tb.AsEnumerable() 會轉成 EnumerableRowCollection&lt;DataRow&gt; 類型 , 因為是 Enumerable 類型 便可以用 linq // 從裡面的資料抓取多筆 使用 where , {} 內是要寫第二行 但是 {} 不會自動 return 所以要手動 return var tmps = tb.AsEnumerable().Where(row =&gt; { var num = row[&#34;DTLNO&#34;].ToString(); return (Convert.ToInt32(num) &lt; 220 &amp;&amp; num != &#34;215&#34;) | num == &#34;254&#34;; }); // 單一一筆 使用 FirstOrDefault (但是這個會 一抓到一筆 馬上返回) var tmp = tb.AsEnumerable().FirstOrDefault(row =&gt; row[&#34;DTLNO&#34;].ToString() == &#34;215&#34;); // 單一一筆 使用 SingleOrDefault (這個是抓到一筆 會再繼續往下 查完所有 抓到第二筆則會報錯誤) tmp = tb."/>
+<meta name="twitter:description" content="Datatable 用法 // 抓回來的 DataTable DataTable tb = GetTB(_formno, _key); // tb.AsEnumerable() 會轉成 EnumerableRowCollection&lt;DataRow&gt; 類型 , 因為是 Enumerable 類型 便可以用 linq // 從裡面的資料抓取多筆 使用 where , {} 內是要寫第二行 但是 {} 不會自動 return 所以要手動 return var tmps = tb.AsEnumerable().Where(row =&gt; { var num = row[&#34;DTLNO&#34;].ToString(); return (Convert.ToInt32(num) &lt; 220 &amp;&amp; num != &#34;215&#34;) | num == &#34;254&#34;; }); // 單一一筆 使用 FirstOrDefault (但是這個會 一抓到一筆 馬上返回) var tmp = tb.AsEnumerable().FirstOrDefault(row =&gt; row[&#34;DTLNO&#34;].ToString() == &#34;215&#34;); // 單一一筆 使用 SingleOrDefault (這個是抓到一筆 會再繼續往下 查完所有 抓到第二筆則會報錯誤) tmp = tb."/>
 
 
 <link rel="stylesheet" href="/blog//bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/blog//css/header.css" media="all">
@@ -198,7 +198,7 @@ LINQ 相關 | Hugo Profile
           </div>
           
           <article class="page-content  p-2">
-          <h4 id="font-colorred離線table-用法font"><strong><font color='red'>離線table 用法</font></strong></h4>
+          <h4 id="font-colorreddatatable-用法font"><strong><font color='red'>Datatable 用法</font></strong></h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#75715e">// 抓回來的 DataTable</span>
 </span></span><span style="display:flex;"><span>DataTable tb = GetTB(_formno, _key);
 </span></span><span style="display:flex;"><span>

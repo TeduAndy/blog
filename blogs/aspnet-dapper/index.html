@@ -202,16 +202,16 @@ Dapper 使用介紹 | Hugo Profile
           </div>
           
           <article class="page-content  p-2">
-          <h4 id="font-colorred說明font"><strong><font color='red'>說明：</font></strong></h4>
+          <h2 id="font-colorred說明font"><strong><font color='red'>說明：</font></strong></h2>
 <ul>
 <li><strong>Dapper輕量級的 ORM，必須要自己定義 C# class、管理連線、自己寫 SQL，但是套件非常迷你而且效能非常好，很適合已經學會目標資料庫語法的開發者。</strong></li>
 </ul>
 <br>
-<h4 id="font-colorred安裝font"><strong><font color='red'>安裝：</font></strong></h4>
+<h3 id="font-colorred安裝font"><strong><font color='red'>安裝：</font></strong></h3>
 <p><strong>1. 專案點右鍵 -&gt; 管理 NuGet 套件</strong></p>
 <p><strong>2.</strong> <strong>收尋 1. <a href="https://www.nuget.org/packages/Dapper">Dapper</a> and 1. <a href="https://www.nuget.org/packages/MySqlConnector/">MySQL Connector</a> 並且安裝</strong></p>
 <br>
-<h4 id="font-colorreddapper-連線-font"><strong><font color='red'>Dapper 連線 :</font></strong></h4>
+<h2 id="font-colorreddapper-連線-font"><strong><font color='red'>Dapper 連線 :</font></strong></h2>
 <ul>
 <li><strong>1. 定義一個用來接資料的 Model 類別：</strong>
 <strong>Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。</strong></li>
@@ -251,9 +251,9 @@ Dapper 使用介紹 | Hugo Profile
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// 便可以連接到 mysql </span>
 </span></span></code></pre></div><br>
-<h4 id="font-colorreddapper使用-font"><strong><font color='red'>Dapper使用: </font></strong></h4>
+<h2 id="font-colorreddapper使用-font"><strong><font color='red'>Dapper使用: </font></strong></h2>
 <br>
-<h5 id="font-colororange-1-dapper---query-font"><strong><font color='orange'> 1. Dapper - Query </font></strong></h5>
+<h2 id="font-colororange-1-dapper---query-font"><strong><font color='orange'> 1. Dapper - Query </font></strong></h2>
 <p><strong>光是查詢Dapper就提供了很多種方法可以使用，很多方法都跟Lambda用法一樣。</strong></p>
 <ul>
 <li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#Query"><strong>Query</strong></a></li>
@@ -323,7 +323,14 @@ Dapper 使用介紹 | Hugo Profile
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#font-colorred說明font"><strong><font color='red'>說明：</font></strong></a>
+      <ul>
+        <li><a href="#font-colorred安裝font"><strong><font color='red'>安裝：</font></strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#font-colorreddapper-連線-font"><strong><font color='red'>Dapper 連線 :</font></strong></a></li>
+    <li><a href="#font-colorreddapper使用-font"><strong><font color='red'>Dapper使用: </font></strong></a></li>
+    <li><a href="#font-colororange-1-dapper---query-font"><strong><font color='orange'> 1. Dapper - Query </font></strong></a>
       <ul>
         <li></li>
       </ul>

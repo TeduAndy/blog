@@ -97,7 +97,7 @@
       <pubDate>Tue, 19 Jul 2022 10:00:01 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/aspnet-linq/</guid>
-      <description>離線table 用法 // 抓回來的 DataTable DataTable tb = GetTB(_formno, _key); // tb.AsEnumerable() 會轉成 EnumerableRowCollection&amp;lt;DataRow&amp;gt; 類型 , 因為是 Enumerable 類型 便可以用 linq // 從裡面的資料抓取多筆 使用 where , {} 內是要寫第二行 但是 {} 不會自動 return 所以要手動 return var tmps = tb.AsEnumerable().Where(row =&amp;gt; { var num = row[&amp;#34;DTLNO&amp;#34;].ToString(); return (Convert.ToInt32(num) &amp;lt; 220 &amp;amp;&amp;amp; num != &amp;#34;215&amp;#34;) | num == &amp;#34;254&amp;#34;; }); // 單一一筆 使用 FirstOrDefault (但是這個會 一抓到一筆 馬上返回) var tmp = tb.AsEnumerable().FirstOrDefault(row =&amp;gt; row[&amp;#34;DTLNO&amp;#34;].ToString() == &amp;#34;215&amp;#34;); // 單一一筆 使用 SingleOrDefault (這個是抓到一筆 會再繼續往下 查完所有 抓到第二筆則會報錯誤) tmp = tb.</description>
+      <description>Datatable 用法 // 抓回來的 DataTable DataTable tb = GetTB(_formno, _key); // tb.AsEnumerable() 會轉成 EnumerableRowCollection&amp;lt;DataRow&amp;gt; 類型 , 因為是 Enumerable 類型 便可以用 linq // 從裡面的資料抓取多筆 使用 where , {} 內是要寫第二行 但是 {} 不會自動 return 所以要手動 return var tmps = tb.AsEnumerable().Where(row =&amp;gt; { var num = row[&amp;#34;DTLNO&amp;#34;].ToString(); return (Convert.ToInt32(num) &amp;lt; 220 &amp;amp;&amp;amp; num != &amp;#34;215&amp;#34;) | num == &amp;#34;254&amp;#34;; }); // 單一一筆 使用 FirstOrDefault (但是這個會 一抓到一筆 馬上返回) var tmp = tb.AsEnumerable().FirstOrDefault(row =&amp;gt; row[&amp;#34;DTLNO&amp;#34;].ToString() == &amp;#34;215&amp;#34;); // 單一一筆 使用 SingleOrDefault (這個是抓到一筆 會再繼續往下 查完所有 抓到第二筆則會報錯誤) tmp = tb.</description>
     </item>
     
     <item>
