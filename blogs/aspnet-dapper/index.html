@@ -44,8 +44,8 @@ if (!doNotTrack) {
 Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。 2.開啟一個 MySQL 連線： 用 var _db = new MySqlConnection(&quot;連線資訊&quot;); 就能開啟連線。比較需要注意的是，最好用注入組態設定的方法取得連線資訊，以及用 using 語法自動幫我們關閉連線，以免忘記關閉造成連線被占用 3.連線資訊設定： 在專案新增一個空類 名叫 serverMq.cs 裡面是用來填入 我們從組態設定抓來的 連線字串 public class servermq { public string ConnectionString { get; set; } } 到 appsettings.json 組態設定裡面 新增 mysql 連線字串&#34;AllowedHosts&#34;: &#34;*&#34;, &#34;MySQL&#34;: { &#34;ConnectionString&#34;: &#34;server=127." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://teduandy.github.io/blog/blogs/aspnet-dapper/" /><meta property="article:section" content="blogs" />
-<meta property="article:published_time" content="2022-07-19T09:27:01+00:00" />
-<meta property="article:modified_time" content="2022-07-19T09:27:01+00:00" /><meta property="og:site_name" content="Andy blog" />
+<meta property="article:published_time" content="2022-12-08T09:27:01+00:00" />
+<meta property="article:modified_time" content="2022-12-08T09:27:01+00:00" /><meta property="og:site_name" content="Andy blog" />
 
 
 <meta name="twitter:card" content="summary"/>
@@ -197,7 +197,7 @@ Dapper 使用介紹 | Hugo Profile
             <div class="text-center">
                
               <small>|</small>
-              Jul 19, 2022
+              Dec 8, 2022
             </div>
           </div>
           
@@ -207,9 +207,15 @@ Dapper 使用介紹 | Hugo Profile
 <li><strong>Dapper輕量級的 ORM，必須要自己定義 C# class、管理連線、自己寫 SQL，但是套件非常迷你而且效能非常好，很適合已經學會目標資料庫語法的開發者。</strong></li>
 </ul>
 <br>
-<h3 id="font-colorred安裝font"><strong><font color='red'>安裝：</font></strong></h3>
+<h2 id="font-colorred安裝font"><strong><font color='red'>安裝：</font></strong></h2>
+<ul>
+<li>
 <p><strong>1. 專案點右鍵 -&gt; 管理 NuGet 套件</strong></p>
+</li>
+<li>
 <p><strong>2.</strong> <strong>收尋 1. <a href="https://www.nuget.org/packages/Dapper">Dapper</a> and 1. <a href="https://www.nuget.org/packages/MySqlConnector/">MySQL Connector</a> 並且安裝</strong></p>
+</li>
+</ul>
 <br>
 <h2 id="font-colorreddapper-連線-font"><strong><font color='red'>Dapper 連線 :</font></strong></h2>
 <ul>
@@ -253,15 +259,29 @@ Dapper 使用介紹 | Hugo Profile
 </span></span></code></pre></div><br>
 <h2 id="font-colorreddapper使用-font"><strong><font color='red'>Dapper使用: </font></strong></h2>
 <br>
-<h2 id="font-colororange-1-dapper---query-font"><strong><font color='orange'> 1. Dapper - Query </font></strong></h2>
-<p><strong>光是查詢Dapper就提供了很多種方法可以使用，很多方法都跟Lambda用法一樣。</strong></p>
+<h3 id="font-colororange-1-dapper---query-font"><strong><font color='orange'> 1. Dapper - Query </font></strong></h3>
 <ul>
-<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#Query"><strong>Query</strong></a></li>
-<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QueryFirst"><strong>QueryFirst</strong></a></li>
-<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QueryFirstOrDefault"><strong>QueryFirstOrDefault</strong></a></li>
-<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QuerySingle"><strong>QuerySingle</strong></a></li>
-<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QuerySingleOrDefault"><strong>QuerySingleOrDefault</strong></a></li>
-<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QueryMultiple"><strong>QueryMultiple</strong></a></li>
+<li>
+<p><strong>光是查詢Dapper就提供了很多種方法可以使用，很多方法都跟Lambda用法一樣。</strong></p>
+</li>
+<li>
+<p><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#Query"><strong>Query</strong></a></p>
+</li>
+<li>
+<p><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QueryFirst"><strong>QueryFirst</strong></a></p>
+</li>
+<li>
+<p><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QueryFirstOrDefault"><strong>QueryFirstOrDefault</strong></a></p>
+</li>
+<li>
+<p><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QuerySingle"><strong>QuerySingle</strong></a></p>
+</li>
+<li>
+<p><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QuerySingleOrDefault"><strong>QuerySingleOrDefault</strong></a></p>
+</li>
+<li>
+<p><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#QueryMultiple"><strong>QueryMultiple</strong></a></p>
+</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>List&lt;MyModel&gt; results = <span style="color:#66d9ef">null</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> (SqlConnection conn = <span style="color:#66d9ef">new</span> SqlConnection(strConnection))
@@ -270,15 +290,27 @@ Dapper 使用介紹 | Hugo Profile
 </span></span><span style="display:flex;"><span>	results = conn.Query&lt;MyModel&gt;(strSql).ToList();
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><br>
-<h5 id="font-colororange-2-dapper---execute-font"><strong><font color='orange'> 2. Dapper - Execute </font></strong></h5>
-<p><strong>執行Insert、Update、Delete、Stored Procedure時使用。</strong></p>
+<h3 id="font-colororange-2-dapper---execute-font"><strong><font color='orange'> 2. Dapper - Execute </font></strong></h3>
 <ul>
-<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#Stored%20Procedure"><strong>Stored Procedure</strong></a></li>
-<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#INSERT%20statement"><strong>INSERT statement</strong></a></li>
-<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#UPDATE%20statement"><strong>UPDATE statement</strong></a></li>
-<li><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#DELETE%20statement"><strong>DELETE statement</strong></a></li>
-</ul>
+<li>
+<p><strong>執行Insert、Update、Delete、Stored Procedure時使用。</strong></p>
+</li>
+<li>
+<p><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#Stored%20Procedure"><strong>Stored Procedure</strong></a></p>
+</li>
+<li>
+<p><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#INSERT%20statement"><strong>INSERT statement</strong></a></p>
+</li>
+<li>
+<p><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#UPDATE%20statement"><strong>UPDATE statement</strong></a></p>
+</li>
+<li>
+<p><a href="https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#DELETE%20statement"><strong>DELETE statement</strong></a></p>
+</li>
+<li>
 <p><strong>新增多筆範例 (修改\刪除也是同一種方法, 只是 sql 不同)</strong></p>
+</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#75715e">//新增多筆範例</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> (SqlConnection conn = <span style="color:#66d9ef">new</span> SqlConnection(strConnection))
 </span></span><span style="display:flex;"><span>{
@@ -290,7 +322,7 @@ Dapper 使用介紹 | Hugo Profile
 </span></span><span style="display:flex;"><span>	conn.Execute( strSql, datas);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><br>
-<h5 id="font-colororange-3-dapper---async-font"><strong><font color='orange'> 3. Dapper - Async </font></strong></h5>
+<h3 id="font-colororange-3-dapper---async-font"><strong><font color='orange'> 3. Dapper - Async </font></strong></h3>
 <p><strong>非同步方法Dapper也是有提供，寫法只有一點點不一樣而已。</strong></p>
 <ul>
 <li><strong>ExecuteAsync</strong></li>
@@ -309,6 +341,80 @@ Dapper 使用介紹 | Hugo Profile
 </span></span><span style="display:flex;"><span>	<span style="color:#75715e">//非同步</span>
 </span></span><span style="display:flex;"><span>	results = conn. QueryAsync&lt;MyModel&gt;(strSql).Result.ToList();
 </span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><br>
+<h3 id="font-colororange-4-dapper---transaction-font"><strong><font color='orange'> 4. Dapper - transaction </font></strong></h3>
+<ul>
+<li><strong>transaction 一般獲取方式都是要在，各自的 DB 連線時獲取各自的 DB transaction</strong></li>
+<li><strong>還要執行完成 執行 commit，失敗時 RollBack</strong></li>
+<li><strong>範例</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> (<span style="color:#66d9ef">var</span> conn1 = <span style="color:#66d9ef">new</span> MySqlConnection(<span style="color:#e6db74">&#34;connectStr&#34;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> (<span style="color:#66d9ef">var</span> ts1 = conn1.BeginTransaction())
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 連線</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (conn1.State != ConnectionState.Open) conn1.Open();
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 執行</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> result = ts1.connection.Query(sql);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 成功</span>
+</span></span><span style="display:flex;"><span>		ts1.commit();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">catch</span>(Exception)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 失敗</span>
+</span></span><span style="display:flex;"><span>		ts1.RollBack();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> (<span style="color:#66d9ef">var</span> conn2 = <span style="color:#66d9ef">new</span> MySqlConnection(<span style="color:#e6db74">&#34;connectStr&#34;</span>))
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> (<span style="color:#66d9ef">var</span> ts2 = conn2.BeginTransaction())
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 連線</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (conn2.State != ConnectionState.Open) conn2.Open();
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 執行</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> result = ts2.connection.Query(sql);
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 成功</span>
+</span></span><span style="display:flex;"><span>		ts2.commit();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">catch</span>(Exception)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 失敗</span>
+</span></span><span style="display:flex;"><span>		ts2.RollBack();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><br>
+<ul>
+<li><strong>transactionscope 分散式交易可以同時對不同 DB 進行處理</strong></li>
+<li><strong>只要在最下面執行 Complete ， 內建機制成功自動 commit，失敗自動 RollBack</strong></li>
+<li><strong>但是伺服器的分散式交易(MSDTC)的設定開放，許多客戶不太願意開放，這會導致 TransactionScope 無法正常運作</strong></li>
+<li><strong>範例</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">using</span> (<span style="color:#66d9ef">var</span> tr = <span style="color:#66d9ef">new</span> TransactionScope())
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">using</span> (<span style="color:#66d9ef">var</span> conn1 = <span style="color:#66d9ef">new</span> MySqlConnection(<span style="color:#e6db74">&#34;connectStr&#34;</span>))
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">using</span> (<span style="color:#66d9ef">var</span> conn2 = <span style="color:#66d9ef">new</span> MySqlConnection(<span style="color:#e6db74">&#34;connectStr&#34;</span>))
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 連線</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (conn1.State != ConnectionState.Open) conn1.Open();
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> (conn2.State != ConnectionState.Open) conn2.Open();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 執行</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> result1 = conn1.connection.Query(sql);
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> result2 = conn2.connection.Query(sql);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 交易結束或者失敗</span>
+</span></span><span style="display:flex;"><span>		tr.Complete();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}<span style="color:#66d9ef">catch</span>(Exception)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 跳到這裡時，已經自動執行 RollBack</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 底下可以做回傳錯誤訊息相關</span>
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div>
           </article>
         </div>
@@ -323,16 +429,15 @@ Dapper 使用介紹 | Hugo Profile
               <div class="toc-content">
                 <nav id="TableOfContents">
   <ul>
-    <li><a href="#font-colorred說明font"><strong><font color='red'>說明：</font></strong></a>
-      <ul>
-        <li><a href="#font-colorred安裝font"><strong><font color='red'>安裝：</font></strong></a></li>
-      </ul>
-    </li>
+    <li><a href="#font-colorred說明font"><strong><font color='red'>說明：</font></strong></a></li>
+    <li><a href="#font-colorred安裝font"><strong><font color='red'>安裝：</font></strong></a></li>
     <li><a href="#font-colorreddapper-連線-font"><strong><font color='red'>Dapper 連線 :</font></strong></a></li>
-    <li><a href="#font-colorreddapper使用-font"><strong><font color='red'>Dapper使用: </font></strong></a></li>
-    <li><a href="#font-colororange-1-dapper---query-font"><strong><font color='orange'> 1. Dapper - Query </font></strong></a>
+    <li><a href="#font-colorreddapper使用-font"><strong><font color='red'>Dapper使用: </font></strong></a>
       <ul>
-        <li></li>
+        <li><a href="#font-colororange-1-dapper---query-font"><strong><font color='orange'> 1. Dapper - Query </font></strong></a></li>
+        <li><a href="#font-colororange-2-dapper---execute-font"><strong><font color='orange'> 2. Dapper - Execute </font></strong></a></li>
+        <li><a href="#font-colororange-3-dapper---async-font"><strong><font color='orange'> 3. Dapper - Async </font></strong></a></li>
+        <li><a href="#font-colororange-4-dapper---transaction-font"><strong><font color='orange'> 4. Dapper - transaction </font></strong></a></li>
       </ul>
     </li>
   </ul>

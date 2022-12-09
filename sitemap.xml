@@ -2,23 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://teduandy.github.io/blog/categories/asp.net/</loc>
+    <lastmod>2022-12-08T09:27:01+00:00</lastmod>
+  </url><url>
     <loc>https://teduandy.github.io/blog/blogs/</loc>
-    <lastmod>2022-12-01T08:00:00+00:00</lastmod>
+    <lastmod>2022-12-08T09:27:01+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/categories/</loc>
-    <lastmod>2022-12-01T08:00:00+00:00</lastmod>
+    <lastmod>2022-12-08T09:27:01+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/aspnet-dapper/</loc>
+    <lastmod>2022-12-08T09:27:01+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/</loc>
+    <lastmod>2022-12-08T09:27:01+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/categories/git/</loc>
     <lastmod>2022-12-01T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://teduandy.github.io/blog/</loc>
-    <lastmod>2022-12-01T08:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://teduandy.github.io/blog/blogs/git-gitignore_io_use/</loc>
     <lastmod>2022-12-01T08:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://teduandy.github.io/blog/categories/asp.net/</loc>
-    <lastmod>2022-11-30T13:47:37+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/aspnet-aspcore3_usespa/</loc>
     <lastmod>2022-11-30T13:47:37+00:00</lastmod>
@@ -127,9 +130,6 @@
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/aspnet-linq/</loc>
     <lastmod>2022-07-19T10:00:01+00:00</lastmod>
-  </url><url>
-    <loc>https://teduandy.github.io/blog/blogs/aspnet-dapper/</loc>
-    <lastmod>2022-07-19T09:27:01+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/git-common-command/</loc>
     <lastmod>2022-07-19T09:03:25+00:00</lastmod>
