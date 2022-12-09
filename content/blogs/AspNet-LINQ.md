@@ -4,7 +4,7 @@ date: 2022-07-19 10:00:01
 categories: Asp.net
 ---
 
-#### **<font color='red'>離線table 用法</font>**
+#### **<font color='red'>Datatable 用法</font>**
 
 ```C#
 // 抓回來的 DataTable

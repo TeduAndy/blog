@@ -5,13 +5,13 @@ categories: Asp.net
 ---
 
 
-#### **<font color='red'>說明：</font>**
+## **<font color='red'>說明：</font>**
 
 - **Dapper輕量級的 ORM，必須要自己定義 C# class、管理連線、自己寫 SQL，但是套件非常迷你而且效能非常好，很適合已經學會目標資料庫語法的開發者。**
 
 <br>
 
-#### **<font color='red'>安裝：</font>**
+### **<font color='red'>安裝：</font>**
 
 **1. 專案點右鍵 -> 管理 NuGet 套件**
 
@@ -19,7 +19,7 @@ categories: Asp.net
 
 <br>
 
-####  **<font color='red'>Dapper 連線 :</font>** 
+##  **<font color='red'>Dapper 連線 :</font>** 
 
 + **1. 定義一個用來接資料的 Model 類別：**
 	**Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。**
@@ -71,11 +71,11 @@ var _db = new MySqlConnection(_options.ConnectionString);
 
 <br>
 
-####  **<font color='red'>Dapper使用: </font>** 
+##  **<font color='red'>Dapper使用: </font>** 
 
 <br>
 
-##### **<font color='orange'> 1. Dapper - Query </font>** 
+## **<font color='orange'> 1. Dapper - Query </font>** 
 **光是查詢Dapper就提供了很多種方法可以使用，很多方法都跟Lambda用法一樣。**
 
 - [**Query**](https://dotblogs.com.tw/OldNick/2018/01/15/Dapper#Query)
@@ -145,3 +145,5 @@ using (SqlConnection conn = new SqlConnection(strConnection))
 	results = conn. QueryAsync<MyModel>(strSql).Result.ToList();
 }
 ```
+
+
