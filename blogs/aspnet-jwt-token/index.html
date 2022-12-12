@@ -311,6 +311,16 @@ JWT 相關 | Hugo Profile
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}		
 </span></span></code></pre></div><br>
+<ul>
+<li><strong>5. 基於角色的授權設置</strong></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#a6e22e">    [Authorize(Roles = &#34;admin&#34;)]</span> <span style="color:#75715e">// 設置查看是甚麼角色類型</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [HttpPut]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">async</span> Task&lt;ActionResult&gt; Test()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Ok(<span style="color:#e6db74">&#34;OK&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><br>
 <h3 id="驗證token"><strong>驗證TOKEN</strong></h3>
 <br>
 <ul>
