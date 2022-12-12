@@ -151,7 +151,7 @@ params:
       enable: true
       title: "FRAMEWORK："
       items:
-        - "ASP.NET CORE web Api"
+        - "ASP.NET CORE"
         - "WinForm"
         - "Vue"
         - "Bootstrap"
