@@ -150,11 +150,8 @@ params:
       title: "FRAMEWORK："
       items:
         - "ASP.NET CORE"
-<<<<<<< HEAD
         - "WinForm"
-=======
         - ".NET Framework"
->>>>>>> a013502c64c59f925b532b89bd7d8d6d336b954e
         - "Vue"
         - "Quasar"
         - "Vite"
