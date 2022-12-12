@@ -382,7 +382,7 @@ JWT 相關 | Hugo Profile
 <br>
 <ul>
 <li><strong>說明：一般而言驗證失敗時，都會回傳默認的，但是為了更加清晰驗證錯誤顯示，可以自定義錯誤訊息顯示</strong></li>
-<li>**設置教學如下：在 驗證 token 區塊裡面有個 AddJwtBearer **</li>
+<li><strong>設置教學如下：在 驗證 token 區塊裡面有個 AddJwtBearer</strong></li>
 <li><strong>設置完 options.TokenValidationParameters 再添加如下程式碼</strong></li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>    <span style="color:#75715e">// token 驗證參數</span>
@@ -400,13 +400,13 @@ JWT 相關 | Hugo Profile
 </span></span><span style="display:flex;"><span>            context.HandleResponse();
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 自定義 需要返回的數據類型及結果, 通過引用 Newtonsoft.Json 進行轉換</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> payload = JsonConvert.SerializeObject(<span style="color:#66d9ef">new</span> { Code=<span style="color:#e6db74">&#34;400&#34;</span>, ErrorMessage=<span style="color:#e6db74">&#34;無權限訪問！&#34;</span> });
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> payload = JsonConvert.SerializeObject(<span style="color:#66d9ef">new</span> { Code=<span style="color:#e6db74">&#34;401&#34;</span>, ErrorMessage=<span style="color:#e6db74">&#34;無權限訪問！&#34;</span> });
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 設置返回數據類型</span>
 </span></span><span style="display:flex;"><span>            context.Response.ContentType = <span style="color:#e6db74">&#34;application/json&#34;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 返回默認狀態碼</span>
-</span></span><span style="display:flex;"><span>            context.Response.StatusCode = <span style="color:#ae81ff">400</span>;
+</span></span><span style="display:flex;"><span>            context.Response.StatusCode = <span style="color:#ae81ff">401</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 輸出數據結果</span>
 </span></span><span style="display:flex;"><span>            context.Response.WriteAsync(payload);
