@@ -133,6 +133,19 @@ public class UserController : Controller
 
 <br>
 
+-  **5. 基於角色的授權設置**
+
+```C#
+    [Authorize(Roles = "admin")] // 設置查看是甚麼角色類型
+    [HttpPut]
+    public async Task<ActionResult> Test()
+    {
+        return Ok("OK");
+    }
+```
+
+<br>
+
 ### **驗證TOKEN**
 
 <br>
