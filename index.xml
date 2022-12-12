@@ -296,12 +296,12 @@ Generator 10 100 1,000 10,000 Hugo 0.05s 0.08s 0.34s 2.95s Jekyll 1.47s 3.3s 14.
     </item>
     
     <item>
-      <title>JWT 驗證 及 創建 token</title>
+      <title>JWT 相關</title>
       <link>https://teduandy.github.io/blog/blogs/aspnet-jwt-token/</link>
       <pubDate>Tue, 19 Jul 2022 11:00:35 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/aspnet-jwt-token/</guid>
-      <description>使用的套件: Microsoft.AspNetCore.Authentication.JwtBearer 創建TOKEN 1. 先在 專案裡面 添加一個 JWT類 代碼如下： using System; using System.Collections.Generic; using System.Security.Claims; using System.Text; using System.IdentityModel.Tokens.Jwt; using Microsoft.Extensions.Configuration; using Microsoft.IdentityModel.Tokens; namespace test2 { public class JWT { private readonly IConfiguration Configuration; public JWT(IConfiguration configuration) { this.Configuration = configuration; } public string GenerateToken(string userName, int expireMinutes = 30) { // 獲取在 appsettiongs.json 裡面設定好的資訊 var issuer = Configuration.GetValue&amp;lt;string&amp;gt;(&amp;#34;Jwt:Issuer&amp;#34;); var signKey = Configuration.GetValue&amp;lt;string&amp;gt;(&amp;#34;KEY:skey&amp;#34;); // Configuring &amp;#34;Claims&amp;#34; to your JWT Token var claims = new List&amp;lt;Claim&amp;gt;(); // In RFC 7519 (Section#4), there are defined 7 built-in Claims, but we mostly use 2 of them.</description>
+      <description>範例版本: Asp.net 6 使用的套件: Microsoft.AspNetCore.Authentication.JwtBearer 創建TOKEN 1. 先在 專案裡面 添加一個 JWT類 代碼如下： using System; using System.Collections.Generic; using System.Security.Claims; using System.Text; using System.IdentityModel.Tokens.Jwt; using Microsoft.Extensions.Configuration; using Microsoft.IdentityModel.Tokens; namespace test2 { public class JWT { private readonly IConfiguration Configuration; public JWT(IConfiguration configuration) { this.Configuration = configuration; } public string GenerateToken(string userName, int expireMinutes = 30) { // 獲取在 appsettiongs.json 裡面設定好的資訊 var issuer = Configuration.GetValue&amp;lt;string&amp;gt;(&amp;#34;Jwt:Issuer&amp;#34;); var signKey = Configuration.GetValue&amp;lt;string&amp;gt;(&amp;#34;KEY:skey&amp;#34;); // Configuring &amp;#34;Claims&amp;#34; to your JWT Token var claims = new List&amp;lt;Claim&amp;gt;(); // In RFC 7519 (Section#4), there are defined 7 built-in Claims, but we mostly use 2 of them.</description>
     </item>
     
     <item>
