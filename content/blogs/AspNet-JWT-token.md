@@ -1,16 +1,19 @@
 ---
-title: JWT 驗證 及 創建 token
+title: JWT 相關
 date: 2022-07-19 11:00:35
 categories: Asp.net
 ---
 
-##### 使用的套件: <font color='red'>Microsoft.AspNetCore.Authentication.JwtBearer</font>
+##### **範例版本: Asp.net 6**
+##### **使用的套件: Microsoft.AspNetCore.Authentication.JwtBearer**
 
 <br>
 
-### <font color='red'>創建TOKEN</font>
+### **創建TOKEN**
 
-+  **1. 先在 專案裡面 添加一個 JWT類 代碼如下：**
+<br>
+
+-  **1. 先在 專案裡面 添加一個 JWT類 代碼如下：**
 
 ```C#
 using System;
@@ -94,7 +97,7 @@ namespace test2
 
 <br>
 
-+  **2. 接下來是到 Program.cs 註冊JWT類 需放在 var app = builder.Build(); 之前  代碼如下：**
+-  **2. 接下來是到 Program.cs 註冊JWT類 需放在 var app = builder.Build(); 之前  代碼如下：**
 
 ```C#
 builder.Services.AddSingleton<JWT>();
@@ -102,7 +105,7 @@ builder.Services.AddSingleton<JWT>();
 
 <br>
 
-+  **3. 在 appsettings.json 設定 自己的私鑰 例：**
+-  **3. 在 appsettings.json 設定 自己的私鑰 例：**
 
 ```json
 "KEY": {
@@ -115,7 +118,7 @@ builder.Services.AddSingleton<JWT>();
 
 <br>
 
-+  **4. 接下來 在 controller 裡面 創建 JWT類 的空變量, 並且在建構函數設定 啟動 controller 時候注入 並且賦值到 創建好的JWT空變量**
+-  **4. 接下來 在 controller 裡面 創建 JWT類 的空變量, 並且在建構函數設定 啟動 controller 時候注入 並且賦值到 創建好的JWT空變量**
 
 ```C#
 public class UserController : Controller
@@ -130,7 +133,9 @@ public class UserController : Controller
 
 <br>
 
-### <font color='red'>驗證TOKEN</font>
+### **驗證TOKEN**
+
+<br>
 
 +  **1. 請求上面 加入這段 [Authorize] 便會判斷 請求是需要 TOKEN 驗證的, [AllowAnonymous] 則允許未經驗證的使用者存取個別動作**
 
@@ -202,6 +207,47 @@ builder.Services
 app.UseAuthentication();
 // 授權中間件，從驗證資訊、路由對應、授權設定判斷是否能夠存取所要求的資源
 app.UseAuthorization();
+```
+
+<br>
+
+### **自定義驗證失敗錯誤訊息**
+
+<br>
+
+- **說明：一般而言驗證失敗時，都會回傳默認的，但是為了更加清晰驗證錯誤顯示，可以自定義錯誤訊息顯示**
+- **設置教學如下：在 驗證 token 區塊裡面有個 AddJwtBearer **
+- **設置完 options.TokenValidationParameters 再添加如下程式碼**
+```C#
+    // token 驗證參數
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        // 驗證需要的參數區塊
+    };
+
+    // 驗證失敗時自訂錯誤
+    options.Events = new JwtBearerEvents()
+    {
+        OnChallenge = context =>
+        {
+            // 此處終止默認 jwt 驗證失敗的返回類型及數據結果 (很重要)
+            context.HandleResponse();
+
+            // 自定義 需要返回的數據類型及結果, 通過引用 Newtonsoft.Json 進行轉換
+            var payload = JsonConvert.SerializeObject(new { Code="400", ErrorMessage="無權限訪問！" });
+
+            // 設置返回數據類型
+            context.Response.ContentType = "application/json";
+
+            // 返回默認狀態碼
+            context.Response.StatusCode = 400;
+
+            // 輸出數據結果
+            context.Response.WriteAsync(payload);
+
+            return Task.FromResult(0);
+        }
+    };
 ```
 
 
