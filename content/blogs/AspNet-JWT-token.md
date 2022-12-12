@@ -216,7 +216,7 @@ app.UseAuthorization();
 <br>
 
 - **說明：一般而言驗證失敗時，都會回傳默認的，但是為了更加清晰驗證錯誤顯示，可以自定義錯誤訊息顯示**
-- **設置教學如下：在 驗證 token 區塊裡面有個 AddJwtBearer **
+- **設置教學如下：在 驗證 token 區塊裡面有個 AddJwtBearer**
 - **設置完 options.TokenValidationParameters 再添加如下程式碼**
 ```C#
     // token 驗證參數
@@ -234,13 +234,13 @@ app.UseAuthorization();
             context.HandleResponse();
 
             // 自定義 需要返回的數據類型及結果, 通過引用 Newtonsoft.Json 進行轉換
-            var payload = JsonConvert.SerializeObject(new { Code="400", ErrorMessage="無權限訪問！" });
+            var payload = JsonConvert.SerializeObject(new { Code="401", ErrorMessage="無權限訪問！" });
 
             // 設置返回數據類型
             context.Response.ContentType = "application/json";
 
             // 返回默認狀態碼
-            context.Response.StatusCode = 400;
+            context.Response.StatusCode = 401;
 
             // 輸出數據結果
             context.Response.WriteAsync(payload);
