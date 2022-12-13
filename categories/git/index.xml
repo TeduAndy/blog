@@ -1,38 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>GIT on Hugo Profile</title>
-    <link>https://teduandy.github.io/blog/categories/git/</link>
-    <description>Recent content in GIT on Hugo Profile</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 01 Dec 2022 08:00:00 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/git/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>獲取各個語言的 Gitignore</title>
-      <link>https://teduandy.github.io/blog/blogs/git-gitignore_io_use/</link>
-      <pubDate>Thu, 01 Dec 2022 08:00:00 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/blogs/git-gitignore_io_use/</guid>
-      <description>說明 使用一個專案時，通常都會使用 Git 進行版控 會產生出一個 .gitignore 檔案用來設定不需要上傳到github的資料夾或者資料 但是有時候會遇到需要手動增加 .gitignore 檔案 每個語言的檔案配置都不太一樣，實在感到相當麻煩 Gitignore.io 網站介紹 此網站提供了各個語言、框架的、操作系統、IDE .gitignore 檔案 點擊網站後，選擇你使用的 語言、框架 便可以產生出 檔案 網址：Gitignore.io </description>
-    </item>
-    
-    <item>
-      <title>GIT 常用指令</title>
-      <link>https://teduandy.github.io/blog/blogs/git-common-command/</link>
-      <pubDate>Tue, 19 Jul 2022 09:03:25 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/blogs/git-common-command/</guid>
-      <description>常用指令 建立新的本地端 Repository。 git init 複製遠端的 Repository 檔案到本地端。 git clone [Repository URL] 檢查本地端檔案異動狀態。 git status 將指定的檔案（或資料夾）加入版本控制。用 git add . 可加入全部。 git add [檔案或資料夾] 提交（commit）目前的異動。 git commit 提交（commit）目前的異動並透過 -m 參數設定摘要說明文字。 git commit -m &amp;#34;提交說明內容&amp;#34; 獲取目前工作目錄的 dirty state，並保存到一個未完成變更的 stack，以方便隨時回復至當初的 state。 git stash 查看先前的 commit 記錄。 git log 將本地端 Repository 的 commit 發佈到遠端。 git push 發佈至遠端指定的分支（Branch） git push origin [BRANCH_NAME] 添加遠端分支 git remote add [name] [your https url][遠端網址別名] [github網址] 查看分支。 git branch 建立分支。 git branch [BRANCH_NAME] 取出指定的分支。 git checkout [BRANCH_NAME] 建立並跳到該分支。 git checkout -b [BRANCH_NAME] 強制刪除指定分支（須先切換至其他分支再做刪除）。 git branch -D [BRANCH_NAME] 強制恢復到指定的 commit（透過 Hash 值）。 git reset --hard [HASH] 切換到指定的 commit（與 git checkout [BRANCH_NAME] 相同)。 git checkout [HASH] 修改分支名稱。 git branch -m &amp;lt;OLD_BRANCH_NAME&amp;gt; &amp;lt;NEW_BRANCH_NAME&amp;gt; 檢視歷史提交紀錄 git log --oneline 遠端資料最新版拉到本地（本地更新） git pull origin master[分支] 刪除本地分支 git branch -d &amp;lt;branch&amp;gt;[分支] 刪除遠端分支 git push origin :&amp;lt;branch&amp;gt;[分支] </description>
-    </item>
-    
-    <item>
-      <title>GITLAB 專案上傳到遠程倉庫教學</title>
-      <link>https://teduandy.github.io/blog/blogs/git-gitlab-teacher/</link>
-      <pubDate>Tue, 19 Jul 2022 09:03:25 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/blogs/git-gitlab-teacher/</guid>
-      <description>1. 說明 : 在使用之前 請先安裝完 git 這邊安裝方法就不再敘述 2. 登入到自己的 gitlab 裡面 並且按 new project 進入到此頁面 3. 點擊 clone 並且複製上面 https 的網址 4. 回到 要上傳的專案 先初始化 git 本地倉庫 到專案的終端機上面 輸入這段指令 git init 輸入這段指令，將所有檔案先加入到暫時存檔區 git add . (. 的意思就是全部) 提交版本 本次 加入到暫存區的 輸入這段指令 git commit -m &amp;#34;這邊是輸入備註，看是要輸入版本號或者是寫入此版本修改了甚麼都可以&amp;#34; 接下來要利用 我們剛剛複製的 gitlab https 位置，輸入這段指令給它一個別名 git remote add [name] [your https url] 然後就可以將專案 推到你的 遠程倉庫了 git push [url_name] [branch] 5. 就可以回到 gitlab 看看 創的 project 有沒有資料了!</description>
-    </item>
-    
-  </channel>
-</rss>
