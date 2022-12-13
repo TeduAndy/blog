@@ -186,22 +186,22 @@ params:
     # title: "Custom Name"
     index: false
     items:
-      - title: "Master of Business Administration"
+      - title: "資訊科技系"
         school:
-          name: "University of California, Berkeley."
-          url: "https://example.org"
-        date: "2013 - 2015"
-        GPA: "3.8 out of 5.0"
+          name: "僑光科技大學"
+          url: "https://www.ocu.edu.tw/"
+        date: "2012 - 2016"
+        # GPA: "3.8 out of 5.0"
       #   content: |-
       #     Extracurricular Activities
       #       - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
       #       - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
-      - title: "Bachelor of Science in Computer Science"
+      - title: "電機科"
         school:
-          name: "Massachusetts Institute of Technology"
-          url: "https://example.org"
-        date: "2009 - 2013"
-        GPA: "3.9 out of 5.0"
+          name: "埔里高級工業職業學校"
+          url: "https://www.plvs.ntct.edu.tw/ischool/publish_page/0/"
+        date: "2009 - 2012"
+        # GPA: "3.9 out of 5.0"
         # content: |-
         #   I Publiced two papers in the ACM SIGCHI Conference on Artificial Intelligence.
         #   - [Fast and Accurate Object Detection with a Single Convolutional Neural Network](https://example.com)
@@ -213,10 +213,10 @@ params:
         #   enable: true
         #   name: "My academic record"
         #   url: "https://example.com"
-      - title: "High School"
-        school:
-          name: "Thomas Jefferson High School for Science and Technology."
-          url: "https://example.org"
+      # - title: "High School"
+      #   school:
+      #     name: "Thomas Jefferson High School for Science and Technology."
+      #     url: "https://example.org"
         # GPA: "4.2 out of 5.0"
         # featuredLink:
         #   enable: true
