@@ -149,10 +149,11 @@ params:
       enable: true
       title: "FRAMEWORK："
       items:
-        - "ASP.NET CORE"
+        - "Asp.Net Core"
         - ".NET Framework"
         - "Vue"
         - "Quasar"
+        - "webpack"
         - "Vite"
         - "Django"
         - "Flask"
