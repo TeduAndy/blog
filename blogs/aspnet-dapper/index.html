@@ -41,7 +41,7 @@ if (!doNotTrack) {
 <meta property="og:title" content="Dapper 使用介紹" />
 <meta property="og:description" content="說明： Dapper輕量級的 ORM，必須要自己定義 C# class、管理連線、自己寫 SQL，但是套件非常迷你而且效能非常好，很適合已經學會目標資料庫語法的開發者。 安裝： 1. 專案點右鍵 -&gt; 管理 NuGet 套件
 2. 收尋 1. Dapper and 1. MySQL Connector 並且安裝
-Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。 2.開啟一個 MySQL 連線： 用 var _db = new MySqlConnection(&quot;連線資訊&quot;); 就能開啟連線。比較需要注意的是，最好用注入組態設定的方法取得連線資訊，以及用 using 語法自動幫我們關閉連線，以免忘記關閉造成連線被占用 3.連線資訊設定： 在專案新增一個空類 名叫 serverMq.cs 裡面是用來填入 我們從組態設定抓來的 連線字串 public class servermq { public string ConnectionString { get; set; } } 到 appsettings.json 組態設定裡面 新增 mysql 連線字串 &#34;AllowedHosts&#34;: &#34;*&#34;, &#34;MySQL&#34;: { &#34;ConnectionString&#34;: &#34;server=127." />
+Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。 2.開啟一個 MySQL 連線： 用 var _db = new MySqlConnection(&quot;連線資訊&quot;); 就能開啟連線。比較需要注意的是，最好用注入組態設定的方法取得連線資訊，以及用 using 語法自動幫我們關閉連線，以免忘記關閉造成連線被占用 3.連線資訊設定： 在專案新增一個空類 名叫 serverMq.cs 裡面是用來填入 我們從組態設定抓來的 連線字串 public class servermq { public string ConnectionString { get; set; } } 到 appsettings.json 組態設定裡面 新增 mysql 連線字串&#34;AllowedHosts&#34;: &#34;*&#34;, &#34;MySQL&#34;: { &#34;ConnectionString&#34;: &#34;server=127." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://teduandy.github.io/blog/blogs/aspnet-dapper/" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2022-12-08T09:27:01+00:00" />
@@ -52,7 +52,7 @@ Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援�
 <meta name="twitter:title" content="Dapper 使用介紹"/>
 <meta name="twitter:description" content="說明： Dapper輕量級的 ORM，必須要自己定義 C# class、管理連線、自己寫 SQL，但是套件非常迷你而且效能非常好，很適合已經學會目標資料庫語法的開發者。 安裝： 1. 專案點右鍵 -&gt; 管理 NuGet 套件
 2. 收尋 1. Dapper and 1. MySQL Connector 並且安裝
-Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。 2.開啟一個 MySQL 連線： 用 var _db = new MySqlConnection(&quot;連線資訊&quot;); 就能開啟連線。比較需要注意的是，最好用注入組態設定的方法取得連線資訊，以及用 using 語法自動幫我們關閉連線，以免忘記關閉造成連線被占用 3.連線資訊設定： 在專案新增一個空類 名叫 serverMq.cs 裡面是用來填入 我們從組態設定抓來的 連線字串 public class servermq { public string ConnectionString { get; set; } } 到 appsettings.json 組態設定裡面 新增 mysql 連線字串 &#34;AllowedHosts&#34;: &#34;*&#34;, &#34;MySQL&#34;: { &#34;ConnectionString&#34;: &#34;server=127."/>
+Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。 2.開啟一個 MySQL 連線： 用 var _db = new MySqlConnection(&quot;連線資訊&quot;); 就能開啟連線。比較需要注意的是，最好用注入組態設定的方法取得連線資訊，以及用 using 語法自動幫我們關閉連線，以免忘記關閉造成連線被占用 3.連線資訊設定： 在專案新增一個空類 名叫 serverMq.cs 裡面是用來填入 我們從組態設定抓來的 連線字串 public class servermq { public string ConnectionString { get; set; } } 到 appsettings.json 組態設定裡面 新增 mysql 連線字串&#34;AllowedHosts&#34;: &#34;*&#34;, &#34;MySQL&#34;: { &#34;ConnectionString&#34;: &#34;server=127."/>
 
 
 <link rel="stylesheet" href="/blog//bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/blog//css/header.css" media="all">
@@ -143,6 +143,11 @@ Dapper 使用介紹 | Hugo Profile
                     </li>
                     
 
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blog#education"
+                            aria-label="education">Education</a>
+                    </li>
                     
 
                     

@@ -39,7 +39,7 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
 <meta property="og:title" content="C# PrintDocument 元件列印說明 (winform)" />
-<meta property="og:description" content="說明： 一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明 使用方法： 1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖 private void button1_Click(object sender, EventArgs e) { // 創建列印物件 PrintDocument pd = new PrintDocument(); // 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個 pd.PrintPage &#43;= new PrintPageEventHandler(this.pd_PrintPage); // 啟動列印 pd.Print(); // 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog PrintPreviewDialog pD = new PrintPreviewDialog(); pD." />
+<meta property="og:description" content="說明： 一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明使用方法： 1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖 private void button1_Click(object sender, EventArgs e) { // 創建列印物件 PrintDocument pd = new PrintDocument(); // 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個 pd.PrintPage &#43;= new PrintPageEventHandler(this.pd_PrintPage); // 啟動列印 pd.Print(); // 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog PrintPreviewDialog pD = new PrintPreviewDialog(); pD." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://teduandy.github.io/blog/blogs/c-winform-printdocument/" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2022-07-18T16:37:54+00:00" />
@@ -48,7 +48,7 @@ if (!doNotTrack) {
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="C# PrintDocument 元件列印說明 (winform)"/>
-<meta name="twitter:description" content="說明： 一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明 使用方法： 1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖 private void button1_Click(object sender, EventArgs e) { // 創建列印物件 PrintDocument pd = new PrintDocument(); // 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個 pd.PrintPage &#43;= new PrintPageEventHandler(this.pd_PrintPage); // 啟動列印 pd.Print(); // 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog PrintPreviewDialog pD = new PrintPreviewDialog(); pD."/>
+<meta name="twitter:description" content="說明： 一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明使用方法： 1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖 private void button1_Click(object sender, EventArgs e) { // 創建列印物件 PrintDocument pd = new PrintDocument(); // 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個 pd.PrintPage &#43;= new PrintPageEventHandler(this.pd_PrintPage); // 啟動列印 pd.Print(); // 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog PrintPreviewDialog pD = new PrintPreviewDialog(); pD."/>
 
 
 <link rel="stylesheet" href="/blog//bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/blog//css/header.css" media="all">
@@ -139,6 +139,11 @@ C# PrintDocument 元件列印說明 (winform) | Hugo Profile
                     </li>
                     
 
+                    
+                    <li class="nav-item navbar-text">
+                        <a class="nav-link" href="/blog#education"
+                            aria-label="education">Education</a>
+                    </li>
                     
 
                     
