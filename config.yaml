@@ -182,20 +182,20 @@ params:
           url: ""
         content: "<br> 煎煮食材及負責櫃台與客人交互。"
   # 學歷
-  education:
-    enable: true
-    index: true
-    items:
-      - title: "大學"
-        school: "僑光科技大學-資訊科技系"
-        name: "University of California, Berkeley"
-        url: "https://example.org"
-        date: "2012 - 2016"
-        GPA: "3.8 out of 5.0"
-        content: |-
-          Extracurricular Activities
-            - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
+  # education:
+  #   enable: true
+  #   index: true
+  #   items:
+      # - title: "大學"
+      #   school: "僑光科技大學-資訊科技系"
+      #   name: "University of California, Berkeley"
+      #   url: "https://example.org"
+      #   date: "2012 - 2016"
+      #   GPA: "3.8 out of 5.0"
+      #   content: |-
+      #     Extracurricular Activities
+      #       - Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      #       - Tempora esse, eaque delectus nulla quo doloribus itaque expedita alias natus optio totam maxime nihil excepturi velit a animi laborum hic similique.
       # - title: "高中"
         # school: "埔里高級職業工業學校-電機科"
           # name: "Massachusetts Institute of Technology"
@@ -224,20 +224,22 @@ params:
       #     url: "https://example.com"
 
   # 成就或者證照
-  # achievements:
-  #   enable: true
-  #   items:
-  #     - title: "MTA-PYTHON"
-  #       # content: I solved all problems with optimal solution.
-  #       # url: https://example.com
+  achievements:
+    enable: true
+    items:
+      - title: "MTA-PYTHON"
+        content: I solved all problems with optimal solution.
+        # url: https://example.com
 
-  #     - title: "MTA-WEB"
-  #       # content: Developed a product using Artificial Intelligence.
+      - title: "MTA-WEB"
+        content: Developed a product using Artificial Intelligence.
 
-  #     - title: "儀表電子乙級"
-  #     #   content: Developed a theme and getting 1K+ downloads per month.
-  #     #   url: "https://github.com/gurusabarish/hugo-profile"
-  #     - title: "工業電子丙級"
+      - title: "儀表電子乙級"
+        content: Developed a theme and getting 1K+ downloads per month.
+      #   url: "https://github.com/gurusabarish/hugo-profile"
+      
+      - title: "工業電子丙級"
+        content: Developed a theme and getting 1K+ downloads per month.
 
   # 專案作品
   # projects:
