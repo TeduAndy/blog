@@ -38,17 +38,17 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-<meta property="og:title" content="C# 上傳檔案轉成二進制" />
-<meta property="og:description" content="" />
+<meta property="og:title" content="C# HttpClient" />
+<meta property="og:description" content="說明： HttpClient 提供許多非同步方法獲取 HTTP 內容，有 GET / POST / PUT / DELETE&hellip;等等 HttpClient 是用於從 URI 標示的資源發送 HTTP 請求和接收 HTTP 響應的基類 非同步方法： DeleteAsync GetAsync GetByteArrayAsync GetStreamAsync GetStringAsync PostAsync PutAsync SendAsync POST 和 GET 非同步教學： GET using (HttpClient client = new HttpClient()) { // 執行 GET非同步方法 HttpResponseMessage res = await client.GetAsync(url); // 用於拋出異常 res.EnsureSuccessStatusCode(); // T 要返回哪類型別 result = await res.Content.ReadAsAsync&lt;T&gt;(); } POST public class infoDTO { public string name {get;set;} public string phone {get;set;} } using (HttpClient client = new HttpClient()) { string result = &#34;&#34;; string url = &#34;https://127." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://teduandy.github.io/blog/blogs/c#_update_fire_change_byte/" /><meta property="article:section" content="blogs" />
-<meta property="article:published_time" content="2022-07-15T10:42:49+00:00" />
-<meta property="article:modified_time" content="2022-07-15T10:42:49+00:00" /><meta property="og:site_name" content="Andy blog" />
+<meta property="og:url" content="https://teduandy.github.io/blog/blogs/c-httpclient/" /><meta property="article:section" content="blogs" />
+<meta property="article:published_time" content="2022-12-12T16:00:22+00:00" />
+<meta property="article:modified_time" content="2022-12-12T16:00:22+00:00" /><meta property="og:site_name" content="Andy blog" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="C# 上傳檔案轉成二進制"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="C# HttpClient"/>
+<meta name="twitter:description" content="說明： HttpClient 提供許多非同步方法獲取 HTTP 內容，有 GET / POST / PUT / DELETE&hellip;等等 HttpClient 是用於從 URI 標示的資源發送 HTTP 請求和接收 HTTP 響應的基類 非同步方法： DeleteAsync GetAsync GetByteArrayAsync GetStreamAsync GetStringAsync PostAsync PutAsync SendAsync POST 和 GET 非同步教學： GET using (HttpClient client = new HttpClient()) { // 執行 GET非同步方法 HttpResponseMessage res = await client.GetAsync(url); // 用於拋出異常 res.EnsureSuccessStatusCode(); // T 要返回哪類型別 result = await res.Content.ReadAsAsync&lt;T&gt;(); } POST public class infoDTO { public string name {get;set;} public string phone {get;set;} } using (HttpClient client = new HttpClient()) { string result = &#34;&#34;; string url = &#34;https://127."/>
 
 
 <link rel="stylesheet" href="/blog//bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/blog//css/header.css" media="all">
@@ -92,7 +92,7 @@ if (!doNotTrack) {
 <script defer src="/blog//fontawesome-5/all-5.15.4.js"></script>
 
   <title>
-C# 上傳檔案轉成二進制 | Hugo Profile
+C# HttpClient | Hugo Profile
 
   </title>
 </head>
@@ -194,16 +194,86 @@ C# 上傳檔案轉成二進制 | Hugo Profile
       <div class="col-sm-12 col-md-12 col-lg-9">
         <div class="pr-lg-4">
           <div class="title mb-5">
-            <h1 class="text-center mb-4">C# 上傳檔案轉成二進制</h1>
+            <h1 class="text-center mb-4">C# HttpClient</h1>
             <div class="text-center">
                
               <small>|</small>
-              Jul 15, 2022
+              Dec 12, 2022
             </div>
           </div>
           
           <article class="page-content  p-2">
-          
+          <h3 id="說明"><strong>說明：</strong></h3>
+<ul>
+<li><strong>HttpClient 提供許多非同步方法獲取 HTTP 內容，有 GET / POST / PUT / DELETE&hellip;等等</strong></li>
+<li><strong>HttpClient 是用於從 URI 標示的資源發送 HTTP 請求和接收 HTTP 響應的基類</strong></li>
+</ul>
+<br>
+<h3 id="非同步方法"><strong>非同步方法：</strong></h3>
+<ul>
+<li>DeleteAsync</li>
+<li>GetAsync</li>
+<li>GetByteArrayAsync</li>
+<li>GetStreamAsync</li>
+<li>GetStringAsync</li>
+<li>PostAsync</li>
+<li>PutAsync</li>
+<li>SendAsync</li>
+</ul>
+<br>
+<h3 id="post-和-get-非同步教學"><strong>POST 和 GET 非同步教學：</strong></h3>
+<br>
+<h5 id="get">GET</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> (HttpClient client = <span style="color:#66d9ef">new</span> HttpClient())
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 執行 GET非同步方法</span>
+</span></span><span style="display:flex;"><span>	HttpResponseMessage res = <span style="color:#66d9ef">await</span> client.GetAsync(url);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 用於拋出異常</span>
+</span></span><span style="display:flex;"><span>	res.EnsureSuccessStatusCode();
+</span></span><span style="display:flex;"><span>	
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// T 要返回哪類型別</span>
+</span></span><span style="display:flex;"><span>	result = <span style="color:#66d9ef">await</span> res.Content.ReadAsAsync&lt;T&gt;();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><br>
+<h5 id="post">POST</h5>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">infoDTO</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> name {<span style="color:#66d9ef">get</span>;<span style="color:#66d9ef">set</span>;}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> phone {<span style="color:#66d9ef">get</span>;<span style="color:#66d9ef">set</span>;}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> (HttpClient client = <span style="color:#66d9ef">new</span> HttpClient())
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">string</span> result = <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">string</span> url = <span style="color:#e6db74">&#34;https://127.0.0.1:443/post&#34;</span>;
+</span></span><span style="display:flex;"><span>	using(HttpClient client = <span style="color:#66d9ef">new</span> HttpClient())
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 創建 data 物件</span>
+</span></span><span style="display:flex;"><span>		infoDTO obj = <span style="color:#66d9ef">new</span> infoDTO();
+</span></span><span style="display:flex;"><span>		obj.name = <span style="color:#e6db74">&#34;Andy&#34;</span>
+</span></span><span style="display:flex;"><span>		obj.phone = <span style="color:#e6db74">&#34;00-00000000&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 將物件轉成 json string</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">string</span> jsonStr = JsonConvert.SerializeObject(obj);
+</span></span><span style="display:flex;"><span>		HttpContent data = <span style="color:#66d9ef">new</span> StringContent(jsonStr);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 設置傳輸格式</span>
+</span></span><span style="display:flex;"><span>		data.Headers.ContentType = <span style="color:#66d9ef">new</span> MediaTypeHeaderValue(<span style="color:#e6db74">&#34;application/json&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 執行 post 非同步請求</span>
+</span></span><span style="display:flex;"><span>		HttpResponseMessage res =  <span style="color:#66d9ef">await</span> client.PostAsync(url, data);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 拋錯使用</span>
+</span></span><span style="display:flex;"><span>		res.EnsureSuccessStatusCode();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 成功之後將響應回來的資訊讀取出來</span>
+</span></span><span style="display:flex;"><span>		result = <span style="color:#66d9ef">await</span> res.Content.ReadAsStringAsync();
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
           </article>
         </div>
       </div>
@@ -215,7 +285,17 @@ C# 上傳檔案轉成二進制 | Hugo Profile
                 Table Of Contents
               </h5>
               <div class="toc-content">
-                <nav id="TableOfContents"></nav>
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#說明"><strong>說明：</strong></a></li>
+        <li><a href="#非同步方法"><strong>非同步方法：</strong></a></li>
+        <li><a href="#post-和-get-非同步教學"><strong>POST 和 GET 非同步教學：</strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
               </div>
           </aside>
           
@@ -228,17 +308,17 @@ C# 上傳檔案轉成二進制 | Hugo Profile
             <div class="social-content">
               <ul class="list-inline">
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://twitter.com/share?text=C%23%20%e4%b8%8a%e5%82%b3%e6%aa%94%e6%a1%88%e8%bd%89%e6%88%90%e4%ba%8c%e9%80%b2%e5%88%b6&url=https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fc%23_update_fire_change_byte%2f">
+                  <a target="_blank" href="https://twitter.com/share?text=C%23%20HttpClient&url=https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fc-httpclient%2f">
                     <i class="fab fa-twitter"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="https://api.whatsapp.com/send?text=C%23%20%e4%b8%8a%e5%82%b3%e6%aa%94%e6%a1%88%e8%bd%89%e6%88%90%e4%ba%8c%e9%80%b2%e5%88%b6: https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fc%23_update_fire_change_byte%2f">
+                  <a target="_blank" href="https://api.whatsapp.com/send?text=C%23%20HttpClient: https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fc-httpclient%2f">
                     <i class="fab fa-whatsapp"></i>
                   </a>
                 </li>
                 <li class="list-inline-item text-center">
-                  <a target="_blank" href="mailto:?subject=C%23%20%e4%b8%8a%e5%82%b3%e6%aa%94%e6%a1%88%e8%bd%89%e6%88%90%e4%ba%8c%e9%80%b2%e5%88%b6&amp;body=Check out this site https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fc%23_update_fire_change_byte%2f">
+                  <a target="_blank" href="mailto:?subject=C%23%20HttpClient&amp;body=Check out this site https%3a%2f%2fteduandy.github.io%2fblog%2fblogs%2fc-httpclient%2f">
                     <i class="fa fa-envelope"></i>
                   </a>
                 </li>

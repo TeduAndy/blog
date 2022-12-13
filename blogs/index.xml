@@ -6,7 +6,16 @@
     <description>Recent content in Blogs on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Dec 2022 09:27:01 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Dec 2022 16:00:22 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C# HttpClient</title>
+      <link>https://teduandy.github.io/blog/blogs/c-httpclient/</link>
+      <pubDate>Mon, 12 Dec 2022 16:00:22 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c-httpclient/</guid>
+      <description>說明： HttpClient 提供許多非同步方法獲取 HTTP 內容，有 GET / POST / PUT / DELETE&amp;hellip;等等 HttpClient 是用於從 URI 標示的資源發送 HTTP 請求和接收 HTTP 響應的基類 非同步方法： DeleteAsync GetAsync GetByteArrayAsync GetStreamAsync GetStringAsync PostAsync PutAsync SendAsync POST 和 GET 非同步教學： GET using (HttpClient client = new HttpClient()) { // 執行 GET非同步方法 HttpResponseMessage res = await client.GetAsync(url); // 用於拋出異常 res.EnsureSuccessStatusCode(); // T 要返回哪類型別 result = await res.Content.ReadAsAsync&amp;lt;T&amp;gt;(); } POST public class infoDTO { public string name {get;set;} public string phone {get;set;} } using (HttpClient client = new HttpClient()) { string result = &amp;#34;&amp;#34;; string url = &amp;#34;https://127.</description>
+    </item>
+    
     <item>
       <title>Dapper 使用介紹</title>
       <link>https://teduandy.github.io/blog/blogs/aspnet-dapper/</link>
@@ -403,15 +412,6 @@ Generator 10 100 1,000 10,000 Hugo 0.05s 0.08s 0.34s 2.95s Jekyll 1.47s 3.3s 14.
       
       <guid>https://teduandy.github.io/blog/blogs/c-mysql-conn/</guid>
       <description>一. 引入 需要的套件 using MySql.Data.MySqlClient; 二. 先有連線字串 string connString = &amp;#34;server=127.0.0.1;port=3306;user id=root;password=***;database=mvctest;charset=utf8;&amp;#34;; 三. 建立一個Connection(聯繫), 連線跟字串連結起來 MySqlConnection conn = new MySqlConnection(); conn.ConnectionString = connString; 四. 連線打開，如果已經開了，再打開一次會出錯，要先判斷 if (conn.State != ConnectionState.Open) { conn.Open(); } 五. 創建 Command(命令) 並且執行 然後判斷成功與否 // sql 字符串 string sql = @&amp;#34;INSERT INTO MTN100 (AREA, CARDNUMBER, SAMFILE) VALUES (&amp;#34;SA&amp;#34;, &amp;#34;0936050029001000000266&amp;#34;, file) // 創建命令 MySqlCommand cmd = new MySqlCommand(sql(sql串), conn(聯繫)); // 執行 int index = cmd.ExecuteNonQuery(); // 判斷成功與否 bool success = false; // 判斷 傳回的 index 是否大於 0 if (index &amp;gt; 0) { success = true; } else { success = false; } ExecuteNonQuery 方法 用在新增修改刪除, 成功返回受影響的列數, 失敗傳回0 六.</description>
-    </item>
-    
-    <item>
-      <title>C# 上傳檔案轉成二進制</title>
-      <link>https://teduandy.github.io/blog/blogs/c#_update_fire_change_byte/</link>
-      <pubDate>Fri, 15 Jul 2022 10:42:49 +0000</pubDate>
-      
-      <guid>https://teduandy.github.io/blog/blogs/c#_update_fire_change_byte/</guid>
-      <description></description>
     </item>
     
   </channel>

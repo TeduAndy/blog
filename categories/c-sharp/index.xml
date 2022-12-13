@@ -6,7 +6,16 @@
     <description>Recent content in C-sharp on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Jul 2022 09:35:18 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/c-sharp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Dec 2022 16:00:22 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/c-sharp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C# HttpClient</title>
+      <link>https://teduandy.github.io/blog/blogs/c-httpclient/</link>
+      <pubDate>Mon, 12 Dec 2022 16:00:22 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c-httpclient/</guid>
+      <description>說明： HttpClient 提供許多非同步方法獲取 HTTP 內容，有 GET / POST / PUT / DELETE&amp;hellip;等等 HttpClient 是用於從 URI 標示的資源發送 HTTP 請求和接收 HTTP 響應的基類 非同步方法： DeleteAsync GetAsync GetByteArrayAsync GetStreamAsync GetStringAsync PostAsync PutAsync SendAsync POST 和 GET 非同步教學： GET using (HttpClient client = new HttpClient()) { // 執行 GET非同步方法 HttpResponseMessage res = await client.GetAsync(url); // 用於拋出異常 res.EnsureSuccessStatusCode(); // T 要返回哪類型別 result = await res.Content.ReadAsAsync&amp;lt;T&amp;gt;(); } POST public class infoDTO { public string name {get;set;} public string phone {get;set;} } using (HttpClient client = new HttpClient()) { string result = &amp;#34;&amp;#34;; string url = &amp;#34;https://127.</description>
+    </item>
+    
     <item>
       <title>C# 將資料輸出成 excel 方法</title>
       <link>https://teduandy.github.io/blog/blogs/c-excel-out/</link>
