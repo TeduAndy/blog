@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo Profile</title>
+    <link>https://teduandy.github.io/blog/</link>
+    <description>Recent content on Hugo Profile</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Dec 2022 09:27:01 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dapper 使用介紹</title>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-dapper/</link>
+      <pubDate>Thu, 08 Dec 2022 09:27:01 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-dapper/</guid>
+      <description>說明： Dapper輕量級的 ORM，必須要自己定義 C# class、管理連線、自己寫 SQL，但是套件非常迷你而且效能非常好，很適合已經學會目標資料庫語法的開發者。 安裝： 1. 專案點右鍵 -&amp;gt; 管理 NuGet 套件
+2. 收尋 1. Dapper and 1. MySQL Connector 並且安裝
+Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。 2.開啟一個 MySQL 連線： 用 var _db = new MySqlConnection(&amp;quot;連線資訊&amp;quot;); 就能開啟連線。比較需要注意的是，最好用注入組態設定的方法取得連線資訊，以及用 using 語法自動幫我們關閉連線，以免忘記關閉造成連線被占用 3.連線資訊設定： 在專案新增一個空類 名叫 serverMq.cs 裡面是用來填入 我們從組態設定抓來的 連線字串 public class servermq { public string ConnectionString { get; set; } } 到 appsettings.json 組態設定裡面 新增 mysql 連線字串&amp;#34;AllowedHosts&amp;#34;: &amp;#34;*&amp;#34;, &amp;#34;MySQL&amp;#34;: { &amp;#34;ConnectionString&amp;#34;: &amp;#34;server=127.</description>
+    </item>
+    
+    <item>
+      <title>獲取各個語言的 Gitignore</title>
+      <link>https://teduandy.github.io/blog/blogs/git-gitignore_io_use/</link>
+      <pubDate>Thu, 01 Dec 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/git-gitignore_io_use/</guid>
+      <description>說明 使用一個專案時，通常都會使用 Git 進行版控 會產生出一個 .gitignore 檔案用來設定不需要上傳到github的資料夾或者資料 但是有時候會遇到需要手動增加 .gitignore 檔案 每個語言的檔案配置都不太一樣，實在感到相當麻煩 Gitignore.io 網站介紹 此網站提供了各個語言、框架的、操作系統、IDE .gitignore 檔案 點擊網站後，選擇你使用的 語言、框架 便可以產生出 檔案 網址：Gitignore.io </description>
+    </item>
+    
+    <item>
+      <title>ASP.NET CORE 3.1 將靜態資源資料夾放入 VUE</title>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-aspcore3_usespa/</link>
+      <pubDate>Wed, 30 Nov 2022 13:47:37 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-aspcore3_usespa/</guid>
+      <description>說明： 撰寫前後端分離的專案，通常都是分別各起一個應用程式。 也可以將後端讀取靜態資源的資料夾，當成前端的起始點。 設置教學 使用套件：Microsoft.AspNetCore.SpaServices.Extensions (目前使用版本：3.1.25) 通常靜態資源都會放入一個 wwwRoot 的資料夾，如果沒有的話可以創建一個 wwwRoot 資料夾 接下來則是在 Startp.cs 裡面進行配置 註釋的地方是要添加進去的地方 public class Startup { public Startup(IConfiguration configuration) { Configuration = configuration; } public IConfiguration Configuration { get; } public void ConfigureServices(IServiceCollection services) { services.AddControllers(); } public void Configure(IApplicationBuilder app, IWebHostEnvironment env) { if (env.IsDevelopment()) { app.UseDeveloperExceptionPage(); } app.UseHttpsRedirection(); // 沒有指定檔案名稱的話就預設使用 index.html http://xxx.xxx.xx/controller/(index.html) app.UseDefaultFiles(); // 預設把 wwwRoot 資料夾底下的檔案作為靜態資源提供服務 app.UseStaticFiles(); app.UseRouting(); app.UseAuthorization(); app.UseEndpoints(endpoints =&amp;gt; { endpoints.MapControllers(); }); // 404 not found // 把後端收到的 http://xxx.</description>
+    </item>
+    
+    <item>
+      <title>AXIOS 基礎用法及夾帶JWT-Bearer_Token</title>
+      <link>https://teduandy.github.io/blog/blogs/js-axios_say/</link>
+      <pubDate>Sun, 20 Nov 2022 15:13:32 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/js-axios_say/</guid>
+      <description>AXIOS 說明： 一個前端輕量型的 httpclient 可以發送 http 請求 攔截響應跟請求 自動轉換成 json 格式 支持 Promise 應用場景： 分離式專案時需要向後端索取資料 跟不同 API 界接時使用 安裝方法 npm 安裝方法 npm install axios cdn 直接引入 &amp;lt;script src=&amp;#34;https://unpkg.com/axios/dist/axios.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 使用方法 1. 基本寫法 以及 夾帶token // 引入 axios 之後 // GET axios({ method: &amp;#39;GET&amp;#39;, url: &amp;#39;url&amp;#39;, data: { param1: &amp;#39;param1&amp;#39;, param2: &amp;#39;param2&amp;#39; } }); // POST 用法 axios({ method: &amp;#39;post&amp;#39;, url: &amp;#39;url&amp;#39;, headers: { &amp;#39;Content-Type&amp;#39;: &amp;#39;application/json&amp;#39;, &amp;#39;Authorization&amp;#39;: `Bearer ${token}` }, data: { param1: &amp;#39;param1&amp;#39;, param2: &amp;#39;param2&amp;#39; } }); 2.</description>
+    </item>
+    
+    <item>
+      <title>VUE2、vue3 實現路由跳轉方法</title>
+      <link>https://teduandy.github.io/blog/blogs/vue-vue2or3-url-return/</link>
+      <pubDate>Sun, 20 Nov 2022 15:13:32 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/vue-vue2or3-url-return/</guid>
+      <description>Vue2 路由跳轉(選項型API) // 用於 method this.$router.push(&amp;#34;/url&amp;#34;) Vue3 路由跳轉(合成型api) // 在進入setup函數時候執行 import { useRouter } from &amp;#34;vue-router&amp;#34;; const router = useRouter() // 指定的路由 router.push(&amp;#39;/url&amp;#39;) </description>
+    </item>
+    
+    <item>
+      <title>SQL 函數使用方法</title>
+      <link>https://teduandy.github.io/blog/blogs/sql-functionuse/</link>
+      <pubDate>Wed, 02 Nov 2022 15:48:00 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/sql-functionuse/</guid>
+      <description>1.Decode (類似if else 用法)函数 說明： Decode(表達式, 條件1, 結果1, 條件2, 結果, 其他) 實例： 表名: product
+ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 Select ID, item, Decode(price, &amp;#39;10&amp;#39;, &amp;#39;十&amp;#39;, &amp;#39;80&amp;#39;, &amp;#39;八十&amp;#39;, &amp;#39;其他&amp;#39;) From product 輸出： ID item price A01 口香糖 十 A01 茶葉蛋 其他 A02 香菸 八十 A02 報紙 十 2.計算型函數 AVG (平均) COUNT (計數) MAX (最大值) MIN (最小值) SUM (總合) **說明：通常會搭配 Groub By 使用 ** Select &amp;#34;函數名&amp;#34;(&amp;#34;欄位名&amp;#34;) From &amp;#34;表格名&amp;#34;; 實例： 表名: product</description>
+    </item>
+    
+    <item>
+      <title>ASP.NET 查看環境安裝版本</title>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-checkaspsdk/</link>
+      <pubDate>Tue, 01 Nov 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-checkaspsdk/</guid>
+      <description>打開 cmd 查看 Asp.Net Framework reg query &amp;#34;HKLM\Software\Microsoft\NET Framework Setup\NDP&amp;#34; /s /v version | findstr /i version | sort /+26 /r 查看 Asp.net Core 版本 指令一: Help dotnet help 指令二: 當前運行版本 dotnet --version 指令三: 查看已安装所有SDK版本 dotnet --list-sdks 指令三: 查看已安装所有版本，包括地址 dotnet --info </description>
+    </item>
+    
+    <item>
+      <title>DI 注入相關說明</title>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-di/</link>
+      <pubDate>Sat, 22 Oct 2022 11:26:12 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-di/</guid>
+      <description>DI 圖示說明 DI注入表圖示PTT下載</description>
+    </item>
+    
+    <item>
+      <title>Oracle 常用進階語法</title>
+      <link>https://teduandy.github.io/blog/blogs/sql-oracle-often-use/</link>
+      <pubDate>Wed, 12 Oct 2022 16:54:51 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/sql-oracle-often-use/</guid>
+      <description>listagg 串聯多筆成一筆 實例： ID item price A01 口香糖 10 A01 茶葉蛋 8 A02 香菸 80 A02 報紙 10 select ID, listagg(Item, &amp;#39;,&amp;#39;) within group (order by price) as ItemList from Order group by OrderNo 輸出： ID ItemList A01 茶葉蛋,口香糖 A02 報紙, 香菸 使用說明： select ID, listagg(相同ID但是欄位值不同且需要合併, 合併時使用的連接符) within group (order by 參照某個欄位讓合併的進行排序連接) as ItemList from Order group by ID </description>
+    </item>
+    
+    <item>
+      <title>VUE3 compontent $emit 和 emits 說明及設置</title>
+      <link>https://teduandy.github.io/blog/blogs/vue-vue3-compontent-emits/</link>
+      <pubDate>Tue, 20 Sep 2022 14:16:42 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/vue-vue3-compontent-emits/</guid>
+      <description>Vue3 Compontent emit emits 說明：組件封裝了多個 emit 事件，回傳數據或者回調函數等等，外部使用時採用 @設置的emit名稱=&amp;ldquo;自己配置的方法&amp;rdquo;，從而讓 compontent 應用 外部的方法。 emits：設置組件自定義的事件名稱，設置時可以是 Array 或 Object 寫法如下 &amp;lt;script&amp;gt; // 此寫法是 cdn 使用 const compontent1 = { template: `&amp;lt;button @click=&amp;#34;this.$emit(&amp;#39;MeClick&amp;#39;)&amp;#34;&amp;gt;com&amp;lt;/button&amp;gt;`, emits: [&amp;#34;MeClick&amp;#34;], props: [&amp;#34;prop&amp;#34;], }; // 在 vite 或者 cli 則是 // Array 寫法 const emit = defineEmits([&amp;#39;change&amp;#39;, &amp;#39;delete&amp;#39;]) // Object 寫法 const emit = defineEmits({ change:()=&amp;gt;{}, delete:()=&amp;gt;{} }) &amp;lt;/script&amp;gt; $emit：觸發當前實際例子上的事件，附加參數也會帶進來，第一個為組件自定義名稱並且會帶入在父組件在自定義名稱裡面寫的方法或者其他，第二個跟第三個&amp;hellip;之後都是傳給綁定的參數 &amp;lt;script setup&amp;gt; this.$emit(&amp;#39;自定義的名稱&amp;#39;, 參數1, 參數2) &amp;lt;/script&amp;gt; 實際例子如下(採用cdn作為例子)： 會發現內部配置的 MeClick 使用的方法是外部的 newclick 事件 &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;app&amp;#34;&amp;gt; &amp;lt;div&amp;gt; &amp;lt;btn @Me-Click=&amp;#34;newclick()&amp;#34;&amp;gt;&amp;lt;/btn&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script src=&amp;#34;https://unpkg.</description>
+    </item>
+    
+    <item>
+      <title>VUE3 ref、reactive說明</title>
+      <link>https://teduandy.github.io/blog/blogs/vue-vue3-ref-reactive-say/</link>
+      <pubDate>Tue, 20 Sep 2022 08:00:00 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/vue-vue3-ref-reactive-say/</guid>
+      <description>Vue3 雙向綁定用到的函數 ref 跟 reactive 區別 1. 說明： ref： 接收任何型態的資料放入，但是不會對每一個元素都進行監聽，Object 和 Array 裡面的元素也不會監聽，取值方式須使用 .value 進行取值。 reactive： 只接受 Array 跟 Object 能夠放入，並且會針對每一個元素進行監聽，同時還不需要使用 .value 去獲得值。 實際例子： &amp;lt;script lang=&amp;#39;ts&amp;#39; setup&amp;gt; import { watch, reactive, ref } from &amp;#34;vue&amp;#34;; const exampleRef = ref({number: 0}) const exampleReactive = reactive({number: 0}) // 取值方式說明 ref 部分 exampleRef.value // 才能取出放入的物件或者其他資料類型 exampleRef.value.number // 才能取出在物件裡面的元素 // 取值方式說明 reactive 部分，這邊取值就不需要再使用 .value exampleReactive.number // 直接向物件取值方式一樣，Array則是使用索引 // 底下這邊實際測試監聽狀態 watch(exampleRef, (newValue)=&amp;gt;{ console.log(newValue) }) watch(exampleReactive, (newValue)=&amp;gt;{ console.</description>
+    </item>
+    
+    <item>
+      <title>hexo-部屬靜態頁面到-github</title>
+      <link>https://teduandy.github.io/blog/blogs/hexo-deploy-github/</link>
+      <pubDate>Fri, 22 Jul 2022 08:35:32 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/hexo-deploy-github/</guid>
+      <description>GitHub 產生站點專案 1. 先點 Github 官網跟著圖片點 第一步 點擊 repositories 第二步 點new 產生站點專案 第三步 在橘色文字那邊輸入 你的用戶名 + github.io 然後按 create repository 第四步 點擊 Your repositories 點選 剛創建的專案 點選 code 會得到 部屬會用到網址 hexo 專案 設置部分 1. hexo 部屬前需安裝的套件 npm install hexo-deployer-git --save 2. 修改根目錄的_config.yml檔案 # Deployment ## Docs: https://hexo.io/docs/one-command-deployment deploy: type: &amp;#34;git&amp;#34; // 類別請寫 git repo: https://github.com/username/username.github.io.git // github專案位置 branch: master // 上傳到此專案的哪一個分支，通常都是 master 3. 輸入指令部屬上傳 每次部屬請進行三步驟 hexo clean // 清除之前建立的靜態檔案 hexo generate // 建立靜態頁面 hexo deploy // 部署至 GitHub </description>
+    </item>
+    
+    <item>
+      <title>VUE3 柱狀圖實現</title>
+      <link>https://teduandy.github.io/blog/blogs/vue-diagram-use/</link>
+      <pubDate>Thu, 21 Jul 2022 15:13:32 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/vue-diagram-use/</guid>
+      <description>說明： 需要實現一些 數據上的顯示 網路上有許多框架，但是 HIHHCHARTS 框架較為方便設定
+操作方法： 1. 先在 VUE 專案裡面輸入指令安裝 npm i --save vue3-highcharts 2. 這邊不採用全域引入，使用需要再引入的方式 template 設定
+&amp;lt;div class=&amp;#34;col-md-8&amp;#34;&amp;gt; &amp;lt;vue-highcharts type=&amp;#34;chart&amp;#34; &amp;lt;!-- 型態 --&amp;gt; :options=&amp;#34;chartOptions&amp;#34; &amp;lt;!-- 要綁入的參數都寫在這邊 --&amp;gt; :redrawOnUpdate=&amp;#34;true&amp;#34; :oneToOneUpdate=&amp;#34;false&amp;#34; :animateOnUpdate=&amp;#34;true&amp;#34; style=&amp;#34;width: auto&amp;#34; &amp;lt;!-- 為了讓整體填充滿整個 div --&amp;gt; /&amp;gt; &amp;lt;/div&amp;gt; script setp lang=”ts” 設定
+import VueHighcharts from &amp;#34;vue3-highcharts&amp;#34;; // 分批引入使用 // 每一個 data 的 數據 const seriesData = ref([40, 50, 45, 45, 50, 45]); // 每一個 X 的 數據 const categories = ref([ &amp;#34;Python&amp;#34;, &amp;#34;JavaScript&amp;#34;, &amp;#34;C#&amp;#34;, &amp;#34;VUE&amp;#34;, &amp;#34;Asp.</description>
+    </item>
+    
+    <item>
+      <title>axios-mock-adapter為axios提供測試用的假資料</title>
+      <link>https://teduandy.github.io/blog/blogs/vue-axios-mock-adapter/</link>
+      <pubDate>Thu, 21 Jul 2022 15:01:51 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/vue-axios-mock-adapter/</guid>
+      <description>安裝指令: npm install axios-mock-adapter --save-dev 說明: 開發時期或是要做Unit testing需要用假資料來取代server api直接回傳。
+import axios from &amp;#39;axios&amp;#39; import MockAdapter from &amp;#39;axios-mock-adapter&amp;#39; let mock = new MockAdapter(axios) mock.onGet(&amp;#39;/users&amp;#39;).reply(200, { users: [ { id: 1, name: &amp;#39;John Smith&amp;#39; }, { id: 2, name: &amp;#39;John Doe&amp;#39; } ] }) axios.get(&amp;#39;/users&amp;#39;) .then(response =&amp;gt; { console.log(response.data) }) 使用方法: 創建uri跟假資料的對應很簡單, 基本上也就是’on&amp;rsquo;‘Method’, 比如說onGet, onPost, 另外還有一個onAny可以處理所有的HTTP methods 做過mock後, axios呼叫這個uri所拿回來的資料通通就都會是假資料了, 這樣也不用為了塞假資料開發測試而去改動自己的程式</description>
+    </item>
+    
+    <item>
+      <title>VUE 基礎理論</title>
+      <link>https://teduandy.github.io/blog/blogs/vue-basic-theory/</link>
+      <pubDate>Thu, 21 Jul 2022 14:40:49 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/vue-basic-theory/</guid>
+      <description>1. Vue2的双向数据绑定原理: Vue是采用数据劫持结合发布订阅模式，通过Object.defineProperty()来劫持各个属性的getter,setter, 在数据变动时发布消息给订阅者，触发相应的回调函数，从而实现数据双向绑定。
+2. SPA 单页面的理解，它的优缺点分别是什么？ SPA（ single-page application ）仅在 Web 页面初始化时加载相应的 HTML、JavaScript 和 CSS。 一旦页面加载完成， SPA 不会因为用户的操作而进行页面的重新加载或跳转；取而代之的是利用路由机制实现 HTML 内容的变换，UI 与用户的交互，避免页面的重新加载。
+優點： 用户体验好、快，内容的改变不需要重新加载整个页面，避免了不必要的跳转和重复渲染 基于上面一点，SPA 相对对服务器压力小 前后端职责分离，架构清晰，前端进行交互逻辑，后端负责数据处理 缺點： 初次加载耗时多：为实现单页 Web 应用功能及显示效果，需要在加载页面的时候将 JavaScript、CSS 统一加载，部分页面按需加载 前进后退路由管理：由于单页应用在一个页面中显示所有的内容，所以不能使用浏览器的前进后退功能，所有的页面切换需要自己建立堆栈管理 SEO 难度较大：由于所有的内容都在一个页面中动态替换显示，所以在 SEO 上其有着天然的弱势。 3、v-show 与 v-if 有什么区别？ V-if 是真正的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建； 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。 v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 的 “display” 属性进行切换。 所以，v-if 适用于在运行时很少改变条件，不需要频繁切换条件的场景； v-show 则适用于需要非常频繁切换条件的场景。 4、谈谈你对 Vue 生命周期的理解？ beforeCreate 组件实例被创建之初，组件的属性生效之前 created 组件实例已经完全创建，属性也绑定，但真实 dom 还没有生成，$el 还不可用 beforeMount 在挂载开始之前被调用：相关的 render 函数首次被调用 mounted el 被新创建的 vm.</description>
+    </item>
+    
+    <item>
+      <title>VUE3 語法糖</title>
+      <link>https://teduandy.github.io/blog/blogs/vue-setup-syntax-sugar/</link>
+      <pubDate>Thu, 21 Jul 2022 14:16:42 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/vue-setup-syntax-sugar/</guid>
+      <description>1. Vue3 的一大特性函数 &amp;mdash;- setup 說明: setup函数是 Composition API（组合API）的入口 2. data 輸出到 Template 採用兩種函數 1. ref函数 (使用常量居多)
+ref 是一个函数，它接受一个参数，返回的就是一个神奇的 响应式对象 。我们初始化的这个 0 作为参数包裹到这个对象中去 ，在未来可以检测到改变并作出对应的相应
+&amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt; const name = ref(&amp;#34;123&amp;#34;) &amp;lt;/script&amp;gt; 2. reactive函数 (使用物件為主) 使用 ref 还是 reactive 可以选择这样的准则 第一，就像刚才的原生 javascript 的代码一样，像你平常写普通的 js 代码选择原始类型和对象类型一样来选&amp;gt; 择是使用 ref 还是 reactive。
+第二，所有场景都使用 reactive，但是要记得使用 toRefs 保证 reactive 对象属性保持响应性。
+&amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt; const name = reactive({ name:&amp;#34;123&amp;#34;, age:20 }) &amp;lt;/script&amp;gt; 3. 生命週期鉤子 vue2 跟 vue3 對應 vue2 vue3 beforeCreate created beforeMount onBeforeMount mounted onMounted beforeUpdate onBeforeUpdate updated onUpdated beforeUnmount onBeforeUnmount unmounted onUnmounted errorCaptured onErrorCaptured renderTracked onRenderTracked renderTriggered onRenderTriggered activated onActivated deactivated onDeactivated &amp;lt;script setup lang=&amp;#34;ts&amp;#34;&amp;gt; onMounted(() =&amp;gt; { console.</description>
+    </item>
+    
+    <item>
+      <title>VUE axios 重新包裝</title>
+      <link>https://teduandy.github.io/blog/blogs/vue-axios-repackage/</link>
+      <pubDate>Thu, 21 Jul 2022 14:09:01 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/vue-axios-repackage/</guid>
+      <description>說明: 一般使用 axios 是 直接 import 引入 雖然 後端路由 可以透過 配置 重新命名處理掉一長串的網址
+但是 如果遇到了 根目錄位置不對的時候 還是要在重新命名的路由在加上之後的位置, 等於說 有使用到 axios 的都要改
+這邊 VUE 有提供 二次包裝 可以在 axios 被呼叫之前 增加裡面的配置 在被呼叫出來。
+使用方法(先建立一個 js 檔案 並且加入以下): // 先引入 原本安裝的 axios import axios from &amp;#34;axios&amp;#34;; // 這邊設定 產生時 自帶的 url設定(baseURL), 設定頭部則是(headers) const request = axios.create({ baseURL: &amp;#39;/ORD/ORDW1030&amp;#39;, headers: { &amp;#39;Content-Type&amp;#39;: &amp;#39;application/json&amp;#39; }, }) // 這邊是輸出這個設定好的 axios (別的地方引入時輸出甚麼東西給對方使用) export default request 別人引入使用: import 自己重新命名 from 設定的 js檔案 </description>
+    </item>
+    
+    <item>
+      <title>VUE build 打包輸出修改位置</title>
+      <link>https://teduandy.github.io/blog/blogs/vue-build-set-out-dir-path/</link>
+      <pubDate>Thu, 21 Jul 2022 14:03:30 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/vue-build-set-out-dir-path/</guid>
+      <description>說明: 輸出時 打包位置 改去別的地方 使用方法: 在 vite.config.js 配置文件裡面 的 export default defineConfig 添加這段 build:{outDir: &amp;lsquo;輸出的位置路徑&amp;rsquo;}, 打包時位置便會到輸入的路徑裡面 { build:{outDir: &amp;#39;../covid-19/covid-19/wwwRoot/app&amp;#39;}, // 配合輸出到 asp.net core 的 wwwRoot資料下底下 plugins: [vue()], } </description>
+    </item>
+    
+    <item>
+      <title>VUE 前端與後端交互 cors \ 上線時 根目錄修改方式</title>
+      <link>https://teduandy.github.io/blog/blogs/vue-cors-set/</link>
+      <pubDate>Thu, 21 Jul 2022 11:39:35 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/vue-cors-set/</guid>
+      <description>1. CORS: 說明: 在以往前後端分離時 不同域名 或者 同域名但是不同PORT號 都會遇上 cors 跨域的問題, 一般都會在 後端 設定 cors 允許那些域名是可以進行訪問的,
+但是前端設置時必須一個一個針對有寫到 ajax 的部分 url 修改, 上線時域名也會不同 , 這時候還是要在修改一次, 相當麻煩, vue 這邊 提供前端設定
+cors 的方法, 並且可以針對後端的 url 取匿名 ,簡短對 ajax 使用時要填上完整的 url, 如果遇到 後端 域名換了只要修改配置文件那邊寫的後端url就
+可以修改全部有 ajax 有寫到url 的地方.
+使用方法: 在 vite.config.js 配置文件裡面 的 export default defineConfig 添加這段 便可以使用 . (/api 這寫法 路由會自帶 api , 不用的話用 rewrite 處理) server: { proxy: { &amp;#39;/api&amp;#39;: { target: &amp;#39;https://localhost:7181/&amp;#39;, changeOrigin: true, rewrite: (path) =&amp;gt; path.</description>
+    </item>
+    
+    <item>
+      <title>Asp csc.exe error</title>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-csc-exe-question/</link>
+      <pubDate>Thu, 21 Jul 2022 09:35:18 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-csc-exe-question/</guid>
+      <description>說明 : 會出現這個原因是因為新版開啟舊版專案導致 解決方法 : 1. 先到專案底下尋找 一個附檔名為 專案名稱.csporj 2. 然後在最下面貼上這段 到這裡面 3. 然後再重新執行一次 程式 就可以了 &amp;lt;Target Name=&amp;#34;CopyRoslynFiles&amp;#34; AfterTargets=&amp;#34;AfterBuild&amp;#34; Condition=&amp;#34;!$(Disable_CopyWebApplication) And &amp;#39;$(OutDir)&amp;#39; != &amp;#39;$(OutputPath)&amp;#39;&amp;#34;&amp;gt; &amp;lt;ItemGroup&amp;gt; &amp;lt;RoslynFiles Include=&amp;#34;$(CscToolPath)\*&amp;#34; /&amp;gt; &amp;lt;/ItemGroup&amp;gt; &amp;lt;MakeDir Directories=&amp;#34;$(WebProjectOutputDir)\bin\roslyn&amp;#34; /&amp;gt; &amp;lt;Copy SourceFiles=&amp;#34;@(RoslynFiles)&amp;#34; DestinationFolder=&amp;#34;$(WebProjectOutputDir)\bin\roslyn&amp;#34; SkipUnchangedFiles=&amp;#34;true&amp;#34; Retries=&amp;#34;$(CopyRetryCount)&amp;#34; RetryDelayMilliseconds=&amp;#34;$(CopyRetryDelayMilliseconds)&amp;#34; /&amp;gt; &amp;lt;/Target&amp;gt; </description>
+    </item>
+    
+    <item>
+      <title>C# 將資料輸出成 excel 方法</title>
+      <link>https://teduandy.github.io/blog/blogs/c-excel-out/</link>
+      <pubDate>Thu, 21 Jul 2022 09:35:18 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c-excel-out/</guid>
+      <description>使用到的套件 using Excel = Microsoft.Office.Interop.Excel; 操作方法 1. 設定需要用到變數 // 設定需要用到的變數 Excel.Application excelApp; // execl 使用的應用程式 變數 Excel._Workbook wBook;	// 活頁簿 變數 Excel._Worksheet wSheet1; // sheet 變數1 Excel._Worksheet wSheet2; // sheet 變數2 Excel.Range wRange; // 活頁簿欄位範圍裏面的控制 及 操作 變數 2. 創建新的 excel 應用 // 開啟一個新的應用程式 excelApp = new Excel.Application(); // 讓Excel文件可見 excelApp.Visible = false; // 停用警告訊息 excelApp.DisplayAlerts = false; // 加入新的活頁簿 excelApp.Workbooks.Add(Type.Missing); // 引用第一個活頁簿 wBook = excelApp.Workbooks[1]; // 基本創建第一個活頁簿時 就有一個 sheet工作表 這邊是添加第二個 wBook.</description>
+    </item>
+    
+    <item>
+      <title>Hexo 分類設定</title>
+      <link>https://teduandy.github.io/blog/blogs/hexo-category-set/</link>
+      <pubDate>Tue, 19 Jul 2022 16:08:18 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/hexo-category-set/</guid>
+      <description>如何使用categories進行分類 1. 第一步驟先到bash下指令新增分類 hexo new page category 2. 會發現 主目錄的 source資料夾底下多了一個 category資料夾，點開裡面的 index.md title: 分類 // 類別頁面的標題 date: 2022-07-15 11:35:52 type: category // 型態可以自己取 layout: &amp;#34;category&amp;#34; // 版面呈現 用於 你在使用的樣式專案 3. 接下來到需要分類的 md文檔 進行設定 title: 文檔標題名稱 date: 時間 category: Hexo // 這個 category 是你在 type 設置的名字 用來判別是用於分類，後面的 Hexo 則是 你分類頁面 會顯示有一個分類區塊叫做 Hexo ，文檔裡面設置是這個名字的都會被歸類在Hexo底下。 接下是切換到樣式專案裡面的 _config.yml 裡面設置 找尋 nav 或者 menu 的設置，把 nav:# Resume:Posts: /archives# category: /category // 把#字號刪除 就打開了 設置好後，在啟動伺服器時要先清除舊的靜態資源，然後生成新的靜態支援後再啟動 hexo clean // 先把原來的靜態資源清空 hexo generate // 再重新生成新的靜態資源 hexo server // 再執行 模擬伺服器，這對之後做分類頁面很重要 </description>
+    </item>
+    
+    <item>
+      <title>Hexo 安裝 及 設置</title>
+      <link>https://teduandy.github.io/blog/blogs/hexo-install-and-setup/</link>
+      <pubDate>Tue, 19 Jul 2022 15:01:23 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/hexo-install-and-setup/</guid>
+      <description>1.安裝 Hexo （電腦必須先安裝 git 和 node.js） npm install -g hexo-cli 2.建立 Hexo 專案 1.產生一個叫做 blog 的資料夾，資料夾名稱可以任意更改，必須是英文 hexo init blog 2.切換到創建的blog專案裡面，並且用npm安裝hexo必需的套件 cd blog npm install 3.輸入底下指令在本地端開啟測試伺服器，預設 port 號 是 4000 ， 在網址輸入：http://localhost:4000/ 即可預設網頁 hexo server 3.Hexo 設定 Hexo 專案結構 ├── source // markdown檔案放置位置| ├── _drafts| └── _posts├── _config.yml // 參數設置├── package.json // node_modules 須安裝的東西├── scaffolds└── themes // 下載樣式存放位置 4.Hexo 樣式下載 及 設定 1. 樣式下載可以到 Hexo官網 樣式下載這邊找，然後點選樣式進入樣式裡面的 gtihub，下載樣式的專案 放到 自己專案 themes資料夾 底下 ├── _config.</description>
+    </item>
+    
+    <item>
+      <title>Hexo 基本指令</title>
+      <link>https://teduandy.github.io/blog/blogs/hexo-basic/</link>
+      <pubDate>Tue, 19 Jul 2022 14:57:47 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/hexo-basic/</guid>
+      <description>快速開始 創建新的筆記 hexo new &amp;#34;My New Post&amp;#34; More info: Writing
+啟動模擬伺服器 hexo server More info: Server
+生成靜態文件 hexo generate More info: Generating
+部屬 hexo deploy More info: Deployment</description>
+    </item>
+    
+    <item>
+      <title>Hugo 創建及設置</title>
+      <link>https://teduandy.github.io/blog/blogs/hugo-install-setup/</link>
+      <pubDate>Tue, 19 Jul 2022 14:57:47 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/hugo-install-setup/</guid>
+      <description>簡介： 官網：HUGO 主題也可以從官網上面查找自己想要得主題 官網上的經典名句：The world’s fastest framework for building websites 這意思其實是指生產靜態資源的速度。
+讓我們看看，可參考以下 Build Time 比較表 生產靜態資源的速度 出處
+Generator 10 100 1,000 10,000 Hugo 0.05s 0.08s 0.34s 2.95s Jekyll 1.47s 3.3s 14.38s 187.15s HUGO 環境安裝(手動配置) Hugo 安裝檔下載地點 點選電腦系統版本 找不到則往下一版找 Window 安裝 步驟 1.先在 C槽 新增一個 Hugo 的資料夾，並且把下載下來的壓縮檔壓縮到此目錄 2.查看 壓縮完的檔案裏面 是否有一個 (hugo.exe) 檔案，有的話接下來進行環境路徑配置 3.點擊我的電腦 右鍵 選擇 (內容) 進去之後點擊 (進階系統設定) 4.點選 (環境變數)，然後選擇 Path 之後 點擊 (編輯) 5.之後 點擊 (新增) 將 hugo 路徑加入 然後都按 (確定) 設置便完成 Mac 安裝 尚未撰寫</description>
+    </item>
+    
+    <item>
+      <title>ASP.NET WEB API常見問題</title>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-asp-web-api-problem/</link>
+      <pubDate>Tue, 19 Jul 2022 13:47:37 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-asp-web-api-problem/</guid>
+      <description>1. ASP.NET Or Core 中強制執行 HTTPS 說明：
+測試的時候可能會出現的問題 http導到https 要求所有要求都需要 HTTPS。 將所有 HTTP 要求都重新導向至 HTTPS。 var builder = WebApplication.CreateBuilder(args); builder.Services.AddRazorPages(); var app = builder.Build(); if (!app.Environment.IsDevelopment()) { app.UseExceptionHandler(&amp;#34;/Error&amp;#34;); app.UseHsts(); } app.UseHttpsRedirection();　／／　這個方法　會強制導到　https (建立專案測試時 請先不要用) app.UseStaticFiles(); app.UseRouting(); app.UseAuthorization(); app.MapRazorPages(); app.Run(); </description>
+    </item>
+    
+    <item>
+      <title>JS 路由參數解析(URL Parameters)</title>
+      <link>https://teduandy.github.io/blog/blogs/js-urlparams/</link>
+      <pubDate>Tue, 19 Jul 2022 13:47:37 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/js-urlparams/</guid>
+      <description>說明： 大部分路由解析都是透過 location.href 然後下去判斷分解取出 Param 的參數 這邊可以使用瀏覽器內建的 URL API 去做解析，獲得 Paramter 參數 教學(URL 介紹) // 創建一個URL物件 const param = new URL(&amp;#34;路由網址&amp;#34;); // 獲取完整路由 param.href; // 取得網址中的主機名稱 param.hostname; // 取得網頁路徑部分 param.pathname; // 取得網址中的通訊協定部分 param.protocol; // 取得網頁參數部分 param.search; param.searchParams; 實際例子 const param = new URL(&amp;#34;https://www.google.com.tw/?hl=zh_TW&amp;#34;) param.href // https://www.google.com.tw/?hl=zh_TW param.hostname // www.google.com.tw param.protocol // https param.search //?hl=zh_TW param.searchParams; // URLSearchParams {} searchParams 會將 參數包成物件，並且可以用 key value 去獲取值 例子 // 套用上面範例已經創建好物件 可以使用searchParams的方法 get、has 兩個 // has 是判斷 參數是否有這個 key const paramOj = param.</description>
+    </item>
+    
+    <item>
+      <title>使用 Serilog 對應用程式事件進行結構化紀錄</title>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-serilog-log-set/</link>
+      <pubDate>Tue, 19 Jul 2022 13:39:29 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-serilog-log-set/</guid>
+      <description>版本:Asp.net 6 1. 使用的套件: Serilog 版本: 2.11.1 Serilog-AspNetCore 版本: 6.00 2. Asp.net6 Program.cs 設定: using System; using Microsoft.AspNetCore.Builder; using Microsoft.Extensions.DependencyInjection; using Microsoft.Extensions.Hosting; using Serilog; using Serilog.Events; // LOG基本設定 Log.Logger = new LoggerConfiguration() .MinimumLevel.Information() .MinimumLevel.Override(&amp;#34;Microsoft.AspNetCore&amp;#34;, LogEventLevel.Warning) .WriteTo.Console() // 執行 LOG時 輸出也會打印 .WriteTo.File(&amp;#34;../logs/log-.txt&amp;#34;, rollingInterval: RollingInterval.Day) // 輸出到哪一個資料夾 .CreateLogger(); try { Log.Information(&amp;#34;=============Starting=============&amp;#34;); // TODO: 將原本 Program.cs 所有程式碼搬到這裡 // LOG設定 必須在 APP 之前 builder.Host.UseSerilog(); // app.UseSerilogRequestLogging(); 這個 Middleware 來整理所有與 Request 相關的紀錄，讓你在一條 Log 中就可以取得目前 Request 所有的相關資訊。 app.</description>
+    </item>
+    
+    <item>
+      <title>上線使用後端搭配前端</title>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-frontend-with-backend-online/</link>
+      <pubDate>Tue, 19 Jul 2022 11:26:12 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-frontend-with-backend-online/</guid>
+      <description>專案範例使用：Asp.net core 3.1 測試 1. 先在專案 底下 新增一個 wwwRoot 靜態資源資料夾(用於放打包好的前端) wwwRoot 資料夾 用於放靜態資源 所以 樣子不一樣
+2. 接下來在 Startup.cs(.net6 在 Program.cs) 添加設定 (套件:Microsoft.AspNetCore.SpaServices.Extensions) app.UseHttpsRedirection(); //將 http 導向至 https app.UseDefaultFiles(); // 沒有指定檔案名稱的話就預設使用 index.html http://xxx.xxx.xx/controller/(index.html) app.UseStaticFiles(); // 預設把 wwwRoot 資料夾底下的檔案作為靜態資源提供服務 // 404 not found // 把後端收到的 /ORD/ORDWxxxx/app/.... 請求 全部導到 /ORD/ORDWxxx/app/index.html 靜態資源 並告訴前端 /a/b/c app.UseSpa(spa =&amp;gt; { spa.Options.SourcePath = &amp;#34;/app&amp;#34;; }); 3. 接下來 對專案 按下發佈 之後彈出畫面 在按發佈 會打包出新的包在 bin\Release\netcoreapp3.1\punlish( 裡面的東西就是要放置到 線上 ) </description>
+    </item>
+    
+    <item>
+      <title>JWT 相關</title>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-jwt-token/</link>
+      <pubDate>Tue, 19 Jul 2022 11:00:35 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-jwt-token/</guid>
+      <description>範例版本: Asp.net 6 使用的套件: Microsoft.AspNetCore.Authentication.JwtBearer 創建TOKEN 1. 先在 專案裡面 添加一個 JWT類 代碼如下： using System; using System.Collections.Generic; using System.Security.Claims; using System.Text; using System.IdentityModel.Tokens.Jwt; using Microsoft.Extensions.Configuration; using Microsoft.IdentityModel.Tokens; namespace test2 { public class JWT { private readonly IConfiguration Configuration; public JWT(IConfiguration configuration) { this.Configuration = configuration; } public string GenerateToken(string userName, int expireMinutes = 30) { // 獲取在 appsettiongs.json 裡面設定好的資訊 var issuer = Configuration.GetValue&amp;lt;string&amp;gt;(&amp;#34;Jwt:Issuer&amp;#34;); var signKey = Configuration.GetValue&amp;lt;string&amp;gt;(&amp;#34;KEY:skey&amp;#34;); // Configuring &amp;#34;Claims&amp;#34; to your JWT Token var claims = new List&amp;lt;Claim&amp;gt;(); // In RFC 7519 (Section#4), there are defined 7 built-in Claims, but we mostly use 2 of them.</description>
+    </item>
+    
+    <item>
+      <title>組態設定 appsettings.json</title>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-appsettings-set/</link>
+      <pubDate>Tue, 19 Jul 2022 10:51:27 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-appsettings-set/</guid>
+      <description>說明： 在 appsettings.json 自己所需要的參數 避免在邏輯控制層曝露自己的帳號密碼, 只有在邏輯控制啟動時注入 到 自己寫好的 DTO裡面 並且實例化
+第一種 抓取方法 IOption 使用方法： 1. 先在 appsettings.json 設定自己需要的 參數 例: 設定了一個 mysql 裡面的 connectionstring &amp;#34;AllowedHosts&amp;#34;: &amp;#34;*&amp;#34;, &amp;#34;MySQL&amp;#34;: { &amp;#34;ConnectionString&amp;#34;: &amp;#34;server=127.0.0.1;userid=root;password=123456;database=django;&amp;#34; }, 2. 然後先寫好自己要注入的DTO namespace test2 { public class servermq { public string? ConnectionString { get; set; } } } 3. 然後在 Program.cs 裡面添加 這段 (基本上 appsettings.json 獲取裡面的資訊都是用這方式) builder.Services.Configure&amp;lt;servermq&amp;gt;(builder.Configuration.GetSection(&amp;#34;MySQL&amp;#34;)); 4. 然後在 Controller 那裡 先幫 創好 一個變量 , 然後在他的建構函數下 添加這段. [ApiController] [Route(&amp;#34;[Controller]&amp;#34;)] public class UserController : Controller { private readonly servermq _options; //建構函數 public UserController(IOptions&amp;lt;servermq&amp;gt; options) { // 啟動時注入 並且把 值 賦予到 創好的變量裡面 _options = options.</description>
+    </item>
+    
+    <item>
+      <title>LINQ 相關</title>
+      <link>https://teduandy.github.io/blog/blogs/aspnet-linq/</link>
+      <pubDate>Tue, 19 Jul 2022 10:00:01 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/aspnet-linq/</guid>
+      <description>Datatable 用法 // 抓回來的 DataTable DataTable tb = GetTB(_formno, _key); // tb.AsEnumerable() 會轉成 EnumerableRowCollection&amp;lt;DataRow&amp;gt; 類型 , 因為是 Enumerable 類型 便可以用 linq // 從裡面的資料抓取多筆 使用 where , {} 內是要寫第二行 但是 {} 不會自動 return 所以要手動 return var tmps = tb.AsEnumerable().Where(row =&amp;gt; { var num = row[&amp;#34;DTLNO&amp;#34;].ToString(); return (Convert.ToInt32(num) &amp;lt; 220 &amp;amp;&amp;amp; num != &amp;#34;215&amp;#34;) | num == &amp;#34;254&amp;#34;; }); // 單一一筆 使用 FirstOrDefault (但是這個會 一抓到一筆 馬上返回) var tmp = tb.AsEnumerable().FirstOrDefault(row =&amp;gt; row[&amp;#34;DTLNO&amp;#34;].ToString() == &amp;#34;215&amp;#34;); // 單一一筆 使用 SingleOrDefault (這個是抓到一筆 會再繼續往下 查完所有 抓到第二筆則會報錯誤) tmp = tb.</description>
+    </item>
+    
+    <item>
+      <title>GIT 常用指令</title>
+      <link>https://teduandy.github.io/blog/blogs/git-common-command/</link>
+      <pubDate>Tue, 19 Jul 2022 09:03:25 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/git-common-command/</guid>
+      <description>常用指令 建立新的本地端 Repository。 git init 複製遠端的 Repository 檔案到本地端。 git clone [Repository URL] 檢查本地端檔案異動狀態。 git status 將指定的檔案（或資料夾）加入版本控制。用 git add . 可加入全部。 git add [檔案或資料夾] 提交（commit）目前的異動。 git commit 提交（commit）目前的異動並透過 -m 參數設定摘要說明文字。 git commit -m &amp;#34;提交說明內容&amp;#34; 獲取目前工作目錄的 dirty state，並保存到一個未完成變更的 stack，以方便隨時回復至當初的 state。 git stash 查看先前的 commit 記錄。 git log 將本地端 Repository 的 commit 發佈到遠端。 git push 發佈至遠端指定的分支（Branch） git push origin [BRANCH_NAME] 添加遠端分支 git remote add [name] [your https url][遠端網址別名] [github網址] 查看分支。 git branch 建立分支。 git branch [BRANCH_NAME] 取出指定的分支。 git checkout [BRANCH_NAME] 建立並跳到該分支。 git checkout -b [BRANCH_NAME] 強制刪除指定分支（須先切換至其他分支再做刪除）。 git branch -D [BRANCH_NAME] 強制恢復到指定的 commit（透過 Hash 值）。 git reset --hard [HASH] 切換到指定的 commit（與 git checkout [BRANCH_NAME] 相同)。 git checkout [HASH] 修改分支名稱。 git branch -m &amp;lt;OLD_BRANCH_NAME&amp;gt; &amp;lt;NEW_BRANCH_NAME&amp;gt; 檢視歷史提交紀錄 git log --oneline 遠端資料最新版拉到本地（本地更新） git pull origin master[分支] 刪除本地分支 git branch -d &amp;lt;branch&amp;gt;[分支] 刪除遠端分支 git push origin :&amp;lt;branch&amp;gt;[分支] </description>
+    </item>
+    
+    <item>
+      <title>GITLAB 專案上傳到遠程倉庫教學</title>
+      <link>https://teduandy.github.io/blog/blogs/git-gitlab-teacher/</link>
+      <pubDate>Tue, 19 Jul 2022 09:03:25 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/git-gitlab-teacher/</guid>
+      <description>1. 說明 : 在使用之前 請先安裝完 git 這邊安裝方法就不再敘述 2. 登入到自己的 gitlab 裡面 並且按 new project 進入到此頁面 3. 點擊 clone 並且複製上面 https 的網址 4. 回到 要上傳的專案 先初始化 git 本地倉庫 到專案的終端機上面 輸入這段指令 git init 輸入這段指令，將所有檔案先加入到暫時存檔區 git add . (. 的意思就是全部) 提交版本 本次 加入到暫存區的 輸入這段指令 git commit -m &amp;#34;這邊是輸入備註，看是要輸入版本號或者是寫入此版本修改了甚麼都可以&amp;#34; 接下來要利用 我們剛剛複製的 gitlab https 位置，輸入這段指令給它一個別名 git remote add [name] [your https url] 然後就可以將專案 推到你的 遠程倉庫了 git push [url_name] [branch] 5. 就可以回到 gitlab 看看 創的 project 有沒有資料了!</description>
+    </item>
+    
+    <item>
+      <title>SQL 通用基礎常用語法</title>
+      <link>https://teduandy.github.io/blog/blogs/sql-often-use/</link>
+      <pubDate>Mon, 18 Jul 2022 16:54:51 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/sql-often-use/</guid>
+      <description>讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&amp;#34;&amp;#34;, 字段名2=&amp;#34;&amp;#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名分組 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &amp;gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2.</description>
+    </item>
+    
+    <item>
+      <title>SQL 運行時執行順序及些許觀念</title>
+      <link>https://teduandy.github.io/blog/blogs/sql-execution-order/</link>
+      <pubDate>Mon, 18 Jul 2022 16:54:51 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/sql-execution-order/</guid>
+      <description>1. SQL 執行語句時 先後順序 上面的圖片總共分四個區塊分別是：select 後面欄位、from 主表、where 條件、left join部分
+1. 資料庫運行時會先從 from 主表尋找資料，再來 where 條件找跟主表相關的做排除 2. 再來 left join 部分，再來 where 條件找跟 left join 相關的做排除 3. 最後才是 select 後面欄位的建置 2. 部分觀念說明 在 join 另外一張表的時候，如果已有明確要尋找的條件，可以再 join裡面就做排除，不需要再帶不相關的資料進來，減少查詢次數，限縮資料範圍 避免在 select 欄位區塊 做子查詢，查詢次數會已次方成長，並且造成查詢速度大幅度遞減，這意思就是 最後運行到建構 欄位 每一筆因為欄位裡面有做子查詢，等同於建構每一筆資料時都要做一次查詢。 </description>
+    </item>
+    
+    <item>
+      <title>C# 散亂筆記</title>
+      <link>https://teduandy.github.io/blog/blogs/c-scattered-notes/</link>
+      <pubDate>Mon, 18 Jul 2022 16:44:47 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c-scattered-notes/</guid>
+      <description>Process 呼叫EXE 檔案 並 傳值 // 第二個負責傳參數 用 空格 分別不同 值 Process.Start(&amp;#34;C:\\AP06BZ\\EXE\\MTNP200.exe&amp;#34;, &amp;#34;2407 L123370532&amp;#34;); 匿名函數說明() =&amp;gt; expression // expression = 求值式 本身會有 return value () =&amp;gt; { statement; } // statement = 執行語句，需要 return 才會 return </description>
+    </item>
+    
+    <item>
+      <title>C# PrintDocument 元件列印說明 (winform)</title>
+      <link>https://teduandy.github.io/blog/blogs/c-winform-printdocument/</link>
+      <pubDate>Mon, 18 Jul 2022 16:37:54 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c-winform-printdocument/</guid>
+      <description>說明： 一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明使用方法： 1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖 private void button1_Click(object sender, EventArgs e) { // 創建列印物件 PrintDocument pd = new PrintDocument(); // 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個 pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage); // 啟動列印 pd.Print(); // 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog PrintPreviewDialog pD = new PrintPreviewDialog(); pD.</description>
+    </item>
+    
+    <item>
+      <title>C# 資料庫獲取資料</title>
+      <link>https://teduandy.github.io/blog/blogs/c-data-get-methods/</link>
+      <pubDate>Mon, 18 Jul 2022 16:26:39 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c-data-get-methods/</guid>
+      <description>說明： 方法有兩種，一種是 DataTable 一種是 DataReader，最簡單的就是用 DataTable 接資料string connString = &amp;#34;server=127.0.0.1;port=3306;user id=root;password=Acuteboy1215;database=mvctest;charset=utf8;&amp;#34;; MySqlConnection conn = new MySqlConnection(); public ActionResult Index() { // 聯繫裡面放入連線字串 conn.ConnectionString = connString; string sql = @&amp;#34; SELECT `id`, `city` FROM `city`&amp;#34;; // 創建新的空的 DataTable 讓抓回來的資料存放 DataTable dt = new DataTable(); // 執行 sql 語句 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn); // 將資料注入到 空的 database adapter.Fill(dt); } 在這段程式我們沒有處理 連線 跟 斷線 ， 因為 MySqlDataAdapter 會幫我們處理 </description>
+    </item>
+    
+    <item>
+      <title>C# 上傳檔案轉成二進制</title>
+      <link>https://teduandy.github.io/blog/blogs/c-fire-change-byte/</link>
+      <pubDate>Mon, 18 Jul 2022 16:00:22 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c-fire-change-byte/</guid>
+      <description>一、上傳檔案轉成二進制 try { StreamReader sr = new StreamReader(openFileDialog1.FileName); var bytes = default(byte[]); using (var memstream = new MemoryStream()) { sr.BaseStream.CopyTo(memstream); bytes = memstream.ToArray(); //SetText(sr.ReadToEnd()); } catch(SecurityException ex) { MessageBox.Show($&amp;#34;Security error.\n\nError message: {ex.Message}\n\n&amp;#34; + $&amp;#34;Details:\n\n{ex.StackTrace}&amp;#34;);} } 一. StreamReader sr = new StreamReader(位置路徑); (這邊輸出只是可讀 string 拿不到 byts) 二. var bytes = default(byte[]); 設置空的 bytes 三. var memstream = new MemoryStream() (呼叫一個 空的 不可讀 但可以拿到 byte 檔的容器) 四. sr.BaseStream.CopyTo(memstream); (把可讀的複製到空容器裡面) 五. bytes = memstream.</description>
+    </item>
+    
+    <item>
+      <title>C# mysql_conn</title>
+      <link>https://teduandy.github.io/blog/blogs/c-mysql-conn/</link>
+      <pubDate>Mon, 18 Jul 2022 15:49:56 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c-mysql-conn/</guid>
+      <description>一. 引入 需要的套件 using MySql.Data.MySqlClient; 二. 先有連線字串 string connString = &amp;#34;server=127.0.0.1;port=3306;user id=root;password=***;database=mvctest;charset=utf8;&amp;#34;; 三. 建立一個Connection(聯繫), 連線跟字串連結起來 MySqlConnection conn = new MySqlConnection(); conn.ConnectionString = connString; 四. 連線打開，如果已經開了，再打開一次會出錯，要先判斷 if (conn.State != ConnectionState.Open) { conn.Open(); } 五. 創建 Command(命令) 並且執行 然後判斷成功與否 // sql 字符串 string sql = @&amp;#34;INSERT INTO MTN100 (AREA, CARDNUMBER, SAMFILE) VALUES (&amp;#34;SA&amp;#34;, &amp;#34;0936050029001000000266&amp;#34;, file) // 創建命令 MySqlCommand cmd = new MySqlCommand(sql(sql串), conn(聯繫)); // 執行 int index = cmd.ExecuteNonQuery(); // 判斷成功與否 bool success = false; // 判斷 傳回的 index 是否大於 0 if (index &amp;gt; 0) { success = true; } else { success = false; } ExecuteNonQuery 方法 用在新增修改刪除, 成功返回受影響的列數, 失敗傳回0 六.</description>
+    </item>
+    
+    <item>
+      <title>C# 上傳檔案轉成二進制</title>
+      <link>https://teduandy.github.io/blog/blogs/c#_update_fire_change_byte/</link>
+      <pubDate>Fri, 15 Jul 2022 10:42:49 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/c#_update_fire_change_byte/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
