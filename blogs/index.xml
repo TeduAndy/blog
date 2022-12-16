@@ -64,6 +64,25 @@ Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援�
     </item>
     
     <item>
+      <title>科技業常用職位簡稱</title>
+      <link>https://teduandy.github.io/blog/blogs/it-title/</link>
+      <pubDate>Sun, 20 Nov 2022 15:13:32 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/it-title/</guid>
+      <description>
+SA (System Analyst) 系統分析師 說明:
+SD (System Designer) 系統設計師 說明:
+RD (Research and Development engineer) 研發設計工程師 說明:
+PG (Programmer) 程式設計師 說明:
+PM (Project Manager) 專案經理 說明:
+DBA (Database Administrator) 資料庫設計與管理人員 說明:
+MIS (Management Information System) 管理資訊系統，即網管人員 說明:
+QA (Quality Assurance) 品質保證工程師 說明:
+Sales 業務 說明:
+負責銷售行銷，推銷產品賣給客戶。 </description>
+    </item>
+    
+    <item>
       <title>SQL 函數使用方法</title>
       <link>https://teduandy.github.io/blog/blogs/sql-functionuse/</link>
       <pubDate>Wed, 02 Nov 2022 15:48:00 +0000</pubDate>

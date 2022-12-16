@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IT相關 on Hugo Profile</title>
+    <link>https://teduandy.github.io/blog/categories/it%E7%9B%B8%E9%97%9C/</link>
+    <description>Recent content in IT相關 on Hugo Profile</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Nov 2022 15:13:32 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/categories/it%E7%9B%B8%E9%97%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>科技業常用職位簡稱</title>
+      <link>https://teduandy.github.io/blog/blogs/it-title/</link>
+      <pubDate>Sun, 20 Nov 2022 15:13:32 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/it-title/</guid>
+      <description>
+SA (System Analyst) 系統分析師 說明:
+SD (System Designer) 系統設計師 說明:
+RD (Research and Development engineer) 研發設計工程師 說明:
+PG (Programmer) 程式設計師 說明:
+PM (Project Manager) 專案經理 說明:
+DBA (Database Administrator) 資料庫設計與管理人員 說明:
+MIS (Management Information System) 管理資訊系統，即網管人員 說明:
+QA (Quality Assurance) 品質保證工程師 說明:
+Sales 業務 說明:
+負責銷售行銷，推銷產品賣給客戶。 </description>
+    </item>
+    
+  </channel>
+</rss>
