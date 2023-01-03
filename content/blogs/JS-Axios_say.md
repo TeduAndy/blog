@@ -85,5 +85,5 @@ const configPost = {
       'Authorization': `Bearer ${token}` 
     }
 }
-axios.get('url',data, configPost)
+axios.post('url',data, configPost)
 ``` 
