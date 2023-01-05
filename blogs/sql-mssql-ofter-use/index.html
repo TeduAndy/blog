@@ -40,7 +40,7 @@ if (!doNotTrack) {
 
 <meta property="og:title" content="MSSQL 通用語法" />
 <meta property="og:description" content="
-Begin try catch 用法 說明: SQL 遇到語法無法執行，出錯時執行另外的行動 用法: Begin try // 這邊執行要執行的語法 End try Begin catch // 拋錯時需要執行的語法 End catch Begin try catch 加入交易 Transaction 說明: 在執行多筆更新或者創建多筆資料時，遇到其中一筆錯誤但是其他筆都有進去，此時應該全部返還回去，重新來過，確保資料的正確性 用法: Begin try Begin Transaction // 開啟交易 // 這邊執行要執行的語法 Commit Transaction // 上面執行的語法如果能順利走到這裡則做確認交易 End try Begin catch Rollback Transaction // 上面語法出現錯誤時會跳來這邊，直接做回復資料 End catch " />
+1. Begin try catch 用法 說明: SQL 遇到語法無法執行，出錯時執行另外的行動 用法: Begin try // 這邊執行要執行的語法 End try Begin catch // 拋錯時需要執行的語法 End catch 2. Begin try catch 加入交易 Transaction 說明: 在執行多筆更新或者創建多筆資料時，遇到其中一筆錯誤但是其他筆都有進去，此時應該全部返還回去，重新來過，確保資料的正確性 用法: Begin try Begin Transaction // 開啟交易 // 這邊執行要執行的語法 Commit Transaction // 上面執行的語法如果能順利走到這裡則做確認交易 End try Begin catch Rollback Transaction // 上面語法出現錯誤時會跳來這邊，直接做回復資料 End catch " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://teduandy.github.io/blog/blogs/sql-mssql-ofter-use/" /><meta property="article:section" content="blogs" />
 <meta property="article:published_time" content="2023-01-04T08:00:00+00:00" />
@@ -50,7 +50,7 @@ Begin try catch 用法 說明: SQL 遇到語法無法執行，出錯時執行另
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="MSSQL 通用語法"/>
 <meta name="twitter:description" content="
-Begin try catch 用法 說明: SQL 遇到語法無法執行，出錯時執行另外的行動 用法: Begin try // 這邊執行要執行的語法 End try Begin catch // 拋錯時需要執行的語法 End catch Begin try catch 加入交易 Transaction 說明: 在執行多筆更新或者創建多筆資料時，遇到其中一筆錯誤但是其他筆都有進去，此時應該全部返還回去，重新來過，確保資料的正確性 用法: Begin try Begin Transaction // 開啟交易 // 這邊執行要執行的語法 Commit Transaction // 上面執行的語法如果能順利走到這裡則做確認交易 End try Begin catch Rollback Transaction // 上面語法出現錯誤時會跳來這邊，直接做回復資料 End catch "/>
+1. Begin try catch 用法 說明: SQL 遇到語法無法執行，出錯時執行另外的行動 用法: Begin try // 這邊執行要執行的語法 End try Begin catch // 拋錯時需要執行的語法 End catch 2. Begin try catch 加入交易 Transaction 說明: 在執行多筆更新或者創建多筆資料時，遇到其中一筆錯誤但是其他筆都有進去，此時應該全部返還回去，重新來過，確保資料的正確性 用法: Begin try Begin Transaction // 開啟交易 // 這邊執行要執行的語法 Commit Transaction // 上面執行的語法如果能順利走到這裡則做確認交易 End try Begin catch Rollback Transaction // 上面語法出現錯誤時會跳來這邊，直接做回復資料 End catch "/>
 
 
 <link rel="stylesheet" href="/blog//bootstrap-5/css/bootstrap.min.css" media="all"><link rel="stylesheet" href="/blog//css/header.css" media="all">
@@ -206,7 +206,7 @@ MSSQL 通用語法 | Hugo Profile
           
           <article class="page-content  p-2">
           <br>
-<h3 id="begin-try-catch-用法"><strong>Begin try catch 用法</strong></h3>
+<h3 id="1-begin-try-catch-用法"><strong>1. Begin try catch 用法</strong></h3>
 <ul>
 <li><strong>說明: SQL 遇到語法無法執行，出錯時執行另外的行動</strong></li>
 <li><strong>用法:</strong></li>
@@ -219,7 +219,7 @@ MSSQL 通用語法 | Hugo Profile
 </span></span><span style="display:flex;"><span>	<span style="color:#f92672">//</span> <span style="color:#960050;background-color:#1e0010">拋錯時需要執行的語法</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">End</span> catch
 </span></span></code></pre></div><br>
-<h3 id="begin-try-catch-加入交易-transaction"><strong>Begin try catch 加入交易 Transaction</strong></h3>
+<h3 id="2-begin-try-catch-加入交易-transaction"><strong>2. Begin try catch 加入交易 Transaction</strong></h3>
 <ul>
 <li><strong>說明: 在執行多筆更新或者創建多筆資料時，遇到其中一筆錯誤但是其他筆都有進去，此時應該全部返還回去，重新來過，確保資料的正確性</strong></li>
 <li><strong>用法:</strong></li>
@@ -248,8 +248,8 @@ MSSQL 通用語法 | Hugo Profile
   <ul>
     <li>
       <ul>
-        <li><a href="#begin-try-catch-用法"><strong>Begin try catch 用法</strong></a></li>
-        <li><a href="#begin-try-catch-加入交易-transaction"><strong>Begin try catch 加入交易 Transaction</strong></a></li>
+        <li><a href="#1-begin-try-catch-用法"><strong>1. Begin try catch 用法</strong></a></li>
+        <li><a href="#2-begin-try-catch-加入交易-transaction"><strong>2. Begin try catch 加入交易 Transaction</strong></a></li>
       </ul>
     </li>
   </ul>
