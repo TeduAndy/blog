@@ -6,7 +6,7 @@ categories: SQL
 
 <br>
 
-### **Begin try catch 用法**
+### **1. Begin try catch 用法**
 
 - **說明: SQL 遇到語法無法執行，出錯時執行另外的行動**
 - **用法:**
@@ -22,7 +22,7 @@ End catch
 
 <br>
 
-### **Begin try catch 加入交易 Transaction**
+### **2. Begin try catch 加入交易 Transaction**
 - **說明: 在執行多筆更新或者創建多筆資料時，遇到其中一筆錯誤但是其他筆都有進去，此時應該全部返還回去，重新來過，確保資料的正確性**
 - **用法:**
 ```SQL
