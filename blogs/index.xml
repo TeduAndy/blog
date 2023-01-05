@@ -6,7 +6,17 @@
     <description>Recent content in Blogs on Hugo Profile</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Dec 2022 16:00:22 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Jan 2023 08:00:00 +0000</lastBuildDate><atom:link href="https://teduandy.github.io/blog/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MSSQL 通用語法</title>
+      <link>https://teduandy.github.io/blog/blogs/sql-mssql-ofter-use/</link>
+      <pubDate>Wed, 04 Jan 2023 08:00:00 +0000</pubDate>
+      
+      <guid>https://teduandy.github.io/blog/blogs/sql-mssql-ofter-use/</guid>
+      <description>
+Begin try catch 用法 說明: SQL 遇到語法無法執行，出錯時執行另外的行動 用法: Begin try // 這邊執行要執行的語法 End try Begin catch // 拋錯時需要執行的語法 End catch </description>
+    </item>
+    
     <item>
       <title>C# HttpClient</title>
       <link>https://teduandy.github.io/blog/blogs/c-httpclient/</link>

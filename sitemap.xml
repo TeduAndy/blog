@@ -3,18 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://teduandy.github.io/blog/blogs/</loc>
-    <lastmod>2022-12-12T16:00:22+00:00</lastmod>
+    <lastmod>2023-01-04T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/categories/</loc>
+    <lastmod>2023-01-04T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/</loc>
+    <lastmod>2023-01-04T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/blogs/sql-mssql-ofter-use/</loc>
+    <lastmod>2023-01-04T08:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://teduandy.github.io/blog/categories/sql/</loc>
+    <lastmod>2023-01-04T08:00:00+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/categories/c-sharp/</loc>
     <lastmod>2022-12-12T16:00:22+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/c-httpclient/</loc>
-    <lastmod>2022-12-12T16:00:22+00:00</lastmod>
-  </url><url>
-    <loc>https://teduandy.github.io/blog/categories/</loc>
-    <lastmod>2022-12-12T16:00:22+00:00</lastmod>
-  </url><url>
-    <loc>https://teduandy.github.io/blog/</loc>
     <lastmod>2022-12-12T16:00:22+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/categories/asp.net/</loc>
@@ -49,9 +55,6 @@
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/it-title/</loc>
     <lastmod>2022-11-20T15:13:32+00:00</lastmod>
-  </url><url>
-    <loc>https://teduandy.github.io/blog/categories/sql/</loc>
-    <lastmod>2022-11-02T15:48:00+00:00</lastmod>
   </url><url>
     <loc>https://teduandy.github.io/blog/blogs/sql-functionuse/</loc>
     <lastmod>2022-11-02T15:48:00+00:00</lastmod>
