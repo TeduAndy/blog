@@ -144,6 +144,9 @@ params:
         - "Python"
         - "C#"
         - "Scss"
+        - "Oracle"
+        - "MSSQL"
+        - "MYSQL"
 
     # 框架
     framework:
