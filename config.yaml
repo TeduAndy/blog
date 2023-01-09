@@ -123,7 +123,7 @@ params:
   about:
     enable: true
     title: "About Me"
-    image: "/blog/images/Andy.png"
+    image: "/blog/images/Andy2.jpg"
     content: |-
       我叫洪嘉均，出生於台中市清水區，畢業於僑光科技大學-資訊科技系日間部，求學階段時對程式設計感到頗有興趣，因此開始鑽研相關技術及語言，後來因家庭因素去服務業性質工作一段時間，雖然我的資質沒有別人那麼好，但是我肯學肯吃苦耐勞，我相信勤能補拙，年輕人的我不怕辛苦，哪裡辛苦我就往哪裡走，只要貴公司交待給我的事情我一定會盡力做好。<br>
 
@@ -172,7 +172,10 @@ params:
           enable: false
           name: ""
           url: ""
-        content: "<br> 負責醫院系統程式相關維護以及開發新的程式。"
+        content: "<br> 1.負責醫療系統專案規劃，與User討論、系統規劃、時程掌控、程式品質掌控、資料庫效能調整(可讀性、可debug的語法)。<br>
+                       2.主要開發框架ASP.NET MVC/.NET Core(C#,Html,JavaScript,CSS,JQuery,Ajax, Vue)，MSSQL，Oracle<br>
+                       3.系統整合規劃及開發(WebAPI)<br>
+                       4.IIS 管理"
       # 弘爺漢堡
       - job: "煎臺手"
         company: "弘爺漢堡-紫雲店"
