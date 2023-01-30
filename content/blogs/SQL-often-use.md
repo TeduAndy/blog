@@ -52,7 +52,7 @@ DROP table 表名
 
 <br>
 
-## **刪除 資料庫**
+### **刪除 資料庫**
 ```SQL
 DROP database 資料庫名
 ```

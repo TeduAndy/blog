@@ -98,7 +98,7 @@ git branch [BRANCH_NAME]
 
 <br>
 
-### **14.取出指定的分支。**
+### **14.取出指定的分支(切換分支)**
 ```GIT
 git checkout [BRANCH_NAME]
 ```
