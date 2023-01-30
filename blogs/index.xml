@@ -34,7 +34,7 @@
       <guid>https://teduandy.github.io/blog/blogs/aspnet-dapper/</guid>
       <description>說明： Dapper輕量級的 ORM，必須要自己定義 C# class、管理連線、自己寫 SQL，但是套件非常迷你而且效能非常好，很適合已經學會目標資料庫語法的開發者。 安裝： 1. 專案點右鍵 -&amp;gt; 管理 NuGet 套件
 2. 收尋 1. Dapper and 1. MySQL Connector 並且安裝
-Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。 2.開啟一個 MySQL 連線： 用 var _db = new MySqlConnection(&amp;quot;連線資訊&amp;quot;); 就能開啟連線。比較需要注意的是，最好用注入組態設定的方法取得連線資訊，以及用 using 語法自動幫我們關閉連線，以免忘記關閉造成連線被占用 3.連線資訊設定： 在專案新增一個空類 名叫 serverMq.cs 裡面是用來填入 我們從組態設定抓來的 連線字串 public class servermq { public string ConnectionString { get; set; } } 到 appsettings.json 組態設定裡面 新增 mysql 連線字串 &amp;#34;AllowedHosts&amp;#34;: &amp;#34;*&amp;#34;, &amp;#34;MySQL&amp;#34;: { &amp;#34;ConnectionString&amp;#34;: &amp;#34;server=127.</description>
+Dapper 連線 : 1. 定義一個用來接資料的 Model 類別： Dapper 支援泛型，只要把指定的型別告訴 Dapper，而且類別的屬性與 MySQL 的欄位有對上，Dapper 就會自動幫我們把取回來的資料放進 Model 類別。 2.開啟一個 MySQL 連線： 用 var _db = new MySqlConnection(&amp;quot;連線資訊&amp;quot;); 就能開啟連線。比較需要注意的是，最好用注入組態設定的方法取得連線資訊，以及用 using 語法自動幫我們關閉連線，以免忘記關閉造成連線被占用 3.連線資訊設定： 在專案新增一個空類 名叫 serverMq.cs 裡面是用來填入 我們從組態設定抓來的 連線字串 public class servermq { public string ConnectionString { get; set; } } 到 appsettings.json 組態設定裡面 新增 mysql 連線字串&amp;#34;AllowedHosts&amp;#34;: &amp;#34;*&amp;#34;, &amp;#34;MySQL&amp;#34;: { &amp;#34;ConnectionString&amp;#34;: &amp;#34;server=127.</description>
     </item>
     
     <item>
@@ -260,7 +260,7 @@ cors 的方法, 並且可以針對後端的 url 取匿名 ,簡短對 ajax 使用
       <pubDate>Tue, 19 Jul 2022 16:08:18 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/hexo-category-set/</guid>
-      <description>如何使用categories進行分類 1. 第一步驟先到bash下指令新增分類 hexo new page category 2. 會發現 主目錄的 source資料夾底下多了一個 category資料夾，點開裡面的 index.md title: 分類 // 類別頁面的標題 date: 2022-07-15 11:35:52 type: category // 型態可以自己取 layout: &amp;#34;category&amp;#34; // 版面呈現 用於 你在使用的樣式專案 3. 接下來到需要分類的 md文檔 進行設定 title: 文檔標題名稱 date: 時間 category: Hexo // 這個 category 是你在 type 設置的名字 用來判別是用於分類，後面的 Hexo 則是 你分類頁面 會顯示有一個分類區塊叫做 Hexo ，文檔裡面設置是這個名字的都會被歸類在Hexo底下。 接下是切換到樣式專案裡面的 _config.yml 裡面設置 找尋 nav 或者 menu 的設置，把 nav: # Resume: Posts: /archives # category: /category // 把#字號刪除 就打開了 設置好後，在啟動伺服器時要先清除舊的靜態資源，然後生成新的靜態支援後再啟動 hexo clean // 先把原來的靜態資源清空 hexo generate // 再重新生成新的靜態資源 hexo server // 再執行 模擬伺服器，這對之後做分類頁面很重要 </description>
+      <description>如何使用categories進行分類 1. 第一步驟先到bash下指令新增分類 hexo new page category 2. 會發現 主目錄的 source資料夾底下多了一個 category資料夾，點開裡面的 index.md title: 分類 // 類別頁面的標題 date: 2022-07-15 11:35:52 type: category // 型態可以自己取 layout: &amp;#34;category&amp;#34; // 版面呈現 用於 你在使用的樣式專案 3. 接下來到需要分類的 md文檔 進行設定 title: 文檔標題名稱 date: 時間 category: Hexo // 這個 category 是你在 type 設置的名字 用來判別是用於分類，後面的 Hexo 則是 你分類頁面 會顯示有一個分類區塊叫做 Hexo ，文檔裡面設置是這個名字的都會被歸類在Hexo底下。 接下是切換到樣式專案裡面的 _config.yml 裡面設置 找尋 nav 或者 menu 的設置，把 nav:# Resume:Posts: /archives# category: /category // 把#字號刪除 就打開了 設置好後，在啟動伺服器時要先清除舊的靜態資源，然後生成新的靜態支援後再啟動 hexo clean // 先把原來的靜態資源清空 hexo generate // 再重新生成新的靜態資源 hexo server // 再執行 模擬伺服器，這對之後做分類頁面很重要 </description>
     </item>
     
     <item>
@@ -269,7 +269,7 @@ cors 的方法, 並且可以針對後端的 url 取匿名 ,簡短對 ajax 使用
       <pubDate>Tue, 19 Jul 2022 15:01:23 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/hexo-install-and-setup/</guid>
-      <description>1.安裝 Hexo （電腦必須先安裝 git 和 node.js） npm install -g hexo-cli 2.建立 Hexo 專案 1.產生一個叫做 blog 的資料夾，資料夾名稱可以任意更改，必須是英文 hexo init blog 2.切換到創建的blog專案裡面，並且用npm安裝hexo必需的套件 cd blog npm install 3.輸入底下指令在本地端開啟測試伺服器，預設 port 號 是 4000 ， 在網址輸入：http://localhost:4000/ 即可預設網頁 hexo server 3.Hexo 設定 Hexo 專案結構 ├── source // markdown檔案放置位置 | ├── _drafts | └── _posts ├── _config.yml // 參數設置 ├── package.json // node_modules 須安裝的東西 ├── scaffolds └── themes // 下載樣式存放位置 4.Hexo 樣式下載 及 設定 1. 樣式下載可以到 Hexo官網 樣式下載這邊找，然後點選樣式進入樣式裡面的 gtihub，下載樣式的專案 放到 自己專案 themes資料夾 底下 ├── _config.</description>
+      <description>1.安裝 Hexo （電腦必須先安裝 git 和 node.js） npm install -g hexo-cli 2.建立 Hexo 專案 1.產生一個叫做 blog 的資料夾，資料夾名稱可以任意更改，必須是英文 hexo init blog 2.切換到創建的blog專案裡面，並且用npm安裝hexo必需的套件 cd blog npm install 3.輸入底下指令在本地端開啟測試伺服器，預設 port 號 是 4000 ， 在網址輸入：http://localhost:4000/ 即可預設網頁 hexo server 3.Hexo 設定 Hexo 專案結構 ├── source // markdown檔案放置位置| ├── _drafts| └── _posts├── _config.yml // 參數設置├── package.json // node_modules 須安裝的東西├── scaffolds└── themes // 下載樣式存放位置 4.Hexo 樣式下載 及 設定 1. 樣式下載可以到 Hexo官網 樣式下載這邊找，然後點選樣式進入樣式裡面的 gtihub，下載樣式的專案 放到 自己專案 themes資料夾 底下 ├── _config.</description>
     </item>
     
     <item>
@@ -367,7 +367,7 @@ Generator 10 100 1,000 10,000 Hugo 0.05s 0.08s 0.34s 2.95s Jekyll 1.47s 3.3s 14.
       <pubDate>Tue, 19 Jul 2022 09:03:25 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/git-common-command/</guid>
-      <description>常用指令 1.建立新的本地端 Repository。 git init 2.複製遠端的 Repository 檔案到本地端。 git clone [Repository URL] 3.檢查本地端檔案異動狀態。 git status 4.將指定的檔案（或資料夾）加入版本控制。用 git add . 可加入全部。 git add [檔案或資料夾] 5.提交（commit）目前的異動。 git commit 6.提交（commit）目前的異動並透過 -m 參數設定摘要說明文字。 git commit -m &amp;#34;提交說明內容&amp;#34; 7.獲取目前工作目錄的 dirty state，並保存到一個未完成變更的 stack，以方便隨時回復至當初的 state。 git stash 8.查看先前的 commit 記錄。 git log 9.將本地端 Repository 的 commit 發佈到遠端。 git push 10.發佈至遠端指定的分支（Branch） git push origin [BRANCH_NAME] 11.添加遠端分支 git remote add [name] [your https url] [遠端網址別名] [github網址] 12.查看分支。 git branch 13.</description>
+      <description>常用指令 1.建立新的本地端 Repository。 git init 2.複製遠端的 Repository 檔案到本地端。 git clone [Repository URL] 3.檢查本地端檔案異動狀態。 git status 4.將指定的檔案（或資料夾）加入版本控制。用 git add . 可加入全部。 git add [檔案或資料夾] 5.提交（commit）目前的異動。 git commit 6.提交（commit）目前的異動並透過 -m 參數設定摘要說明文字。 git commit -m &amp;#34;提交說明內容&amp;#34; 7.獲取目前工作目錄的 dirty state，並保存到一個未完成變更的 stack，以方便隨時回復至當初的 state。 git stash 8.查看先前的 commit 記錄。 git log 9.將本地端 Repository 的 commit 發佈到遠端。 git push 10.發佈至遠端指定的分支（Branch） git push origin [BRANCH_NAME] 11.添加遠端分支 git remote add [name] [your https url][遠端網址別名] [github網址] 12.查看分支。 git branch 13.</description>
     </item>
     
     <item>
@@ -385,7 +385,7 @@ Generator 10 100 1,000 10,000 Hugo 0.05s 0.08s 0.34s 2.95s Jekyll 1.47s 3.3s 14.
       <pubDate>Mon, 18 Jul 2022 16:54:51 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/sql-often-use/</guid>
-      <description>讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&amp;#34;&amp;#34;, 字段名2=&amp;#34;&amp;#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名分組 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明： HAVING 子句通常是在一個 SQL 句子的最後。 一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。 example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &amp;gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2.</description>
+      <description>讀取資料 SELECT *(或者字段名) FROM 表格 WHERE 條件 AND 條件 SELECT *(或者字段名) FROM 表格 WHERE 條件 OR 條件 插入資料(單一) INSERT INTO 表名(字段名, 字段名 ) VALUES (插入的值, 插入的值) 插入多筆資料 INSERT INTO 新表名(字段名1, 字段名2, … ) SELECT 字段名1, 字段名2.. FROM 舊表明 更新語句 UPDATE 表名 SET 字段名=&amp;#34;&amp;#34;, 字段名2=&amp;#34;&amp;#34; WHERE 條件 刪除語句(表內的某一條) DELETE FROM 表名 WHERE 條件 刪除 表 DROP table 表名 刪除 資料庫 DROP database 資料庫名 創建資料庫 CREATE DATABASE 資料庫名字 CHARACTER SET utf8 創建表 CREATE TABLE 表名 (欄位名字 欄位型態 not null, 欄位名字 欄位型態, PRIMARY KEY(欄位名字)) GROUP BY 使用 SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name; 說明: 針對店名分組 算出 sales 總和 輸出之後為這樣 Store_Name	SUM(Sales) Los Angeles	1800 San Diego	250 Boston	700 HAVING 使用 #### 說明：HAVING 子句通常是在一個 SQL 句子的最後。一個含有 HAVING 子句的 SQL 並不一定要包含 GROUP BY 子句。example： SELECT Store_Name, SUM(Sales) FROM Store_Information GROUP BY Store_Name HAVING SUM(Sales) &amp;gt; 1500; 說明: 找出 營業額總和 大於 1500 的店家 LEFT JOIN 使用 SELECT table_column1, table_column2.</description>
     </item>
     
     <item>
@@ -404,7 +404,7 @@ Generator 10 100 1,000 10,000 Hugo 0.05s 0.08s 0.34s 2.95s Jekyll 1.47s 3.3s 14.
       <pubDate>Mon, 18 Jul 2022 16:44:47 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/c-scattered-notes/</guid>
-      <description> Process 呼叫EXE 檔案 並 傳值 // 第二個負責傳參數 用 空格 分別不同 值 Process.Start(&amp;#34;C:\\AP06BZ\\EXE\\MTNP200.exe&amp;#34;, &amp;#34;2407 L123370532&amp;#34;); 匿名函數說明 () =&amp;gt; expression // expression = 求值式 本身會有 return value () =&amp;gt; { statement; } // statement = 執行語句，需要 return 才會 return </description>
+      <description>Process 呼叫EXE 檔案 並 傳值 // 第二個負責傳參數 用 空格 分別不同 值 Process.Start(&amp;#34;C:\\AP06BZ\\EXE\\MTNP200.exe&amp;#34;, &amp;#34;2407 L123370532&amp;#34;); 匿名函數說明() =&amp;gt; expression // expression = 求值式 本身會有 return value () =&amp;gt; { statement; } // statement = 執行語句，需要 return 才會 return </description>
     </item>
     
     <item>
@@ -413,7 +413,7 @@ Generator 10 100 1,000 10,000 Hugo 0.05s 0.08s 0.34s 2.95s Jekyll 1.47s 3.3s 14.
       <pubDate>Mon, 18 Jul 2022 16:37:54 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/c-winform-printdocument/</guid>
-      <description>說明： 一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明 使用方法： 1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖 private void button1_Click(object sender, EventArgs e) { // 創建列印物件 PrintDocument pd = new PrintDocument(); // 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個 pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage); // 啟動列印 pd.Print(); // 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog PrintPreviewDialog pD = new PrintPreviewDialog(); pD.</description>
+      <description>說明： 一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明使用方法： 1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖 private void button1_Click(object sender, EventArgs e) { // 創建列印物件 PrintDocument pd = new PrintDocument(); // 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個 pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage); // 啟動列印 pd.Print(); // 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog PrintPreviewDialog pD = new PrintPreviewDialog(); pD.</description>
     </item>
     
     <item>
@@ -422,7 +422,7 @@ Generator 10 100 1,000 10,000 Hugo 0.05s 0.08s 0.34s 2.95s Jekyll 1.47s 3.3s 14.
       <pubDate>Mon, 18 Jul 2022 16:26:39 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/c-data-get-methods/</guid>
-      <description>說明： 方法有兩種，一種是 DataTable 一種是 DataReader，最簡單的就是用 DataTable 接資料 string connString = &amp;#34;server=127.0.0.1;port=3306;user id=root;password=Acuteboy1215;database=mvctest;charset=utf8;&amp;#34;; MySqlConnection conn = new MySqlConnection(); public ActionResult Index() { // 聯繫裡面放入連線字串 conn.ConnectionString = connString; string sql = @&amp;#34; SELECT `id`, `city` FROM `city`&amp;#34;; // 創建新的空的 DataTable 讓抓回來的資料存放 DataTable dt = new DataTable(); // 執行 sql 語句 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn); // 將資料注入到 空的 database adapter.Fill(dt); } 在這段程式我們沒有處理 連線 跟 斷線 ， 因為 MySqlDataAdapter 會幫我們處理 </description>
+      <description>說明： 方法有兩種，一種是 DataTable 一種是 DataReader，最簡單的就是用 DataTable 接資料string connString = &amp;#34;server=127.0.0.1;port=3306;user id=root;password=Acuteboy1215;database=mvctest;charset=utf8;&amp;#34;; MySqlConnection conn = new MySqlConnection(); public ActionResult Index() { // 聯繫裡面放入連線字串 conn.ConnectionString = connString; string sql = @&amp;#34; SELECT `id`, `city` FROM `city`&amp;#34;; // 創建新的空的 DataTable 讓抓回來的資料存放 DataTable dt = new DataTable(); // 執行 sql 語句 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn); // 將資料注入到 空的 database adapter.Fill(dt); } 在這段程式我們沒有處理 連線 跟 斷線 ， 因為 MySqlDataAdapter 會幫我們處理 </description>
     </item>
     
     <item>

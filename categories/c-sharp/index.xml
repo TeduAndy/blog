@@ -31,7 +31,7 @@
       <pubDate>Mon, 18 Jul 2022 16:44:47 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/c-scattered-notes/</guid>
-      <description> Process 呼叫EXE 檔案 並 傳值 // 第二個負責傳參數 用 空格 分別不同 值 Process.Start(&amp;#34;C:\\AP06BZ\\EXE\\MTNP200.exe&amp;#34;, &amp;#34;2407 L123370532&amp;#34;); 匿名函數說明 () =&amp;gt; expression // expression = 求值式 本身會有 return value () =&amp;gt; { statement; } // statement = 執行語句，需要 return 才會 return </description>
+      <description>Process 呼叫EXE 檔案 並 傳值 // 第二個負責傳參數 用 空格 分別不同 值 Process.Start(&amp;#34;C:\\AP06BZ\\EXE\\MTNP200.exe&amp;#34;, &amp;#34;2407 L123370532&amp;#34;); 匿名函數說明() =&amp;gt; expression // expression = 求值式 本身會有 return value () =&amp;gt; { statement; } // statement = 執行語句，需要 return 才會 return </description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Mon, 18 Jul 2022 16:37:54 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/c-winform-printdocument/</guid>
-      <description>說明： 一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明 使用方法： 1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖 private void button1_Click(object sender, EventArgs e) { // 創建列印物件 PrintDocument pd = new PrintDocument(); // 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個 pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage); // 啟動列印 pd.Print(); // 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog PrintPreviewDialog pD = new PrintPreviewDialog(); pD.</description>
+      <description>說明： 一般來說 用 winform 寫 列印 相當麻煩 因為要對應 位置 以及 以及會使用到多個元件 對此 針對這個部分來做一些說明使用方法： 1.先在 需要 綁定的按鈕 創建點擊事件，並且在事件裡面 產生一個 PrintDocument 物件 如圖 private void button1_Click(object sender, EventArgs e) { // 創建列印物件 PrintDocument pd = new PrintDocument(); // 並且 加入 啟動列印時 該執行的動作(method)， but 這個方法傳遞參數那邊 必須設置 object sender, PrintPageEventArgs ev 這兩個 pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage); // 啟動列印 pd.Print(); // 但是在 真正列印的時候 會先預覽 去看 文字或者文字的位置以及大小，才會去做真正的列印，這時候可以先把 print() 先註釋 先使用預覽模式 把 PrintDocument 綁定到 PrintPreviewDialog PrintPreviewDialog pD = new PrintPreviewDialog(); pD.</description>
     </item>
     
     <item>
@@ -49,7 +49,7 @@
       <pubDate>Mon, 18 Jul 2022 16:26:39 +0000</pubDate>
       
       <guid>https://teduandy.github.io/blog/blogs/c-data-get-methods/</guid>
-      <description>說明： 方法有兩種，一種是 DataTable 一種是 DataReader，最簡單的就是用 DataTable 接資料 string connString = &amp;#34;server=127.0.0.1;port=3306;user id=root;password=Acuteboy1215;database=mvctest;charset=utf8;&amp;#34;; MySqlConnection conn = new MySqlConnection(); public ActionResult Index() { // 聯繫裡面放入連線字串 conn.ConnectionString = connString; string sql = @&amp;#34; SELECT `id`, `city` FROM `city`&amp;#34;; // 創建新的空的 DataTable 讓抓回來的資料存放 DataTable dt = new DataTable(); // 執行 sql 語句 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn); // 將資料注入到 空的 database adapter.Fill(dt); } 在這段程式我們沒有處理 連線 跟 斷線 ， 因為 MySqlDataAdapter 會幫我們處理 </description>
+      <description>說明： 方法有兩種，一種是 DataTable 一種是 DataReader，最簡單的就是用 DataTable 接資料string connString = &amp;#34;server=127.0.0.1;port=3306;user id=root;password=Acuteboy1215;database=mvctest;charset=utf8;&amp;#34;; MySqlConnection conn = new MySqlConnection(); public ActionResult Index() { // 聯繫裡面放入連線字串 conn.ConnectionString = connString; string sql = @&amp;#34; SELECT `id`, `city` FROM `city`&amp;#34;; // 創建新的空的 DataTable 讓抓回來的資料存放 DataTable dt = new DataTable(); // 執行 sql 語句 MySqlDataAdapter adapter = new MySqlDataAdapter(sql, conn); // 將資料注入到 空的 database adapter.Fill(dt); } 在這段程式我們沒有處理 連線 跟 斷線 ， 因為 MySqlDataAdapter 會幫我們處理 </description>
     </item>
     
     <item>
